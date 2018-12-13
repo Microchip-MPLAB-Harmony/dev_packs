@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMS70N20</tag>
+  <display>Atmel SAMS70N20</display>
+  <data>$CUR_DIR$\ATSAMS70N20.i79</data>
+</optionMenuItem>

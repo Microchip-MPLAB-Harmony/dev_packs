@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMD20G14B</tag>
+  <display>Atmel ATSAMD20G14B</display>
+  <data>$CUR_DIR$\ATSAMD20G14B.i79</data>
+</optionMenuItem>

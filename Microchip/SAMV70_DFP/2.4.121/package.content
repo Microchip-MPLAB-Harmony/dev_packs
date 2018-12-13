@@ -1,0 +1,1978 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMV70Q19">
+      <resource type="atdf" subdir="samv70/atdf">
+        <includes pattern="ATSAMV70Q19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70/edc">
+        <includes pattern="ATSAMV70Q19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70/svd">
+        <includes pattern="ATSAMV70Q19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv70/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70q19.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pioe.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/sdramc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70q19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70Q19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70/gcc">
+        <includes pattern="gcc/startup_samv70q19.c"/>
+        <includes pattern="system_samv70q19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70/gcc">
+        <includes pattern="gcc/samv70q19_flash.ld"/>
+        <includes pattern="gcc/samv70q19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70/iar">
+        <includes pattern="iar/startup_samv70q19.c"/>
+        <includes pattern="system_samv70q19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70/iar">
+        <includes pattern="config/linker/Microchip/atsamv70q19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70q19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70Q19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70/iar">
+        <includes pattern="config/flashloader/Atmel/samv70q19/samv70q19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70q19/samv70q19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70q19/samv70q19-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70J19B">
+      <resource type="atdf" subdir="samv70b/atdf">
+        <includes pattern="ATSAMV70J19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70b/edc">
+        <includes pattern="ATSAMV70J19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70b/svd">
+        <includes pattern="ATSAMV70J19B.svd"/>
+      </resource>
+      <resource type="c.header.deprecated" subdir="samv70b/include">
+        <includes pattern="component/deprecated/tc.h"/>
+        <includes pattern="component/deprecated/usart.h"/>
+        <includes pattern="component/deprecated/usbhs.h"/>
+      </resource>
+      <resource type="c.header" subdir="samv70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70j19b.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70j19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70J19B__"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="samv70b/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70j19b.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/samv70j19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70J19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70b/gcc">
+        <includes pattern="gcc/startup_samv70j19b.c"/>
+        <includes pattern="system_samv70j19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70b/gcc">
+        <includes pattern="gcc/samv70j19b_flash.ld"/>
+        <includes pattern="gcc/samv70j19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70b/iar">
+        <includes pattern="iar/startup_samv70j19b.c"/>
+        <includes pattern="system_samv70j19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70b/iar">
+        <includes pattern="config/linker/Microchip/atsamv70j19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70j19b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70b/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J19B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J19B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70J19B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70b/iar">
+        <includes pattern="config/flashloader/Atmel/samv70j19b/samv70j19b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70j19b/samv70j19b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70j19b/samv70j19b-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70J20">
+      <resource type="atdf" subdir="samv70/atdf">
+        <includes pattern="ATSAMV70J20.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70/edc">
+        <includes pattern="ATSAMV70J20.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70/svd">
+        <includes pattern="ATSAMV70J20.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv70/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70j20.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70j20.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70J20__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70/gcc">
+        <includes pattern="gcc/startup_samv70j20.c"/>
+        <includes pattern="system_samv70j20.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70/gcc">
+        <includes pattern="gcc/samv70j20_flash.ld"/>
+        <includes pattern="gcc/samv70j20_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70/iar">
+        <includes pattern="iar/startup_samv70j20.c"/>
+        <includes pattern="system_samv70j20.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70/iar">
+        <includes pattern="config/linker/Microchip/atsamv70j20/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70j20/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J20.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J20.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70J20.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70/iar">
+        <includes pattern="config/flashloader/Atmel/samv70j20/samv70j20-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70j20/samv70j20-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70j20/samv70j20-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70Q20">
+      <resource type="atdf" subdir="samv70/atdf">
+        <includes pattern="ATSAMV70Q20.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70/edc">
+        <includes pattern="ATSAMV70Q20.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70/svd">
+        <includes pattern="ATSAMV70Q20.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv70/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70q20.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pioe.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/sdramc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70q20.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70Q20__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70/gcc">
+        <includes pattern="gcc/startup_samv70q20.c"/>
+        <includes pattern="system_samv70q20.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70/gcc">
+        <includes pattern="gcc/samv70q20_flash.ld"/>
+        <includes pattern="gcc/samv70q20_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70/iar">
+        <includes pattern="iar/startup_samv70q20.c"/>
+        <includes pattern="system_samv70q20.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70/iar">
+        <includes pattern="config/linker/Microchip/atsamv70q20/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70q20/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q20.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q20.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70Q20.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70/iar">
+        <includes pattern="config/flashloader/Atmel/samv70q20/samv70q20-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70q20/samv70q20-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70q20/samv70q20-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70Q19B">
+      <resource type="atdf" subdir="samv70b/atdf">
+        <includes pattern="ATSAMV70Q19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70b/edc">
+        <includes pattern="ATSAMV70Q19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70b/svd">
+        <includes pattern="ATSAMV70Q19B.svd"/>
+      </resource>
+      <resource type="c.header.deprecated" subdir="samv70b/include">
+        <includes pattern="component/deprecated/tc.h"/>
+        <includes pattern="component/deprecated/usart.h"/>
+        <includes pattern="component/deprecated/usbhs.h"/>
+      </resource>
+      <resource type="c.header" subdir="samv70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70q19b.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pioe.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/sdramc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70q19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70Q19B__"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="samv70b/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70q19b.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/samv70q19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70Q19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70b/gcc">
+        <includes pattern="gcc/startup_samv70q19b.c"/>
+        <includes pattern="system_samv70q19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70b/gcc">
+        <includes pattern="gcc/samv70q19b_flash.ld"/>
+        <includes pattern="gcc/samv70q19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70b/iar">
+        <includes pattern="iar/startup_samv70q19b.c"/>
+        <includes pattern="system_samv70q19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70b/iar">
+        <includes pattern="config/linker/Microchip/atsamv70q19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70q19b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70b/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q19B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q19B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70Q19B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70b/iar">
+        <includes pattern="config/flashloader/Atmel/samv70q19b/samv70q19b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70q19b/samv70q19b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70q19b/samv70q19b-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70N20">
+      <resource type="atdf" subdir="samv70/atdf">
+        <includes pattern="ATSAMV70N20.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70/edc">
+        <includes pattern="ATSAMV70N20.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70/svd">
+        <includes pattern="ATSAMV70N20.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv70/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70n20.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="pio/samv70n20.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70N20__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70/gcc">
+        <includes pattern="gcc/startup_samv70n20.c"/>
+        <includes pattern="system_samv70n20.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70/gcc">
+        <includes pattern="gcc/samv70n20_flash.ld"/>
+        <includes pattern="gcc/samv70n20_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70/iar">
+        <includes pattern="iar/startup_samv70n20.c"/>
+        <includes pattern="system_samv70n20.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70/iar">
+        <includes pattern="config/linker/Microchip/atsamv70n20/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70n20/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N20.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N20.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70N20.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70/iar">
+        <includes pattern="config/flashloader/Atmel/samv70n20/samv70n20-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70n20/samv70n20-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70n20/samv70n20-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70J19">
+      <resource type="atdf" subdir="samv70/atdf">
+        <includes pattern="ATSAMV70J19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70/edc">
+        <includes pattern="ATSAMV70J19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70/svd">
+        <includes pattern="ATSAMV70J19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv70/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70j19.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="pio/samv70j19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70J19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70/gcc">
+        <includes pattern="gcc/startup_samv70j19.c"/>
+        <includes pattern="system_samv70j19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70/gcc">
+        <includes pattern="gcc/samv70j19_flash.ld"/>
+        <includes pattern="gcc/samv70j19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70/iar">
+        <includes pattern="iar/startup_samv70j19.c"/>
+        <includes pattern="system_samv70j19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70/iar">
+        <includes pattern="config/linker/Microchip/atsamv70j19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70j19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70J19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70/iar">
+        <includes pattern="config/flashloader/Atmel/samv70j19/samv70j19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70j19/samv70j19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70j19/samv70j19-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70N19">
+      <resource type="atdf" subdir="samv70/atdf">
+        <includes pattern="ATSAMV70N19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70/edc">
+        <includes pattern="ATSAMV70N19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70/svd">
+        <includes pattern="ATSAMV70N19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv70/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70n19.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70n19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70N19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70/gcc">
+        <includes pattern="gcc/startup_samv70n19.c"/>
+        <includes pattern="system_samv70n19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70/gcc">
+        <includes pattern="gcc/samv70n19_flash.ld"/>
+        <includes pattern="gcc/samv70n19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70/iar">
+        <includes pattern="iar/startup_samv70n19.c"/>
+        <includes pattern="system_samv70n19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70/iar">
+        <includes pattern="config/linker/Microchip/atsamv70n19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70n19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70N19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70/iar">
+        <includes pattern="config/flashloader/Atmel/samv70n19/samv70n19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70n19/samv70n19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70n19/samv70n19-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70N20B">
+      <resource type="atdf" subdir="samv70b/atdf">
+        <includes pattern="ATSAMV70N20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70b/edc">
+        <includes pattern="ATSAMV70N20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70b/svd">
+        <includes pattern="ATSAMV70N20B.svd"/>
+      </resource>
+      <resource type="c.header.deprecated" subdir="samv70b/include">
+        <includes pattern="component/deprecated/tc.h"/>
+        <includes pattern="component/deprecated/usart.h"/>
+        <includes pattern="component/deprecated/usbhs.h"/>
+      </resource>
+      <resource type="c.header" subdir="samv70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70n20b.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70n20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70N20B__"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="samv70b/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70n20b.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/samv70n20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70N20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70b/gcc">
+        <includes pattern="gcc/startup_samv70n20b.c"/>
+        <includes pattern="system_samv70n20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70b/gcc">
+        <includes pattern="gcc/samv70n20b_flash.ld"/>
+        <includes pattern="gcc/samv70n20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70b/iar">
+        <includes pattern="iar/startup_samv70n20b.c"/>
+        <includes pattern="system_samv70n20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70b/iar">
+        <includes pattern="config/linker/Microchip/atsamv70n20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70n20b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70b/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N20B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N20B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70N20B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70b/iar">
+        <includes pattern="config/flashloader/Atmel/samv70n20b/samv70n20b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70n20b/samv70n20b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70n20b/samv70n20b-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70N19B">
+      <resource type="atdf" subdir="samv70b/atdf">
+        <includes pattern="ATSAMV70N19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70b/edc">
+        <includes pattern="ATSAMV70N19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70b/svd">
+        <includes pattern="ATSAMV70N19B.svd"/>
+      </resource>
+      <resource type="c.header.deprecated" subdir="samv70b/include">
+        <includes pattern="component/deprecated/tc.h"/>
+        <includes pattern="component/deprecated/usart.h"/>
+        <includes pattern="component/deprecated/usbhs.h"/>
+      </resource>
+      <resource type="c.header" subdir="samv70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70n19b.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70n19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70N19B__"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="samv70b/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70n19b.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/samv70n19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70N19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70b/gcc">
+        <includes pattern="gcc/startup_samv70n19b.c"/>
+        <includes pattern="system_samv70n19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70b/gcc">
+        <includes pattern="gcc/samv70n19b_flash.ld"/>
+        <includes pattern="gcc/samv70n19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70b/iar">
+        <includes pattern="iar/startup_samv70n19b.c"/>
+        <includes pattern="system_samv70n19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70b/iar">
+        <includes pattern="config/linker/Microchip/atsamv70n19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70n19b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70b/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N19B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70N19B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70N19B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70b/iar">
+        <includes pattern="config/flashloader/Atmel/samv70n19b/samv70n19b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70n19b/samv70n19b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70n19b/samv70n19b-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70Q20B">
+      <resource type="atdf" subdir="samv70b/atdf">
+        <includes pattern="ATSAMV70Q20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70b/edc">
+        <includes pattern="ATSAMV70Q20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70b/svd">
+        <includes pattern="ATSAMV70Q20B.svd"/>
+      </resource>
+      <resource type="c.header.deprecated" subdir="samv70b/include">
+        <includes pattern="component/deprecated/tc.h"/>
+        <includes pattern="component/deprecated/usart.h"/>
+        <includes pattern="component/deprecated/usbhs.h"/>
+      </resource>
+      <resource type="c.header" subdir="samv70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70q20b.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/hsmci.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pioe.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/sdramc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/twihs2.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usart2.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70q20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70Q20B__"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="samv70b/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70q20b.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/samv70q20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70Q20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70b/gcc">
+        <includes pattern="gcc/startup_samv70q20b.c"/>
+        <includes pattern="system_samv70q20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70b/gcc">
+        <includes pattern="gcc/samv70q20b_flash.ld"/>
+        <includes pattern="gcc/samv70q20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70b/iar">
+        <includes pattern="iar/startup_samv70q20b.c"/>
+        <includes pattern="system_samv70q20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70b/iar">
+        <includes pattern="config/linker/Microchip/atsamv70q20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70q20b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70b/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q20B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70Q20B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70Q20B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70b/iar">
+        <includes pattern="config/flashloader/Atmel/samv70q20b/samv70q20b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70q20b/samv70q20b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70q20b/samv70q20b-flash.out"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV70J20B">
+      <resource type="atdf" subdir="samv70b/atdf">
+        <includes pattern="ATSAMV70J20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv70b/edc">
+        <includes pattern="ATSAMV70J20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv70b/svd">
+        <includes pattern="ATSAMV70J20B.svd"/>
+      </resource>
+      <resource type="c.header.deprecated" subdir="samv70b/include">
+        <includes pattern="component/deprecated/tc.h"/>
+        <includes pattern="component/deprecated/usart.h"/>
+        <includes pattern="component/deprecated/usbhs.h"/>
+      </resource>
+      <resource type="c.header" subdir="samv70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70j20b.h"/>
+        <includes pattern="system_samv70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/afec0.h"/>
+        <includes pattern="instance/afec1.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/dacc.h"/>
+        <includes pattern="instance/efc.h"/>
+        <includes pattern="instance/gpbr.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isi.h"/>
+        <includes pattern="instance/matrix.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mlb.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/pwm0.h"/>
+        <includes pattern="instance/pwm1.h"/>
+        <includes pattern="instance/qspi.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rswdt.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rtt.h"/>
+        <includes pattern="instance/ssc.h"/>
+        <includes pattern="instance/supc.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tc2.h"/>
+        <includes pattern="instance/tc3.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/usart0.h"/>
+        <includes pattern="instance/usart1.h"/>
+        <includes pattern="instance/usbhs.h"/>
+        <includes pattern="instance/utmi.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac.h"/>
+        <includes pattern="pio/samv70j20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70J20B__"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="samv70b/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv70j20b.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/samv70j20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV70J20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv70b/gcc">
+        <includes pattern="gcc/startup_samv70j20b.c"/>
+        <includes pattern="system_samv70j20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv70b/gcc">
+        <includes pattern="gcc/samv70j20b_flash.ld"/>
+        <includes pattern="gcc/samv70j20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv70b/iar">
+        <includes pattern="iar/startup_samv70j20b.c"/>
+        <includes pattern="system_samv70j20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv70b/iar">
+        <includes pattern="config/linker/Microchip/atsamv70j20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv70j20b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv70b/iar">
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J20B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV70/ATSAMV70J20B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMV70.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMV70J20B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv70b/iar">
+        <includes pattern="config/flashloader/Atmel/samv70j20b/samv70j20b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv70j20b/samv70j20b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv70j20b/samv70j20b-flash.out"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Atmel">
+		<releases>
+            <release version="2.4.BUILDNUMBER">Corrections to XML and header-files. Core modules descriptions in ATDF and SVD changed for rev. B devices. Core IRQ and interrupt handler names changed to alligne with CMSIS names. Old names mapped as aliases to new names. Several errors in SVD files corrected. Missing TC1 and TC2 to instance definitions added to header files. TC, USART and USBHS module changed (for revB devices) to reflect the modes according to the datasheet. Added ARMCC support files. Added Keil support files.</release>
+			<release version="2.3.90">Updated device XML for rev. B devices. Updated/added SVD files.</release>
+			<release version="2.2.82">Renamed some Cortex-M interrupt handlers. Added TCM configuration fuses.</release>
+			<release version="2.1.76">Corrected number of TC channels.</release>
+			<release version="2.0.63">Fixed EFC parameters.</release>
+			<release version="2.0.57">Added rev B devices. Added core peripherals. Updated headers, startup code and linker scripts.</release>
+			<release version="1.0.39">Updated documentation links.</release>
+			<release version="1.0.28">Updated documentation links.</release>
+			<release version="1.0.23">Initial release.</release>
+		</releases>
+	</pdsc>
+</package>

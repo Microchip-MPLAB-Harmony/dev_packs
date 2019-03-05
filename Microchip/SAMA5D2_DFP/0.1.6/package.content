@@ -1,0 +1,1547 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMA5D26">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D26.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D26.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d26.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d26.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D26__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d26.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom2.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc0.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d26.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D26__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D27">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D27.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D27.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d27.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d27.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D27__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d27.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom2.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc0.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d27.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D27__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D24">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D24.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D24.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d24.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d24.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D24__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d24.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom2.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc0.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d24.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D24__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D22">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D22.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D22.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d22.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d22.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D22__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d22.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d22.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D22__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D23">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D23.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D23.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d23.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d23.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D23__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d23.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d23.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D23__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D21">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D21.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D21.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d21.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d21.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D21__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d21.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d21.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D21__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D28.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D28.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d28.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d28.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D28__"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d28.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pio_ctrl.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="instance/acc.h"/>
+        <includes pattern="instance/adc.h"/>
+        <includes pattern="instance/aes.h"/>
+        <includes pattern="instance/aesb.h"/>
+        <includes pattern="instance/aic.h"/>
+        <includes pattern="instance/saic.h"/>
+        <includes pattern="instance/aximx.h"/>
+        <includes pattern="instance/chipid.h"/>
+        <includes pattern="instance/classd.h"/>
+        <includes pattern="instance/flexcom0.h"/>
+        <includes pattern="instance/flexcom1.h"/>
+        <includes pattern="instance/flexcom2.h"/>
+        <includes pattern="instance/flexcom3.h"/>
+        <includes pattern="instance/flexcom4.h"/>
+        <includes pattern="instance/gmac.h"/>
+        <includes pattern="instance/i2sc0.h"/>
+        <includes pattern="instance/i2sc1.h"/>
+        <includes pattern="instance/icm.h"/>
+        <includes pattern="instance/isc.h"/>
+        <includes pattern="instance/l2cc.h"/>
+        <includes pattern="instance/lcdc.h"/>
+        <includes pattern="instance/matrix0.h"/>
+        <includes pattern="instance/matrix1.h"/>
+        <includes pattern="instance/mcan0.h"/>
+        <includes pattern="instance/mcan1.h"/>
+        <includes pattern="instance/mpddrc.h"/>
+        <includes pattern="instance/pdmic.h"/>
+        <includes pattern="instance/pioa.h"/>
+        <includes pattern="instance/piob.h"/>
+        <includes pattern="instance/pioc.h"/>
+        <includes pattern="instance/piod.h"/>
+        <includes pattern="instance/pio_ctrl.h"/>
+        <includes pattern="instance/pit.h"/>
+        <includes pattern="instance/pmc.h"/>
+        <includes pattern="instance/ptc.h"/>
+        <includes pattern="instance/pwm.h"/>
+        <includes pattern="instance/qspi0.h"/>
+        <includes pattern="instance/qspi1.h"/>
+        <includes pattern="instance/rstc.h"/>
+        <includes pattern="instance/rtc.h"/>
+        <includes pattern="instance/rxlp.h"/>
+        <includes pattern="instance/sckc.h"/>
+        <includes pattern="instance/sdmmc0.h"/>
+        <includes pattern="instance/sdmmc1.h"/>
+        <includes pattern="instance/secumod.h"/>
+        <includes pattern="instance/sfc.h"/>
+        <includes pattern="instance/sfr.h"/>
+        <includes pattern="instance/sfrbu.h"/>
+        <includes pattern="instance/sha.h"/>
+        <includes pattern="instance/shdwc.h"/>
+        <includes pattern="instance/smc.h"/>
+        <includes pattern="instance/spi0.h"/>
+        <includes pattern="instance/spi1.h"/>
+        <includes pattern="instance/ssc0.h"/>
+        <includes pattern="instance/ssc1.h"/>
+        <includes pattern="instance/tc0.h"/>
+        <includes pattern="instance/tc1.h"/>
+        <includes pattern="instance/tdes.h"/>
+        <includes pattern="instance/trng.h"/>
+        <includes pattern="instance/twihs0.h"/>
+        <includes pattern="instance/twihs1.h"/>
+        <includes pattern="instance/uart0.h"/>
+        <includes pattern="instance/uart1.h"/>
+        <includes pattern="instance/uart2.h"/>
+        <includes pattern="instance/uart3.h"/>
+        <includes pattern="instance/uart4.h"/>
+        <includes pattern="instance/udphs.h"/>
+        <includes pattern="instance/wdt.h"/>
+        <includes pattern="instance/xdmac0.h"/>
+        <includes pattern="instance/xdmac1.h"/>
+        <includes pattern="pio/sama5d28.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D28__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="ddram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="ddram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="sram.mac"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+        <releases>
+            <release version="0.1.BUILDNUMBER">In development.</release>
+        </releases>
+    </pdsc>
+</package>

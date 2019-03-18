@@ -86,7 +86,7 @@
          <param caption="Reference Clock 2 Default Frequency" name="__REFCLK2_DEF_FREQ" value="120000000"/>
          <param caption="Reference Clock 3 Default Frequency" name="__REFCLK3_DEF_FREQ" value="120000000"/>
          <param caption="Reference Clock 4 Default Frequency" name="__REFCLK4_DEF_FREQ" value="120000000"/>
-         <param caption="Primary Oscillator Input Default Frequency" name="__POSC_DEF_FREQ" value="24000000"/>
+         <param caption="Primary Oscillator Input Default Frequency" name="__POSC_DEF_FREQ" value="12000000"/>
          <param caption="Secondary Oscillator Input Default Frequency" name="__SOSC_DEF_FREQ" value="32768"/>
          <param caption="Peripheral Bus 1 Default Divider Value" name="__PB1_DEF_DIV" value="2"/>
          <param caption="Peripheral Bus 2 Default Divider Value" name="__PB2_DEF_DIV" value="2"/>
@@ -114,12 +114,14 @@
             </instance>
          </module>
          <module id="01445" name="CDAC" version="">
-            <instance name="CDAC">
+            <instance name="CDAC1">
                <register-group address-space="periph_pb2_std" name="CDAC" name-in-module="CDAC" offset="0x1f82c200" />
                <parameters>
                   <param name="" />
                </parameters>
             </instance>
+            <instance name="CDAC2"/>
+            <instance name="CDAC3"/>
          </module>
          <module id="02481" name="CFG" version="">
             <instance name="CFG">
@@ -352,7 +354,8 @@
             <instance name="NVM">
                <register-group address-space="periph_pb1_std" name="NVM" name-in-module="NVM" offset="0x1f800a00" />
                <parameters>
-                  <param name="" />
+                  <param name="PAGE_SIZE" value="4096"/>
+                  <param name="ROW_SIZE" value="512"/>
                </parameters>
             </instance>
          </module>
@@ -831,7 +834,7 @@
             <bitfield caption="USB1 USBID Selection bit" mask="0x40000000" name="FUSBIDIO1" values="DEVCFG3__FUSBIDIO1" />
             <bitfield caption="USB1 VBUSON Selection bit" mask="0x80000000" name="FVBUSIO1" values="DEVCFG3__FVBUSIO1" />
          </register>
-         <register caption="Device Configuration Word 2" name="DEVCFG2" initval="0xF7FAA728">
+         <register caption="Device Configuration Word 2" name="DEVCFG2" initval="0xF7FABB98">
             <bitfield caption="PLL Input Divider bits" mask="0x7" name="FPLLIDIV" values="DEVCFG2__FPLLIDIV" />
             <bitfield caption="System PLL Divided Input Clock Frequency Range bits" mask="0x70" name="FPLLRNG" values="DEVCFG2__FPLLRNG" />
             <bitfield caption="System PLL Input Clock Select bit" mask="0x80" name="FPLLICLK" values="DEVCFG2__FPLLICLK" />
@@ -846,7 +849,7 @@
             <bitfield caption="Brown-out Reset Select Trip Voltage bit" mask="0x20000000" name="BORSEL" values="DEVCFG2__BORSEL" />
             <bitfield caption="USB PLL Enable bit" mask="0x80000000" name="UPLLEN" values="DEVCFG2__UPLLEN" />
          </register>
-         <register caption="Device Configuration Word 1" name="DEVCFG1" initval="0x5F74FCF9">
+         <register caption="Device Configuration Word 1" name="DEVCFG1" initval="0x5F74FFF9">
             <bitfield caption="Oscillator Selection bits" mask="0x7" name="FNOSC" values="DEVCFG1__FNOSC" />
             <bitfield caption="Deadman Timer Count Window Interval bits" mask="0x38" name="DMTINTV" values="DEVCFG1__DMTINTV" />
             <bitfield caption="Secondary Oscillator Enable bit" mask="0x40" name="FSOSCEN" values="DEVCFG1__FSOSCEN" />
@@ -929,7 +932,7 @@
          <value caption="8-16 MHz" name="RANGE_8_16_MHZ" value="0x2" />
          <value caption="13-26 MHz" name="RANGE_13_26_MHZ" value="0x3" />
          <value caption="21-42 MHz" name="RANGE_21_42_MHZ" value="0x4" />
-         <value caption="34-68 MHz" name="RANGE_34_68_MHZ" value="0x5" />
+         <value caption="34-64 MHz" name="RANGE_34_64_MHZ" value="0x5" />
       </value-group>
       <value-group caption="System PLL Input Clock Select bit" name="DEVCFG2__FPLLICLK">
          <value caption="FRC is selected as input to the System PLL" name="PLL_FRC" value="0x1" />
@@ -1322,7 +1325,7 @@
    </module>
    <module caption="" id="02508" name="ADCHS" version="">
       <register-group name="ADCHS">
-         <register caption="ADC Control Register 1" name="ADCCON1" offset="0x0" rw="RW" size="4">
+         <register caption="ADC Control Register 1" name="ADCCON1" initval="0x00600000" offset="0x0" rw="RW" size="4">
             <bitfield caption="DMA to System RAM Buffer Length Size bits" mask="0x00000007" name="DMABL" values="ADCCON1__DMABL" />
             <bitfield caption="Scan Trigger High Level/Positive Edge Sensitivity bit" mask="0x00000008" name="STRGLVL" values="ADCCON1__STRGLVL" />
             <bitfield caption="Interrupt Vector Shift bits" mask="0x00000070" name="IRQVS" values="ADCCON1__IRQVS" />
@@ -1362,13 +1365,14 @@
             <bitfield caption="ADC Update Ready Status bit" mask="0x00000400" name="UPDRDY" values="ADCCON3__UPDRDY" />
             <bitfield caption="Update Ready Interrupt Enable bit" mask="0x00000800" name="UPDIEN" values="ADCCON3__UPDIEN" />
             <bitfield caption="Trigger Suspend bit" mask="0x00001000" name="TRGSUSP" values="ADCCON3__TRGSUSP" />
-            <bitfield mask="0x0000E000" name="VREFSEL" />
+            <bitfield caption="Voltage Reference Input Selection bits" mask="0x0000E000" name="VREFSEL" values="ADCCON3__VREFSEL"/>
             <bitfield caption="ADC0 Digital Enable bit" mask="0x00010000" name="DIGEN0" values="ADCCON3__DIGEN0" />
             <bitfield caption="ADC1 Digital Enable bit" mask="0x00020000" name="DIGEN1" values="ADCCON3__DIGEN1" />
             <bitfield caption="ADC2 Digital Enable bit" mask="0x00040000" name="DIGEN2" values="ADCCON3__DIGEN2" />
             <bitfield caption="ADC3 Digital Enable bit" mask="0x00080000" name="DIGEN3" values="ADCCON3__DIGEN3" />
             <bitfield caption="ADC4 Digital Enable bit" mask="0x00100000" name="DIGEN4" values="ADCCON3__DIGEN4" />
             <bitfield caption="ADC5 Digital Enable bit" mask="0x00200000" name="DIGEN5" values="ADCCON3__DIGEN5" />
+            <bitfield caption="ADC6 Digital Enable bit" mask="0x00400000" name="DIGEN6" />
             <bitfield caption="Shared ADC (ADC7) Digital Enable bit" mask="0x00800000" name="DIGEN7" values="ADCCON3__DIGEN7" />
             <bitfield caption="Analog-to-Digital Control Clock Divider bits" mask="0x3F000000" name="CONCLKDIV" values="ADCCON3__CONCLKDIV" />
             <bitfield caption="Analog-to-Digital Clock Source bits" mask="0xC0000000" name="ADCSEL" values="ADCCON3__ADCSEL" />
@@ -1424,7 +1428,7 @@
             <bitfield caption="AN13 Mode bit" mask="0x08000000" name="DIFF13" values="ADCIMCON1__DIFF13" />
             <bitfield caption="AN14 Signed Data Mode bit" mask="0x10000000" name="SIGN14" values="ADCIMCON1__SIGN14" />
             <bitfield caption="AN14 Mode bit" mask="0x20000000" name="DIFF14" values="ADCIMCON1__DIFF14" />
-            <bitfield mask="0x40000000" name="SIGN15" />
+            <bitfield caption="AN15 Signed Data Mode bit" mask="0x40000000" name="SIGN15" values="ADCIMCON1__SIGN15" />
             <bitfield caption="AN15 Mode bit" mask="0x80000000" name="DIFF15" values="ADCIMCON1__DIFF15" />
          </register>
          <register caption="ADC Input Mode Control Register 2" name="ADCIMCON2" offset="0x50" rw="RW" size="4">
@@ -1472,7 +1476,7 @@
             <bitfield caption="AN40 Mode bit" mask="0x00020000" name="DIFF40" values="ADCIMCON3__DIFF40" />
             <bitfield caption="AN41 Signed Data Mode bit" mask="0x00040000" name="SIGN41" values="ADCIMCON3__SIGN41" />
             <bitfield caption="AN41 Mode bit" mask="0x00080000" name="DIFF41" values="ADCIMCON3__DIFF41" />
-            <bitfield mask="0x04000000" name="SIGN45" />
+            <bitfield caption="AN45 Signed Data Mode bit" mask="0x04000000" name="SIGN45" values="ADCIMCON3__SIGN45" />
             <bitfield caption="AN45 Mode bit" mask="0x08000000" name="DIFF45" values="ADCIMCON3__DIFF45" />
             <bitfield caption="AN45 Signed Data Mode bit" mask="0x10000000" name="SIGN46" values="ADCIMCON3__SIGN46" />
             <bitfield caption="AN46 Mode bit" mask="0x20000000" name="DIFF46" values="ADCIMCON3__DIFF46" />
@@ -1813,45 +1817,45 @@
             <bitfield caption="Digital Filter 'x' Enable bit" mask="0x80000000" name="AFEN" values="ADCFLTR4__AFEN" />
          </register>
          <register caption="ADC Trigger Source 1 Register" name="ADCTRG1" offset="0x200" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC0" />
-            <bitfield mask="0x00001F00" name="TRGSRC1" />
-            <bitfield mask="0x001F0000" name="TRGSRC2" />
+            <bitfield caption="Trigger Source for Conversion of ADC0 Module Select bits" mask="0x0000001F" name="TRGSRC0" values="ADCTRG1__TRGSRC0" />
+            <bitfield caption="Trigger Source for Conversion of ADC1 Module Select bits" mask="0x00001F00" name="TRGSRC1" values="ADCTRG1__TRGSRC1" />
+            <bitfield caption="Trigger Source for Conversion of ADC2 Module Select bits" mask="0x001F0000" name="TRGSRC2" values="ADCTRG1__TRGSRC2" />
             <bitfield caption="Trigger Source for Conversion of ADC3 Module Select bits" mask="0x1F000000" name="TRGSRC3" values="ADCTRG1__TRGSRC3" />
          </register>
          <register caption="ADC Trigger Source 2 Register" name="ADCTRG2" offset="0x210" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC4" />
-            <bitfield mask="0x00001F00" name="TRGSRC5" />
-            <bitfield mask="0x001F0000" name="TRGSRC6" />
+            <bitfield caption="Trigger Source for Conversion of ADC4 Module Select bits" mask="0x0000001F" name="TRGSRC4" values="ADCTRG2__TRGSRC4" />
+            <bitfield caption="Trigger Source for Conversion of ADC5 Module Select bits" mask="0x00001F00" name="TRGSRC5" values="ADCTRG2__TRGSRC5" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN6 Select bits" mask="0x001F0000" name="TRGSRC6" values="ADCTRG2__TRGSRC6" />
             <bitfield caption="Trigger Source for Conversion of Analog Input AN7 Select bits" mask="0x1F000000" name="TRGSRC7" values="ADCTRG2__TRGSRC7" />
          </register>
          <register caption="ADC Trigger Source 3 Register" name="ADCTRG3" offset="0x220" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC8" />
-            <bitfield mask="0x00001F00" name="TRGSRC9" />
-            <bitfield mask="0x001F0000" name="TRGSRC10" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN8 Select bits" mask="0x0000001F" name="TRGSRC8" values="ADCTRG3__TRGSRC8" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN9 Select bits" mask="0x00001F00" name="TRGSRC9" values="ADCTRG3__TRGSRC9" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN10 Select bits" mask="0x001F0000" name="TRGSRC10" values="ADCTRG3__TRGSRC10" />
             <bitfield caption="Trigger Source for Conversion of Analog Input AN11 Select bits" mask="0x1F000000" name="TRGSRC11" values="ADCTRG3__TRGSRC11" />
          </register>
          <register caption="ADC Trigger Source 4 Register" name="ADCTRG4" offset="0x230" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC12" />
-            <bitfield mask="0x00001F00" name="TRGSRC13" />
-            <bitfield mask="0x001F0000" name="TRGSRC14" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN12 Select bits" mask="0x0000001F" name="TRGSRC12" values="ADCTRG4__TRGSRC12" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN13 Select bits" mask="0x00001F00" name="TRGSRC13" values="ADCTRG4__TRGSRC13" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN14 Select bits" mask="0x001F0000" name="TRGSRC14" values="ADCTRG4__TRGSRC14" />
             <bitfield caption="Trigger Source for Conversion of Analog Input AN15 Select bits" mask="0x1F000000" name="TRGSRC15" values="ADCTRG4__TRGSRC15" />
          </register>
          <register caption="ADC Trigger Source 5 Register" name="ADCTRG5" offset="0x240" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC16" />
-            <bitfield mask="0x00001F00" name="TRGSRC17" />
-            <bitfield mask="0x001F0000" name="TRGSRC18" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN16 Select bits" mask="0x0000001F" name="TRGSRC16" values="ADCTRG5__TRGSRC16" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN17 Select bits" mask="0x00001F00" name="TRGSRC17" values="ADCTRG5__TRGSRC17" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN18 Select bits" mask="0x001F0000" name="TRGSRC18" values="ADCTRG5__TRGSRC18" />
             <bitfield caption="Trigger Source for Conversion of Analog Input AN19 Select bits" mask="0x1F000000" name="TRGSRC19" values="ADCTRG5__TRGSRC19" />
          </register>
          <register caption="ADC Trigger Source 6 Register" name="ADCTRG6" offset="0x250" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC20" />
-            <bitfield mask="0x00001F00" name="TRGSRC21" />
-            <bitfield mask="0x001F0000" name="TRGSRC22" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN20 Select bits" mask="0x0000001F" name="TRGSRC20" values="ADCTRG6__TRGSRC20" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN21 Select bits" mask="0x00001F00" name="TRGSRC21" values="ADCTRG6__TRGSRC21" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN22 Select bits" mask="0x001F0000" name="TRGSRC22" values="ADCTRG6__TRGSRC22" />
             <bitfield caption="Trigger Source for Conversion of Analog Input AN23 Select bits" mask="0x1F000000" name="TRGSRC23" values="ADCTRG6__TRGSRC23" />
          </register>
          <register caption="ADC Trigger Source 7 Register" name="ADCTRG7" offset="0x260" rw="RW" size="4">
-            <bitfield mask="0x0000001F" name="TRGSRC24" />
-            <bitfield mask="0x00001F00" name="TRGSRC25" />
-            <bitfield mask="0x001F0000" name="TRGSRC26" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN24 Select bits" mask="0x0000001F" name="TRGSRC24" values="ADCTRG7__TRGSRC24" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN25 Select bits" mask="0x00001F00" name="TRGSRC25" values="ADCTRG7__TRGSRC25" />
+            <bitfield caption="Trigger Source for Conversion of Analog Input AN26 Select bits" mask="0x001F0000" name="TRGSRC26" values="ADCTRG7__TRGSRC26" />
             <bitfield caption="Trigger Source for Conversion of Analog Input AN27 Select bits" mask="0x1F000000" name="TRGSRC27" values="ADCTRG7__TRGSRC27" />
          </register>
          <register caption="ADC Digital Comparator 1 Control Register" name="ADCCMPCON1" offset="0x280" rw="RW" size="4">
@@ -2561,6 +2565,16 @@
          <value caption="Triggers are blocked from starting a new analog-to-digital conversion" name="" value="0x1" />
          <value caption="Triggers are not blocked" name="" value="0x0" />
       </value-group>
+      <value-group caption="Voltage Reference Input Selection bits" name="ADCCON3__VREFSEL">
+         <value caption="Reserved" name="" value="0x7"/>
+         <value caption="Reserved" name="" value="0x6"/>
+         <value caption="Reserved" name="" value="0x5"/>
+         <value caption="Reserved" name="" value="0x4"/>
+         <value caption="External VREFH and External VREFL" name="" value="0x3"/>
+         <value caption="AVDD and External VREFL" name="" value="0x2"/>
+         <value caption="External VREFH and AVSS" name="" value="0x1"/>
+         <value caption="AVDD and AVSS" name="" value="0x0"/>
+      </value-group>
       <value-group caption="ADC0 Digital Enable bit" name="ADCCON3__DIGEN0">
          <value caption="ADC0 is digital enabled (required for active operation)" name="" value="0x1" />
          <value caption="ADC0 is digital disabled (power-saving mode)" name="" value="0x0" />
@@ -2806,6 +2820,10 @@
          <value caption="Selects AN14 differential input pair as AN14+ and AN1-" name="" value="0x1" />
          <value caption="AN14 is using Single-ended mode" name="" value="0x0" />
       </value-group>
+      <value-group caption="AN15 Signed Data Mode bit" name="ADCIMCON1__SIGN15">
+         <value caption="AN15 is using Signed Data mode" name="" value="0x1" />
+         <value caption="AN15 is using Unsigned Data mode" name="" value="0x0" />
+      </value-group>
       <value-group caption="AN15 Mode bit" name="ADCIMCON1__DIFF15">
          <value caption="Selects AN15 differential input pair as AN15+ and AN1-" name="" value="0x1" />
          <value caption="AN15 is using Single-ended mode" name="" value="0x0" />
@@ -2977,6 +2995,10 @@
       <value-group caption="AN41 Mode bit" name="ADCIMCON3__DIFF41">
          <value caption="Selects AN41 differential input pair as AN41+ and AN1-" name="" value="0x1" />
          <value caption="AN41 is using Single-ended mode" name="" value="0x0" />
+      </value-group>
+      <value-group caption="AN45 Signed Data Mode bit" name="ADCIMCON3__SIGN45">
+         <value caption="AN45 is using Signed Data mode" name="" value="0x1" />
+         <value caption="AN45 is using Unsigned Data mode" name="" value="0x0" />
       </value-group>
       <value-group caption="AN45 Mode bit" name="ADCIMCON3__DIFF45">
          <value caption="Selects AN45 differential input pair as AN45+ and AN1-" name="" value="0x1" />
@@ -3796,7 +3818,211 @@
          <value caption="Digital filter is enabled" name="" value="0x1" />
          <value caption="Digital filter is disabled and the AFRDY status bit is cleared" name="" value="0x0" />
       </value-group>
+      <value-group caption="Trigger Source for Conversion of ADC0 Module Select bits" name="ADCTRG1__TRGSRC0">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of ADC1 Module Select bits" name="ADCTRG1__TRGSRC1">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of ADC2 Module Select bits" name="ADCTRG1__TRGSRC2">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
       <value-group caption="Trigger Source for Conversion of ADC3 Module Select bits" name="ADCTRG1__TRGSRC3">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of ADC4 Module Select bits" name="ADCTRG2__TRGSRC4">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of ADC5 Module Select bits" name="ADCTRG2__TRGSRC5">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN6 Select bits" name="ADCTRG2__TRGSRC6">
          <value caption="Reserved" name="" value="0x1f" />
          <value caption="Reserved" name="" value="0x1e" />
          <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
@@ -3864,6 +4090,108 @@
          <value caption="Software edge trigger" name="" value="0x1" />
          <value caption="No Trigger" name="" value="0x0" />
       </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN8 Select bits" name="ADCTRG3__TRGSRC8">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN9 Select bits" name="ADCTRG3__TRGSRC9">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN10 Select bits" name="ADCTRG3__TRGSRC10">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
       <value-group caption="Trigger Source for Conversion of Analog Input AN11 Select bits" name="ADCTRG3__TRGSRC11">
          <value caption="Reserved" name="" value="0x1f" />
          <value caption="Reserved" name="" value="0x1e" />
@@ -3889,6 +4217,108 @@
          <value caption="PWM Generator 1 trigger (Motor Control only)" name="" value="0xa" />
          <value caption="Secondary Special Event trigger (Motor Control only)" name="" value="0x9" />
          <value caption="Primary Special Event trigger (Motor Control only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN12 Select bits" name="ADCTRG4__TRGSRC12">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN13 Select bits" name="ADCTRG4__TRGSRC13">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN14 Select bits" name="ADCTRG4__TRGSRC14">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
          <value caption="General Purpose Timer5" name="" value="0x7" />
          <value caption="General Purpose Timer3" name="" value="0x6" />
          <value caption="General Purpose Timer1" name="" value="0x5" />
@@ -3932,6 +4362,108 @@
          <value caption="Software edge trigger" name="" value="0x1" />
          <value caption="No Trigger" name="" value="0x0" />
       </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN16 Select bits" name="ADCTRG5__TRGSRC16">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN17 Select bits" name="ADCTRG5__TRGSRC17">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN18 Select bits" name="ADCTRG5__TRGSRC18">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
       <value-group caption="Trigger Source for Conversion of Analog Input AN19 Select bits" name="ADCTRG5__TRGSRC19">
          <value caption="Reserved" name="" value="0x1f" />
          <value caption="Reserved" name="" value="0x1e" />
@@ -3945,10 +4477,10 @@
          <value caption="Reserved" name="" value="0x16" />
          <value caption="Reserved" name="" value="0x15" />
          <value caption="CTMU trip" name="" value="0x14" />
-         <value caption="Output Compare 4 (Rising Edge only)" name="" value="0x13" />
-         <value caption="Output Compare 3 (Rising Edge only)" name="" value="0x12" />
-         <value caption="Output Compare 2 (Rising Edge only)" name="" value="0x11" />
-         <value caption="Output Compare 1 (Rising Edge only)" name="" value="0x10" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
          <value caption="PWM Generator 6 trigger (Motor Control only)" name="" value="0xf" />
          <value caption="PWM Generator 5 trigger (Motor Control only)" name="" value="0xe" />
          <value caption="PWM Generator 4 trigger (Motor Control only)" name="" value="0xd" />
@@ -3957,6 +4489,108 @@
          <value caption="PWM Generator 1 trigger (Motor Control only)" name="" value="0xa" />
          <value caption="Secondary Special Event trigger (Motor Control only)" name="" value="0x9" />
          <value caption="Primary Special Event trigger (Motor Control only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN20 Select bits" name="ADCTRG6__TRGSRC20">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN21 Select bits" name="ADCTRG6__TRGSRC21">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN22 Select bits" name="ADCTRG6__TRGSRC22">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
          <value caption="General Purpose Timer5" name="" value="0x7" />
          <value caption="General Purpose Timer3" name="" value="0x6" />
          <value caption="General Purpose Timer1" name="" value="0x5" />
@@ -3979,10 +4613,10 @@
          <value caption="Reserved" name="" value="0x16" />
          <value caption="Reserved" name="" value="0x15" />
          <value caption="CTMU trip" name="" value="0x14" />
-         <value caption="Output Compare 4 (Rising Edge only) " name="" value="0x13" />
-         <value caption="Output Compare 3 (Rising Edge only)" name="" value="0x12" />
-         <value caption="Output Compare 2 (Rising Edge only)" name="" value="0x11" />
-         <value caption="Output Compare 1 (Rising Edge only)" name="" value="0x10" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
          <value caption="PWM Generator 6 trigger (Motor Control only)" name="" value="0xf" />
          <value caption="PWM Generator 5 trigger (Motor Control only)" name="" value="0xe" />
          <value caption="PWM Generator 4 trigger (Motor Control only)" name="" value="0xd" />
@@ -3995,7 +4629,109 @@
          <value caption="General Purpose Timer3" name="" value="0x6" />
          <value caption="General Purpose Timer1" name="" value="0x5" />
          <value caption="INT0" name="" value="0x4" />
-         <value caption="Scan trigger (see the following Note)" name="" value="0x3" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN24 Select bits" name="ADCTRG7__TRGSRC24">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN25 Select bits" name="ADCTRG7__TRGSRC25">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
+         <value caption="Software level trigger" name="" value="0x2" />
+         <value caption="Software edge trigger" name="" value="0x1" />
+         <value caption="No Trigger" name="" value="0x0" />
+      </value-group>
+      <value-group caption="Trigger Source for Conversion of Analog Input AN26 Select bits" name="ADCTRG7__TRGSRC26">
+         <value caption="Reserved" name="" value="0x1f" />
+         <value caption="Reserved" name="" value="0x1e" />
+         <value caption="PWM Generator 6 Current-Limit (Motor Control Variants Only)" name="" value="0x1d" />
+         <value caption="PWM Generator 5 Current-Limit (Motor Control Variants Only)" name="" value="0x1c" />
+         <value caption="PWM Generator 4 Current-Limit (Motor Control Variants Only)" name="" value="0x1b" />
+         <value caption="PWM Generator 3 Current-Limit (Motor Control Variants Only)" name="" value="0x1a" />
+         <value caption="PWM Generator 2 Current-Limit (Motor Control Variants Only)" name="" value="0x19" />
+         <value caption="PWM Generator 1 Current-Limit (Motor Control Variants Only)" name="" value="0x18" />
+         <value caption="Reserved" name="" value="0x17" />
+         <value caption="Reserved" name="" value="0x16" />
+         <value caption="Reserved" name="" value="0x15" />
+         <value caption="CTMU trip" name="" value="0x14" />
+         <value caption="Output Compare 4 (Rising Edge Only)" name="" value="0x13" />
+         <value caption="Output Compare 3 (Rising Edge Only)" name="" value="0x12" />
+         <value caption="Output Compare 2 (Rising Edge Only)" name="" value="0x11" />
+         <value caption="Output Compare 1 (Rising Edge Only)" name="" value="0x10" />
+         <value caption="PWM Generator 6 trigger (Motor Control Variants Only)" name="" value="0xf" />
+         <value caption="PWM Generator 5 trigger (Motor Control Variants Only)" name="" value="0xe" />
+         <value caption="PWM Generator 4 trigger (Motor Control Variants Only)" name="" value="0xd" />
+         <value caption="PWM Generator 3 trigger (Motor Control Variants Only)" name="" value="0xc" />
+         <value caption="PWM Generator 2 trigger (Motor Control Variants Only)" name="" value="0xb" />
+         <value caption="PWM Generator 1 trigger (Motor Control Variants Only)" name="" value="0xa" />
+         <value caption="Secondary Special Event trigger (Motor Control Variants Only)" name="" value="0x9" />
+         <value caption="Primary Special Event trigger (Motor Control Variants Only)" name="" value="0x8" />
+         <value caption="General Purpose Timer5" name="" value="0x7" />
+         <value caption="General Purpose Timer3" name="" value="0x6" />
+         <value caption="General Purpose Timer1" name="" value="0x5" />
+         <value caption="INT0" name="" value="0x4" />
+         <value caption="Scan trigger (see Note)" name="" value="0x3" />
          <value caption="Software level trigger" name="" value="0x2" />
          <value caption="Software edge trigger" name="" value="0x1" />
          <value caption="No Trigger" name="" value="0x0" />
@@ -18619,12 +19355,12 @@
       </value-group>
       <value-group caption="System PLL Frequency Range Selection bits" name="UPLLCON__PLLRANGE">
          <value caption="Reserved" name="" value="0x7" />
-         <value caption="54-90 MHz" name="54_90MHZ" value="0x6" />
-         <value caption="34-68 MHz" name="34_68MHZ" value="0x5" />
-         <value caption="21-42 MHz" name="21_42MHZ" value="0x4" />
-         <value caption="13-26 MHz" name="13_26MHZ" value="0x3" />
-         <value caption="8-16 MHz" name="8_16MHZ" value="0x2" />
-         <value caption="5-10 MHz" name="5_10MHZ" value="0x1" />
+         <value caption="54-90 MHz" name="RANGE_54_90_MHZ" value="0x6" />
+         <value caption="34-68 MHz" name="RANGE_34_64_MHZ" value="0x5" />
+         <value caption="21-42 MHz" name="RANGE_21_42_MHZ" value="0x4" />
+         <value caption="13-26 MHz" name="RANGE_13_26_MHZ" value="0x3" />
+         <value caption="8-16 MHz" name="RANGE_8_16_MHZ" value="0x2" />
+         <value caption="5-10 MHz" name="RANGE_5_10_MHZ" value="0x1" />
          <value caption="Bypass" name="Bypass" value="0x0" />
       </value-group>
       <value-group caption="System PLL Input Clock Divider bits" name="UPLLCON__PLLIDIV">

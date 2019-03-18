@@ -364,7 +364,8 @@
             <instance name="NVM">
                <register-group address-space="periph_pb1_std" name="NVM" name-in-module="NVM" offset="0x1f800600" />
                <parameters>
-                  <param name="" />
+                  <param name="PAGE_SIZE" value="16384"/>
+                  <param name="ROW_SIZE" value="2048"/>
                </parameters>
             </instance>
          </module>

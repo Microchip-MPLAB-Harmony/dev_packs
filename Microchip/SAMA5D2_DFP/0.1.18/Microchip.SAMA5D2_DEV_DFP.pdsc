@@ -1,0 +1,713 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.3" xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd" xs:noNamespaceSchemaLocation="PACK.xsd">
+   <vendor>Microchip</vendor>
+   <url>http://packs.download.atmel.com/</url>
+   <name>SAMA5D2_DFP</name>
+   <description>Microchip SAMA5D2 Series Device Support</description>
+   <releases>
+      <release version="0.1.18" date="2019-04-26">Removed legacy headers. In development.</release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>SAMA5D2</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="SAMA5D2" Dvendor="Microchip:3">
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="ATSAMA5D26">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D26__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D26.atdf"/>
+                  <at:variant ordercode="ATSAMA5D26C-CU" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D26C-CUR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D26C-CN" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:variant ordercode="ATSAMA5D26C-CNR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:memory name="EBI_CS0" start="0x10000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" start="0x20000000" size="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" start="0x40000000" size="0x20000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" start="0x60000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" start="0x70000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" start="0x80000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" start="0x90000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" start="0x98000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC0" start="0xA0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SDMMC1" start="0xB0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" start="0xC0000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" start="0xD0000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" start="0xD8000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" start="0x00000000" size="0x00010000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" start="0x00040000" size="0x00018000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" start="0x00100000" size="0x00002400" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" start="0x00300000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" start="0x00400000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" start="0x00500000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" start="0x00600000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="DAP" start="0x00700000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" start="0x00800000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" start="0xF8044000" size="0x00004000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D26.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16/32-bit DDR,  BGA289</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D26" title="Device page for ATSAMA5D26"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D26" title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMA5D27">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D27__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D27.atdf"/>
+                  <at:variant ordercode="ATSAMA5D27C-CU" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D27C-CUR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D27C-CN" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:variant ordercode="ATSAMA5D27C-CNR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:memory name="EBI_CS0" start="0x10000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" start="0x20000000" size="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" start="0x40000000" size="0x20000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" start="0x60000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" start="0x70000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" start="0x80000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" start="0x90000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" start="0x98000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC0" start="0xA0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SDMMC1" start="0xB0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" start="0xC0000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" start="0xD0000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" start="0xD8000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" start="0x00000000" size="0x00010000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" start="0x00040000" size="0x00018000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" start="0x00100000" size="0x00002400" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" start="0x00300000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" start="0x00400000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" start="0x00500000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" start="0x00600000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="DAP" start="0x00700000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" start="0x00800000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" start="0xF8044000" size="0x00004000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D27.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16/32-bit DDR, CAN, BGA289</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D27" title="Device page for ATSAMA5D27"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D27" title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMA5D24">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D24__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D24.atdf"/>
+                  <at:variant ordercode="ATSAMA5D24C-CU" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D24C-CUR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:memory name="EBI_CS0" start="0x10000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" start="0x20000000" size="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" start="0x40000000" size="0x20000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" start="0x60000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" start="0x70000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" start="0x80000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" start="0x90000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" start="0x98000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC0" start="0xA0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SDMMC1" start="0xB0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" start="0xC0000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" start="0xD0000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" start="0xD8000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" start="0x00000000" size="0x00010000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" start="0x00040000" size="0x00018000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" start="0x00100000" size="0x00002400" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" start="0x00300000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" start="0x00400000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" start="0x00500000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" start="0x00600000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="DAP" start="0x00700000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" start="0x00800000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" start="0xF8044000" size="0x00004000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D24.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16/32-bit DDR, USB HSIC, BGA256</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D24" title="Device page for ATSAMA5D24"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D24" title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMA5D22">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D22__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D22.atdf"/>
+                  <at:variant ordercode="ATSAMA5D22C-CN" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:variant ordercode="ATSAMA5D22C-CNR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:variant ordercode="ATSAMA5D22C-CU" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D22C-CUR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:memory name="EBI_CS0" start="0x10000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" start="0x20000000" size="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" start="0x40000000" size="0x20000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" start="0x60000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" start="0x70000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" start="0x80000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" start="0x90000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" start="0x98000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC1" start="0xB0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" start="0xC0000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" start="0xD0000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" start="0xD8000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" start="0x00000000" size="0x00010000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" start="0x00040000" size="0x00018000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" start="0x00100000" size="0x00002400" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" start="0x00300000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" start="0x00400000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" start="0x00500000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" start="0x00600000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="DAP" start="0x00700000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" start="0x00800000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" start="0xF8044000" size="0x00004000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D22.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16-bit DDR, CAN, BGA196</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D22" title="Device page for ATSAMA5D22"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D22" title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMA5D23">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D23__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D23.atdf"/>
+                  <at:variant ordercode="ATSAMA5D23C-CU" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D23C-CUR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D23C-CN" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:variant ordercode="ATSAMA5D23C-CNR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:memory name="EBI_CS0" start="0x10000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" start="0x20000000" size="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" start="0x40000000" size="0x20000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" start="0x60000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" start="0x70000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" start="0x80000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" start="0x90000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" start="0x98000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC1" start="0xB0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" start="0xC0000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" start="0xD0000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" start="0xD8000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" start="0x00000000" size="0x00010000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" start="0x00040000" size="0x00018000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" start="0x00100000" size="0x00002400" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" start="0x00300000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" start="0x00400000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" start="0x00500000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" start="0x00600000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="DAP" start="0x00700000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" start="0x00800000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" start="0xF8044000" size="0x00004000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D23.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16-bit DDR, CAN, Enhanced Security, BGA196</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D23" title="Device page for ATSAMA5D23"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D23" title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMA5D21">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D21__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D21.atdf"/>
+                  <at:variant ordercode="ATSAMA5D21C-CU" vccmin="+0" vccmax="+0" tempmin="+85" tempmax="-40"/>
+                  <at:variant ordercode="ATSAMA5D21C-CUR" vccmin="+0" vccmax="+0" tempmin="+85" tempmax="-40"/>
+                  <at:memory name="EBI_CS0" start="0x10000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" start="0x20000000" size="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" start="0x40000000" size="0x20000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" start="0x60000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" start="0x70000000" size="0x10000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" start="0x80000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" start="0x90000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" start="0x98000000" size="0x08000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC1" start="0xB0000000" size="0x00001000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" start="0xC0000000" size="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" start="0xD0000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" start="0xD8000000" size="0x08000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" start="0x00000000" size="0x00010000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" start="0x00040000" size="0x00018000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" start="0x00100000" size="0x00002400" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" start="0x00300000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" start="0x00400000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" start="0x00500000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" start="0x00600000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="DAP" start="0x00700000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" start="0x00800000" size="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" start="0xF8044000" size="0x00004000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D21.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16-bit DDR, BGA196</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D21" title="Device page for ATSAMA5D21"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D21" title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMA5D28">
+            <processor Dcore="Cortex-A5" Dendian="Little-endian" Dmpu="NO_MPU" Dfpu="SP_FPU"/>
+            <compile header="include/sam.h" define="__SAMA5D28__"/>
+            <memory id="IROM1" start="0x00000000" size="0x00010000"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMA5D28.atdf"/>
+                  <at:variant ordercode="ATSAMA5D28C-CU" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D28C-CUR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="ATSAMA5D28C-CN" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:variant ordercode="ATSAMA5D28C-CNR" vccmin="+0" vccmax="+0" tempmin="-40" tempmax="+105"/>
+                  <at:memory name="EBI_CS0" size="0x10000000" start="0x10000000" type="other" address-space="base"/>
+                  <at:memory name="DDR_CS" size="0x20000000" start="0x20000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="DDR_AES_CS" size="0x20000000" start="0x40000000" type="other" address-space="base"/>
+                  <at:memory name="EBI_CS1" size="0x10000000" start="0x60000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS2" size="0x10000000" start="0x70000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="EBI_CS3" size="0x08000000" start="0x80000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI_AES0" size="0x08000000" start="0x90000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI_AES1" size="0x08000000" start="0x98000000" type="other" address-space="base"/>
+                  <at:memory name="SDMMC0" size="0x00001000" start="0xA0000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SDMMC1" size="0x00001000" start="0xB0000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="NFC" size="0x10000000" start="0xC0000000" type="other" address-space="base"/>
+                  <at:memory name="QSPI0MEM" size="0x08000000" start="0xD0000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="QSPI1MEM" size="0x08000000" start="0xD8000000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="PERIPHERALS" start="0xF0000000" size="0x10000000" type="io" rw="RW" address-space="base"/>
+                  <at:memory name="IROM" size="0x00010000" start="0x00000000" type="rom" address-space="base"/>
+                  <at:memory name="ECC_ROM" size="0x00018000" start="0x00040000" type="other" address-space="base"/>
+                  <at:memory name="NFC_RAM" size="0x00002400" start="0x00100000" type="other" address-space="base"/>
+                  <at:memory name="SRAM0" start="0x00200000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="SRAM1" start="0x00220000" size="0x00020000" type="other" exec="true" address-space="base"/>
+                  <at:memory name="UDPHS_RAM" size="0x00100000" start="0x00300000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_OHCI" size="0x00100000" start="0x00400000" type="other" address-space="base"/>
+                  <at:memory name="UHPHS_EHCI" size="0x00100000" start="0x00500000" type="other" address-space="base"/>
+                  <at:memory name="AXIMX" size="0x00100000" start="0x00600000" type="other" address-space="base"/>
+                  <at:memory name="DAP" size="0x00100000" start="0x00700000" type="other" address-space="base"/>
+                  <at:memory name="PTCMEM" size="0x00100000" start="0x00800000" type="other" address-space="base"/>
+                  <at:memory name="SECURAM" size="0x00004000" start="0xF8044000" type="other" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMA5D28.PIC"/>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <description>ARM&#174; Cortex&#174;-A5 processor based embedded MPU, 500Mhz, Neon, L2 cache, TrustZone, 16/32-bit DDR, CAN, Enhanced Security, BGA289</description>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMA5D28" title="Device page for ATSAMA5D28"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMA5D28" title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+   <conditions>
+      <condition id="ARMCC">
+         <accept Tcompiler="ARMCC"/>
+      </condition>
+      <condition id="ARMCC Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+      </condition>
+      <condition id="GCC">
+         <accept Tcompiler="GCC"/>
+      </condition>
+      <condition id="GCC Exe">
+         <accept Tcompiler="GCC" Toutput="exe"/>
+      </condition>
+      <condition id="IAR">
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="IAR Exe">
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C">
+         <accept Tcompiler="ARMCC"/>
+         <accept Tcompiler="GCC"/>
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="C Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+         <accept Tcompiler="GCC" Toutput="exe"/>
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C Lib">
+         <accept Tcompiler="ARMCC" Toutput="lib"/>
+         <accept Tcompiler="GCC" Toutput="lib"/>
+         <accept Tcompiler="IAR" Toutput="lib"/>
+      </condition>
+      <condition id="ATSAMA5D26">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D26"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMA5D27">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D27"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMA5D24">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D24"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMA5D22">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D22"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMA5D23">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D23"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMA5D21">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D21"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMA5D28">
+         <require Dvendor="Microchip:3" Dname="ATSAMA5D28"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+   </conditions>
+   <components>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D26">
+         <description>Headers and startup code for Microchip ATSAMA5D26</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D27">
+         <description>Headers and startup code for Microchip ATSAMA5D27</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D24">
+         <description>Headers and startup code for Microchip ATSAMA5D24</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D22">
+         <description>Headers and startup code for Microchip ATSAMA5D22</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D23">
+         <description>Headers and startup code for Microchip ATSAMA5D23</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D21">
+         <description>Headers and startup code for Microchip ATSAMA5D21</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="0.1.0" condition="ATSAMA5D28">
+         <description>Headers and startup code for Microchip ATSAMA5D28</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe" category="source" name="templates/main.c" attr="template" select="Main file (.c)"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/cstartup.S" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.c" attr="config"/>
+            <file condition="GCC Exe" category="source" name="gcc/startup/arm/fault_handlers.h" attr="config"/>
+            <file condition="GCC Exe" category="linkerScript" name="gcc/ld/sram.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi0.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/qspi1.ld" attr="config"/>
+            <file condition="GCC Exe" category="other" name="gcc/ld/ddram.ld" attr="config"/>
+            <file condition="IAR Exe" category="source" name="iar/iar/cstartup.s" attr="config"/>
+            <file condition="IAR Exe" category="linkerScript" name="iar/iar/linker/sram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/ddram.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi1.icf" attr="config"/>
+            <file condition="IAR Exe" category="other" name="iar/iar/linker/qspi0.icf" attr="config"/>
+         </files>
+      </component>
+   </components>
+</package>

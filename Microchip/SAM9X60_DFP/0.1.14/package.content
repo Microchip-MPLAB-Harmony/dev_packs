@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="SAM9X60">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="SAM9X60.atdf"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sam9x60.h"/>
+        <includes pattern="system_sam9x.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/dbgu.h"/>
+        <includes pattern="component/emac.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gfx2d.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pmecc.h"/>
+        <includes pattern="component/pmerrloc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sam9x60.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAM9X60__"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+        <releases>
+            <release version="0.1.BUILDNUMBER">In development.</release>
+        </releases>
+    </pdsc>
+</package>

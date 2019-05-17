@@ -1,0 +1,37 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  FLASH        Memory    0x00000000  0x0000FFFF  RW
+Memory   =  RWW          Memory    0x00400000  0x004007FF  RW
+Memory   =  CAL          Memory    0x00800000  0x00800007  R
+Memory   =  LOCKBIT      Memory    0x00802000  0x00802003  R
+Memory   =  USER_PAGE    Memory    0x00804000  0x008040FF  RW
+Memory   =  OTP1         Memory    0x00806000  0x00806007  R
+Memory   =  OTP2         Memory    0x00806008  0x0080600F  R
+Memory   =  OTP3         Memory    0x00806010  0x00806017  R
+Memory   =  OTP4         Memory    0x00806018  0x0080601F  R
+Memory   =  OTP5         Memory    0x00806020  0x00806027  R
+Memory   =  HSRAM        Memory    0x20000000  0x20001FFF  RW
+Memory   =  HPB0         Memory    0x40000000  0x40003FFF  RW
+Memory   =  PERIPHERALS  Memory    0x40000000  0x5FFFFFFF  RW
+Memory   =  HPB1         Memory    0x41000000  0x4100FFFF  RW
+Memory   =  HPB2         Memory    0x42000000  0x42005FFF  RW
+Memory   =  PPB          Memory    0xE0000000  0xE00FFFFF  RW
+Memory   =  SCS          Memory    0xE000E000  0xE000EFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = ATSAML22G16A.svd

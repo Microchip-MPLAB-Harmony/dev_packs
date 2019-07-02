@@ -1,0 +1,1207 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.3" xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd" xs:noNamespaceSchemaLocation="PACK.ATMEL.xsd">
+   <vendor>Microchip</vendor>
+   <url>http://packs.download.atmel.com/</url>
+   <name>PIC32MK-GP_DFP</name>
+   <description>Microchip PIC32MK-GP Series Device Support</description>
+   <releases>
+      <release version="1.0.43" date="2019-05-14">Fixed GPIO port definitions, POSCGain and POSCFGain bit field definition, Excluded Interrupt Offset registers OFF126-129, OFF139-147, OFF151-153 on 64 pin variants.</release>
+      <release version="1.0.21" date="2019-01-24">Initial release.</release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>PIC32MK-GP</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="PIC32MK-GP" Dvendor="Microchip:3">
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="PIC32MK1024GPE100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPE100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPE100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPE100" title="Device page for PIC32MK1024GPE100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPE100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPK064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPK064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPK064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPK064" title="Device page for PIC32MK1024GPK064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPK064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPK100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPK100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPK100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPK100" title="Device page for PIC32MK0512GPK100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPK100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPL064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPL064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPL064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPL064" title="Device page for PIC32MK0512GPL064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPL064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPE100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPE100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPE100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPE100" title="Device page for PIC32MK0512GPE100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPE100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPD064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPD064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPD064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPD064" title="Device page for PIC32MK1024GPD064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPD064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPL064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPL064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPL064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPL064" title="Device page for PIC32MK1024GPL064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPL064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPD100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPD100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPD100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPD100" title="Device page for PIC32MK0512GPD100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPD100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPL100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPL100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPL100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPL100" title="Device page for PIC32MK1024GPL100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPL100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPE064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPE064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPE064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPE064" title="Device page for PIC32MK0512GPE064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPE064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPK064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPK064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPK064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPK064" title="Device page for PIC32MK0512GPK064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPK064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPL100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPL100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPL100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPL100" title="Device page for PIC32MK0512GPL100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPL100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPD100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPD100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPD100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPD100" title="Device page for PIC32MK1024GPD100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPD100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK0512GPD064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK0512GPD064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x80000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x20000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK0512GPD064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK0512GPD064" title="Device page for PIC32MK0512GPD064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK0512GPD064" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPK100">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPK100.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="85"/>
+                  <at:memory exec="" name="lowerbootaliasaltconfig" rw="" size="0x50" start="0x1fc03f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasaltconfig" rw="" size="0x50" start="0x1fc23f30" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot1config" rw="" size="0x50" start="0x1fc43f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="altboot2config" rw="" size="0x50" start="0x1fc63f30" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3f30" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3f30" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3f30" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3f30" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPK100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPK100" title="Device page for PIC32MK1024GPK100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPK100" title="Datasheet"/>
+         </device>
+         <device Dname="PIC32MK1024GPE064">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="DP_FPU"/>
+            <compile header="include/xc.h"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension" schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MK1024GPE064.atdf"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:variant ordercode="" vccmin="2.2" vccmax="3.6" tempmin="-40" tempmax="+85"/>
+                  <at:memory exec="" name="upperbootaliasconfig" rw="" size="0x50" start="0x1fc23fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1config" rw="" size="0x50" start="0x1fc43fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2config" rw="" size="0x50" start="0x1fc63fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1" rw="" size="0x3fb0" start="0x1fc40000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot1lastpage" rw="" size="0x1000" start="0x1fc44000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2" rw="" size="0x3fb0" start="0x1fc60000" type="" address-space="base"/>
+                  <at:memory exec="" name="boot2lastpage" rw="" size="0x1000" start="0x1fc64000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootalias" rw="" size="0x3fb0" start="0x1fc20000" type="" address-space="base"/>
+                  <at:memory exec="" name="upperbootaliaslastpage" rw="" size="0x1000" start="0x1fc24000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootalias" rw="" size="0x3fb0" start="0x1fc00000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliaslastpage" rw="" size="0x1000" start="0x1fc04000" type="" address-space="base"/>
+                  <at:memory exec="" name="code" rw="" size="0x100000" start="0x1d000000" type="" address-space="base"/>
+                  <at:memory exec="" name="lowerbootaliasconfig" rw="" size="0x50" start="0x1fc03fb0" type="" address-space="base"/>
+                  <at:memory exec="" name="adccal" rw="" size="0x1c" start="0x1fc45000" type="" address-space="base"/>
+                  <at:memory exec="" name="serial" rw="" size="0x10" start="0x1fc45020" type="" address-space="base"/>
+                  <at:memory exec="" name="eedatacal" rw="" size="0x10" start="0x1fc45030" type="" address-space="base"/>
+                  <at:memory exec="" name="devid" rw="" size="0x0" start="0xffffffff" type="" address-space="base"/>
+                  <at:memory exec="" name="emulation" rw="" size="0x100000" start="0xff300000" type="" address-space="base"/>
+                  <at:memory exec="" name="kseg0_data_mem" rw="" size="0x40000" start="0x00000000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_std" rw="" size="0x2000" start="0x1f800000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb1_fast" rw="" size="0x2000" start="0x1f810000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb2_std" rw="" size="0xe200" start="0x1f820000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb3_std" rw="" size="0xc800" start="0x1f840000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb4_std" rw="" size="0x700" start="0x1f860000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb5_std" rw="" size="0xb000" start="0x1f880000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_pb6_std" rw="" size="0x400" start="0x1f8c0000" type="" address-space="base"/>
+                  <at:memory exec="" name="periph_ssx" rw="" size="0x10000" start="0x1f8f0000" type="" address-space="base"/>
+                  <at:memory exec="" name="testmem" rw="" size="0x1000" start="0x1fc65000" type="" address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension" schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MK1024GPE064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MK1024GPE064" title="Device page for PIC32MK1024GPE064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MK1024GPE064" title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+   <conditions>
+      <condition id="ARMCC">
+         <accept Tcompiler="ARMCC"/>
+      </condition>
+      <condition id="ARMCC Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+      </condition>
+      <condition id="GCC">
+         <accept Tcompiler="GCC"/>
+      </condition>
+      <condition id="GCC Exe">
+         <accept Tcompiler="GCC" Toutput="exe"/>
+      </condition>
+      <condition id="IAR">
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="IAR Exe">
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C">
+         <accept Tcompiler="ARMCC"/>
+         <accept Tcompiler="GCC"/>
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="C Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+         <accept Tcompiler="GCC" Toutput="exe"/>
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C Lib">
+         <accept Tcompiler="ARMCC" Toutput="lib"/>
+         <accept Tcompiler="GCC" Toutput="lib"/>
+         <accept Tcompiler="IAR" Toutput="lib"/>
+      </condition>
+      <condition id="PIC32MK1024GPE100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPE100"/>
+      </condition>
+      <condition id="PIC32MK1024GPK064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPK064"/>
+      </condition>
+      <condition id="PIC32MK0512GPK100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPK100"/>
+      </condition>
+      <condition id="PIC32MK0512GPL064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPL064"/>
+      </condition>
+      <condition id="PIC32MK0512GPE100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPE100"/>
+      </condition>
+      <condition id="PIC32MK1024GPD064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPD064"/>
+      </condition>
+      <condition id="PIC32MK1024GPL064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPL064"/>
+      </condition>
+      <condition id="PIC32MK0512GPD100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPD100"/>
+      </condition>
+      <condition id="PIC32MK1024GPL100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPL100"/>
+      </condition>
+      <condition id="PIC32MK0512GPE064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPE064"/>
+      </condition>
+      <condition id="PIC32MK0512GPK064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPK064"/>
+      </condition>
+      <condition id="PIC32MK0512GPL100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPL100"/>
+      </condition>
+      <condition id="PIC32MK1024GPD100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPD100"/>
+      </condition>
+      <condition id="PIC32MK0512GPD064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK0512GPD064"/>
+      </condition>
+      <condition id="PIC32MK1024GPK100">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPK100"/>
+      </condition>
+      <condition id="PIC32MK1024GPE064">
+         <require Dvendor="Microchip:3" Dname="PIC32MK1024GPE064"/>
+      </condition>
+   </conditions>
+   <components>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPE100">
+         <description>Headers and startup code for Microchip PIC32MK1024GPE100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPK064">
+         <description>Headers and startup code for Microchip PIC32MK1024GPK064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPK100">
+         <description>Headers and startup code for Microchip PIC32MK0512GPK100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPL064">
+         <description>Headers and startup code for Microchip PIC32MK0512GPL064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPE100">
+         <description>Headers and startup code for Microchip PIC32MK0512GPE100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPD064">
+         <description>Headers and startup code for Microchip PIC32MK1024GPD064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPL064">
+         <description>Headers and startup code for Microchip PIC32MK1024GPL064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPD100">
+         <description>Headers and startup code for Microchip PIC32MK0512GPD100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPL100">
+         <description>Headers and startup code for Microchip PIC32MK1024GPL100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPE064">
+         <description>Headers and startup code for Microchip PIC32MK0512GPE064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPK064">
+         <description>Headers and startup code for Microchip PIC32MK0512GPK064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPL100">
+         <description>Headers and startup code for Microchip PIC32MK0512GPL100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPD100">
+         <description>Headers and startup code for Microchip PIC32MK1024GPD100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK0512GPD064">
+         <description>Headers and startup code for Microchip PIC32MK0512GPD064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPK100">
+         <description>Headers and startup code for Microchip PIC32MK1024GPK100</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip" Cclass="Device" Cgroup="Startup" Cversion="1.0.0" condition="PIC32MK1024GPE064">
+         <description>Headers and startup code for Microchip PIC32MK1024GPE064</description>
+         <files>
+            <file condition="C" category="include" name="include"/>
+            <file condition="C" category="header" name="include/xc.h"/>
+         </files>
+      </component>
+   </components>
+</package>

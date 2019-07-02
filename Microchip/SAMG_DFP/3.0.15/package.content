@@ -1,0 +1,795 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMG51G18">
+      <resource type="atdf" subdir="samg51/atdf">
+        <includes pattern="ATSAMG51G18.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg51/edc">
+        <includes pattern="ATSAMG51G18.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg51/svd">
+        <includes pattern="ATSAMG51G18.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg51/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg51g18.h"/>
+        <includes pattern="system_samg51.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg51g18.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG51G18__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg51/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg51/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg51/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg51/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg51/armcc">
+        <includes pattern="armcc/startup_samg51g18.s"/>
+        <includes pattern="system_samg51g18.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg51/gcc">
+        <includes pattern="gcc/startup_samg51g18.c"/>
+        <includes pattern="system_samg51g18.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg51/gcc">
+        <includes pattern="gcc/samg51g18_flash.ld"/>
+        <includes pattern="gcc/samg51g18_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg51/iar">
+        <includes pattern="iar/startup_samg51g18.c"/>
+        <includes pattern="system_samg51g18.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg51/iar">
+        <includes pattern="config/linker/Microchip/atsamg51g18/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg51g18/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg51/iar">
+        <includes pattern="config/devices/Atmel/SAMG51/ATSAMG51G18.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG51/ATSAMG51G18.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG51.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG51G18.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg51/iar">
+        <includes pattern="config/flashloader/Atmel/samg51g18/samg51g18-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg51g18/samg51g18-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg51g18/samg51g18-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg51/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG54J19">
+      <resource type="atdf" subdir="samg54/atdf">
+        <includes pattern="ATSAMG54J19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg54/edc">
+        <includes pattern="ATSAMG54J19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg54/svd">
+        <includes pattern="ATSAMG54J19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg54/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg54j19.h"/>
+        <includes pattern="system_samg54.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg54j19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG54J19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg54/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg54/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg54/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg54/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg54/armcc">
+        <includes pattern="armcc/startup_samg54j19.s"/>
+        <includes pattern="system_samg54j19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg54/gcc">
+        <includes pattern="gcc/startup_samg54j19.c"/>
+        <includes pattern="system_samg54j19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg54/gcc">
+        <includes pattern="gcc/samg54j19_flash.ld"/>
+        <includes pattern="gcc/samg54j19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg54/iar">
+        <includes pattern="iar/startup_samg54j19.c"/>
+        <includes pattern="system_samg54j19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg54/iar">
+        <includes pattern="config/linker/Microchip/atsamg54j19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg54j19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg54/iar">
+        <includes pattern="config/devices/Atmel/SAMG54/ATSAMG54J19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG54/ATSAMG54J19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG54.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG54J19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg54/iar">
+        <includes pattern="config/flashloader/Atmel/samg54j19/samg54j19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg54j19/samg54j19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg54j19/samg54j19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg54/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG54N19">
+      <resource type="atdf" subdir="samg54/atdf">
+        <includes pattern="ATSAMG54N19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg54/edc">
+        <includes pattern="ATSAMG54N19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg54/svd">
+        <includes pattern="ATSAMG54N19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg54/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg54n19.h"/>
+        <includes pattern="system_samg54.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg54n19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG54N19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg54/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg54/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg54/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg54/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg54/armcc">
+        <includes pattern="armcc/startup_samg54n19.s"/>
+        <includes pattern="system_samg54n19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg54/gcc">
+        <includes pattern="gcc/startup_samg54n19.c"/>
+        <includes pattern="system_samg54n19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg54/gcc">
+        <includes pattern="gcc/samg54n19_flash.ld"/>
+        <includes pattern="gcc/samg54n19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg54/iar">
+        <includes pattern="iar/startup_samg54n19.c"/>
+        <includes pattern="system_samg54n19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg54/iar">
+        <includes pattern="config/linker/Microchip/atsamg54n19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg54n19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg54/iar">
+        <includes pattern="config/devices/Atmel/SAMG54/ATSAMG54N19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG54/ATSAMG54N19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG54.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG54N19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg54/iar">
+        <includes pattern="config/flashloader/Atmel/samg54n19/samg54n19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg54n19/samg54n19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg54n19/samg54n19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg54/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG51N18">
+      <resource type="atdf" subdir="samg51/atdf">
+        <includes pattern="ATSAMG51N18.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg51/edc">
+        <includes pattern="ATSAMG51N18.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg51/svd">
+        <includes pattern="ATSAMG51N18.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg51/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg51n18.h"/>
+        <includes pattern="system_samg51.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg51n18.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG51N18__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg51/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg51/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg51/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg51/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg51/armcc">
+        <includes pattern="armcc/startup_samg51n18.s"/>
+        <includes pattern="system_samg51n18.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg51/gcc">
+        <includes pattern="gcc/startup_samg51n18.c"/>
+        <includes pattern="system_samg51n18.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg51/gcc">
+        <includes pattern="gcc/samg51n18_flash.ld"/>
+        <includes pattern="gcc/samg51n18_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg51/iar">
+        <includes pattern="iar/startup_samg51n18.c"/>
+        <includes pattern="system_samg51n18.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg51/iar">
+        <includes pattern="config/linker/Microchip/atsamg51n18/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg51n18/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg51/iar">
+        <includes pattern="config/devices/Atmel/SAMG51/ATSAMG51N18.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG51/ATSAMG51N18.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG51.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG51N18.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg51/iar">
+        <includes pattern="config/flashloader/Atmel/samg51n18/samg51n18-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg51n18/samg51n18-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg51n18/samg51n18-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg51/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG55J19">
+      <resource type="atdf" subdir="samg55/atdf">
+        <includes pattern="ATSAMG55J19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg55/edc">
+        <includes pattern="ATSAMG55J19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg55/svd">
+        <includes pattern="ATSAMG55J19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg55/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg55j19.h"/>
+        <includes pattern="system_samg55.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/crccu.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/udp.h"/>
+        <includes pattern="component/uhp.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg55j19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG55J19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg55/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg55/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg55/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg55/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg55/armcc">
+        <includes pattern="armcc/startup_samg55j19.s"/>
+        <includes pattern="system_samg55j19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg55/gcc">
+        <includes pattern="gcc/startup_samg55j19.c"/>
+        <includes pattern="system_samg55j19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg55/gcc">
+        <includes pattern="gcc/samg55j19_flash.ld"/>
+        <includes pattern="gcc/samg55j19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg55/iar">
+        <includes pattern="iar/startup_samg55j19.c"/>
+        <includes pattern="system_samg55j19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg55/iar">
+        <includes pattern="config/linker/Microchip/atsamg55j19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg55j19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg55/iar">
+        <includes pattern="config/devices/Atmel/SAMG55/ATSAMG55J19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG55/ATSAMG55J19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG55.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG55J19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg55/iar">
+        <includes pattern="config/flashloader/Atmel/samg55j19/samg55j19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg55j19/samg55j19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg55j19/samg55j19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg55/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG54G19">
+      <resource type="atdf" subdir="samg54/atdf">
+        <includes pattern="ATSAMG54G19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg54/edc">
+        <includes pattern="ATSAMG54G19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg54/svd">
+        <includes pattern="ATSAMG54G19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg54/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg54g19.h"/>
+        <includes pattern="system_samg54.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg54g19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG54G19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg54/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg54/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg54/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg54/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg54/armcc">
+        <includes pattern="armcc/startup_samg54g19.s"/>
+        <includes pattern="system_samg54g19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg54/gcc">
+        <includes pattern="gcc/startup_samg54g19.c"/>
+        <includes pattern="system_samg54g19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg54/gcc">
+        <includes pattern="gcc/samg54g19_flash.ld"/>
+        <includes pattern="gcc/samg54g19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg54/iar">
+        <includes pattern="iar/startup_samg54g19.c"/>
+        <includes pattern="system_samg54g19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg54/iar">
+        <includes pattern="config/linker/Microchip/atsamg54g19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg54g19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg54/iar">
+        <includes pattern="config/devices/Atmel/SAMG54/ATSAMG54G19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG54/ATSAMG54G19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG54.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG54G19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg54/iar">
+        <includes pattern="config/flashloader/Atmel/samg54g19/samg54g19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg54g19/samg54g19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg54g19/samg54g19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg54/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG53N19">
+      <resource type="atdf" subdir="samg53/atdf">
+        <includes pattern="ATSAMG53N19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg53/edc">
+        <includes pattern="ATSAMG53N19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg53/svd">
+        <includes pattern="ATSAMG53N19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg53/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg53n19.h"/>
+        <includes pattern="system_samg53.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg53n19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG53N19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg53/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg53/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg53/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg53/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg53/armcc">
+        <includes pattern="armcc/startup_samg53n19.s"/>
+        <includes pattern="system_samg53n19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg53/gcc">
+        <includes pattern="gcc/startup_samg53n19.c"/>
+        <includes pattern="system_samg53n19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg53/gcc">
+        <includes pattern="gcc/samg53n19_flash.ld"/>
+        <includes pattern="gcc/samg53n19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg53/iar">
+        <includes pattern="iar/startup_samg53n19.c"/>
+        <includes pattern="system_samg53n19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg53/iar">
+        <includes pattern="config/linker/Microchip/atsamg53n19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg53n19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg53/iar">
+        <includes pattern="config/devices/Atmel/SAMG53/ATSAMG53N19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG53/ATSAMG53N19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG53.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG53N19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg53/iar">
+        <includes pattern="config/flashloader/Atmel/samg53n19/samg53n19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg53n19/samg53n19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg53n19/samg53n19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg53/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG55G19">
+      <resource type="atdf" subdir="samg55/atdf">
+        <includes pattern="ATSAMG55G19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg55/edc">
+        <includes pattern="ATSAMG55G19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg55/svd">
+        <includes pattern="ATSAMG55G19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg55/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg55g19.h"/>
+        <includes pattern="system_samg55.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/crccu.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/udp.h"/>
+        <includes pattern="component/uhp.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg55g19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG55G19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg55/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg55/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg55/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg55/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg55/armcc">
+        <includes pattern="armcc/startup_samg55g19.s"/>
+        <includes pattern="system_samg55g19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg55/gcc">
+        <includes pattern="gcc/startup_samg55g19.c"/>
+        <includes pattern="system_samg55g19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg55/gcc">
+        <includes pattern="gcc/samg55g19_flash.ld"/>
+        <includes pattern="gcc/samg55g19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg55/iar">
+        <includes pattern="iar/startup_samg55g19.c"/>
+        <includes pattern="system_samg55g19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg55/iar">
+        <includes pattern="config/linker/Microchip/atsamg55g19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg55g19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg55/iar">
+        <includes pattern="config/devices/Atmel/SAMG55/ATSAMG55G19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG55/ATSAMG55G19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG55.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG55G19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg55/iar">
+        <includes pattern="config/flashloader/Atmel/samg55g19/samg55g19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg55g19/samg55g19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg55g19/samg55g19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg55/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMG53G19">
+      <resource type="atdf" subdir="samg53/atdf">
+        <includes pattern="ATSAMG53G19.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samg53/edc">
+        <includes pattern="ATSAMG53G19.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samg53/svd">
+        <includes pattern="ATSAMG53G19.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samg53/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samg53g19.h"/>
+        <includes pattern="system_samg53.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/twi.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samg53g19.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMG53G19__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samg53/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samg53/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samg53/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samg53/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samg53/armcc">
+        <includes pattern="armcc/startup_samg53g19.s"/>
+        <includes pattern="system_samg53g19.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samg53/gcc">
+        <includes pattern="gcc/startup_samg53g19.c"/>
+        <includes pattern="system_samg53g19.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samg53/gcc">
+        <includes pattern="gcc/samg53g19_flash.ld"/>
+        <includes pattern="gcc/samg53g19_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samg53/iar">
+        <includes pattern="iar/startup_samg53g19.c"/>
+        <includes pattern="system_samg53g19.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samg53/iar">
+        <includes pattern="config/linker/Microchip/atsamg53g19/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamg53g19/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samg53/iar">
+        <includes pattern="config/devices/Atmel/SAMG53/ATSAMG53G19.i79"/>
+        <includes pattern="config/devices/Atmel/SAMG53/ATSAMG53G19.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAMG53.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMG53G19.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samg53/iar">
+        <includes pattern="config/flashloader/Atmel/samg53g19/samg53g19-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samg53g19/samg53g19-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samg53g19/samg53g19-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samg53/../scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+		<releases>
+			<release version="3.0.BUILDNUMBER">Succeeds Atmel.SAMG_DFP 2.1.97. Added programming/debugging support in MPLAB X. Legacy headers removed.</release>
+		</releases>
+	</pdsc>
+</package>

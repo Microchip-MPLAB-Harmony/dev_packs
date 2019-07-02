@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMG51N18</tag>
+  <display>Atmel SAMG51N18</display>
+  <data>$CUR_DIR$\ATSAMG51N18.i79</data>
+</optionMenuItem>

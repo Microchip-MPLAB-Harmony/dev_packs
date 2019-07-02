@@ -1,0 +1,48 @@
+/* ARM CPU
+   Copyright (C) 2003-2016 Free Software Foundation, Inc.
+   Written by Microchip
+
+   This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify it
+   under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   GCC is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   General Public License for more details.
+
+   Under Section 7 of GPL version 3, you are granted additional
+   permissions described in the GCC Runtime Library Exception, version
+   3.1, as published by the Free Software Foundation.
+
+   You should have received a copy of the GNU General Public License and
+   a copy of the GCC Runtime Library Exception along with this program;
+   see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/* Before using #include to read this file, define a macro:
+
+    PIC32C_MCU (NAME, ARCH, DEV_ATTRIBUTE, MACRO, FPU)
+
+   The NAME is the name of the device, represented as a string constant.
+
+   Some tools assume no whitespace up to the first "," in each entry.
+*/
+
+/*
+PIC32C_MCU (NAME, ARCH, DEV_ATTRIBUTE, MACRO, FPU)
+*/
+
+PIC32C_MCU("ATSAMS70N20",  "cortex-m7",  CORTEX_M7,  "__SAMS70N20__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70N19",  "cortex-m7",  CORTEX_M7,  "__SAMS70N19__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70N21",  "cortex-m7",  CORTEX_M7,  "__SAMS70N21__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70Q21",  "cortex-m7",  CORTEX_M7,  "__SAMS70Q21__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70Q20",  "cortex-m7",  CORTEX_M7,  "__SAMS70Q20__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70J21",  "cortex-m7",  CORTEX_M7,  "__SAMS70J21__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70Q19",  "cortex-m7",  CORTEX_M7,  "__SAMS70Q19__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70J19",  "cortex-m7",  CORTEX_M7,  "__SAMS70J19__",  "fpv5-d16")
+PIC32C_MCU("ATSAMS70J20",  "cortex-m7",  CORTEX_M7,  "__SAMS70J20__",  "fpv5-d16")
+

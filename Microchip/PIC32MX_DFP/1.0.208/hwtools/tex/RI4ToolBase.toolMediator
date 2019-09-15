@@ -1,0 +1,516 @@
+<tex:tex xmlns:tex="http://crownking/tex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/tex ../../schema/tex/tex.xsd">
+  <tex:version tex:major="0" tex:minor="0" tex:rev="0"/>
+  <tex:lookuptable>
+    <tex:devicerecord tex:device="PIC32MX110F016B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX110F016C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX110F016D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX120F032B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX120F032C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX120F032D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX120F064H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F064B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F064C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F064D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F128H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F128L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F256B">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX130F256D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX150F128B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX150F128C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX150F128D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX150F256H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX150F256L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX170F256B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX170F256D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX170F512H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX170F512L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX210F016B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX210F016C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX210F016D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX220F032B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX220F032C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX220F032D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F064B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F064C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F064D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F128H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F128L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F256B">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX230F256D">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX250F128B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX250F128C">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX250F128D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX250F256H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX250F256L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX270F256B">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX270F256D">
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX270F512H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX270F512L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX320F032H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX320F064H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX320F128H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX320F128L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX330F064H">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX330F064L">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX340F128H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX340F128L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX340F256H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX340F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX350F128H">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX350F128L">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX350F256H">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX350F256L">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX360F256L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX360F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX370F512H">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX370F512L">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX420F032H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX430F064H">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX430F064L">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX440F128H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX440F128L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX440F256H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX440F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX450F128H">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX450F128L">
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX450F256H">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX450F256L">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX460F256L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX460F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX470F512H">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX470F512L">
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX530F128H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX530F128L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX534F064H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX534F064L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX550F256H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX550F256L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX564F064H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX564F064L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX564F128H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX564F128L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX570F512H">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX570F512L">
+      <tex:fileref tex:descid="RIPE_11" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX575F256H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX575F256L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX575F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX575F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX664F064H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX664F064L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX664F128H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX664F128L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX675F256H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX675F256L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX675F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX675F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX695F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX695F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX764F128H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX764F128L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX775F256H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX775F256L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX775F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX775F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX795F512H">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX795F512L">
+      <tex:fileref tex:descid="RIDE_06" tex:param="de"/>
+      <tex:fileref tex:descid="RIPE_06" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_11_A" tex:param="PIC32JTAG"/>
+    </tex:devicerecord>
+  </tex:lookuptable>
+  <tex:execdesc tex:descid="RIDE_11" tex:environ="FIRMWARE" tex:environpath="RI_ICD4Common" tex:fileregexp="RIDE_11_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="ri4files.jar" tex:rootdir="$MPLAB/REALICE">
+    <tex:memoryload tex:loadat="0x1FC00490" tex:memory="BootMemory" tex:numbytes="0x760"/>
+    <tex:reserve tex:end="0x01fC" tex:memory="FileRegisters" tex:start="0x0000"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="RIPE_11" tex:environ="FIRMWARE" tex:environpath="RI_ICD4Common" tex:fileregexp="RIPE_11_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="ri4files.jar" tex:rootdir="$MPLAB/REALICE">
+    <tex:memoryload tex:loadat="0x0900" tex:memory="FileRegisters" tex:numbytes="0x0fd0"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="RIDE_06" tex:environ="FIRMWARE" tex:environpath="RI_ICD4Common" tex:fileregexp="RIDE_06_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="ri4files.jar" tex:rootdir="$MPLAB/REALICE">
+    <tex:memoryload tex:loadat="0x1FC02000" tex:memory="BootMemory" tex:numbytes="0x500"/>
+    <tex:reserve tex:end="0x01fC" tex:memory="FileRegisters" tex:start="0x0000"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="RIPE_06" tex:environ="FIRMWARE" tex:environpath="RI_ICD4Common" tex:fileregexp="RIPE_06_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="ri4files.jar" tex:rootdir="$MPLAB/REALICE">
+    <tex:memoryload tex:loadat="0x1FC02000" tex:memory="BootMemory" tex:numbytes="0x500"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="RIDE_11_A" tex:environ="FIRMWARE" tex:environpath="RI_ICD4Common" tex:fileregexp="RIDE_11_A_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="ri4files.jar" tex:rootdir="$MPLAB/REALICE">
+    <tex:memoryload tex:loadat="0x1FC02000" tex:memory="BootMemory" tex:numbytes="0x760"/>
+    <tex:reserve tex:end="0x01fC" tex:memory="FileRegisters" tex:start="0x0000"/>
+  </tex:execdesc>
+</tex:tex>

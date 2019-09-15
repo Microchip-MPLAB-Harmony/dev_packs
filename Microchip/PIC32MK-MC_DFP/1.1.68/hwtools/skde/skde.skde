@@ -1,0 +1,3 @@
+<skde:skde xmlns:skde="http://crownking/skde" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/skde ../../schema/skde/skde.xsd">
+  <skde:version skde:major="0" skde:minor="0" skde:rev="0"/>
+</skde:skde>

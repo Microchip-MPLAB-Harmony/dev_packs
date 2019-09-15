@@ -1,0 +1,196 @@
+<pk4:pk4 xmlns:pk4="http://crownking/pk4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pk4 ../../schema/pk4/pk4.xsd">
+  <pk4:version pk4:major="0" pk4:minor="0" pk4:rev="0"/>
+  <pk4:baseclass pk4:classname="PK4InitInterfaceProvider"/>
+  <pk4:device pk4:name="PIC32MZ0512EFE064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFE100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFE124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFE144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFF064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFF100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFF124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFF144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFK064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFK100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFK124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ0512EFK144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFE064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFE100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFE124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFE144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFF064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFF100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFF124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFF144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFG064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFG100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFG124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFG144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFH064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFH100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFH124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFH144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFK064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFK100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFK124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFK144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFM064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFM100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFM124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ1024EFM144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFG064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFG100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFG124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFG144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFH064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFH100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFH124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFH144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFM064">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFM100">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFM124">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="PIC32MZ2048EFM144">
+    <pk4:basicinfo pk4:programmertype="PIC32MZ"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+</pk4:pk4>

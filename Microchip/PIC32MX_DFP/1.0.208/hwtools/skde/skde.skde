@@ -1,0 +1,120 @@
+<skde:skde xmlns:skde="http://crownking/skde" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/skde ../../schema/skde/skde.xsd">
+  <skde:version skde:major="0" skde:minor="0" skde:rev="0"/>
+  <skde:device skde:name="PIC32MX320F032H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX320F064H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX320F128H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX320F128L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX340F128H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX340F128L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX340F256H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX340F512H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX360F256L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX360F512L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX420F032H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX440F128H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX440F128L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX440F256H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX440F512H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX460F256L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX460F512L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX534F064H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX534F064L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX564F064H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX564F064L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX564F128H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX564F128L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX575F256H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX575F256L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX575F512H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX575F512L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX664F064H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX664F064L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX664F128H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX664F128L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX675F512H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX675F512L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX695F512H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX695F512L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX764F128H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX764F128L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX795F512H">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+  <skde:device skde:name="PIC32MX795F512L">
+    <skde:basicinfo skde:pid="0x00E0" skde:imageversion="00.00.00" skde:reflasherversion="00.00.00" skde:releaseonexit="true" skde:type="PIC32" skde:id="PIC32_1" skde:configsize="16" skde:usepe="true"/>
+  </skde:device>
+</skde:skde>

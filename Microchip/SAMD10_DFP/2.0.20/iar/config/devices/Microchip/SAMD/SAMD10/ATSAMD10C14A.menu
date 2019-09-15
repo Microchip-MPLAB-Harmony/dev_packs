@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMD10C14A</tag>
+  <display>Microchip ATSAMD10C14A</display>
+  <data>$CUR_DIR$\ATSAMD10C14A.i79</data>
+</optionMenuItem>

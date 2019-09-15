@@ -1,0 +1,845 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAML11D16A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML11D16A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML11D16A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML11D16A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml11d16a.h"/>
+        <includes pattern="system_saml11.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml11d16a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML11D16A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml11d16a.s"/>
+        <includes pattern="system_saml11d16a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml11d16a.c"/>
+        <includes pattern="system_saml11d16a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml11d16a_flash.ld"/>
+        <includes pattern="gcc/saml11d16a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml11d16a.c"/>
+        <includes pattern="system_saml11d16a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml11d16a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml11d16a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML11.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML11D16A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11D16A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11D16A.menu"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/saml11d16a/saml11d16a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml11d16a/saml11d16a-dataflash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11d16a/saml11d16a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11d16a/saml11d16a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m23.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+        <includes pattern="ATSAML11D14A/startup_atsaml11d14a.c"/>
+        <includes pattern="ATSAML11D14A/configuration.data"/>
+        <includes pattern="ATSAML11D14A/specs-ATSAML11D14A"/>
+        <includes pattern="ATSAML11D14A/ATSAML11D14A.ld"/>
+        <includes pattern="ATSAML11E14A/startup_atsaml11e14a.c"/>
+        <includes pattern="ATSAML11E14A/specs-ATSAML11E14A"/>
+        <includes pattern="ATSAML11E14A/configuration.data"/>
+        <includes pattern="ATSAML11E14A/ATSAML11E14A.ld"/>
+        <includes pattern="ATSAML11E16A/specs-ATSAML11E16A"/>
+        <includes pattern="ATSAML11E16A/configuration.data"/>
+        <includes pattern="ATSAML11E16A/startup_atsaml11e16a.c"/>
+        <includes pattern="ATSAML11E16A/ATSAML11E16A.ld"/>
+        <includes pattern="device-specs/specs-ATSAML11E16A"/>
+        <includes pattern="device-specs/specs-ATSAML11E14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D15A"/>
+        <includes pattern="device-specs/specs-ATSAML11E15A"/>
+        <includes pattern="device-specs/specs-ATSAML11D14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D16A"/>
+        <includes pattern="ATSAML11E15A/configuration.data"/>
+        <includes pattern="ATSAML11E15A/startup_atsaml11e15a.c"/>
+        <includes pattern="ATSAML11E15A/specs-ATSAML11E15A"/>
+        <includes pattern="ATSAML11E15A/ATSAML11E15A.ld"/>
+        <includes pattern="ATSAML11D15A/configuration.data"/>
+        <includes pattern="ATSAML11D15A/specs-ATSAML11D15A"/>
+        <includes pattern="ATSAML11D15A/ATSAML11D15A.ld"/>
+        <includes pattern="ATSAML11D15A/startup_atsaml11d15a.c"/>
+        <includes pattern="ATSAML11D16A/ATSAML11D16A.ld"/>
+        <includes pattern="ATSAML11D16A/startup_atsaml11d16a.c"/>
+        <includes pattern="ATSAML11D16A/configuration.data"/>
+        <includes pattern="ATSAML11D16A/specs-ATSAML11D16A"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+      </resource>
+      <resource type="misc">
+        <includes pattern="install.bat"/>
+        <includes pattern="uninstall.bat"/>
+        <includes pattern="studio/SecureSolutionTemplateWithBoot.zip"/>
+        <includes pattern="studio/SecureSolutionTemplate.zip"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML11E16A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML11E16A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML11E16A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML11E16A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml11e16a.h"/>
+        <includes pattern="system_saml11.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml11e16a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML11E16A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml11e16a.s"/>
+        <includes pattern="system_saml11e16a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml11e16a.c"/>
+        <includes pattern="system_saml11e16a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml11e16a_flash.ld"/>
+        <includes pattern="gcc/saml11e16a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml11e16a.c"/>
+        <includes pattern="system_saml11e16a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml11e16a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml11e16a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML11.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML11E16A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11E16A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11E16A.menu"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/saml11e16a/saml11e16a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml11e16a/saml11e16a-dataflash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11e16a/saml11e16a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11e16a/saml11e16a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m23.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+        <includes pattern="ATSAML11D14A/startup_atsaml11d14a.c"/>
+        <includes pattern="ATSAML11D14A/configuration.data"/>
+        <includes pattern="ATSAML11D14A/specs-ATSAML11D14A"/>
+        <includes pattern="ATSAML11D14A/ATSAML11D14A.ld"/>
+        <includes pattern="ATSAML11E14A/startup_atsaml11e14a.c"/>
+        <includes pattern="ATSAML11E14A/specs-ATSAML11E14A"/>
+        <includes pattern="ATSAML11E14A/configuration.data"/>
+        <includes pattern="ATSAML11E14A/ATSAML11E14A.ld"/>
+        <includes pattern="ATSAML11E16A/specs-ATSAML11E16A"/>
+        <includes pattern="ATSAML11E16A/configuration.data"/>
+        <includes pattern="ATSAML11E16A/startup_atsaml11e16a.c"/>
+        <includes pattern="ATSAML11E16A/ATSAML11E16A.ld"/>
+        <includes pattern="device-specs/specs-ATSAML11E16A"/>
+        <includes pattern="device-specs/specs-ATSAML11E14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D15A"/>
+        <includes pattern="device-specs/specs-ATSAML11E15A"/>
+        <includes pattern="device-specs/specs-ATSAML11D14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D16A"/>
+        <includes pattern="ATSAML11E15A/configuration.data"/>
+        <includes pattern="ATSAML11E15A/startup_atsaml11e15a.c"/>
+        <includes pattern="ATSAML11E15A/specs-ATSAML11E15A"/>
+        <includes pattern="ATSAML11E15A/ATSAML11E15A.ld"/>
+        <includes pattern="ATSAML11D15A/configuration.data"/>
+        <includes pattern="ATSAML11D15A/specs-ATSAML11D15A"/>
+        <includes pattern="ATSAML11D15A/ATSAML11D15A.ld"/>
+        <includes pattern="ATSAML11D15A/startup_atsaml11d15a.c"/>
+        <includes pattern="ATSAML11D16A/ATSAML11D16A.ld"/>
+        <includes pattern="ATSAML11D16A/startup_atsaml11d16a.c"/>
+        <includes pattern="ATSAML11D16A/configuration.data"/>
+        <includes pattern="ATSAML11D16A/specs-ATSAML11D16A"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+      </resource>
+      <resource type="misc">
+        <includes pattern="install.bat"/>
+        <includes pattern="uninstall.bat"/>
+        <includes pattern="studio/SecureSolutionTemplateWithBoot.zip"/>
+        <includes pattern="studio/SecureSolutionTemplate.zip"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML11E14A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML11E14A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML11E14A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML11E14A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml11e14a.h"/>
+        <includes pattern="system_saml11.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml11e14a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML11E14A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml11e14a.s"/>
+        <includes pattern="system_saml11e14a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml11e14a.c"/>
+        <includes pattern="system_saml11e14a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml11e14a_flash.ld"/>
+        <includes pattern="gcc/saml11e14a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml11e14a.c"/>
+        <includes pattern="system_saml11e14a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml11e14a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml11e14a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML11.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML11E14A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11E14A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11E14A.menu"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/saml11e14a/saml11e14a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml11e14a/saml11e14a-dataflash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11e14a/saml11e14a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11e14a/saml11e14a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m23.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+        <includes pattern="ATSAML11D14A/startup_atsaml11d14a.c"/>
+        <includes pattern="ATSAML11D14A/configuration.data"/>
+        <includes pattern="ATSAML11D14A/specs-ATSAML11D14A"/>
+        <includes pattern="ATSAML11D14A/ATSAML11D14A.ld"/>
+        <includes pattern="ATSAML11E14A/startup_atsaml11e14a.c"/>
+        <includes pattern="ATSAML11E14A/specs-ATSAML11E14A"/>
+        <includes pattern="ATSAML11E14A/configuration.data"/>
+        <includes pattern="ATSAML11E14A/ATSAML11E14A.ld"/>
+        <includes pattern="ATSAML11E16A/specs-ATSAML11E16A"/>
+        <includes pattern="ATSAML11E16A/configuration.data"/>
+        <includes pattern="ATSAML11E16A/startup_atsaml11e16a.c"/>
+        <includes pattern="ATSAML11E16A/ATSAML11E16A.ld"/>
+        <includes pattern="device-specs/specs-ATSAML11E16A"/>
+        <includes pattern="device-specs/specs-ATSAML11E14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D15A"/>
+        <includes pattern="device-specs/specs-ATSAML11E15A"/>
+        <includes pattern="device-specs/specs-ATSAML11D14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D16A"/>
+        <includes pattern="ATSAML11E15A/configuration.data"/>
+        <includes pattern="ATSAML11E15A/startup_atsaml11e15a.c"/>
+        <includes pattern="ATSAML11E15A/specs-ATSAML11E15A"/>
+        <includes pattern="ATSAML11E15A/ATSAML11E15A.ld"/>
+        <includes pattern="ATSAML11D15A/configuration.data"/>
+        <includes pattern="ATSAML11D15A/specs-ATSAML11D15A"/>
+        <includes pattern="ATSAML11D15A/ATSAML11D15A.ld"/>
+        <includes pattern="ATSAML11D15A/startup_atsaml11d15a.c"/>
+        <includes pattern="ATSAML11D16A/ATSAML11D16A.ld"/>
+        <includes pattern="ATSAML11D16A/startup_atsaml11d16a.c"/>
+        <includes pattern="ATSAML11D16A/configuration.data"/>
+        <includes pattern="ATSAML11D16A/specs-ATSAML11D16A"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+      </resource>
+      <resource type="misc">
+        <includes pattern="install.bat"/>
+        <includes pattern="uninstall.bat"/>
+        <includes pattern="studio/SecureSolutionTemplateWithBoot.zip"/>
+        <includes pattern="studio/SecureSolutionTemplate.zip"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML11E15A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML11E15A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML11E15A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML11E15A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml11e15a.h"/>
+        <includes pattern="system_saml11.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml11e15a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML11E15A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml11e15a.s"/>
+        <includes pattern="system_saml11e15a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml11e15a.c"/>
+        <includes pattern="system_saml11e15a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml11e15a_flash.ld"/>
+        <includes pattern="gcc/saml11e15a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml11e15a.c"/>
+        <includes pattern="system_saml11e15a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml11e15a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml11e15a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML11.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML11E15A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11E15A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11E15A.menu"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/saml11e15a/saml11e15a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml11e15a/saml11e15a-dataflash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11e15a/saml11e15a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11e15a/saml11e15a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m23.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+        <includes pattern="ATSAML11D14A/startup_atsaml11d14a.c"/>
+        <includes pattern="ATSAML11D14A/configuration.data"/>
+        <includes pattern="ATSAML11D14A/specs-ATSAML11D14A"/>
+        <includes pattern="ATSAML11D14A/ATSAML11D14A.ld"/>
+        <includes pattern="ATSAML11E14A/startup_atsaml11e14a.c"/>
+        <includes pattern="ATSAML11E14A/specs-ATSAML11E14A"/>
+        <includes pattern="ATSAML11E14A/configuration.data"/>
+        <includes pattern="ATSAML11E14A/ATSAML11E14A.ld"/>
+        <includes pattern="ATSAML11E16A/specs-ATSAML11E16A"/>
+        <includes pattern="ATSAML11E16A/configuration.data"/>
+        <includes pattern="ATSAML11E16A/startup_atsaml11e16a.c"/>
+        <includes pattern="ATSAML11E16A/ATSAML11E16A.ld"/>
+        <includes pattern="device-specs/specs-ATSAML11E16A"/>
+        <includes pattern="device-specs/specs-ATSAML11E14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D15A"/>
+        <includes pattern="device-specs/specs-ATSAML11E15A"/>
+        <includes pattern="device-specs/specs-ATSAML11D14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D16A"/>
+        <includes pattern="ATSAML11E15A/configuration.data"/>
+        <includes pattern="ATSAML11E15A/startup_atsaml11e15a.c"/>
+        <includes pattern="ATSAML11E15A/specs-ATSAML11E15A"/>
+        <includes pattern="ATSAML11E15A/ATSAML11E15A.ld"/>
+        <includes pattern="ATSAML11D15A/configuration.data"/>
+        <includes pattern="ATSAML11D15A/specs-ATSAML11D15A"/>
+        <includes pattern="ATSAML11D15A/ATSAML11D15A.ld"/>
+        <includes pattern="ATSAML11D15A/startup_atsaml11d15a.c"/>
+        <includes pattern="ATSAML11D16A/ATSAML11D16A.ld"/>
+        <includes pattern="ATSAML11D16A/startup_atsaml11d16a.c"/>
+        <includes pattern="ATSAML11D16A/configuration.data"/>
+        <includes pattern="ATSAML11D16A/specs-ATSAML11D16A"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+      </resource>
+      <resource type="misc">
+        <includes pattern="install.bat"/>
+        <includes pattern="uninstall.bat"/>
+        <includes pattern="studio/SecureSolutionTemplateWithBoot.zip"/>
+        <includes pattern="studio/SecureSolutionTemplate.zip"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML11D15A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML11D15A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML11D15A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML11D15A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml11d15a.h"/>
+        <includes pattern="system_saml11.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml11d15a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML11D15A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml11d15a.s"/>
+        <includes pattern="system_saml11d15a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml11d15a.c"/>
+        <includes pattern="system_saml11d15a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml11d15a_flash.ld"/>
+        <includes pattern="gcc/saml11d15a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml11d15a.c"/>
+        <includes pattern="system_saml11d15a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml11d15a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml11d15a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML11.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML11D15A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11D15A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11D15A.menu"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/saml11d15a/saml11d15a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml11d15a/saml11d15a-dataflash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11d15a/saml11d15a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11d15a/saml11d15a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m23.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+        <includes pattern="ATSAML11D14A/startup_atsaml11d14a.c"/>
+        <includes pattern="ATSAML11D14A/configuration.data"/>
+        <includes pattern="ATSAML11D14A/specs-ATSAML11D14A"/>
+        <includes pattern="ATSAML11D14A/ATSAML11D14A.ld"/>
+        <includes pattern="ATSAML11E14A/startup_atsaml11e14a.c"/>
+        <includes pattern="ATSAML11E14A/specs-ATSAML11E14A"/>
+        <includes pattern="ATSAML11E14A/configuration.data"/>
+        <includes pattern="ATSAML11E14A/ATSAML11E14A.ld"/>
+        <includes pattern="ATSAML11E16A/specs-ATSAML11E16A"/>
+        <includes pattern="ATSAML11E16A/configuration.data"/>
+        <includes pattern="ATSAML11E16A/startup_atsaml11e16a.c"/>
+        <includes pattern="ATSAML11E16A/ATSAML11E16A.ld"/>
+        <includes pattern="device-specs/specs-ATSAML11E16A"/>
+        <includes pattern="device-specs/specs-ATSAML11E14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D15A"/>
+        <includes pattern="device-specs/specs-ATSAML11E15A"/>
+        <includes pattern="device-specs/specs-ATSAML11D14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D16A"/>
+        <includes pattern="ATSAML11E15A/configuration.data"/>
+        <includes pattern="ATSAML11E15A/startup_atsaml11e15a.c"/>
+        <includes pattern="ATSAML11E15A/specs-ATSAML11E15A"/>
+        <includes pattern="ATSAML11E15A/ATSAML11E15A.ld"/>
+        <includes pattern="ATSAML11D15A/configuration.data"/>
+        <includes pattern="ATSAML11D15A/specs-ATSAML11D15A"/>
+        <includes pattern="ATSAML11D15A/ATSAML11D15A.ld"/>
+        <includes pattern="ATSAML11D15A/startup_atsaml11d15a.c"/>
+        <includes pattern="ATSAML11D16A/ATSAML11D16A.ld"/>
+        <includes pattern="ATSAML11D16A/startup_atsaml11d16a.c"/>
+        <includes pattern="ATSAML11D16A/configuration.data"/>
+        <includes pattern="ATSAML11D16A/specs-ATSAML11D16A"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+      </resource>
+      <resource type="misc">
+        <includes pattern="install.bat"/>
+        <includes pattern="uninstall.bat"/>
+        <includes pattern="studio/SecureSolutionTemplateWithBoot.zip"/>
+        <includes pattern="studio/SecureSolutionTemplate.zip"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML11D14A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML11D14A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML11D14A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML11D14A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml11d14a.h"/>
+        <includes pattern="system_saml11.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml11d14a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML11D14A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml11d14a.s"/>
+        <includes pattern="system_saml11d14a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml11d14a.c"/>
+        <includes pattern="system_saml11d14a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml11d14a_flash.ld"/>
+        <includes pattern="gcc/saml11d14a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml11d14a.c"/>
+        <includes pattern="system_saml11d14a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml11d14a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml11d14a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML11.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML11D14A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11D14A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML11/ATSAML11D14A.menu"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/saml11d14a/saml11d14a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml11d14a/saml11d14a-dataflash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11d14a/saml11d14a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml11d14a/saml11d14a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m23.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+        <includes pattern="ATSAML11D14A/startup_atsaml11d14a.c"/>
+        <includes pattern="ATSAML11D14A/configuration.data"/>
+        <includes pattern="ATSAML11D14A/specs-ATSAML11D14A"/>
+        <includes pattern="ATSAML11D14A/ATSAML11D14A.ld"/>
+        <includes pattern="ATSAML11E14A/startup_atsaml11e14a.c"/>
+        <includes pattern="ATSAML11E14A/specs-ATSAML11E14A"/>
+        <includes pattern="ATSAML11E14A/configuration.data"/>
+        <includes pattern="ATSAML11E14A/ATSAML11E14A.ld"/>
+        <includes pattern="ATSAML11E16A/specs-ATSAML11E16A"/>
+        <includes pattern="ATSAML11E16A/configuration.data"/>
+        <includes pattern="ATSAML11E16A/startup_atsaml11e16a.c"/>
+        <includes pattern="ATSAML11E16A/ATSAML11E16A.ld"/>
+        <includes pattern="device-specs/specs-ATSAML11E16A"/>
+        <includes pattern="device-specs/specs-ATSAML11E14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D15A"/>
+        <includes pattern="device-specs/specs-ATSAML11E15A"/>
+        <includes pattern="device-specs/specs-ATSAML11D14A"/>
+        <includes pattern="device-specs/specs-ATSAML11D16A"/>
+        <includes pattern="ATSAML11E15A/configuration.data"/>
+        <includes pattern="ATSAML11E15A/startup_atsaml11e15a.c"/>
+        <includes pattern="ATSAML11E15A/specs-ATSAML11E15A"/>
+        <includes pattern="ATSAML11E15A/ATSAML11E15A.ld"/>
+        <includes pattern="ATSAML11D15A/configuration.data"/>
+        <includes pattern="ATSAML11D15A/specs-ATSAML11D15A"/>
+        <includes pattern="ATSAML11D15A/ATSAML11D15A.ld"/>
+        <includes pattern="ATSAML11D15A/startup_atsaml11d15a.c"/>
+        <includes pattern="ATSAML11D16A/ATSAML11D16A.ld"/>
+        <includes pattern="ATSAML11D16A/startup_atsaml11d16a.c"/>
+        <includes pattern="ATSAML11D16A/configuration.data"/>
+        <includes pattern="ATSAML11D16A/specs-ATSAML11D16A"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="pic32c-mcus.def"/>
+      </resource>
+      <resource type="misc">
+        <includes pattern="install.bat"/>
+        <includes pattern="uninstall.bat"/>
+        <includes pattern="studio/SecureSolutionTemplateWithBoot.zip"/>
+        <includes pattern="studio/SecureSolutionTemplate.zip"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+		<releases>
+            <release version="3.0.BUILDNUMBER">Updated captions and registers in CCL, EIC, GCLK, OPAMP, OSC32KCTRL, OSCCTRL, RTC, SERCOM and SUPC. Added XC32 content.</release>
+            <release version="2.0.33">Fixes. Succeeds Atmel.SAML11_DFP 1.0.91.</release>
+		</releases>
+	</pdsc>
+</package>

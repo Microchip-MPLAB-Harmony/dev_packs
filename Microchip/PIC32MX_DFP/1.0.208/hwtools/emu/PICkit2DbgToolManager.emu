@@ -1,0 +1,65 @@
+<emu:emu xmlns:emu="http://crownking/emu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/emu ../../schema/emu/emu.xsd">
+  <emu:version major="0" minor="0" rev="0"/>
+  <emu:indextable>
+    <emu:indextablerecord device="PIC32MX320F032H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX320F064H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX320F128H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX320F128L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX340F128H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX340F128L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX340F256H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX340F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX360F256L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX360F512L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX420F032H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX440F128H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX440F128L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX440F256H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX440F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX460F256L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX460F512L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX534F064H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX534F064L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX564F064H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX564F064L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX564F128H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX564F128L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX575F256H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX575F256L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX575F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX575F512L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX664F064H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX664F064L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX664F128H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX664F128L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX675F256H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX675F256L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX675F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX675F512L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX695F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX695F512L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX764F128H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX764F128L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX775F256H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX775F256L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX775F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX775F512L" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX795F512H" emulengine="ejtag" maxprogbps="6"/>
+    <emu:indextablerecord device="PIC32MX795F512L" emulengine="ejtag" maxprogbps="6"/>
+  </emu:indextable>
+  <emu:emulenginedesc name="ejtag">
+    <emu:bps maxprogbps="6" maxdatabps="2" separate="true" maxpasscount="255" maxdelaycount="0"/>
+    <emu:databps match="true" access="readorwriteoreither" widths="false" bus="false"/>
+    <emu:tuples maxands="0"/>
+    <emu:sequences maxseqs="0" maxbpsinseq="0"/>
+    <emu:swbps supported="false"/>
+    <emu:datacapture allowed="false"/>
+    <emu:addressmask allowed="false"/>
+    <emu:dma breaksallowed="false"/>
+    <emu:stopwatch available="true" cpcontrolled="true" instcpsonly="true" freerunning="true" resultaddr="0xff308908"/>
+    <emu:trace allowed="false"/>
+    <emu:tblxxbp available="false"/>
+    <emu:nonaddressbreaks clockswitch="false" sleep="false" stack="false" watchdog="false"/>
+    <emu:runtimebps supported="false"/>
+  </emu:emulenginedesc>
+</emu:emu>

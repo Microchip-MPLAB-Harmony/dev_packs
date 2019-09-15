@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMDA1J14B</tag>
+  <display>Atmel ATSAMDA1J14B</display>
+  <data>$CUR_DIR$\ATSAMDA1J14B.i79</data>
+</optionMenuItem>

@@ -1,0 +1,3 @@
+<masm:masm xmlns:masm="http://crownking/masm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/masm ../../schema/masm/masm.xsd">
+  <masm:version masm:major="0" masm:minor="0" masm:rev="0"/>
+</masm:masm>

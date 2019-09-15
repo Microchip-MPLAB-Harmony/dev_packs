@@ -1,0 +1,148 @@
+<icd4:icd4 xmlns:icd4="http://crownking/icd4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/icd4 ../../schema/icd4/icd4.xsd">
+  <icd4:version icd4:major="0" icd4:minor="0" icd4:rev="0"/>
+  <icd4:baseclass icd4:classname="ICD4InitInterfaceProvider"/>
+  <icd4:device icd4:name="PIC32MZ0512EFE064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFE100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFE124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFE144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFF064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFF100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFF124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFF144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFK064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFK100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFK124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ0512EFK144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFE064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFE100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFE124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFE144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFF064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFF100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFF124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFF144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFG064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFG100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFG124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFG144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFH064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFH100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFH124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFH144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFK064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFK100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFK124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFK144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFM064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFM100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFM124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ1024EFM144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFG064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFG100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFG124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFG144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFH064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFH100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFH124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFH144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFM064">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFM100">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFM124">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+  <icd4:device icd4:name="PIC32MZ2048EFM144">
+    <icd4:basicinfo icd4:programmertype="PIC32MZ"/>
+  </icd4:device>
+</icd4:icd4>

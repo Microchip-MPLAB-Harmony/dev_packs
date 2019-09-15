@@ -1,0 +1,172 @@
+<tex:tex xmlns:tex="http://crownking/tex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/tex ../../schema/tex/tex.xsd">
+  <tex:version tex:major="0" tex:minor="0" tex:rev="0"/>
+  <tex:lookuptable>
+    <tex:devicerecord tex:device="PIC32MZ1025DAA169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAA176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAA288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAB169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAB176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAB288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAG169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAG176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAH169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1025DAH176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAA169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAA176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAA288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAB169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAB176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAB288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAG169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAG176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAH169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ1064DAH176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAA169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAA176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAA288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAB169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAB176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAB288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAG169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAG176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAH169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2025DAH176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAA169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAA176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAA288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAB169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAB176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAB288">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAG169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAG176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAH169">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MZ2064DAH176">
+      <tex:fileref tex:descid="RIPE_15" tex:param="pe"/>
+      <tex:fileref tex:descid="RIDE_15" tex:param="de"/>
+    </tex:devicerecord>
+  </tex:lookuptable>
+  <tex:execdesc tex:descid="RIPE_15" tex:environ="FIRMWARE" tex:environpath="RI4_ICD4Common" tex:fileregexp="RIPE_15_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="pk4files.jar" tex:rootdir="$MPLAB/ICD4">
+    <tex:memoryload tex:loadat="0xA0000900" tex:memory="FileRegisters" tex:numbytes="0x0fd0"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="RIDE_15" tex:environ="FIRMWARE" tex:environpath="RI4_ICD4Common" tex:fileregexp="RIDE_15_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="pk4files.jar" tex:rootdir="$MPLAB/ICD4">
+    <tex:memoryload tex:loadat="0x1FC74000" tex:memory="TestMemory" tex:numbytes="0x1000"/>
+    <tex:reserve tex:end="0x027f" tex:memory="FileRegisters" tex:start="0x0000"/>
+  </tex:execdesc>
+</tex:tex>

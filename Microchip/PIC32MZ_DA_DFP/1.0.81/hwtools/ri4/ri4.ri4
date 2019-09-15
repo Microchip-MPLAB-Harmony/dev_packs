@@ -1,0 +1,124 @@
+<ri4:ri4 xmlns:ri4="http://crownking/ri4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/ri4 ../../schema/ri4/ri4.xsd">
+  <ri4:version ri4:major="0" ri4:minor="0" ri4:rev="0"/>
+  <ri4:baseclass ri4:classname="RI4InitInterfaceProvider"/>
+  <ri4:device ri4:name="PIC32MZ1025DAA169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAA176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAA288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAB169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAB176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAB288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAG169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAG176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAH169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1025DAH176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAA169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAA176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAA288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAB169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAB176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAB288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAG169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAG176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAH169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ1064DAH176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAA169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAA176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAA288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAB169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAB176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAB288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAG169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAG176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAH169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2025DAH176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAA169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAA176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAA288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAB169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAB176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAB288">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAG169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAG176">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAH169">
+    <ri4:basicinfo/>
+  </ri4:device>
+  <ri4:device ri4:name="PIC32MZ2064DAH176">
+    <ri4:basicinfo/>
+  </ri4:device>
+</ri4:ri4>

@@ -1,0 +1,76 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="32x">
+    <mp:device mp:name="PIC32MK0256GPG048">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0256GPG064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0256GPH048">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0256GPH064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPD064">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPD100">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPE064">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPE100">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPG048">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPG064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPH048">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPH064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPK064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPK100">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPL064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK0512GPL100">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPD064">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPD100">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPE064">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPE100">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPK064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPK100">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPL064">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MK1024GPL100">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

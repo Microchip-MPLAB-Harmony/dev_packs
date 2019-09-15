@@ -1,0 +1,71 @@
+<emu:emu xmlns:emu="http://crownking/emu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/emu ../../schema/emu/emu.xsd">
+  <emu:version major="0" minor="0" rev="0"/>
+  <emu:indextable>
+    <emu:indextablerecord device="PIC32MZ0512EFE064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFE100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFE124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFE144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFF064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFF100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFF124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFF144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFK064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFK100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFK124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ0512EFK144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFE064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFE100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFE124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFE144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFF064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFF100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFF124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFF144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFG064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFG100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFG124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFG144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFH064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFH100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFH124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFH144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFK064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFK100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFK124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFK144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFM064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFM100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFM124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ1024EFM144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFG064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFG100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFG124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFG144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFH064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFH100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFH124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFH144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFM064" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFM100" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFM124" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+    <emu:indextablerecord device="PIC32MZ2048EFM144" emulengine="ejtagonlyiflowtrace2" maxprogbps="8"/>
+  </emu:indextable>
+  <emu:emulenginedesc name="ejtagonlyiflowtrace2">
+    <emu:bps maxdatabps="2" maxdelaycount="0" maxpasscount="255" maxprogbps="6" separate="true"/>
+    <emu:databps access="readorwriteoreither" bus="false" match="true" widths="false"/>
+    <emu:tuples maxands="2"/>
+    <emu:sequences maxbpsinseq="3" maxseqs="3"/>
+    <emu:swbps supported="false"/>
+    <emu:datacapture allowed="true"/>
+    <emu:addressmask allowed="false"/>
+    <emu:dma breaksallowed="false"/>
+    <emu:stopwatch available="true" cpcontrolled="true" freerunning="true" instcpsonly="true" resultaddr="0xff308908"/>
+    <emu:trace allowed="true" cpcontrolled="true">
+      <emu:cpcontrolled multiplestartstop="true"/>
+    </emu:trace>
+    <emu:tblxxbp available="false"/>
+    <emu:nonaddressbreaks clockswitch="true" deadmantimer="true" sleep="true" watchdog="true"/>
+    <emu:runtimebps supported="true" supportfwver="0x01.0x27.0x00"/>
+    <emu:runtimereads supported="true" supportfwver="0x01.0x29.0x34"/>
+  </emu:emulenginedesc>
+</emu:emu>

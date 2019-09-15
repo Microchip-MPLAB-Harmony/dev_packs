@@ -1,0 +1,65 @@
+<tex:tex xmlns:tex="http://crownking/tex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/tex ../../schema/tex/tex.xsd">
+  <tex:version tex:major="0" tex:minor="0" tex:rev="0"/>
+  <tex:lookuptable>
+    <tex:devicerecord tex:device="PIC32MX360F512L">
+      <tex:fileref tex:param="pk00" tex:descid="SKDE_32_00"/>
+      <tex:fileref tex:param="pk01" tex:descid="SKDE_32_01"/>
+      <tex:fileref tex:param="hdr" tex:descid="SKDE_24_33_DE"/>
+      <!-- This line is added so that TEX works even if a header is selected for a SKDE -->
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX460F512L">
+      <tex:fileref tex:param="pk00" tex:descid="SKDE_32_00"/>
+      <tex:fileref tex:param="pk01" tex:descid="SKDE_32_01"/>
+      <tex:fileref tex:param="hdr" tex:descid="SKDE_24_33_DE"/>
+      <!-- This line is added so that TEX works even if a header is selected for a SKDE -->
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX795F512H">
+      <tex:fileref tex:param="pk00" tex:descid="SKDE_32_00"/>
+      <tex:fileref tex:param="pk01" tex:descid="SKDE_32_01"/>
+      <tex:fileref tex:param="hdr" tex:descid="SKDE_24_33_DE"/>
+      <!-- This line is added so that TEX works even if a header is selected for a SKDE -->
+    </tex:devicerecord>
+    <tex:devicerecord tex:device="PIC32MX795F512L">
+      <tex:fileref tex:param="pk00" tex:descid="SKDE_32_00"/>
+      <tex:fileref tex:param="pk01" tex:descid="SKDE_32_01"/>
+      <tex:fileref tex:param="hdr" tex:descid="SKDE_24_33_DE"/>
+      <!-- This line is added so that TEX works even if a header is selected for a SKDE -->
+    </tex:devicerecord>
+  </tex:lookuptable>
+  <tex:execdesc tex:descid="SKDE_32_00" tex:filetype="bin" tex:rootdir="$MPLAB/PIC32MXSK" tex:fileregexp="P3200SK[0-9]*\.BIN" tex:jarfile="SKDE.jar" tex:environ="FIRMWARE" tex:environpath="SKDE">
+    <tex:memoryload tex:memory="BUFFER" tex:loadat="0x1800"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="SKDE_32_01" tex:filetype="bin" tex:rootdir="$MPLAB/PIC32MXSK" tex:fileregexp="P3201SK[0-9]*\.BIN" tex:jarfile="SKDE.jar" tex:environ="FIRMWARE" tex:environpath="SKDE">
+    <tex:memoryload tex:memory="BUFFER" tex:loadat="0x1800"/>
+  </tex:execdesc>
+  <tex:execdesc tex:descid="SKDE_24_33_DE" tex:filetype="hex" tex:rootdir="$MPLAB/SKDE" tex:fileregexp="RIDE_01_00[0-9]*\.hex" tex:jarfile="SKDE.jar" tex:environ="FIRMWARE" tex:environpath="SKDE">
+    <tex:memoryload tex:memory="TestMemory" tex:loadat="0x800000" tex:numbytes="0xC00"/>
+    <tex:reserve tex:memory="FileRegisters" tex:start="0x0800" tex:end="0x084F"/>
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0000" tex:reqend="0x0001" tex:userid="0" tex:remstart="0x0808"/>
+    <!--W0        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0002" tex:reqend="0x0003" tex:userid="0" tex:remstart="0x080A"/>
+    <!--W1        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0004" tex:reqend="0x0005" tex:userid="0" tex:remstart="0x080C"/>
+    <!--W2        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0006" tex:reqend="0x0007" tex:userid="0" tex:remstart="0x080E"/>
+    <!--W3        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0008" tex:reqend="0x0009" tex:userid="0" tex:remstart="0x0810"/>
+    <!--W4        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x000A" tex:reqend="0x000B" tex:userid="0" tex:remstart="0x0812"/>
+    <!--W5        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0018" tex:reqend="0x0019" tex:userid="0" tex:remstart="0x0814"/>
+    <!--W12       -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x001A" tex:reqend="0x001B" tex:userid="0" tex:remstart="0x0816"/>
+    <!--W13       -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x001E" tex:reqend="0x001F" tex:userid="0" tex:remstart="0x0818"/>
+    <!--W15       -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0020" tex:reqend="0x0021" tex:userid="0" tex:remstart="0x081A"/>
+    <!--SPLIM     -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0032" tex:reqend="0x0033" tex:userid="0" tex:remstart="0x081C"/>
+    <!--TBLPAG    -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0042" tex:reqend="0x0043" tex:userid="0" tex:remstart="0x081E"/>
+    <!--SR        -->
+    <tex:remap tex:reqmemory="FileRegisters" tex:reqstart="0x0762" tex:reqend="0x0763" tex:userid="0" tex:remstart="0x0822"/>
+    <!--NVMADDR   -->
+  </tex:execdesc>
+</tex:tex>

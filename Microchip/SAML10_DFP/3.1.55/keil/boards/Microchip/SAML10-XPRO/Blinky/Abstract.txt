@@ -1,0 +1,15 @@
+The 'Blinky' project is a simple application example for
+Microchip 'ATSAML10E16A' microcontroller using Microchip 'SAML10-XPRO' Evaluation Board.
+Compliant to Cortex Microcontroller Software Interface Standard (CMSIS).
+
+Example functionality:
+ - Clock Settings:
+   - XTAL       =    OSC8M
+   - CPU Clock  =    4 MHz
+
+ - 1 LED blinks with a fixed speed.
+
+The Blinky program is available in different targets:
+
+  SAML10 Flash:    runs from Internal Flash located on chip
+                   (used for production or target debugging)

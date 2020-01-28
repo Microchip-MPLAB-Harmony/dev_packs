@@ -1,0 +1,1286 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMDA1E15B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1E15B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1E15B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1E15B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1e15b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1e15b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1E15B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1e15b.s"/>
+        <includes pattern="system_samda1e15b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_32.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_32.FLM" value="start=0x00000000|size=0x00008000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1e15b.c"/>
+        <includes pattern="system_samda1e15b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1e15b_flash.ld"/>
+        <includes pattern="gcc/samda1e15b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1e15b.c"/>
+        <includes pattern="system_samda1e15b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1e15b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1e15b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1E15B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1E15B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1E15B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1e15b/samda1e15b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1e15b/samda1e15b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1e15b/samda1e15b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1E14B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1E14B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1E14B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1E14B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1e14b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1e14b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1E14B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1e14b.s"/>
+        <includes pattern="system_samda1e14b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_16.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1/ATSAMDA1.uvopt" value="start=|size=|default=0"/>
+        <meta key="Flash/ATSAMDA1/ATSAMDA1.uvproj" value="start=|size=|default=0"/>
+        <meta key="Flash/ATSAMDA1/ATSAMDA1.uvgui" value="start=|size=|default=0"/>
+        <meta key="Flash/FlashOS.h" value="start=|size=|default=0"/>
+        <meta key="Flash/ATSAMDA1/FlashPrg.c" value="start=|size=|default=0"/>
+        <meta key="Flash/ATSAMDA1/FlashDev.c" value="start=|size=|default=0"/>
+        <meta key="Flash/ATSAMDA1_16.FLM" value="start=0x00000000|size=0x00004000|default=1"/>
+        <meta key="Flash/ATSAMDA1/Target.lin" value="start=|size=|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1e14b.c"/>
+        <includes pattern="system_samda1e14b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1e14b_flash.ld"/>
+        <includes pattern="gcc/samda1e14b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1e14b.c"/>
+        <includes pattern="system_samda1e14b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1e14b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1e14b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1E14B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1E14B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1E14B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1e14b/samda1e14b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1e14b/samda1e14b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1e14b/samda1e14b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1J14B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1J14B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1J14B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1J14B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1j14b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1j14b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1J14B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1j14b.s"/>
+        <includes pattern="system_samda1j14b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_16.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_16.FLM" value="start=0x00000000|size=0x00004000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1j14b.c"/>
+        <includes pattern="system_samda1j14b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1j14b_flash.ld"/>
+        <includes pattern="gcc/samda1j14b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1j14b.c"/>
+        <includes pattern="system_samda1j14b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1j14b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1j14b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1J14B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1J14B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1J14B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1j14b/samda1j14b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1j14b/samda1j14b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1j14b/samda1j14b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1J15B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1J15B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1J15B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1J15B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1j15b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1j15b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1J15B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1j15b.s"/>
+        <includes pattern="system_samda1j15b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_32.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_32.FLM" value="start=0x00000000|size=0x00008000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1j15b.c"/>
+        <includes pattern="system_samda1j15b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1j15b_flash.ld"/>
+        <includes pattern="gcc/samda1j15b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1j15b.c"/>
+        <includes pattern="system_samda1j15b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1j15b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1j15b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1J15B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1J15B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1J15B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1j15b/samda1j15b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1j15b/samda1j15b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1j15b/samda1j15b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1J16B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1J16B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1J16B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1J16B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1j16b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1j16b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1J16B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1j16b.s"/>
+        <includes pattern="system_samda1j16b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_64.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_64.FLM" value="start=0x00000000|size=0x00010000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1j16b.c"/>
+        <includes pattern="system_samda1j16b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1j16b_flash.ld"/>
+        <includes pattern="gcc/samda1j16b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1j16b.c"/>
+        <includes pattern="system_samda1j16b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1j16b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1j16b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1J16B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1J16B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1J16B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1j16b/samda1j16b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1j16b/samda1j16b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1j16b/samda1j16b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1G15B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1G15B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1G15B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1G15B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1g15b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1g15b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1G15B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1g15b.s"/>
+        <includes pattern="system_samda1g15b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_32.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_32.FLM" value="start=0x00000000|size=0x00008000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1g15b.c"/>
+        <includes pattern="system_samda1g15b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1g15b_flash.ld"/>
+        <includes pattern="gcc/samda1g15b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1g15b.c"/>
+        <includes pattern="system_samda1g15b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1g15b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1g15b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1G15B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1G15B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1G15B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1g15b/samda1g15b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1g15b/samda1g15b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1g15b/samda1g15b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1G14B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1G14B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1G14B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1G14B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1g14b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1g14b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1G14B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1g14b.s"/>
+        <includes pattern="system_samda1g14b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_16.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_16.FLM" value="start=0x00000000|size=0x00004000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1g14b.c"/>
+        <includes pattern="system_samda1g14b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1g14b_flash.ld"/>
+        <includes pattern="gcc/samda1g14b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1g14b.c"/>
+        <includes pattern="system_samda1g14b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1g14b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1g14b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1G14B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1G14B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1G14B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1g14b/samda1g14b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1g14b/samda1g14b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1g14b/samda1g14b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1G16B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1G16B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1G16B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1G16B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1g16b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1g16b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1G16B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1g16b.s"/>
+        <includes pattern="system_samda1g16b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_64.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_64.FLM" value="start=0x00000000|size=0x00010000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1g16b.c"/>
+        <includes pattern="system_samda1g16b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1g16b_flash.ld"/>
+        <includes pattern="gcc/samda1g16b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1g16b.c"/>
+        <includes pattern="system_samda1g16b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1g16b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1g16b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1G16B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1G16B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1G16B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1g16b/samda1g16b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1g16b/samda1g16b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1g16b/samda1g16b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMDA1E16B">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMDA1E16B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMDA1E16B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMDA1E16B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samda1e16b.h"/>
+        <includes pattern="system_samda1.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sysctrl.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/samda1e16b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMDA1E16B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samda1e16b.s"/>
+        <includes pattern="system_samda1e16b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="Flash/ATSAMDA1_64.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvproj"/>
+        <includes pattern="Flash/ATSAMDA1/FlashDev.c"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvopt"/>
+        <includes pattern="Flash/ATSAMDA1/FlashPrg.c"/>
+        <includes pattern="Flash/ATSAMDA1/Target.lin"/>
+        <includes pattern="Flash/ATSAMDA1/ATSAMDA1.uvgui"/>
+        <meta key="Flash/ATSAMDA1_64.FLM" value="start=0x00000000|size=0x00010000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samda1e16b.c"/>
+        <includes pattern="system_samda1e16b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samda1e16b_flash.ld"/>
+        <includes pattern="gcc/samda1e16b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samda1e16b.c"/>
+        <includes pattern="system_samda1e16b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamda1e16b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamda1e16b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1E16B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMD/ATSAMDA1/ATSAMDA1E16B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAMDA1E16B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/samda1e16b/samda1e16b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samda1e16b/samda1e16b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samda1e16b/samda1e16b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMDA1G16B/startup_atsamda1g16b.c"/>
+        <includes pattern="ATSAMDA1G16B/ATSAMDA1G16B.ld"/>
+        <includes pattern="ATSAMDA1G16B/configuration.data"/>
+        <includes pattern="ATSAMDA1G16B/specs-ATSAMDA1G16B"/>
+        <includes pattern="ATSAMDA1J16B/startup_atsamda1j16b.c"/>
+        <includes pattern="ATSAMDA1J16B/specs-ATSAMDA1J16B"/>
+        <includes pattern="ATSAMDA1J16B/configuration.data"/>
+        <includes pattern="ATSAMDA1J16B/ATSAMDA1J16B.ld"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMDA1E14B/startup_atsamda1e14b.c"/>
+        <includes pattern="ATSAMDA1E14B/ATSAMDA1E14B.ld"/>
+        <includes pattern="ATSAMDA1E14B/specs-ATSAMDA1E14B"/>
+        <includes pattern="ATSAMDA1E14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/startup_atsamda1g15b.c"/>
+        <includes pattern="ATSAMDA1G15B/configuration.data"/>
+        <includes pattern="ATSAMDA1G15B/specs-ATSAMDA1G15B"/>
+        <includes pattern="ATSAMDA1G15B/ATSAMDA1G15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/ATSAMDA1J15B.ld"/>
+        <includes pattern="ATSAMDA1J15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J15B/startup_atsamda1j15b.c"/>
+        <includes pattern="ATSAMDA1J15B/specs-ATSAMDA1J15B"/>
+        <includes pattern="ATSAMDA1E15B/ATSAMDA1E15B.ld"/>
+        <includes pattern="ATSAMDA1E15B/specs-ATSAMDA1E15B"/>
+        <includes pattern="ATSAMDA1E15B/startup_atsamda1e15b.c"/>
+        <includes pattern="ATSAMDA1E15B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/specs-ATSAMDA1J14B"/>
+        <includes pattern="ATSAMDA1J14B/startup_atsamda1j14b.c"/>
+        <includes pattern="ATSAMDA1J14B/configuration.data"/>
+        <includes pattern="ATSAMDA1J14B/ATSAMDA1J14B.ld"/>
+        <includes pattern="ATSAMDA1G14B/startup_atsamda1g14b.c"/>
+        <includes pattern="ATSAMDA1G14B/specs-ATSAMDA1G14B"/>
+        <includes pattern="ATSAMDA1G14B/configuration.data"/>
+        <includes pattern="ATSAMDA1G14B/ATSAMDA1G14B.ld"/>
+        <includes pattern="ATSAMDA1E16B/startup_atsamda1e16b.c"/>
+        <includes pattern="ATSAMDA1E16B/specs-ATSAMDA1E16B"/>
+        <includes pattern="ATSAMDA1E16B/ATSAMDA1E16B.ld"/>
+        <includes pattern="ATSAMDA1E16B/configuration.data"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+		<releases>
+			<release version="2.2.BUILDNUMBER">NEXT</release>
+			<release version="2.1.35" date="2019-10-25">Update IAR configuration and flash loader. Updated TC generator names. Updated programming and debugging scripts. Added XC32 content.</release>
+			<release version="2.0.14" date="2019-04-22">Succeeds Atmel.SAMDA1_DFP 1.2.50. Added programming/debugging support in MPLAB X.</release>
+		</releases>
+	<description>ARM&#174; Cortex&#174;-M0+ microcontroller with 16KB Flash, 4kB SRAM, 512Byte RWW Flash, 4 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 10 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 26 GPIOs, QFN32 ARM&#174; Cortex&#174;-M0+ microcontroller with 16KB Flash, 4kB SRAM, 512Byte RWW Flash, 4 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 10 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 26 GPIOs, QFN32</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 32KB Flash, 4kB SRAM, 1KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 20 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 52 GPIOs, TQFP64 ARM&#174; Cortex&#174;-M0+ microcontroller with 32KB Flash, 4kB SRAM, 1KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 20 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 52 GPIOs, TQFP64</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 16KB Flash, 4kB SRAM, 512Byte RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 20 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 52 GPIOs, TQFP64 ARM&#174; Cortex&#174;-M0+ microcontroller with 16KB Flash, 4kB SRAM, 512Byte RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 20 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 52 GPIOs, TQFP64</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 32KB Flash, 4kB SRAM, 1KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 14 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 38 GPIOs, QFN48 ARM&#174; Cortex&#174;-M0+ microcontroller with 32KB Flash, 4kB SRAM, 1KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 14 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 38 GPIOs, QFN48</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 32KB Flash, 4kB SRAM and 1KB RWW Flash, 4 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 10 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 26 GPIOs, QFN32 ARM&#174; Cortex&#174;-M0+ microcontroller with 32KB Flash, 4kB SRAM and 1KB RWW Flash, 4 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 10 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 26 GPIOs, QFN32</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 64KB Flash, 8kB SRAM, 2KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 20 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 52 GPIOs, TQFP64 ARM&#174; Cortex&#174;-M0+ microcontroller with 64KB Flash, 8kB SRAM, 2KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 20 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 52 GPIOs, TQFP64</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 16KB Flash, 4kB SRAM, 512Byte RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 14 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 38 GPIOs, QFN48 ARM&#174; Cortex&#174;-M0+ microcontroller with 16KB Flash, 4kB SRAM, 512Byte RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 14 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 38 GPIOs, QFN48</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 64KB Flash, 8kB SRAM, 2KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 14 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 38 GPIOs, QFN48 ARM&#174; Cortex&#174;-M0+ microcontroller with 64KB Flash, 8kB SRAM, 2KB RWW Flash, 6 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 14 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 38 GPIOs, QFN48</description>
+            <description>ARM&#174; Cortex&#174;-M0+ microcontroller with 64KB Flash, 8kB SRAM and 2KB RWW Flash, 4 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 10 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 26 GPIOs, QFN32 ARM&#174; Cortex&#174;-M0+ microcontroller with 64KB Flash, 8kB SRAM and 2KB RWW Flash, 4 SERCOM, 5 Timer Counter (TC), 3 Timer Counter for Control (TCC), USB, I2S, 10 channel ADC, 2 Analog Comparators, 1 DAC, RTC, PTC, 48MHz, 26 GPIOs, QFN32</description>
+            </pdsc>
+</package>

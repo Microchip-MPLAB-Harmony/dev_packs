@@ -1,0 +1,6 @@
+<pm3:pm3 xmlns:pm3="http://crownking/pm3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pm3 ../../schema/pm3/pm3.xsd">
+  <pm3:version pm3:major="00" pm3:minor="20" pm3:rev="9"/>
+  <pm3:device pm3:name="PIC32MZ1025W104132">
+    <pm3:basicinfo pm3:algorithm="84" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1'"/>
+  </pm3:device>
+</pm3:pm3>

@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMA5D26">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D26.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D26.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d26.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d26.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D26__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D27">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D27.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D27.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d27.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d27.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D27__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D24">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D24.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D24.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d24.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d24.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D24__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D22">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D22.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D22.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d22.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d22.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D22__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D23">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D23.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D23.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d23.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d23.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D23__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D21">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D21.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D21.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d21.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d21.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D21__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMA5D28">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMA5D28.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMA5D28.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama5d28.h"/>
+        <includes pattern="system_sama5d2.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/aximx.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/l2cc.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/pdmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rxlp.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama5d28.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA5D28__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="qspi1.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+        <includes pattern="sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="qspi0.icf"/>
+        <includes pattern="qspi1.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="ddram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a5.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA5D28/startup_atsama5d28.S"/>
+        <includes pattern="ATSAMA5D28/configuration.data"/>
+        <includes pattern="ATSAMA5D28/ATSAMA5D28.ld"/>
+        <includes pattern="ATSAMA5D28/specs-ATSAMA5D28"/>
+        <includes pattern="ATSAMA5D24/configuration.data"/>
+        <includes pattern="ATSAMA5D24/specs-ATSAMA5D24"/>
+        <includes pattern="ATSAMA5D24/startup_atsama5d24.S"/>
+        <includes pattern="ATSAMA5D24/ATSAMA5D24.ld"/>
+        <includes pattern="ATSAMA5D21/ATSAMA5D21.ld"/>
+        <includes pattern="ATSAMA5D21/configuration.data"/>
+        <includes pattern="ATSAMA5D21/specs-ATSAMA5D21"/>
+        <includes pattern="ATSAMA5D21/startup_atsama5d21.S"/>
+        <includes pattern="ATSAMA5D26/specs-ATSAMA5D26"/>
+        <includes pattern="ATSAMA5D26/configuration.data"/>
+        <includes pattern="ATSAMA5D26/ATSAMA5D26.ld"/>
+        <includes pattern="ATSAMA5D26/startup_atsama5d26.S"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMA5D23/startup_atsama5d23.S"/>
+        <includes pattern="ATSAMA5D23/configuration.data"/>
+        <includes pattern="ATSAMA5D23/ATSAMA5D23.ld"/>
+        <includes pattern="ATSAMA5D23/specs-ATSAMA5D23"/>
+        <includes pattern="ATSAMA5D27/configuration.data"/>
+        <includes pattern="ATSAMA5D27/ATSAMA5D27.ld"/>
+        <includes pattern="ATSAMA5D27/startup_atsama5d27.S"/>
+        <includes pattern="ATSAMA5D27/specs-ATSAMA5D27"/>
+        <includes pattern="ATSAMA5D22/specs-ATSAMA5D22"/>
+        <includes pattern="ATSAMA5D22/startup_atsama5d22.S"/>
+        <includes pattern="ATSAMA5D22/configuration.data"/>
+        <includes pattern="ATSAMA5D22/ATSAMA5D22.ld"/>
+        <includes pattern="mcc_xc.h"/>
+      </resource>
+      <resource type="script.template" subdir="templates">
+        <includes pattern="autoload.py"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+        <releases>
+            <release version="1.2.BUILDNUMBER">NEXT</release>
+            <release version="1.1.11" date="2019-10-24">Updated GCC and IAR fault handler and startup implementations. Updated programming and debugging scripts. </release>
+            <release version="1.0.1" date="2019-07-02">Initial release.</release>
+        </releases>
+    </pdsc>
+</package>

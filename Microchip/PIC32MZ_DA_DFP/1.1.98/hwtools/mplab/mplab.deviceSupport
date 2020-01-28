@@ -1,0 +1,220 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="32x">
+    <mp:device mp:name="PIC32MZ1025DAA169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAA176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAA288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAB169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAB176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAB288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAG169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAG176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAH169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAH176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAK169">
+      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="yes" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAK176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAL169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAL176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAR169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAR176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAS169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1025DAS176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAA169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAA176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAA288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAB169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAB176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAB288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAG169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAG176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAH169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAH176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAK169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAK176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAL169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAL176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAR169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAR176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAS169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ1064DAS176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAA169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAA176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAA288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAB169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAB176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAB288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAG169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAG176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAH169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAH176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAK169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAK176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAL169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAL176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAR169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAR176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAS169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2025DAS176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAA169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAA176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAA288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAB169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAB176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:excludedfrom="8" mp:name="PIC32MZ2064DAB288">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAG169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAG176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAH169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAH176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:simp="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAK169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAK176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAL169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAL176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAR169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAR176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAS169">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32MZ2064DAS176">
+      <mp:support mp:icd3d="yes" mp:icd3p="yes" mp:icd4d="yes" mp:icd4p="yes" mp:pk3d="yes" mp:pk3p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pm3="yes" mp:riced="yes" mp:ricep="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

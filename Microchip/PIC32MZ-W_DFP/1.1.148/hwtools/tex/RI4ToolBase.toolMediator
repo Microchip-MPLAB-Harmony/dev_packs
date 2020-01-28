@@ -1,0 +1,11 @@
+<tex:tex xmlns:tex="http://crownking/tex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/tex ../../schema/tex/tex.xsd">
+  <tex:version tex:major="0" tex:minor="0" tex:rev="0"/>
+  <tex:lookuptable>
+    <tex:devicerecord tex:device="PIC32MZ1025W104132">
+      <tex:fileref tex:descid="RIPE_25" tex:param="pe"/>
+    </tex:devicerecord>
+  </tex:lookuptable>
+  <tex:execdesc tex:descid="RIPE_25" tex:environ="FIRMWARE" tex:environpath="RI4_ICD4Common" tex:fileregexp="RIPE_25_[0-9]*\.hex" tex:filetype="hex" tex:jarfile="ice4files.jar" tex:rootdir="$MPLAB/ICD4">
+    <tex:memoryload tex:loadat="0xA0000900" tex:memory="FileRegisters" tex:numbytes="0x0fd0"/>
+  </tex:execdesc>
+</tex:tex>

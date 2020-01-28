@@ -1,0 +1,1650 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><edc:PIC xmlns:edc="http://crownking/edc" xmlns:atdf="http://crownking/atdf" xmlns:ltx="http://crownking/ltx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" atdf:architecture="ARM926EJS" atdf:family="SAM9" edc:arch="arm32bit" edc:atsamname="SAM9X60D5M" edc:hasfreeze="false" edc:name="SAM9X60D5M" edc:procid="0x0000" xsi:schemaLocation="http://crownking/edc edc/PIC.xsd">
+  <edc:Properties>
+    <edc:Property edc:propkey="file.registers.are.odd.address.accessible" edc:propvalue="true"/>
+  </edc:Properties>
+  <edc:Power>
+    <edc:VDD edc:maxvoltage="+0" edc:minvoltage="+0" edc:nominalvoltage="0.000"/>
+  </edc:Power>
+  <edc:Programming edc:haslvp2="true"/>
+  <edc:ArchDef edc:desc="arm32bit" edc:name="arm32bit">
+    <edc:MemTraits edc:addrinc="0x1" edc:locsize="0x1" edc:wordimpl="0xFFFFFFFF" edc:wordinit="0xFFFFFFFF" edc:wordsafe="0xFFFFFFFF" edc:wordsize="0x4"/>
+  </edc:ArchDef>
+  <edc:InstructionSet edc:instructionsetid="armv5"/>
+  <edc:InterruptList>
+    <edc:Interrupt edc:cname="EXT_FIQ" edc:desc="External FIQ" edc:irq="0" ltx:memberofperipheral="AIC"/>
+    <edc:Interrupt edc:cname="SYSC" edc:desc="System Controller Interrupt" edc:irq="1" ltx:memberofperipheral="PMC RSTC RTT PIT WDT RTC"/>
+    <edc:Interrupt edc:cname="PIOA" edc:desc="Parallel I/O Controller A" edc:irq="2" ltx:memberofperipheral="PIOA"/>
+    <edc:Interrupt edc:cname="PIOB" edc:desc="Parallel I/O Controller B" edc:irq="3" ltx:memberofperipheral="PIOB"/>
+    <edc:Interrupt edc:cname="PIOC" edc:desc="Parallel I/O Controller C" edc:irq="4" ltx:memberofperipheral="PIOC"/>
+    <edc:Interrupt edc:cname="FLEXCOM0" edc:desc="FLEXCOM 0" edc:irq="5" ltx:memberofperipheral="FLEXCOM0"/>
+    <edc:Interrupt edc:cname="FLEXCOM1" edc:desc="FLEXCOM 1" edc:irq="6" ltx:memberofperipheral="FLEXCOM1"/>
+    <edc:Interrupt edc:cname="FLEXCOM2" edc:desc="FLEXCOM 2" edc:irq="7" ltx:memberofperipheral="FLEXCOM2"/>
+    <edc:Interrupt edc:cname="FLEXCOM3" edc:desc="FLEXCOM 3" edc:irq="8" ltx:memberofperipheral="FLEXCOM3"/>
+    <edc:Interrupt edc:cname="FLEXCOM6" edc:desc="FLEXCOM 6" edc:irq="9" ltx:memberofperipheral="FLEXCOM6"/>
+    <edc:Interrupt edc:cname="FLEXCOM7" edc:desc="FLEXCOM 7" edc:irq="10" ltx:memberofperipheral="FLEXCOM7"/>
+    <edc:Interrupt edc:cname="FLEXCOM8" edc:desc="FLEXCOM 8" edc:irq="11" ltx:memberofperipheral="FLEXCOM8"/>
+    <edc:Interrupt edc:cname="SDMMC0" edc:desc="Secure Digital Multi Media Card 0" edc:irq="12" ltx:memberofperipheral="SDMMC0"/>
+    <edc:Interrupt edc:cname="FLEXCOM4" edc:desc="FLEXCOM 4" edc:irq="13" ltx:memberofperipheral="FLEXCOM4"/>
+    <edc:Interrupt edc:cname="FLEXCOM5" edc:desc="FLEXCOM 5" edc:irq="14" ltx:memberofperipheral="FLEXCOM5"/>
+    <edc:Interrupt edc:cname="FLEXCOM9" edc:desc="FLEXCOM 9" edc:irq="15" ltx:memberofperipheral="FLEXCOM9"/>
+    <edc:Interrupt edc:cname="FLEXCOM10" edc:desc="FLEXCOM 10" edc:irq="16" ltx:memberofperipheral="FLEXCOM10"/>
+    <edc:Interrupt edc:cname="TC0" edc:desc="Timer Counter 0" edc:irq="17" ltx:memberofperipheral="TC0"/>
+    <edc:Interrupt edc:cname="PWM" edc:desc="Pulse Width Modulation" edc:irq="18" ltx:memberofperipheral="PWM"/>
+    <edc:Interrupt edc:cname="ADC" edc:desc="Analog to Digital Converter" edc:irq="19" ltx:memberofperipheral="ADC"/>
+    <edc:Interrupt edc:cname="XDMAC" edc:desc="Extended DMA Controller" edc:irq="20" ltx:memberofperipheral="XDMAC"/>
+    <edc:Interrupt edc:cname="MATRIX" edc:desc="Matrix" edc:irq="21" ltx:memberofperipheral="MATRIX"/>
+    <edc:Interrupt edc:cname="UHPHS" edc:desc="USB Host High Speed" edc:irq="22" ltx:memberofperipheral="UHPHS"/>
+    <edc:Interrupt edc:cname="UDPHS" edc:desc="USB Device High Speed" edc:irq="23" ltx:memberofperipheral="UDPHS"/>
+    <edc:Interrupt edc:cname="EMAC0" edc:desc="Ethernet MAC 0" edc:irq="24" ltx:memberofperipheral="EMAC0"/>
+    <edc:Interrupt edc:cname="LCDC" edc:desc="LCD Controller" edc:irq="25" ltx:memberofperipheral="LCDC"/>
+    <edc:Interrupt edc:cname="SDMMC1" edc:desc="Secure Digital Multi Media Card 1" edc:irq="26" ltx:memberofperipheral="SDMMC1"/>
+    <edc:Interrupt edc:cname="EMAC1" edc:desc="Ethernet MAC 1" edc:irq="27" ltx:memberofperipheral="EMAC1"/>
+    <edc:Interrupt edc:cname="SSC" edc:desc="Synchronous Serial Controller" edc:irq="28" ltx:memberofperipheral="SSC"/>
+    <edc:Interrupt edc:cname="CAN0" edc:desc="Controller Area Network 0" edc:irq="29" ltx:memberofperipheral="CAN0"/>
+    <edc:Interrupt edc:cname="CAN1" edc:desc="Controller Area Network 1" edc:irq="30" ltx:memberofperipheral="CAN1"/>
+    <edc:Interrupt edc:cname="EXT_IRQ" edc:desc="External IRQ" edc:irq="31" ltx:memberofperipheral="AIC"/>
+    <edc:Interrupt edc:cname="FLEXCOM11" edc:desc="FLEXCOM 11" edc:irq="32" ltx:memberofperipheral="FLEXCOM11"/>
+    <edc:Interrupt edc:cname="FLEXCOM12" edc:desc="FLEXCOM 12" edc:irq="33" ltx:memberofperipheral="FLEXCOM12"/>
+    <edc:Interrupt edc:cname="I2SMCC" edc:desc="I2S Multi Channel Controller" edc:irq="34" ltx:memberofperipheral="I2SMCC"/>
+    <edc:Interrupt edc:cname="QSPI" edc:desc="Quad I/O SPI Controller" edc:irq="35" ltx:memberofperipheral="QSPI"/>
+    <edc:Interrupt edc:cname="GFX2D" edc:desc="Graphics 2D Controller" edc:irq="36" ltx:memberofperipheral="GFX2D"/>
+    <edc:Interrupt edc:cname="PIT64B" edc:desc="Periodic Interval Timer 64-bit " edc:irq="37" ltx:memberofperipheral="PIT64B"/>
+    <edc:Interrupt edc:cname="TRNG" edc:desc="True Random Number Generator" edc:irq="38" ltx:memberofperipheral="TRNG"/>
+    <edc:Interrupt edc:cname="AES" edc:desc="Advanced Encryption Standard" edc:irq="39" ltx:memberofperipheral="AES"/>
+    <edc:Interrupt edc:cname="TDES" edc:desc="Triple Data Encryption Standard" edc:irq="40" ltx:memberofperipheral="TDES"/>
+    <edc:Interrupt edc:cname="SHA" edc:desc="Secure Hash Algorithm" edc:irq="41" ltx:memberofperipheral="SHA"/>
+    <edc:Interrupt edc:cname="CLASSD" edc:desc="Class D Controller" edc:irq="42" ltx:memberofperipheral="CLASSD"/>
+    <edc:Interrupt edc:cname="ISI" edc:desc="Image Sensor Interface" edc:irq="43" ltx:memberofperipheral="ISI"/>
+    <edc:Interrupt edc:cname="PIOD" edc:desc="Parallel I/O D" edc:irq="44" ltx:memberofperipheral="PIOD"/>
+    <edc:Interrupt edc:cname="TC1" edc:desc="Timer Counter 1" edc:irq="45" ltx:memberofperipheral="TC1"/>
+    <edc:Interrupt edc:cname="OTPC" edc:desc="One Time Programmable Controller" edc:irq="46" ltx:memberofperipheral="OTPC"/>
+    <edc:Interrupt edc:cname="DBGU" edc:desc="Debug Unit" edc:irq="47" ltx:memberofperipheral="DBGU"/>
+    <edc:Interrupt edc:cname="ECC" edc:desc="ECC Controller" edc:irq="48" ltx:memberofperipheral="PMECC PMERRLOC"/>
+    <edc:Interrupt edc:cname="MC" edc:desc="Memory Controller" edc:irq="49" ltx:memberofperipheral="SDRAMC MPDDRC SMC"/>
+  </edc:InterruptList>
+  <edc:PeripheralList>
+    <edc:Peripheral edc:cname="ADC" edc:desc=""/>
+    <edc:Peripheral edc:cname="AES" edc:desc=""/>
+    <edc:Peripheral edc:cname="AIC" edc:desc=""/>
+    <edc:Peripheral edc:cname="BSC" edc:desc=""/>
+    <edc:Peripheral edc:cname="CAN0" edc:desc=""/>
+    <edc:Peripheral edc:cname="CAN1" edc:desc=""/>
+    <edc:Peripheral edc:cname="CLASSD" edc:desc=""/>
+    <edc:Peripheral edc:cname="DBGU" edc:desc=""/>
+    <edc:Peripheral edc:cname="EMAC0" edc:desc=""/>
+    <edc:Peripheral edc:cname="EMAC1" edc:desc=""/>
+    <edc:Peripheral edc:cname="EBI" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM0" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM1" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM2" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM3" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM4" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM5" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM6" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM7" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM8" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM9" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM10" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM11" edc:desc=""/>
+    <edc:Peripheral edc:cname="FLEXCOM12" edc:desc=""/>
+    <edc:Peripheral edc:cname="GFX2D" edc:desc=""/>
+    <edc:Peripheral edc:cname="GPBR" edc:desc=""/>
+    <edc:Peripheral edc:cname="I2SMCC" edc:desc=""/>
+    <edc:Peripheral edc:cname="ICE" edc:desc=""/>
+    <edc:Peripheral edc:cname="ISI" edc:desc=""/>
+    <edc:Peripheral edc:cname="LCDC" edc:desc=""/>
+    <edc:Peripheral edc:cname="MATRIX" edc:desc=""/>
+    <edc:Peripheral edc:cname="MPDDRC" edc:desc=""/>
+    <edc:Peripheral edc:cname="OTPC" edc:desc=""/>
+    <edc:Peripheral edc:cname="PIOA" edc:desc=""/>
+    <edc:Peripheral edc:cname="PIOB" edc:desc=""/>
+    <edc:Peripheral edc:cname="PIOC" edc:desc=""/>
+    <edc:Peripheral edc:cname="PIOD" edc:desc=""/>
+    <edc:Peripheral edc:cname="PIT" edc:desc=""/>
+    <edc:Peripheral edc:cname="PIT64B" edc:desc=""/>
+    <edc:Peripheral edc:cname="PMC" edc:desc=""/>
+    <edc:Peripheral edc:cname="PMECC" edc:desc=""/>
+    <edc:Peripheral edc:cname="PMERRLOC" edc:desc=""/>
+    <edc:Peripheral edc:cname="PWM" edc:desc=""/>
+    <edc:Peripheral edc:cname="QSPI" edc:desc=""/>
+    <edc:Peripheral edc:cname="RSTC" edc:desc=""/>
+    <edc:Peripheral edc:cname="RTC" edc:desc=""/>
+    <edc:Peripheral edc:cname="RTT" edc:desc=""/>
+    <edc:Peripheral edc:cname="SCKC" edc:desc=""/>
+    <edc:Peripheral edc:cname="SDMMC0" edc:desc=""/>
+    <edc:Peripheral edc:cname="SDMMC1" edc:desc=""/>
+    <edc:Peripheral edc:cname="SDRAMC" edc:desc=""/>
+    <edc:Peripheral edc:cname="SFR" edc:desc=""/>
+    <edc:Peripheral edc:cname="SHA" edc:desc=""/>
+    <edc:Peripheral edc:cname="SHDWC" edc:desc=""/>
+    <edc:Peripheral edc:cname="SMC" edc:desc=""/>
+    <edc:Peripheral edc:cname="SSC" edc:desc=""/>
+    <edc:Peripheral edc:cname="SYSCWP" edc:desc=""/>
+    <edc:Peripheral edc:cname="TC0" edc:desc=""/>
+    <edc:Peripheral edc:cname="TC1" edc:desc=""/>
+    <edc:Peripheral edc:cname="TDES" edc:desc=""/>
+    <edc:Peripheral edc:cname="TRNG" edc:desc=""/>
+    <edc:Peripheral edc:cname="UDPHS" edc:desc=""/>
+    <edc:Peripheral edc:cname="UHPHS_OHCI" edc:desc=""/>
+    <edc:Peripheral edc:cname="UHPHS_EHCI" edc:desc=""/>
+    <edc:Peripheral edc:cname="WDT" edc:desc=""/>
+    <edc:Peripheral edc:cname="XDMAC" edc:desc=""/>
+  </edc:PeripheralList>
+  <edc:PhysicalSpace>
+    <edc:NMMRPlace edc:regionid="corenmmrs">
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R0" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="0" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R1" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="4" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R2" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="8" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R3" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="12" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R4" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="16" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R5" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="20" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R6" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="24" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R7" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="28" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R8" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="32" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R9" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="36" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R10" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="40" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R11" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="44" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="R12" edc:desc="General-Purpose Register" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="48" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="SP" edc:desc="Stack Pointer" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="52" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="LR" edc:desc="Link Register" edc:impl="0xFFFFFFFF" edc:mclr="11111111111111111111111111111111" edc:nmmrid="56" edc:nzwidth="0x20" edc:por="11111111111111111111111111111111"/>
+      <edc:SFRDef edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="PC" edc:desc="Program Counter" edc:impl="0xFFFFFFFF" edc:mclr="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" edc:nmmrid="60" edc:nzwidth="0x20" edc:por="00000000000000000000000000000000"/>
+    </edc:NMMRPlace>
+    <edc:GPRDataSector edc:beginaddr="0x300000" edc:endaddr="0x400000" edc:isexecutable="true" edc:regionid="SRAM0"/>
+    <edc:GPRDataSector edc:beginaddr="0x400000" edc:endaddr="0x500000" edc:isexecutable="true" edc:regionid="SRAM1"/>
+    <edc:DPRSector edc:beginaddr="0x500000" edc:endaddr="0x600000" edc:regionid="UDPHS_RAM"/>
+    <edc:DPRSector edc:beginaddr="0x600000" edc:endaddr="0x700000" edc:regionid="UHPHS_OHCI">
+      <edc:SFRDef edc:_addr="0x600000" edc:access="------------------------rrrrrrrr" edc:cname="UHPHS_OHCI_HcRevision" edc:impl="0xFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="REV" edc:desc="OHCI Revision Number" edc:nzwidth="0x8"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600004" edc:access="---------------------nnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcControl" edc:impl="0x7FF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="CBSR" edc:desc="Control/Bulk Service Ratio" edc:nzwidth="0x2"/>
+            <edc:SFRFieldDef edc:cname="PLE" edc:desc="Periodic List Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="IE" edc:desc="Isochronous Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CLE" edc:desc="ControL List Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="BLE" edc:desc="Bulk List Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="HCFS" edc:desc="Host Controller Functional State" edc:nzwidth="0x2"/>
+            <edc:SFRFieldDef edc:cname="IR" edc:desc="Interrupt Routing" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RWC" edc:desc="Remote Wakeup Connected" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RWE" edc:desc="Remote Wakeup Enable" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600008" edc:access="--------------nn------------nnnn" edc:cname="UHPHS_OHCI_HcCommandStatus" edc:impl="0x3000F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="HCR" edc:desc="Host Controller Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CLF" edc:desc="Control List Filled (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="BLF" edc:desc="Bulk List Filled (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCR" edc:desc="Ownership Change Request (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0xC"/>
+            <edc:SFRFieldDef edc:cname="SOC" edc:desc="Scheduling Overrun Count (read-only)" edc:nzwidth="0x2"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x60000C" edc:access="-n-----------------------nnnnnnn" edc:cname="UHPHS_OHCI_HcInterruptStatus" edc:impl="0x4000007F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="SO" edc:desc="Scheduling Overrun (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WDH" edc:desc="Write Done Head (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SF" edc:desc="Start of Frame (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RD" edc:desc="Resume Detected (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="UE" edc:desc="Unrecoverable Error (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FNO" edc:desc="Frame Number Overflow (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RHSC" edc:desc="Root Hub Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x17"/>
+            <edc:SFRFieldDef edc:cname="OC" edc:desc="Ownership Change (read-only)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600010" edc:access="nn-----------------------nnnnnnn" edc:cname="UHPHS_OHCI_HcInterruptEnable" edc:impl="0xC000007F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="SO" edc:desc="Scheduling Overrun (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WDH" edc:desc="Write Done Head (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SF" edc:desc="Start of Frame (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RD" edc:desc="Resume Detected (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="UE" edc:desc="Unrecoverable Error (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FNO" edc:desc="Frame Number Overflow (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RHSC" edc:desc="Root Hub Status Change (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x17"/>
+            <edc:SFRFieldDef edc:cname="OC" edc:desc="Ownership Change (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="MIE" edc:desc="Master Interrupt Enable (read/write, write '1' to set)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600014" edc:access="nn-----------------------nnnnnnn" edc:cname="UHPHS_OHCI_HcInterruptDisable" edc:impl="0xC000007F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="SO" edc:desc="Scheduling Overrun (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WDH" edc:desc="Write Done Head (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SF" edc:desc="Start of Frame (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RD" edc:desc="Resume Detected (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="UE" edc:desc="Unrecoverable Error (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FNO" edc:desc="Frame Number Overflow (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RHSC" edc:desc="Root Hub Status Change (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x17"/>
+            <edc:SFRFieldDef edc:cname="OC" edc:desc="Ownership Change (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="MIE" edc:desc="Master Interrupt Enable (read/write)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600018" edc:access="nnnnnnnnnnnnnnnnnnnnnnnn--------" edc:cname="UHPHS_OHCI_HcHCCA" edc:impl="0xFFFFFF00" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x8"/>
+            <edc:SFRFieldDef edc:cname="HCCA" edc:desc="Physical Address of the Beginning of the HCCA" edc:nzwidth="0x18"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x60001C" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnn----" edc:cname="UHPHS_OHCI_HcPeriodCurrentED" edc:impl="0xFFFFFFF0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="PCED" edc:desc="Physical Address of the Current ED on the Periodic ED list" edc:nzwidth="0x1C"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600020" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnn----" edc:cname="UHPHS_OHCI_HcControlHeadED" edc:impl="0xFFFFFFF0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="CHED" edc:desc="Physical Address of the Head ED on the Control ED list" edc:nzwidth="0x1C"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600024" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnn----" edc:cname="UHPHS_OHCI_HcControlCurrentED" edc:impl="0xFFFFFFF0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="CCED" edc:desc="Physical Address of the Current ED on the Control ED List" edc:nzwidth="0x1C"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600028" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnn----" edc:cname="UHPHS_OHCI_HcBulkHeadED" edc:impl="0xFFFFFFF0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="BHED" edc:desc="Physical Address of the Head ED on the Bulk ED List" edc:nzwidth="0x1C"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x60002C" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnn----" edc:cname="UHPHS_OHCI_HcBulkCurrentED" edc:impl="0xFFFFFFF0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="BCED" edc:desc="Physical Address of the Current ED on the Bulk ED List" edc:nzwidth="0x1C"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600030" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnn----" edc:cname="UHPHS_OHCI_HcDoneHead" edc:impl="0xFFFFFFF0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="DH" edc:desc="Physical Address of the Last TD that has added to the done queue" edc:nzwidth="0x1C"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600034" edc:access="nnnnnnnnnnnnnnnn--nnnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcFmInterval" edc:impl="0xFFFF3FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="FRAMEINTERVAL" edc:desc="Frame Interval" edc:nzwidth="0xE"/>
+            <edc:AdjustPoint edc:offset="0x2"/>
+            <edc:SFRFieldDef edc:cname="FSMPS" edc:desc="Largest Data Packet" edc:nzwidth="0xF"/>
+            <edc:SFRFieldDef edc:cname="FIT" edc:desc="Frame Interval Toggle" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600038" edc:access="n-----------------nnnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcFmRemaining" edc:impl="0x80003FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="FR" edc:desc="Frame Remaining" edc:nzwidth="0xE"/>
+            <edc:AdjustPoint edc:offset="0x11"/>
+            <edc:SFRFieldDef edc:cname="FRT" edc:desc="Frame Remaining Toggle" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x60003C" edc:access="----------------nnnnnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcFmNumber" edc:impl="0xFFFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="FN" edc:desc="Frame Number" edc:nzwidth="0x10"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600040" edc:access="------------------nnnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcPeriodicStart" edc:impl="0x3FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="PS" edc:desc="Periodic Start" edc:nzwidth="0xE"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600044" edc:access="------------------nnnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcLSThreshold" edc:impl="0x3FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="LST" edc:desc="Low-Speed Threshold" edc:nzwidth="0xE"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600048" edc:access="nnnnnnnn-----------nnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcRhDescriptorA" edc:impl="0xFF001FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="NDP" edc:desc="Number of Downstream Ports (read-only)" edc:nzwidth="0x8"/>
+            <edc:SFRFieldDef edc:cname="PSM" edc:desc="Power Switching Mode (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="NPS" edc:desc="No Power Switching (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DT" edc:desc="Device Type (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCPM" edc:desc="Overcurrent Protection Mode (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="NOCP" edc:desc="No Overcurrent Protection (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0xB"/>
+            <edc:SFRFieldDef edc:cname="POTPG" edc:desc="Power-On to Power-good Time (read/write)" edc:nzwidth="0x8"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x60004C" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="UHPHS_OHCI_HcRhDescriptorB" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="DR0" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR1" edc:desc="Device Removable Bit for Downstream Port 1" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR2" edc:desc="Device Removable Bit for Downstream Port 2" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR3" edc:desc="Device Removable Bit for Downstream Port 3" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR4" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR5" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR6" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR7" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR8" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR9" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR10" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR11" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR12" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR13" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR14" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="DR15" edc:desc="Device Removable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM0" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM1" edc:desc="Port Power Control Mask for Downstream Port 1" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM2" edc:desc="Port Power Control Mask for Downstream Port 2" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM3" edc:desc="Port Power Control Mask for Downstream Port 3" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM4" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM5" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM6" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM7" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM8" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM9" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM10" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM11" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM12" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM13" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM14" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PPCM15" edc:desc="Port Power Control Mask" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600050" edc:access="n-------------nnn-------------nn" edc:cname="UHPHS_OHCI_HcRhStatus" edc:impl="0x80038003" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="LPS" edc:desc="Local Power Status (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCI" edc:desc="Overcurrent Indicator (read-only)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0xD"/>
+            <edc:SFRFieldDef edc:cname="DRWE" edc:desc="Device Remote Wakeup Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="LPSC" edc:desc="Local Power Status Change (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCIC" edc:desc="Overcurrent Indication Change (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0xD"/>
+            <edc:SFRFieldDef edc:cname="CRWE" edc:desc="Clear Remote Wakeup Enable (read/write)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600054" edc:access="-----------nnnnn------nn---nnnnn" edc:cname="UHPHS_OHCI_HcRhPortStatus0" edc:impl="0x1F031F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="CPE" edc:desc="Port Current Connection Status/clear Port Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPE" edc:desc="Port Enable Status/set Port Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPS" edc:desc="Port Suspend Status/set Port Suspend (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CSS" edc:desc="Port Overcurrent Indicator/clear Suspend Status (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPR" edc:desc="Port Reset Status/set Port Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x3"/>
+            <edc:SFRFieldDef edc:cname="SPP" edc:desc="Port Power Status/set Port Power (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CPP" edc:desc="Low-speed Device Attached/clear Port Power (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x6"/>
+            <edc:SFRFieldDef edc:cname="CSC" edc:desc="Connect Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PESC" edc:desc="Port Enable Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PSSC" edc:desc="Port Suspend Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCIC" edc:desc="Overcurrent Indicator Change (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PRSC" edc:desc="Port Reset Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x600058" edc:access="-----------nnnnn------nn---nnnnn" edc:cname="UHPHS_OHCI_HcRhPortStatus1" edc:impl="0x1F031F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="CPE" edc:desc="Port Current Connection Status/clear Port Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPE" edc:desc="Port Enable Status/set Port Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPS" edc:desc="Port Suspend Status/set Port Suspend (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CSS" edc:desc="Port Overcurrent Indicator/clear Suspend Status (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPR" edc:desc="Port Reset Status/set Port Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x3"/>
+            <edc:SFRFieldDef edc:cname="SPP" edc:desc="Port Power Status/set Port Power (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CPP" edc:desc="Low-speed Device Attached/clear Port Power (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x6"/>
+            <edc:SFRFieldDef edc:cname="CSC" edc:desc="Connect Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PESC" edc:desc="Port Enable Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PSSC" edc:desc="Port Suspend Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCIC" edc:desc="Overcurrent Indicator Change (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PRSC" edc:desc="Port Reset Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x60005C" edc:access="-----------nnnnn------nn---nnnnn" edc:cname="UHPHS_OHCI_HcRhPortStatus2" edc:impl="0x1F031F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_OHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_OHCI">
+            <edc:SFRFieldDef edc:cname="CPE" edc:desc="Port Current Connection Status/clear Port Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPE" edc:desc="Port Enable Status/set Port Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPS" edc:desc="Port Suspend Status/set Port Suspend (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CSS" edc:desc="Port Overcurrent Indicator/clear Suspend Status (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SPR" edc:desc="Port Reset Status/set Port Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x3"/>
+            <edc:SFRFieldDef edc:cname="SPP" edc:desc="Port Power Status/set Port Power (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CPP" edc:desc="Low-speed Device Attached/clear Port Power (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x6"/>
+            <edc:SFRFieldDef edc:cname="CSC" edc:desc="Connect Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PESC" edc:desc="Port Enable Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PSSC" edc:desc="Port Suspend Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCIC" edc:desc="Overcurrent Indicator Change (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PRSC" edc:desc="Port Reset Status Change (read/write, write '1' to clear)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+    </edc:DPRSector>
+    <edc:DPRSector edc:beginaddr="0x700000" edc:endaddr="0x800000" edc:regionid="UHPHS_EHCI">
+      <edc:SFRDef edc:_addr="0x700000" edc:access="rrrrrrrrrrrrrrrr--------rrrrrrrr" edc:cname="UHPHS_EHCI_HCCAPBASE" edc:impl="0xFFFF00FF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="CAPLENGTH" edc:desc="Capability Registers Length" edc:nzwidth="0x8"/>
+            <edc:AdjustPoint edc:offset="0x8"/>
+            <edc:SFRFieldDef edc:cname="HCIVERSION" edc:desc="Host Controller Interface Version Number" edc:nzwidth="0x10"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700004" edc:access="--------rrrr---rrrrrrrrr---rrrrr" edc:cname="UHPHS_EHCI_HCSPARAMS" edc:impl="0xF1FF1F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="N_PORTS" edc:desc="Number of Ports" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="PPC" edc:desc="Port Power Control" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x3"/>
+            <edc:SFRFieldDef edc:cname="N_PCC" edc:desc="Number of Ports per Companion Controller" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="N_CC" edc:desc="Number of Companion Controllers" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="P_INDICATOR" edc:desc="Port Indicators" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x3"/>
+            <edc:SFRFieldDef edc:cname="N_DP" edc:desc="Debug Port Number" edc:nzwidth="0x4"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700008" edc:access="----------------rrrrrrrrrrrr-rrr" edc:cname="UHPHS_EHCI_HCCPARAMS" edc:impl="0xFFF7" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="AC" edc:desc="64-bit Addressing Capability" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PFLF" edc:desc="Programmable Frame List Flag" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="ASPC" edc:desc="Asynchronous Schedule Park Capability" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x1"/>
+            <edc:SFRFieldDef edc:cname="IST" edc:desc="Isochronous Scheduling Threshold" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="EECP" edc:desc="EHCI Extended Capabilities Pointer" edc:nzwidth="0x8"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:AdjustPoint edc:offset="0x4"/>
+      <edc:SFRDef edc:_addr="0x700010" edc:access="--------nnnnnnnn----n-nnnnnnnnnn" edc:cname="UHPHS_EHCI_USBCMD" edc:impl="0xFF0BFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="RS" edc:desc="Run/Stop (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="HCRESET" edc:desc="Host Controller Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FLS" edc:desc="Frame List Size (read/write or read-only)" edc:nzwidth="0x2"/>
+            <edc:SFRFieldDef edc:cname="PSE" edc:desc="Periodic Schedule Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="ASE" edc:desc="Asynchronous Schedule Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="IAAD" edc:desc="Interrupt on Async Advance Doorbell (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="LHCR" edc:desc="Light Host Controller Reset (optional) (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="ASPMC" edc:desc="Asynchronous Schedule Park Mode Count (optional) (read/write or read-only)" edc:nzwidth="0x2"/>
+            <edc:AdjustPoint edc:offset="0x1"/>
+            <edc:SFRFieldDef edc:cname="ASPME" edc:desc="Asynchronous Schedule Park Mode Enable (optional) (read/write or read-only)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x4"/>
+            <edc:SFRFieldDef edc:cname="ITC" edc:desc="Interrupt Threshold Control (read/write)" edc:nzwidth="0x8"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700014" edc:access="----------------nnnn------nnnnnn" edc:cname="UHPHS_EHCI_USBSTS" edc:impl="0xF03F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="USBINT" edc:desc="USB Interrupt (cleared on write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="USBERRINT" edc:desc="USB Error Interrupt (cleared on write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PCD" edc:desc="Port Change Detect (cleared on write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FLR" edc:desc="Frame List Rollover (cleared on write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="HSE" edc:desc="Host System Error (cleared on write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="IAA" edc:desc="Interrupt on Async Advance (cleared on write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x6"/>
+            <edc:SFRFieldDef edc:cname="HCHLT" edc:desc="HCHalted (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="RCM" edc:desc="Reclamation (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PSS" edc:desc="Periodic Schedule Status (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="ASS" edc:desc="Asynchronous Schedule Status (read-only)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700018" edc:access="--------------------------nnnnnn" edc:cname="UHPHS_EHCI_USBINTR" edc:impl="0x3F" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="USBIE" edc:desc="USBINT Interrupt Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="USBEIE" edc:desc="USBERRINT Interrupt Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PCIE" edc:desc="Port Change Detect Interrupt Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FLRE" edc:desc="Frame List Rollover Interrupt Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="HSEE" edc:desc="Host System Error Interrupt Enable" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="IAAE" edc:desc="Interrupt on Async Advance Enable" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x70001C" edc:access="------------------nnnnnnnnnnnnnn" edc:cname="UHPHS_EHCI_FRINDEX" edc:impl="0x3FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="FI" edc:desc="Frame Index" edc:nzwidth="0xE"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700020" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="UHPHS_EHCI_CTRLDSSEGMENT" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI"/>
+      <edc:SFRDef edc:_addr="0x700024" edc:access="nnnnnnnnnnnnnnnnnnnn------------" edc:cname="UHPHS_EHCI_PERIODICLISTBASE" edc:impl="0xFFFFF000" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:AdjustPoint edc:offset="0xC"/>
+            <edc:SFRFieldDef edc:cname="BA" edc:desc="Base Address (Low)" edc:nzwidth="0x14"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700028" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnn-----" edc:cname="UHPHS_EHCI_ASYNCLISTADDR" edc:impl="0xFFFFFFE0" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:AdjustPoint edc:offset="0x5"/>
+            <edc:SFRFieldDef edc:cname="LPL" edc:desc="Link Pointer Low" edc:nzwidth="0x1B"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:AdjustPoint edc:offset="0x24"/>
+      <edc:SFRDef edc:_addr="0x700050" edc:access="-------------------------------n" edc:cname="UHPHS_EHCI_CONFIGFLAG" edc:impl="0x1" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="CF" edc:desc="Configure Flag (Read/Write)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700054" edc:access="---------nnnnnnnnnnnnn-nnnnnnnnn" edc:cname="UHPHS_EHCI_PORTSC0" edc:impl="0x7FFDFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="CCS" edc:desc="Current Connect Status (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CSC" edc:desc="Connect Status Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PED" edc:desc="Port Enabled/Disabled (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PEDC" edc:desc="Port Enable/Disable Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCA" edc:desc="Over-current Active (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCC" edc:desc="Over-current Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FPR" edc:desc="Force Port Resume (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SUS" edc:desc="Suspend (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PR" edc:desc="Port Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x1"/>
+            <edc:SFRFieldDef edc:cname="LS" edc:desc="Line Status (read-only)" edc:nzwidth="0x2">
+              <edc:SFRFieldSemantic edc:cname="SE0" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x0"/>
+              <edc:SFRFieldSemantic edc:cname="K_STATE" edc:desc="Low-speed device, release ownership of port" edc:when="(field &amp; 0x3) == 0x1"/>
+              <edc:SFRFieldSemantic edc:cname="J_STATE" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x2"/>
+              <edc:SFRFieldSemantic edc:cname="UNDEFINED" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x3"/>
+            </edc:SFRFieldDef>
+            <edc:SFRFieldDef edc:cname="PP" edc:desc="Port Power (read/write or read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PO" edc:desc="Port Owner (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PIC" edc:desc="Port Indicator Control (read/write)" edc:nzwidth="0x2"/>
+            <edc:SFRFieldDef edc:cname="PTC" edc:desc="Port Test Control (read/write)" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="WKCNNT_E" edc:desc="Wake on Connect Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WKDSCNNT_E" edc:desc="Wake on Disconnect Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WKOC_E" edc:desc="Wake on Over-current Enable (read/write)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x700058" edc:access="---------nnnnnnnnnnnnn-nnnnnnnnn" edc:cname="UHPHS_EHCI_PORTSC1" edc:impl="0x7FFDFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="CCS" edc:desc="Current Connect Status (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CSC" edc:desc="Connect Status Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PED" edc:desc="Port Enabled/Disabled (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PEDC" edc:desc="Port Enable/Disable Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCA" edc:desc="Over-current Active (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCC" edc:desc="Over-current Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FPR" edc:desc="Force Port Resume (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SUS" edc:desc="Suspend (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PR" edc:desc="Port Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x1"/>
+            <edc:SFRFieldDef edc:cname="LS" edc:desc="Line Status (read-only)" edc:nzwidth="0x2">
+              <edc:SFRFieldSemantic edc:cname="SE0" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x0"/>
+              <edc:SFRFieldSemantic edc:cname="K_STATE" edc:desc="Low-speed device, release ownership of port" edc:when="(field &amp; 0x3) == 0x1"/>
+              <edc:SFRFieldSemantic edc:cname="J_STATE" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x2"/>
+              <edc:SFRFieldSemantic edc:cname="UNDEFINED" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x3"/>
+            </edc:SFRFieldDef>
+            <edc:SFRFieldDef edc:cname="PP" edc:desc="Port Power (read/write or read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PO" edc:desc="Port Owner (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PIC" edc:desc="Port Indicator Control (read/write)" edc:nzwidth="0x2"/>
+            <edc:SFRFieldDef edc:cname="PTC" edc:desc="Port Test Control (read/write)" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="WKCNNT_E" edc:desc="Wake on Connect Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WKDSCNNT_E" edc:desc="Wake on Disconnect Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WKOC_E" edc:desc="Wake on Over-current Enable (read/write)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x70005C" edc:access="---------nnnnnnnnnnnnn-nnnnnnnnn" edc:cname="UHPHS_EHCI_PORTSC2" edc:impl="0x7FFDFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="CCS" edc:desc="Current Connect Status (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="CSC" edc:desc="Connect Status Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PED" edc:desc="Port Enabled/Disabled (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PEDC" edc:desc="Port Enable/Disable Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCA" edc:desc="Over-current Active (read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="OCC" edc:desc="Over-current Change (read/write clear)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="FPR" edc:desc="Force Port Resume (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="SUS" edc:desc="Suspend (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PR" edc:desc="Port Reset (read/write)" edc:nzwidth="0x1"/>
+            <edc:AdjustPoint edc:offset="0x1"/>
+            <edc:SFRFieldDef edc:cname="LS" edc:desc="Line Status (read-only)" edc:nzwidth="0x2">
+              <edc:SFRFieldSemantic edc:cname="SE0" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x0"/>
+              <edc:SFRFieldSemantic edc:cname="K_STATE" edc:desc="Low-speed device, release ownership of port" edc:when="(field &amp; 0x3) == 0x1"/>
+              <edc:SFRFieldSemantic edc:cname="J_STATE" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x2"/>
+              <edc:SFRFieldSemantic edc:cname="UNDEFINED" edc:desc="Not a low-speed device, perform EHCI reset" edc:when="(field &amp; 0x3) == 0x3"/>
+            </edc:SFRFieldDef>
+            <edc:SFRFieldDef edc:cname="PP" edc:desc="Port Power (read/write or read-only)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PO" edc:desc="Port Owner (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="PIC" edc:desc="Port Indicator Control (read/write)" edc:nzwidth="0x2"/>
+            <edc:SFRFieldDef edc:cname="PTC" edc:desc="Port Test Control (read/write)" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="WKCNNT_E" edc:desc="Wake on Connect Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WKDSCNNT_E" edc:desc="Wake on Disconnect Enable (read/write)" edc:nzwidth="0x1"/>
+            <edc:SFRFieldDef edc:cname="WKOC_E" edc:desc="Wake on Over-current Enable (read/write)" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:AdjustPoint edc:offset="0x48"/>
+      <edc:SFRDef edc:_addr="0x7000A8" edc:access="n-------------------nnnnnnnnnnnn" edc:cname="UHPHS_EHCI_INSNREG06" edc:impl="0x80000FFF" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="Nb_Success_Burst" edc:desc="Number of Successful Bursts (Read-only)" edc:nzwidth="0x4"/>
+            <edc:SFRFieldDef edc:cname="Nb_Burst" edc:desc="Number of Bursts (Read-only)" edc:nzwidth="0x5"/>
+            <edc:SFRFieldDef edc:cname="HBURST" edc:desc="Burst Value (Read-only)" edc:nzwidth="0x3"/>
+            <edc:AdjustPoint edc:offset="0x13"/>
+            <edc:SFRFieldDef edc:cname="AHB_ERR" edc:desc="AHB Error" edc:nzwidth="0x1"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+      <edc:SFRDef edc:_addr="0x7000AC" edc:access="nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn" edc:cname="UHPHS_EHCI_INSNREG07" edc:nzwidth="0x20" ltx:memberofperipheral="UHPHS_EHCI">
+        <edc:SFRModeList>
+          <edc:SFRMode edc:id="DS.0" ltx:memberofperipheral="UHPHS_EHCI">
+            <edc:SFRFieldDef edc:cname="AHB_ADDR" edc:desc="AHB Address (Read Only)" edc:nzwidth="0x20"/>
+          </edc:SFRMode>
+        </edc:SFRModeList>
+      </edc:SFRDef>
+    </edc:DPRSector>
+    <edc:EBIDataSector edc:beginaddr="0x10000000" edc:endaddr="0x20000000" edc:isexecutable="true" edc:regionid="EBI_CS0"/>
+    <edc:EBIDataSector edc:beginaddr="0x20000000" edc:endaddr="0x30000000" edc:isexecutable="true" edc:regionid="EBI_CS1"/>
+    <edc:EBIDataSector edc:beginaddr="0x20000000" edc:endaddr="0x30000000" edc:regionid="EBI_MPDDR"/>
+    <edc:DDRSector edc:beginaddr="0x20000000" edc:endaddr="0x30000000" edc:isexecutable="true" edc:regionid="SDRAM_CS"/>
+    <edc:EBIDataSector edc:beginaddr="0x30000000" edc:endaddr="0x40000000" edc:isexecutable="true" edc:regionid="EBI_CS2"/>
+    <edc:EBIDataSector edc:beginaddr="0x40000000" edc:endaddr="0x50000000" edc:isexecutable="true" edc:regionid="EBI_CS3"/>
+    <edc:EBIDataSector edc:beginaddr="0x40000000" edc:endaddr="0x50000000" edc:regionid="EBI_NF"/>
+    <edc:EBIDataSector edc:beginaddr="0x50000000" edc:endaddr="0x60000000" edc:isexecutable="true" edc:regionid="EBI_CS4"/>
+    <edc:EBIDataSector edc:beginaddr="0x60000000" edc:endaddr="0x70000000" edc:isexecutable="true" edc:regionid="EBI_CS5"/>
+    <edc:SQIDataSector edc:beginaddr="0x70000000" edc:endaddr="0x80000000" edc:isexecutable="true" edc:regionid="QSPIMEM"/>
+    <edc:DeviceIDSector edc:beginaddr="0xFFFFF240" edc:endaddr="0xFFFFF244" edc:mask="0x80000000" edc:regionid="devid" edc:value="0x819B3540"/>
+  </edc:PhysicalSpace>
+  <edc:PinList edc:ppsflavor="atmel">
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA0" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM0_IO0" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM0"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO4" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO4" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM4"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA1" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM0_IO1" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM0"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO5" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM4"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA2" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM0_IO4" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM0"/>
+      <edc:VirtualPin edc:name="SDMMC1_DAT1" edc:ppsfunction="B" ltx:memberofperipheral="SDMMC1"/>
+      <edc:VirtualPin edc:name="E0_TX0" edc:ppsfunction="C" ltx:memberofperipheral="EMAC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA3" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM0_IO3" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM0"/>
+      <edc:VirtualPin edc:name="SDMMC1_DAT2" edc:ppsfunction="B" ltx:memberofperipheral="SDMMC1"/>
+      <edc:VirtualPin edc:name="E0_TX1" edc:ppsfunction="C" ltx:memberofperipheral="EMAC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA4" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM0_IO2" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM0"/>
+      <edc:VirtualPin edc:name="SDMMC1_DAT3" edc:ppsfunction="B" ltx:memberofperipheral="SDMMC1"/>
+      <edc:VirtualPin edc:name="E0_TXER" edc:ppsfunction="C" ltx:memberofperipheral="EMAC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA5" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM1_IO0" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM1"/>
+      <edc:VirtualPin edc:name="CANTX1" edc:ppsfunction="B" ltx:memberofperipheral="CAN1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA6" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM1_IO1" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM1"/>
+      <edc:VirtualPin edc:name="CANRX1" edc:ppsfunction="B" ltx:memberofperipheral="CAN1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA7" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM2_IO0" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM2"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO4" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM4"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO4" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM5"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA8" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM2_IO1" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM2"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO3" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO5" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM4"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA9" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="DRXD" edc:ppsfunction="A" ltx:memberofperipheral="DBGU"/>
+      <edc:VirtualPin edc:name="CANRX0" edc:ppsfunction="B" ltx:memberofperipheral="CAN0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA10" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="DTXD" edc:ppsfunction="A" ltx:memberofperipheral="DBGU"/>
+      <edc:VirtualPin edc:name="CANTX0" edc:ppsfunction="B" ltx:memberofperipheral="CAN0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA11" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO1" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM4"/>
+      <edc:VirtualPin edc:name="SDMMC1_DAT0" edc:ppsfunction="B" ltx:memberofperipheral="SDMMC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA12" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO0" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM4"/>
+      <edc:VirtualPin edc:name="SDMMC1_CMD" edc:ppsfunction="B" ltx:memberofperipheral="SDMMC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA13" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO2" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM4"/>
+      <edc:VirtualPin edc:name="SDMMC1_CK" edc:ppsfunction="B" ltx:memberofperipheral="SDMMC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA14" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO3" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM4"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA15" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="SDMMC0_DAT0" edc:ppsfunction="A" ltx:memberofperipheral="SDMMC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA16" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="SDMMC0_CMD" edc:ppsfunction="A" ltx:memberofperipheral="SDMMC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA17" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="SDMMC0_CK" edc:ppsfunction="A" ltx:memberofperipheral="SDMMC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA18" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="SDMMC0_DAT1" edc:ppsfunction="A" ltx:memberofperipheral="SDMMC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA19" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="SDMMC0_DAT2" edc:ppsfunction="A" ltx:memberofperipheral="SDMMC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA20" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="SDMMC0_DAT3" edc:ppsfunction="A" ltx:memberofperipheral="SDMMC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA21" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TIOA0" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO1" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA22" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TIOA1" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO0" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA23" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TIOA2" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO2" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA24" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TCLK0" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="TK" edc:ppsfunction="B" ltx:memberofperipheral="SSC"/>
+      <edc:VirtualPin edc:name="CLASSD_L0" edc:ppsfunction="C" ltx:memberofperipheral="CLASSD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA25" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TCLK1" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="TF" edc:ppsfunction="B" ltx:memberofperipheral="SSC"/>
+      <edc:VirtualPin edc:name="CLASSD_L1" edc:ppsfunction="C" ltx:memberofperipheral="CLASSD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA26" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TCLK2" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="TD" edc:ppsfunction="B" ltx:memberofperipheral="SSC"/>
+      <edc:VirtualPin edc:name="CLASSD_L2" edc:ppsfunction="C" ltx:memberofperipheral="CLASSD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA27" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TIOB0" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="RD" edc:ppsfunction="B" ltx:memberofperipheral="SSC"/>
+      <edc:VirtualPin edc:name="CLASSD_L3" edc:ppsfunction="C" ltx:memberofperipheral="CLASSD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA28" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TIOB1" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="RK" edc:ppsfunction="B" ltx:memberofperipheral="SSC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA29" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="TIOB2" edc:ppsfunction="A" ltx:memberofperipheral="TC0"/>
+      <edc:VirtualPin edc:name="RF" edc:ppsfunction="B" ltx:memberofperipheral="SSC"/>
+      <edc:VirtualPin edc:name="FLEXCOM2_IO7" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM2"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA30" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM6_IO0" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM6"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO6" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+      <edc:VirtualPin edc:name="E0_MDC" edc:ppsfunction="C" ltx:memberofperipheral="EMAC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PA31" edc:ppsfunction="default" ltx:memberofperipheral="PIOA"/>
+      <edc:VirtualPin edc:name="FLEXCOM6_IO1" edc:ppsfunction="A" ltx:memberofperipheral="FLEXCOM6"/>
+      <edc:VirtualPin edc:name="FLEXCOM5_IO5" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM5"/>
+      <edc:VirtualPin edc:name="E0_TXEN" edc:ppsfunction="C" ltx:memberofperipheral="EMAC0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB0" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RX0" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM2_IO4" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM2"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB1" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RX1" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM2_IO3" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM2"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB2" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RXER" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM2_IO2" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM2"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB3" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RXDV" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM4_IO6" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM4"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB4" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TXCK" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM8_IO0" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM8"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB5" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_MDIO" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM8_IO1" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM8"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB6" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_MDC" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="FLEXCOM0_IO7" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM0"/>
+      <edc:VirtualPin edc:name="AD7" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB7" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TXEN" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="AD8" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB8" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TXER" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="AD9" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB9" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TX0" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="PCK1" edc:ppsfunction="B" ltx:memberofperipheral="PMC"/>
+      <edc:VirtualPin edc:name="AD10" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB10" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TX1" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="PCK0" edc:ppsfunction="B" ltx:memberofperipheral="PMC"/>
+      <edc:VirtualPin edc:name="AD11" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB11" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TX2" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="PWM0" edc:ppsfunction="B" ltx:memberofperipheral="PWM"/>
+      <edc:VirtualPin edc:name="AD0" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB12" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_TX3" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="PWM1" edc:ppsfunction="B" ltx:memberofperipheral="PWM"/>
+      <edc:VirtualPin edc:name="AD1" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB13" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RX2" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="PWM2" edc:ppsfunction="B" ltx:memberofperipheral="PWM"/>
+      <edc:VirtualPin edc:name="AD2" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB14" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RX3" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="PWM3" edc:ppsfunction="B" ltx:memberofperipheral="PWM"/>
+      <edc:VirtualPin edc:name="AD3" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB15" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_RXCK" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="AD4" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB16" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_CRS" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="AD5" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB17" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="E0_COL" edc:ppsfunction="A" ltx:memberofperipheral="EMAC0"/>
+      <edc:VirtualPin edc:name="AD6" edc:ppsfunction="X1" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB18" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="IRQ" edc:ppsfunction="A" ltx:memberofperipheral="AIC"/>
+      <edc:VirtualPin edc:name="ADTRG" edc:ppsfunction="B" ltx:memberofperipheral="ADC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB19" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="QSCK" edc:ppsfunction="A" ltx:memberofperipheral="QSPI"/>
+      <edc:VirtualPin edc:name="I2SMCC_CK" edc:ppsfunction="B" ltx:memberofperipheral="I2SMCC"/>
+      <edc:VirtualPin edc:name="FLEXCOM11_IO0" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM11"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB20" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="QCS" edc:ppsfunction="A" ltx:memberofperipheral="QSPI"/>
+      <edc:VirtualPin edc:name="I2SMCC_WS" edc:ppsfunction="B" ltx:memberofperipheral="I2SMCC"/>
+      <edc:VirtualPin edc:name="FLEXCOM11_IO1" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM11"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB21" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="QIO0" edc:ppsfunction="A" ltx:memberofperipheral="QSPI"/>
+      <edc:VirtualPin edc:name="I2SMCC_DIN0" edc:ppsfunction="B" ltx:memberofperipheral="I2SMCC"/>
+      <edc:VirtualPin edc:name="FLEXCOM12_IO0" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM12"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB22" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="QIO1" edc:ppsfunction="A" ltx:memberofperipheral="QSPI"/>
+      <edc:VirtualPin edc:name="I2SMCC_DOUT0" edc:ppsfunction="B" ltx:memberofperipheral="I2SMCC"/>
+      <edc:VirtualPin edc:name="FLEXCOM12_IO1" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM12"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB23" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="QIO2" edc:ppsfunction="A" ltx:memberofperipheral="QSPI"/>
+      <edc:VirtualPin edc:name="I2SMCC_MCK" edc:ppsfunction="B" ltx:memberofperipheral="I2SMCC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB24" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="QIO3" edc:ppsfunction="A" ltx:memberofperipheral="QSPI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PB25" edc:ppsfunction="default" ltx:memberofperipheral="PIOB"/>
+      <edc:VirtualPin edc:name="NRST_OUT" edc:ppsfunction="A" ltx:memberofperipheral="RSTC"/>
+      <edc:VirtualPin edc:name="NTRST" edc:ppsfunction="B" ltx:memberofperipheral="ICE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC0" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT0" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D0" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="FLEXCOM7_IO0" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM7"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC1" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT1" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D1" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="FLEXCOM7_IO1" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM7"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC2" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT2" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D2" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TIOA3" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC3" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT3" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D3" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TIOB3" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC4" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT4" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D4" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TCLK3" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC5" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT5" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D5" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TIOA4" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC6" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT6" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D6" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TIOB4" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC7" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT7" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D7" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TCLK4" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC8" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT8" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D8" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="FLEXCOM9_IO0" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM9"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC9" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT9" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D9" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="FLEXCOM9_IO1" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM9"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC10" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT10" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D10" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="PWM0" edc:ppsfunction="C" ltx:memberofperipheral="PWM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC11" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT11" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_D11" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="PWM1" edc:ppsfunction="C" ltx:memberofperipheral="PWM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC12" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT12" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_PCK" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TIOA5" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC13" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT13" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_VSYNC" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TIOB5" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC14" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT14" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_HSYNC" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="TCLK5" edc:ppsfunction="C" ltx:memberofperipheral="TC1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC15" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT15" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="ISI_MCK" edc:ppsfunction="B" ltx:memberofperipheral="ISI"/>
+      <edc:VirtualPin edc:name="PCK0" edc:ppsfunction="C" ltx:memberofperipheral="PMC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC16" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT16" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_RXER" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="FLEXCOM10_IO0" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM10"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC17" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT17" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="FLEXCOM1_IO7" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM1"/>
+      <edc:VirtualPin edc:name="FLEXCOM10_IO1" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM10"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC18" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT18" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_TX0" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="PWM0" edc:ppsfunction="C" ltx:memberofperipheral="PWM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC19" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT19" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_TX1" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="PWM1" edc:ppsfunction="C" ltx:memberofperipheral="PWM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC20" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT20" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_RX0" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="PWM2" edc:ppsfunction="C" ltx:memberofperipheral="PWM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC21" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT21" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_RX1" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="PWM3" edc:ppsfunction="C" ltx:memberofperipheral="PWM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC22" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT22" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="FLEXCOM3_IO0" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM3"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC23" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDAT23" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="FLEXCOM3_IO1" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM3"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC24" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDISP" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="FLEXCOM3_IO4" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM3"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC25" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="FLEXCOM3_IO3" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM3"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC26" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDPWM" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="FLEXCOM3_IO2" edc:ppsfunction="B" ltx:memberofperipheral="FLEXCOM3"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC27" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDVSYNC" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_TXEN" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="FLEXCOM1_IO4" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC28" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDHSYNC" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_CRSDV" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="FLEXCOM1_IO3" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC29" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDDEN" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_TXCK" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="FLEXCOM1_IO2" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC30" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="LCDPCK" edc:ppsfunction="A" ltx:memberofperipheral="LCDC"/>
+      <edc:VirtualPin edc:name="E1_MDC" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="FLEXCOM3_IO7" edc:ppsfunction="C" ltx:memberofperipheral="FLEXCOM3"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PC31" edc:ppsfunction="default" ltx:memberofperipheral="PIOC"/>
+      <edc:VirtualPin edc:name="FIQ" edc:ppsfunction="A" ltx:memberofperipheral="AIC"/>
+      <edc:VirtualPin edc:name="E1_MDIO" edc:ppsfunction="B" ltx:memberofperipheral="EMAC1"/>
+      <edc:VirtualPin edc:name="PCK1" edc:ppsfunction="C" ltx:memberofperipheral="PMC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD0" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="NANDOE" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD1" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="NANDWE" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD2" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="A21" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="NANDALE" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD3" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="A22" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="NANDCLE" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD4" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="NCS3" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="NANDCS" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD5" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="NWAIT" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD6" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D16" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD7" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D17" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD8" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D18" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD9" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D19" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD10" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D20" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD11" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D21" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD12" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D22" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD13" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D23" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD14" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D24" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD15" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D25" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="A20" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD16" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D26" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="A23" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD17" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D27" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="A24" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD18" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D28" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="A25" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD19" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D29" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="NCS2" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD20" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D30" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="NCS4" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="PD21" edc:ppsfunction="default" ltx:memberofperipheral="PIOD"/>
+      <edc:VirtualPin edc:name="D31" edc:ppsfunction="A" ltx:memberofperipheral="EBI"/>
+      <edc:VirtualPin edc:name="NCS5" edc:ppsfunction="B" ltx:memberofperipheral="EBI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDR_CAL"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDR_VREF"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="ADVREFP"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="ADVREFN"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="RTUNE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="HHSDPA"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="HHSDMA"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="HHSDPB"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="HHSDMB"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="HHSDPC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="HHSDMC"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="WKUP0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="SHDN"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="JTAGSEL"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="TCK"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="TDI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="TDO"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="TMS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="RTCK"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="NRST"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="XIN32"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="XOUT32"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="XIN"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="XOUT"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOM"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GND"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDNF"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOP0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOP0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOP0"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIOP1"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDBU"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDANA"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GNDANA"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDOUT25"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIN33"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDIN33"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GNDIN33"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="GNDIN33"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDCORE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDCORE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDCORE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDCORE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDCORE"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="VDDQSPI"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VDD"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+    <edc:Pin>
+      <edc:VirtualPin edc:name="DDRM_VSS"/>
+    </edc:Pin>
+  </edc:PinList>
+</edc:PIC>

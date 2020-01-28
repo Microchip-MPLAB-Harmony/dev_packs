@@ -1,0 +1,363 @@
+<pm3:pm3 xmlns:pm3="http://crownking/pm3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pm3 ../../schema/pm3/pm3.xsd">
+  <pm3:version pm3:major="00" pm3:minor="20" pm3:rev="1"/>
+  <pm3:device pm3:name="PIC32MX110F016B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX110F016C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX110F016D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX120F032B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX120F032C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX120F032D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX120F064H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F064B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F064C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F064D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F128H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F128L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F256B">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX130F256D">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX150F128B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX150F128C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX150F128D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX150F256H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX150F256L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX154F128B">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 194'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX154F128D">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX170F256B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX170F256D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX170F512H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX170F512L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX174F256B">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 194'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX174F256D">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX210F016B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX210F016C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX210F016D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX220F032B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX220F032C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX220F032D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F064B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F064C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F064D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F128H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F128L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F256B">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX230F256D">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX250F128B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX250F128C">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 282'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX250F128D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX250F256H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX250F256L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX254F128B">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 194'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX254F128D">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX270F256B">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 193 194 210'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX270F256D">
+    <pm3:basicinfo pm3:algorithm="54" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 336 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX270F512H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX270F512L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX274F256B">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 153 194'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX274F256D">
+    <pm3:basicinfo pm3:algorithm="80" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 185 195'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX320F032H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX320F064H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX320F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX320F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX330F064H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX330F064L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 444'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX340F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX340F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX340F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX340F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX350F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX350F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 444'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX350F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX350F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX360F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX360F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX370F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX370F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 444'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX420F032H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX430F064H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX430F064L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 444'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX440F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX440F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX440F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX440F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX450F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX450F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 444'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX450F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX450F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX460F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX460F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX470F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX470F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 444'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX530F128H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX530F128L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX534F064H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX534F064L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX550F256H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX550F256L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX564F064H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX564F064L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX564F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX564F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX570F512H">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX570F512L">
+    <pm3:basicinfo pm3:algorithm="66" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX575F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX575F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX575F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX575F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX664F064H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX664F064L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX664F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX664F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX675F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX675F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX675F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX675F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX695F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX695F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX764F128H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX764F128L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 240 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX775F256H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX775F256L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX775F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX775F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX795F512H">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 163 239'"/>
+  </pm3:device>
+  <pm3:device pm3:name="PIC32MX795F512L">
+    <pm3:basicinfo pm3:algorithm="32" pm3:erasealg="15" pm3:firstrev="01.00.00" pm3:pkgs="'1 158 211 269 279'"/>
+  </pm3:device>
+</pm3:pm3>

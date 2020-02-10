@@ -1,0 +1,2594 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32MK0512MCJ064">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0512MCJ064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0512MCJ064.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK1024MCM100">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK1024MCM100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK1024MCM100.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0512MCJ048">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0512MCJ048.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0512MCJ048.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK1024MCF100">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK1024MCF100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK1024MCF100.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK1024MCM064">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK1024MCM064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK1024MCM064.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0512MCM064">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0512MCM064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0512MCM064.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0256MCJ064">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0256MCJ064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0256MCJ064.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0512MCF064">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0512MCF064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0512MCF064.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0512MCM100">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0512MCM100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0512MCM100.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK1024MCF064">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK1024MCF064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK1024MCF064.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0512MCF100">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0512MCF100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0512MCF100.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MK0256MCJ048">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MK0256MCJ048.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MK0256MCJ048.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.emu" subdir="hwtools/emu">
+        <includes pattern="PK3OBDbgToolManager.emu"/>
+        <includes pattern="Simulator.emu"/>
+        <includes pattern="ICD4ToolBase.emu"/>
+        <includes pattern="SnapToolImpl.emu"/>
+        <includes pattern="RI4ToolBase.emu"/>
+        <includes pattern="ICD3DbgToolManager.emu"/>
+        <includes pattern="SKDEManager.emu"/>
+        <includes pattern="PICkit3DbgToolManager.emu"/>
+        <includes pattern="PKOB4ToolImpl.emu"/>
+        <includes pattern="PICkit2DbgToolManager.emu"/>
+        <includes pattern="AtmelIceBase.emu"/>
+        <includes pattern="RIDbgToolManager.emu"/>
+        <includes pattern="Pk4HybridTooImpl.emu"/>
+        <includes pattern="PKOBSKDEDbgToolManager.emu"/>
+        <includes pattern="AtmelIceScriptingBase.emu"/>
+      </resource>
+      <resource type="hwtools.tex" subdir="hwtools/tex">
+        <includes pattern="PK4ToolBase.toolMediator"/>
+        <includes pattern="PKOBSKDEDbgToolManager.toolMediator"/>
+        <includes pattern="RI4ToolBase.toolMediator"/>
+        <includes pattern="ICD4ToolBase.toolMediator"/>
+        <includes pattern="RIDbgToolManager.toolMediator"/>
+        <includes pattern="PK3OBDbgToolManager.toolMediator"/>
+        <includes pattern="SKDEManager.toolMediator"/>
+        <includes pattern="PICkit2DbgToolManager.toolMediator"/>
+        <includes pattern="PICkit3DbgToolManager.toolMediator"/>
+        <includes pattern="SnapToolImpl.toolMediator"/>
+        <includes pattern="Pk4HybridTooImpl.toolMediator"/>
+        <includes pattern="PgmToolManager.toolMediator"/>
+        <includes pattern="AtmelIceScriptingBase.toolMediator"/>
+        <includes pattern="ICD3DbgToolManager.toolMediator"/>
+        <includes pattern="PKOB4ToolImpl.toolMediator"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.pkg" subdir="hwtools/pkg">
+        <includes pattern="pkg.pkg"/>
+      </resource>
+      <resource type="hwtools.pk4" subdir="hwtools/pk4">
+        <includes pattern="pk4.pk4"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="pic18.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="avr8.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+      <resource type="hwtools.icd4" subdir="hwtools/icd4">
+        <includes pattern="icd4.icd4"/>
+      </resource>
+      <resource type="hwtools.ice4" subdir="hwtools/ice4">
+        <includes pattern="ice4.ice4"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MK1024MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCM064.info"/>
+        <includes pattern="device_files/32MK0512MCJ048.info"/>
+        <includes pattern="device_files/32MK0256MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCM064.info"/>
+        <includes pattern="device_files/32MK0256MCJ048.info"/>
+        <includes pattern="device_files/32MK0512MCJ064.info"/>
+        <includes pattern="device_files/32MK1024MCF064.info"/>
+        <includes pattern="device_files/32MK1024MCF100.info"/>
+        <includes pattern="device_files/32MK0512MCM100.info"/>
+        <includes pattern="device_files/32MK0512MCF064.info"/>
+        <includes pattern="device_files/32MK0512MCF100.info"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_voff_init.S"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064.S"/>
+        <includes pattern="32MK0512MCM064/configuration.data"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_pic.ld"/>
+        <includes pattern="32MK0512MCM064/p32MK0512MCM064_div.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064.S"/>
+        <includes pattern="32MK1024MCF064/configuration.data"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_voff_init.S"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_pic.ld"/>
+        <includes pattern="32MK1024MCF064/p32MK1024MCF064_div.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_pic.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.ld"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_voff_init.S"/>
+        <includes pattern="32MK0512MCF064/configuration.data"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064.S"/>
+        <includes pattern="32MK0512MCF064/p32MK0512MCF064_div.S"/>
+        <includes pattern="32MK0512MCF100/configuration.data"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_div.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_voff_init.S"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100.ld"/>
+        <includes pattern="32MK0512MCF100/p32MK0512MCF100_pic.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_div.S"/>
+        <includes pattern="32MK0256MCJ064/configuration.data"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_voff_init.S"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064.ld"/>
+        <includes pattern="32MK0256MCJ064/p32MK0256MCJ064_pic.ld"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100.ld"/>
+        <includes pattern="32MK1024MCM100/configuration.data"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_voff_init.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_div.S"/>
+        <includes pattern="32MK1024MCM100/p32MK1024MCM100_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_voff_init.S"/>
+        <includes pattern="32MK1024MCM064/configuration.data"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_pic.ld"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064_div.S"/>
+        <includes pattern="32MK1024MCM064/p32MK1024MCM064.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_pic.ld"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.ld"/>
+        <includes pattern="32MK0512MCJ048/configuration.data"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_div.S"/>
+        <includes pattern="32MK0512MCJ048/p32MK0512MCJ048_voff_init.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_pic.ld"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_div.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.ld"/>
+        <includes pattern="32MK0512MCJ064/configuration.data"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064.S"/>
+        <includes pattern="32MK0512MCJ064/p32MK0512MCJ064_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/configuration.data"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_voff_init.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.S"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_pic.ld"/>
+        <includes pattern="32MK0512MCM100/p32MK0512MCM100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_div.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.ld"/>
+        <includes pattern="32MK1024MCF100/configuration.data"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_pic.ld"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100_voff_init.S"/>
+        <includes pattern="32MK1024MCF100/p32MK1024MCF100.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_div.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_pic.ld"/>
+        <includes pattern="32MK0256MCJ048/configuration.data"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.S"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048.ld"/>
+        <includes pattern="32MK0256MCJ048/p32MK0256MCJ048_voff_init.S"/>
+        <includes pattern="xc32_device.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mk0256mcj048.h"/>
+        <includes pattern="proc/p32mk0512mcj064.h"/>
+        <includes pattern="proc/p32mk0256mcj064.h"/>
+        <includes pattern="proc/p32mk1024mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcf064.h"/>
+        <includes pattern="proc/p32mk0512mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcj048.h"/>
+        <includes pattern="proc/p32mk1024mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcm100.h"/>
+        <includes pattern="proc/p32mk0512mcf100.h"/>
+        <includes pattern="proc/p32mk0512mcm064.h"/>
+        <includes pattern="proc/p32mk1024mcf100.h"/>
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip" compliant="false">
+        <releases>
+            <release version="1.2.BUILDNUMBER">NEXT</release>
+            <release version="1.2.80" date="2019-10-15">Removed PWM1nIF from IFSn. Updated VirtualPin description. Added HYSPOL bit to CMnCON. Removed PWMCON10.</release>
+            <release version="1.1.53" date="2019-07-11">Added PIC32MK-MCJ devices. Updated name of ANO pin to AN0 for PIC32MK0512MCF064, PIC32MK0512MCM064, PIC32MK1024MCF064, and PIC32MK1024MCM064.</release>
+            <release version="1.0.38" date="2019-04-16">Fixed GPIO port definitions, POSCGain and POSCFGain bit field definition, Excluded Interrupt Offset registers OFF126-129, OFF139-147, OFF151-153 on 64 pin variants.</release>
+            <release version="1.0.22" date="2019-01-24">Initial release.</release>
+        </releases>
+    </pdsc>
+</package>

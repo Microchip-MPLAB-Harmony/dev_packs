@@ -1,0 +1,40 @@
+<pk4:pk4 xmlns:pk4="http://crownking/pk4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pk4 ../../schema/pk4/pk4.xsd">
+  <pk4:version pk4:major="0" pk4:minor="0" pk4:rev="0"/>
+  <pk4:baseclass pk4:classname="PK4InitInterfaceProvider"/>
+  <pk4:device pk4:name="ATSAMS70J19">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70J20">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70J21">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70N19">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70N20">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70N21">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70Q19">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70Q20">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMS70Q21">
+    <pk4:basicinfo pk4:programmertype="EFC_6450"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+</pk4:pk4>

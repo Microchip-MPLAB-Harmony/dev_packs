@@ -1,0 +1,40 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="ATSAMA5D21">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="alpha" mp:icd4p="alpha" mp:pk4d="alpha" mp:pk4p="alpha" mp:sim="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D22">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="alpha" mp:icd4p="alpha" mp:pk4d="alpha" mp:pk4p="alpha" mp:sim="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D225CD1M">
+      <mp:support mp:sim="no"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D23">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="alpha" mp:icd4p="alpha" mp:pk4d="alpha" mp:pk4p="alpha" mp:sim="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D24">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="alpha" mp:icd4p="alpha" mp:pk4d="alpha" mp:pk4p="alpha" mp:sim="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D26">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D27">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="alpha" mp:icd4p="alpha" mp:pk4d="alpha" mp:pk4p="alpha" mp:sim="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D27CD1G">
+      <mp:support mp:sim="no"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D27CD5M">
+      <mp:support mp:sim="no"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D27CLD1G">
+      <mp:support mp:sim="no"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D27CLD2G">
+      <mp:support mp:sim="no"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMA5D28">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="alpha" mp:icd4p="alpha" mp:pk4d="alpha" mp:pk4p="alpha" mp:sim="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

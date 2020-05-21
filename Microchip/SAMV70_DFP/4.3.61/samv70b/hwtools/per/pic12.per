@@ -1,0 +1,400 @@
+<per:per xmlns:per="http://crownking/per" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/per per/per.xsd">
+  <per:version major="0" minor="0" rev="0"/>
+  <per:peripheral name="PullUp">
+    <per:periphConfig>
+      <per:sfr key="RBPU" sfr="OPTION(_REG)?" field="n?RBPU"/>
+      <per:cfg key="MCLRE" cfg="CONFIG" field="MCLRE" optional="true" critical="false"/>
+      <per:pin key="RB0" pinID="RB0" optional="true" critical="false"/>
+      <per:pin key="RB1" pinID="RB1" optional="true" critical="false"/>
+      <per:pin key="RB3" pinID="RB3" optional="true" critical="false"/>
+      <per:pin key="RB4" pinID="RB4" optional="true" critical="false"/>
+      <per:periphClassDesc class="PullUp"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="RBPU" sfr="OPTION(_REG)?" field="n?RAPU"/>
+      <per:cfg key="MCLRE" cfg="CONFIG" field="MCLRE" optional="true" critical="false"/>
+      <per:pin key="RB0" pinID="RA0" optional="true" critical="false"/>
+      <per:pin key="RB1" pinID="RA1" optional="true" critical="false"/>
+      <per:pin key="RB3" pinID="RA3" optional="true" critical="false"/>
+      <per:pin key="RB4" pinID="RA4" optional="true" critical="false"/>
+      <per:periphClassDesc class="PullUp"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="GPPU" sfr="OPTION(_REG)?" field="n?GPPU"/>
+      <per:cfg key="MCLRE" cfg="CONFIG" field="MCLRE" optional="true" critical="false"/>
+      <per:pin key="GP0" pinID="GP0" optional="true" critical="false"/>
+      <per:pin key="GP1" pinID="GP1" optional="true" critical="false"/>
+      <per:pin key="GP3" pinID="GP3" optional="true" critical="false"/>
+      <per:periphClassDesc class="PullUp"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="TMR0">
+    <per:periphConfig>
+      <per:pin key="TXCKI" pinID="T0CKI"/>
+      <per:sfr key="TMRX" sfr="TMR0"/>
+      <per:sfr key="CMCON" sfr="CM1?CON0" critical="false"/>
+      <per:sfr key="CXTXCS" sfr="CM1?CON0" field="nC(1|MP)T0CS" critical="false"/>
+      <per:sfr key="CXOUT" sfr="CM1?CON0" field="C(1|MP)OUT" critical="false"/>
+      <per:sfr key="INTCON" sfr="INTCON0" critical="false"/>
+      <per:sfr key="TXIF" sfr="INTCON0" field="T0IF" critical="false"/>
+      <per:sfr key="TXCON" sfr="OPTION(_REG)?" critical="false"/>
+      <per:sfr key="TXCS" sfr="OPTION(_REG)?" field="T0CS"/>
+      <per:sfr key="TXSE" sfr="OPTION(_REG)?" field="T0SE"/>
+      <per:sfr key="PSA" sfr="OPTION(_REG)?" field="PSA" critical="false"/>
+      <per:sfr key="TXPS" sfr="OPTION(_REG)?" field="PS" critical="false"/>
+      <per:periphClassDesc class="Timer.Timer0"/>
+      <per:initParam param="0I"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:pin key="TXCKI" pinID="T0CKI"/>
+      <per:sfr key="TMRX" sfr="TMR0"/>
+      <per:sfr key="CMCON" sfr="CM1?CON0" critical="false"/>
+      <per:sfr key="CXTXCS" sfr="CM1?CON0" field="nC(1|MP)T0CS" critical="false"/>
+      <per:sfr key="CXOUT" sfr="CM1?CON0" field="C(1|MP)OUT" critical="false"/>
+      <per:sfr key="TXCON" sfr="OPTION(_REG)?" critical="false"/>
+      <per:sfr key="TXCS" sfr="OPTION(_REG)?" field="T0CS"/>
+      <per:sfr key="TXSE" sfr="OPTION(_REG)?" field="T0SE"/>
+      <per:sfr key="PSA" sfr="OPTION(_REG)?" field="PSA" critical="false"/>
+      <per:sfr key="TXPS" sfr="OPTION(_REG)?" field="PS" critical="false"/>
+      <per:periphClassDesc class="Timer.Timer0"/>
+      <per:initParam param="0"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:pin key="TXCKI" pinID="T0CKI"/>
+      <per:sfr key="TMRX" sfr="TMR0"/>
+      <per:sfr key="TXCON" sfr="OPTION(_REG)?"/>
+      <per:sfr key="TXCS" sfr="OPTION(_REG)?" field="T0CS"/>
+      <per:sfr key="TXSE" sfr="OPTION(_REG)?" field="T0SE"/>
+      <per:sfr key="PSA" sfr="OPTION(_REG)?" field="PSA"/>
+      <per:sfr key="TXPS" sfr="OPTION(_REG)?" field="PS"/>
+      <per:periphClassDesc class="Timer.Timer0"/>
+      <per:initParam param="0A"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="WDT">
+    <per:periphConfig>
+      <per:sfr key="PSA" sfr="OPTION|OPTION_REG" field="PSA" critical="false"/>
+      <per:sfr key="PS" sfr="OPTION|OPTION_REG" field="PS" critical="false"/>
+      <per:sfr key="TO" sfr="STATUS" field="nTO"/>
+      <per:cfg key="WDTE" cfg="CONFIG[1-9]?" field="WDT|WDTE|WDTEN"/>
+      <per:periphClassDesc class="WatchdogTimer"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="OSC">
+    <per:periphConfig>
+      <per:sfr key="OSCCAL" sfr="OSCCAL" field="FOSC4"/>
+      <per:pin key="CLKOUT" pinID="(FOSC4)|(GP2)" critical="false"/>
+      <per:periphClassDesc class="OSC.OSC_BL"/>
+      <per:initParam param="a3,D,0"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:cfg key="CONFIG_FOSC" cfg="CONFIG" field="(OSC)|(FOSC)"/>
+      <per:pin key="CLKIN" pinID="(OSC1)|(CLKIN)" critical="false"/>
+      <per:pin key="CLKOUT" pinID="(OSC2)|(CLKOUT)" critical="false"/>
+      <per:periphClassDesc class="OSC.OSC_BL"/>
+      <per:initParam param="a0,A,0"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="COMP1">
+    <per:periphConfig>
+      <per:sfr key="COMPXCON" sfr="CM1CON0" field="nC1WU"/>
+      <per:sfr key="COMPXCONA" sfr="CM1CON0" field="C1PREF"/>
+      <per:sfr key="COMPXCONB" sfr="CM1CON0" field="C1NREF"/>
+      <per:sfr key="COMPXCONC" sfr="CM1CON0" field="C1ON"/>
+      <per:sfr key="COMPXCOND" sfr="CM1CON0" field="nC1T0CS"/>
+      <per:sfr key="COMPXCONE" sfr="CM1CON0" field="C1POL"/>
+      <per:sfr key="COMPXCONF" sfr="CM1CON0" field="nC1OUTEN"/>
+      <per:sfr key="COMPXCONG" sfr="CM1CON0" field="C1OUT"/>
+      <per:sfr key="CXOUTCON" sfr="CM1CON0" field="C1OUT"/>
+      <per:pin key="VIN0-" pinID="C1IN-" critical="false"/>
+      <per:pin key="VIN1-" pinID="C1IN\+" critical="false"/>
+      <per:pin key="VIN0REF+" pinID="C1IN-" critical="false"/>
+      <per:pin key="CXOUT" pinID="C1OUT" critical="false"/>
+      <per:sfr key="PIR" sfr="INTCON0" field="CWIF" critical="false"/>
+      <per:periphClassDesc class="Comparator.Comparator_BL_A"/>
+      <per:initParam param="a51,1,T,T,T,T,T"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="COMPXCON" sfr="CM1CON0" field="nC1WU"/>
+      <per:sfr key="COMPXCONA" sfr="CM1CON0" field="C1PREF"/>
+      <per:sfr key="COMPXCONB" sfr="CM1CON0" field="C1NREF"/>
+      <per:sfr key="COMPXCONC" sfr="CM1CON0" field="C1ON"/>
+      <per:sfr key="COMPXCOND" sfr="CM1CON0" field="nC1T0CS"/>
+      <per:sfr key="COMPXCONE" sfr="CM1CON0" field="C1POL"/>
+      <per:sfr key="COMPXCONF" sfr="CM1CON0" field="nC1OUTEN"/>
+      <per:sfr key="COMPXCONG" sfr="CM1CON0" field="C1OUT"/>
+      <per:sfr key="CXOUTCON" sfr="CM1CON0" field="C1OUT"/>
+      <per:pin key="VIN0-" pinID="C1IN-" critical="false"/>
+      <per:pin key="VIN1-" pinID="C1IN\+" critical="false"/>
+      <per:pin key="VIN0REF+" pinID="C1IN-" critical="false"/>
+      <per:pin key="CXOUT" pinID="C1OUT" critical="false"/>
+      <per:periphClassDesc class="Comparator.Comparator_BL_A"/>
+      <per:initParam param="a53,1,T,T,T,T,T"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="COMPXCON" sfr="CMCON0" field="nCWU"/>
+      <per:sfr key="COMPXCONA" sfr="CMCON0" field="CPREF"/>
+      <per:sfr key="COMPXCONB" sfr="CMCON0" field="CNREF"/>
+      <per:sfr key="COMPXCONC" sfr="CMCON0" field="CMPON"/>
+      <per:sfr key="COMPXCOND" sfr="CMCON0" field="nCMPT0CS"/>
+      <per:sfr key="COMPXCONE" sfr="CMCON0" field="POL"/>
+      <per:sfr key="COMPXCONF" sfr="CMCON0" field="nCOUTEN"/>
+      <per:sfr key="COMPXCONG" sfr="CMCON0" field="CMPOUT"/>
+      <per:sfr key="CXOUTCON" sfr="CMCON0" field="CMPOUT"/>
+      <per:pin key="VIN0-" pinID="CIN-" critical="false"/>
+      <per:pin key="VIN1-" pinID="CIN\+" critical="false"/>
+      <per:pin key="VIN0REF+" pinID="CIN-" critical="false"/>
+      <per:pin key="CXOUT" pinID="COUT" critical="false"/>
+      <per:periphClassDesc class="Comparator.Comparator_BL_A"/>
+      <per:initParam param="a50,1,S,S,S,S,S"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="COMP2">
+    <per:periphConfig>
+      <per:sfr key="COMPXCON" sfr="CM2CON0" field="nC2WU"/>
+      <per:sfr key="COMPXCONA" sfr="CM2CON0" field="C2PREF1"/>
+      <per:sfr key="COMPXCONB" sfr="CM2CON0" field="C2NREF"/>
+      <per:sfr key="COMPXCONC" sfr="CM2CON0" field="C2ON"/>
+      <per:sfr key="COMPXCOND" sfr="CM2CON0" field="C2PREF2"/>
+      <per:sfr key="COMPXCONE" sfr="CM2CON0" field="C2POL"/>
+      <per:sfr key="COMPXCONF" sfr="CM2CON0" field="nC2OUTEN"/>
+      <per:sfr key="COMPXCONG" sfr="CM2CON0" field="C2OUT"/>
+      <per:sfr key="CXOUTCON" sfr="CM2CON0" field="C2OUT"/>
+      <per:pin key="VIN0-" pinID="C2IN-" critical="false"/>
+      <per:pin key="VIN1-" pinID="C2IN\+" critical="false"/>
+      <per:pin key="VIN2-" pinID="C1IN\+" critical="false"/>
+      <per:pin key="VIN0REF+" pinID="C2IN-" critical="false"/>
+      <per:pin key="CXOUT" pinID="C2OUT" critical="false"/>
+      <per:periphClassDesc class="Comparator.Comparator_BL_A"/>
+      <per:initParam param="a52,2,T,T,T,T,U"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="GPIO">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="GP([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRIS(GP)?(IO)?"/>
+      <per:sfr key="PORT" sfr="GPIO"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="1"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORTA">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="RA([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRISA"/>
+      <per:sfr key="PORT" sfr="PORTA"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="A"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORTB">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="RB([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRISB"/>
+      <per:sfr key="PORT" sfr="PORTB"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="B"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORTC">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="RC([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRISC"/>
+      <per:sfr key="PORT" sfr="PORTC"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="C"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORTD">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="RD([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRISD"/>
+      <per:sfr key="PORT" sfr="PORTD"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="D"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORTE">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="RE([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRISE"/>
+      <per:sfr key="PORT" sfr="PORTE"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="E"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORTF">
+    <per:periphConfig>
+      <per:pin key="RX" pinID="RF([0-9])"/>
+      <per:sfr key="TRIS" sfr="TRISF"/>
+      <per:sfr key="PORT" sfr="PORTF"/>
+      <per:periphClassDesc class="Port.Port"/>
+      <per:initParam param="F"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="AnalogPinHandler" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ANS" sfr="ADCON0" field="ANS[0]?"/>
+      <per:periphClassDesc class="AnalogPinHandler"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="PCFG" sfr="ADCON1" field="PCFG[0]?"/>
+      <per:periphClassDesc class="AnalogPinHandler"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="ANSEL" sfr="ANSEL[A|B|C|D|E]?"/>
+      <per:periphClassDesc class="AnalogPinHandler"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="ADC">
+    <per:periphConfig>
+      <per:sfr key="ADCON0" sfr="ADCON[0]?"/>
+      <per:sfr key="ADCS" sfr="ADCON[0]?" field="ADCS" optional="true"/>
+      <per:sfr key="ADCSX#" sfr="ADCON[0]?" field="ADCS#" metaf="#" metar="0|1|2" optional="true"/>
+      <per:sfr key="ADFM" sfr="ADCON[0]?" field="ADFM" optional="true"/>
+      <per:sfr key="ADON" sfr="ADCON[0]?" field="(AD)?ON"/>
+      <per:sfr key="CHS" sfr="ADCON[0]?" field="CHS" optional="true"/>
+      <per:sfr key="CHSX#" sfr="ADCON[0]?" field="CHS#" metaf="#" metar="0|1|2|3|4" optional="true"/>
+      <per:sfr key="GODONE" sfr="ADCON[0]?" field="GO_DONE|GO_nDONE|GO|GOnDONE"/>
+      <per:sfr key="VCFG" sfr="ADCON[0]?" field="VCFG" optional="true"/>
+      <per:sfr key="VCFGX#" sfr="ADCON[0]?" field="VCFG#" metaf="#" metar="0|1" optional="true"/>
+      <per:sfr key="ADCON1" sfr="A?ADCON1" optional="true"/>
+      <per:sfr key="ADCS1" sfr="A?ADCON1" field="ADCS" optional="true"/>
+      <per:sfr key="ADCS1X#" sfr="A?ADCON1" field="ADCS#" metaf="#" metar="0|1|2" optional="true"/>
+      <per:sfr key="ADFM1" sfr="A?ADCON1" field="ADFM" optional="true"/>
+      <per:sfr key="ADNREF" sfr="A?ADCON1" field="ADNREF" optional="true"/>
+      <per:sfr key="ADPREF" sfr="A?ADCON1" field="ADPREF" optional="true"/>
+      <per:sfr key="ADPREFX#" sfr="A?ADCON1" field="ADPREF#" metaf="#" metar="0|1" optional="true"/>
+      <per:sfr key="ADREF" sfr="A?ADCON1" field="ADREF" optional="true"/>
+      <per:sfr key="ADREFX#" sfr="A?ADCON1" field="ADREF#" metaf="#" metar="0|1|2" optional="true"/>
+      <per:sfr key="PCFG" sfr="A?ADCON1" field="PCFG" optional="true"/>
+      <per:sfr key="PCFGX#" sfr="A?ADCON1" field="PCFG#" metaf="#" metar="0|1|2|3" optional="true"/>
+      <per:sfr key="VCFG1" sfr="A?ADCON1" field="VCFG" optional="true"/>
+      <per:sfr key="VCFG1X#" sfr="A?ADCON1" field="VCFG#" metaf="#" metar="0|1" optional="true"/>
+      <per:sfr key="ADCON2" sfr="A?ADCON2" optional="true"/>
+      <per:sfr key="CHSN" sfr="A?ADCON2" field="CHSN" optional="true"/>
+      <per:sfr key="CHSNX#" sfr="A?ADCON2" field="CHSN#" metaf="#" metar="0|1|2|3" optional="true"/>
+      <per:sfr key="TRIGSEL" sfr="A?ADCON2" field="TRIGSEL" optional="true"/>
+      <per:sfr key="TRIGSELX#" sfr="A?ADCON2" field="TRIGSEL#" metaf="#" metar="0|1|2|3" optional="true"/>
+      <per:sfr key="ADCON3" sfr="A?ADCON3" optional="true"/>
+      <per:sfr key="ADEPPOL" sfr="A?ADCON3" field="ADEPPOL" optional="true"/>
+      <per:sfr key="ADIPPOL" sfr="A?ADCON3" field="ADIPPOL" optional="true"/>
+      <per:sfr key="ADOEN" sfr="A?ADCON3" field="ADOEN" optional="true"/>
+      <per:sfr key="ADOOEN" sfr="A?ADCON3" field="ADOOEN" optional="true"/>
+      <per:sfr key="ADIPEN" sfr="A?ADCON3" field="ADIPEN" optional="true"/>
+      <per:sfr key="ADDSEN" sfr="A?ADCON3" field="ADDSEN" optional="true"/>
+      <per:sfr key="ADRES" sfr="ADRES" optional="true"/>
+      <per:sfr key="ADRESH" sfr="ADRESH|ADRES0H" optional="true"/>
+      <per:sfr key="ADRESL" sfr="ADRESL|ADRES0L" optional="true"/>
+      <per:sfr key="ADRES1H" sfr="AADRES1H|ADRES1H" optional="true"/>
+      <per:sfr key="ADRES1L" sfr="AADRES1L|ADRES1L" optional="true"/>
+      <per:sfr key="AADACQ" sfr="AADACQ" optional="true"/>
+      <per:sfr key="ADACQ" sfr="AADACQ" field="ADACQ" optional="true"/>
+      <per:sfr key="ADACQX#" sfr="AADACQ" field="ADACQ#" metaf="#" metar="0|1|2|3|4|5|6" optional="true"/>
+      <per:sfr key="AADCAP" sfr="AADCAP" optional="true"/>
+      <per:sfr key="ADDCAO" sfr="AADCAP" field="ADDCAP" optional="true"/>
+      <per:sfr key="ADDCAPX#" sfr="AADCAP" field="ADDCAP#" metaf="#" metar="0|1|2" optional="true"/>
+      <per:sfr key="AADGRD" sfr="AADGRD" optional="true"/>
+      <per:sfr key="GRDAOE" sfr="AADGRD" field="GRDAOE" optional="true"/>
+      <per:sfr key="GRDBOE" sfr="AADGRD" field="GRDBOE" optional="true"/>
+      <per:sfr key="GRDPOL" sfr="AADGRD" field="GRDPOL" optional="true"/>
+      <per:sfr key="AADPRE" sfr="AADPRE" optional="true"/>
+      <per:sfr key="ADPRE" sfr="AADPRE" field="ADPRE" optional="true"/>
+      <per:sfr key="ADPREX#" sfr="AADPRE" field="ADPRE#" metaf="#" metar="0|1|2|3|4|5|6" optional="true"/>
+      <per:sfr key="AADSTAT" sfr="AADSTAT" optional="true"/>
+      <per:sfr key="ADCONV" sfr="AADSTAT" field="ADCONV" optional="true"/>
+      <per:sfr key="ADSTG" sfr="AADSTAT" field="ADSTG" optional="true"/>
+      <per:sfr key="ADSTGX#" sfr="AADSTAT" field="ADSTG#" metaf="#" metar="0|1" optional="true"/>
+      <per:sfr key="ADACT" sfr="ADACT" field="ADACT" optional="true"/>
+      <per:sfr key="ANSEL" sfr="ANSEL0?" optional="true" critical="false"/>
+      <per:sfr key="ADCS2" sfr="ANSEL0?" field="ADCS" optional="true" critical="false"/>
+      <per:sfr key="ADCS2X#" sfr="ANSEL0?" field="ADCS#" metaf="#" metar="0|1|2" optional="true" critical="false"/>
+      <per:sfr key="FVRCON" sfr="FVRCON" optional="true" critical="false"/>
+      <per:sfr key="ADFVR" sfr="FVRCON" field="ADFVR" optional="true" critical="false"/>
+      <per:sfr key="ADFVRX#" sfr="FVRCON" field="ADFVR#" metaf="#" metar="0|1" optional="true" critical="false"/>
+      <per:sfr key="CDAFVR" sfr="FVRCON" field="CDAFVR" optional="true" critical="false"/>
+      <per:sfr key="CDAFVRX#" sfr="FVRCON" field="CDAFVR#" metaf="#" metar="0|1" optional="true" critical="false"/>
+      <per:sfr key="ADIF" sfr="PIR[0-9]?|ADCON[0]?" field="ADIF" optional="true" critical="false"/>
+      <per:cfg key="IOSCFS" cfg="CONFIG[0-9]?" field="IOSCFS" optional="true" critical="false"/>
+      <per:pin key="ADGRDA" pinID="ADGRDA" optional="true"/>
+      <per:pin key="ADGRDB" pinID="ADGRDB" optional="true"/>
+      <per:pin key="ANX#" pinID="ANA?#" metaf="#" metar="0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15" optional="true" critical="false"/>
+      <per:pin key="AVDD" pinID="AVDD" optional="true"/>
+      <per:pin key="AVSS" pinID="AVSS" optional="true"/>
+      <per:pin key="VDD" pinID="VDD" critical="false"/>
+      <per:pin key="VREF" pinID="VREF|VREFP|VREF1|VREF1P|VREF\+|VREF1\+|VREF\+ADC" optional="true" critical="false"/>
+      <per:pin key="VREFN" pinID="VREFN|VREF1N|VREF-" optional="true" critical="false"/>
+      <per:pin key="VREF2" pinID="VREF2|VREF2P|VREF2\+" optional="true" critical="false"/>
+      <per:pin key="VRH" pinID="VR[H]?" optional="true" critical="false"/>
+      <per:pin key="VRL" pinID="VRL" optional="true" critical="false"/>
+      <per:pin key="VSS" pinID="VSS|GND|VS|PGND" critical="false"/>
+      <per:periphClassDesc class="ADC.ADC"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="EEFLASH">
+    <per:periphConfig>
+      <per:sfr key="FREE" sfr="EECON" field="FREE"/>
+      <per:sfr key="WRERR" sfr="EECON" field="WRERR"/>
+      <per:sfr key="WREN" sfr="EECON" field="WREN"/>
+      <per:sfr key="WR" sfr="EECON" field="WR"/>
+      <per:sfr key="RD" sfr="EECON" field="RD"/>
+      <per:sfr key="EEDATA" sfr="EEDATA"/>
+      <per:sfr key="EEADR" sfr="EEADR"/>
+      <per:periphClassDesc class="EEFlash"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="INT_ADC" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ENABLE" sfr="INTCON1" field="ADIE"/>
+      <per:sfr key="FLAG" sfr="INTCON0" field="ADIF"/>
+      <per:periphClassDesc class="InterruptCore"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="INT_CMP" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ENABLE" sfr="INTCON1" field="CWIE"/>
+      <per:sfr key="FLAG" sfr="INTCON0" field="CWIF"/>
+      <per:periphClassDesc class="InterruptCore"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="INT_TOI" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ENABLE" sfr="INTCON1" field="T0IE"/>
+      <per:sfr key="FLAG" sfr="INTCON0" field="T0IF"/>
+      <per:periphClassDesc class="InterruptCore"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="INT_IOC" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ENABLE" sfr="INTCON1" field="R[A|B]IE"/>
+      <per:sfr key="FLAG" sfr="INTCON0" field="R[A|B]IF"/>
+      <per:periphClassDesc class="InterruptCore"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="IOC">
+    <per:periphConfig>
+      <per:sfr key="ENABLEFLAG" sfr="OPTION(_REG)?" field="nR[A|B]WU" critical="false"/>
+      <per:sfr key="FLAG" sfr="INTCON0" field="R[A|B]IF"/>
+      <per:periphClassDesc class="IOC"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="WakeUp_PinChange" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ENABLE" sfr="OPTION(_REG)?" field="nRBWU" critical="false"/>
+      <per:sfr key="FLAG" sfr="STATUS" field="RBWUF"/>
+      <per:periphClassDesc class="WakeUp_PinChange"/>
+    </per:periphConfig>
+    <per:periphConfig>
+      <per:sfr key="ENABLE" sfr="OPTION(_REG)?" field="nGPWU" critical="false"/>
+      <per:sfr key="FLAG" sfr="STATUS" field="GPWUF"/>
+      <per:periphClassDesc class="WakeUp_PinChange"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="MCLRE" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:pin key="MCLR" pinID="MCLR" critical="false"/>
+      <per:cfg key="MCLRE" cfg="CONFIG" field="MCLRE"/>
+      <per:periphClassDesc class="MCLRE"/>
+    </per:periphConfig>
+  </per:peripheral>
+</per:per>

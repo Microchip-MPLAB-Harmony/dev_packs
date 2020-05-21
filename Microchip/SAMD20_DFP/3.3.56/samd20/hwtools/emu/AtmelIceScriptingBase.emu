@@ -1,0 +1,37 @@
+<emu:emu xmlns:emu="http://crownking/emu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/emu ../../schema/emu/emu.xsd">
+  <emu:version major="0" minor="0" rev="0"/>
+  <emu:indextable>
+    <emu:indextablerecord device="ATSAMD20E14" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20E15" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20E16" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20E17" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20E18" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G14" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G15" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G16" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G17" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G17U" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G18" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20G18U" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20J14" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20J15" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20J16" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20J17" emulengine="armv6" maxprogbps="4"/>
+    <emu:indextablerecord device="ATSAMD20J18" emulengine="armv6" maxprogbps="4"/>
+  </emu:indextable>
+  <emu:emulenginedesc name="armv6">
+    <emu:bps maxdatabps="2" maxdelaycount="0" maxpasscount="0" maxprogbps="4" separate="true"/>
+    <emu:databps access="readorwriteoreither" bus="false" match="false" widths="false"/>
+    <emu:tuples maxands="0"/>
+    <emu:sequences maxbpsinseq="0" maxseqs="0"/>
+    <emu:swbps supported="true"/>
+    <emu:datacapture allowed="false"/>
+    <emu:addressmask allowed="false"/>
+    <emu:dma breaksallowed="false"/>
+    <emu:stopwatch available="false" cpcontrolled="false" freerunning="false"/>
+    <emu:trace allowed="false"/>
+    <emu:tblxxbp available="false"/>
+    <emu:nonaddressbreaks clockswitch="false" sleep="false" stack="true" watchdog="false"/>
+    <emu:runtimebps supported="false"/>
+  </emu:emulenginedesc>
+</emu:emu>

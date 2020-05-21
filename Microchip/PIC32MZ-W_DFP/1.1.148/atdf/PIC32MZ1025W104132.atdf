@@ -76,16 +76,16 @@
         <param caption="System Clock Default Frequency" name="__SYS_DEF_FREQ" value="200000000"/>
         <param caption="FRC Default Frequency" name="__FRC_DEF_FREQ" value="8000000"/>
         <param caption="REFCLKI Pin Input Default Frequency" name="__REFCLKI_DEF_FREQ" value="8000000"/>
-        <param caption="Peripheral Bus 1 Default Clock Frequency" name="__PB1_DEF_FREQ" value="8000000"/>
-        <param caption="Peripheral Bus 2 Default Clock Frequency" name="__PB2_DEF_FREQ" value="8000000"/>
-        <param caption="Peripheral Bus 3 Default Clock Frequency" name="__PB3_DEF_FREQ" value="8000000"/>
-        <param caption="Peripheral Bus 4 Default Clock Frequency" name="__PB4_DEF_FREQ" value="8000000"/>
-        <param caption="Peripheral Bus 5 Default Clock Frequency" name="__PB5_DEF_FREQ" value="8000000"/>
-        <param caption="Peripheral Bus 6 Default Clock Frequency" name="__PB6_DEF_FREQ" value="8000000"/>
-        <param caption="Reference Clock 1 Default Frequency" name="__REFCLK1_DEF_FREQ" value="8000000"/>
-        <param caption="Reference Clock 2 Default Frequency" name="__REFCLK2_DEF_FREQ" value="8000000"/>
-        <param caption="Reference Clock 3 Default Frequency" name="__REFCLK3_DEF_FREQ" value="8000000"/>
-        <param caption="Reference Clock 4 Default Frequency" name="__REFCLK4_DEF_FREQ" value="8000000"/>
+        <param caption="Peripheral Bus 1 Default Clock Frequency" name="__PB1_DEF_FREQ" value="100000000"/>
+        <param caption="Peripheral Bus 2 Default Clock Frequency" name="__PB2_DEF_FREQ" value="100000000"/>
+        <param caption="Peripheral Bus 3 Default Clock Frequency" name="__PB3_DEF_FREQ" value="100000000"/>
+        <param caption="Peripheral Bus 4 Default Clock Frequency" name="__PB4_DEF_FREQ" value="100000000"/>
+        <param caption="Peripheral Bus 5 Default Clock Frequency" name="__PB5_DEF_FREQ" value="100000000"/>
+        <param caption="Peripheral Bus 6 Default Clock Frequency" name="__PB6_DEF_FREQ" value="200000000"/>
+        <param caption="Reference Clock 1 Default Frequency" name="__REFCLK1_DEF_FREQ" value="200000000"/>
+        <param caption="Reference Clock 2 Default Frequency" name="__REFCLK2_DEF_FREQ" value="200000000"/>
+        <param caption="Reference Clock 3 Default Frequency" name="__REFCLK3_DEF_FREQ" value="200000000"/>
+        <param caption="Reference Clock 4 Default Frequency" name="__REFCLK4_DEF_FREQ" value="200000000"/>
         <param caption="Number of DMA Channels" name="__NUM_DMA_CHANNELS" value="8"/>
       </parameters>
       <peripherals>
@@ -9886,7 +9886,7 @@
           <bitfield caption="Dead Man Timer Count Select bits" mask="0x7C000000" name="DMTCNT" values="CFGCON2__DMTCNT"/>
           <bitfield caption="Dead Man Timer Enable bit" mask="0x80000000" name="DMTEN" values="CFGCON2__DMTEN"/>
         </register>
-        <register caption="CONFIGURATION CONTROL REGISTER 3" initval="0x0" name="CFGCON3" offset="0x30" rw="RW" size="4">
+        <register caption="CONFIGURATION CONTROL REGISTER 3" initval="0xA" name="CFGCON3" offset="0x30" rw="RW" size="4">
           <bitfield caption="EWPLL Post Divider bits for controlling second PLL clock output for WiFI" mask="0x0000003F" name="ETHPLLPOSTDIV2" values="CFGCON3__ETHPLLPOSTDIV2"/>
           <bitfield caption="SPLL Post Divider bits for controlling auxiliary second PLL clock output." mask="0x00000FC0" name="SPLLPOSTDIV2" values="CFGCON3__SPLLPOSTDIV2"/>
           <bitfield caption="BTPLL Post Divider bits for controlling auxiliary second PLL clock output." mask="0x0003F000" name="BTPLLPOSTDIV2" values="CFGCON3__BTPLLPOSTDIV2"/>
@@ -10769,7 +10769,7 @@
           <bitfield caption="Source Input Clock Selection bit" mask="0x40000000" name="SPLLICLK" values="SPLLCON__SPLLICLK"/>
           <bitfield caption="SPLL Bypass" mask="0x80000000" name="SPLL_BYP" values="SPLLCON__SPLL_BYP"/>
         </register>
-        <register caption="UPLL CONTROL REGISTER" initval="0x40832047" name="UPLLCON" offset="0x30" rw="RW" size="4">
+        <register caption="UPLL CONTROL REGISTER" initval="0x404180A5" name="UPLLCON" offset="0x30" rw="RW" size="4">
           <bitfield caption="USB PLL Bandwidth Select" mask="0x00000007" name="UPLLBSWSEL"/>
           <bitfield caption="PLL Power Down Register bit" mask="0x00000008" name="UPLLPWDN" values="UPLLCON__UPLLPWDN"/>
           <bitfield caption="First Post Divide Value, 1 to 63" mask="0x000003F0" name="UPLLPOSTDIV1"/>
@@ -10780,7 +10780,7 @@
           <bitfield caption="USB PLL Lock Status bit (Read-only)" mask="0x20000000" name="ULOCK" values="UPLLCON__ULOCK"/>
           <bitfield caption="UPLL Bypass" mask="0x80000000" name="UPLL_BYP" values="UPLLCON__UPLL_BYP"/>
         </register>
-        <register caption="BTPLL CONTROL REGISTER" initval="0x10419045" name="BTPLLCON" offset="0x40" rw="RW" size="4">
+        <register caption="BTPLL CONTROL REGISTER" initval="0x152562E0" name="BTPLLCON" offset="0x40" rw="RW" size="4">
           <bitfield caption="PLL Bandwidth Select" mask="0x00000007" name="BTPLLBSWSEL"/>
           <bitfield caption="PLL Power Down Register bit" mask="0x00000008" name="BTPLLPWDN" values="BTPLLCON__BTPLLPWDN"/>
           <bitfield caption="First Post Divide Value. 1 to 63" mask="0x000003F0" name="BTPLLPOSTDIV1"/>
@@ -10793,7 +10793,7 @@
           <bitfield caption="Source Input Clock Selection bit" mask="0x40000000" name="BTPLLCLK" values="BTPLLCON__BTPLLCLK"/>
           <bitfield caption="BTPLL Bypass" mask="0x80000000" name="BTPLL_BYP" values="BTPLLCON__BTPLL_BYP"/>
         </register>
-        <register caption="EWPLL CONTROL REGISTER" initval="0x10419045" name="EWPLLCON" offset="0x50" rw="RW" size="4">
+        <register caption="EWPLL CONTROL REGISTER" initval="0x15320206" name="EWPLLCON" offset="0x50" rw="RW" size="4">
           <bitfield caption="PLL Bandwidth Select" mask="0x00000007" name="EWPLLBSWSEL"/>
           <bitfield caption="PLL Power Down Register bit" mask="0x00000008" name="EWPLLPWDN" values="EWPLLCON__EWPLLPWDN"/>
           <bitfield caption="First Post Divide Value" mask="0x000003F0" name="EWPLLPOSTDIV1"/>

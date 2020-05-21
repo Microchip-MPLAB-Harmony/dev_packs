@@ -1,0 +1,34 @@
+<emu:emu xmlns:emu="http://crownking/emu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/emu ../../schema/emu/emu.xsd">
+  <emu:version major="0" minor="0" rev="0"/>
+  <emu:indextable>
+    <emu:indextablerecord device="ATSAMC21E15A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21E16A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21E17A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21E18A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21G15A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21G16A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21G17A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21G18A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21J15A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21J16A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21J17A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21J17AU" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21J18A" emulengine="pic32sim"/>
+    <emu:indextablerecord device="ATSAMC21J18AU" emulengine="pic32sim"/>
+  </emu:indextable>
+  <emu:emulenginedesc name="pic32sim">
+    <emu:bps maxdatabps="1000" maxdelaycount="1000000000" maxpasscount="1000000000" maxprogbps="1000" separate="false"/>
+    <emu:databps access="readorwriteoreither" bus="false" match="true" widths="false"/>
+    <emu:tuples maxands="1000"/>
+    <emu:sequences maxbpsinseq="1000" maxseqs="1000"/>
+    <emu:swbps supported="false"/>
+    <emu:datacapture allowed="false"/>
+    <emu:addressmask allowed="false"/>
+    <emu:dma breaksallowed="false"/>
+    <emu:stopwatch available="true" cpcontrolled="false" freerunning="true" instcpsonly="true"/>
+    <emu:trace allowed="false"/>
+    <emu:tblxxbp available="false"/>
+    <emu:nonaddressbreaks clockswitch="false" reset="false" sleep="false" stack="false" wakeup="false" watchdog="true"/>
+    <emu:runtimebps supported="false"/>
+  </emu:emulenginedesc>
+</emu:emu>

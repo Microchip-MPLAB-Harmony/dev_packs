@@ -1,0 +1,52 @@
+<pk4:pk4 xmlns:pk4="http://crownking/pk4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pk4 ../../schema/pk4/pk4.xsd">
+  <pk4:version pk4:major="0" pk4:minor="0" pk4:rev="0"/>
+  <pk4:baseclass pk4:classname="PK4InitInterfaceProvider"/>
+  <pk4:device pk4:name="ATSAMC21E15A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21E16A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21E17A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21E18A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21G15A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21G16A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21G17A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21G18A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21J15A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21J16A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21J17A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+  <pk4:device pk4:name="ATSAMC21J18A">
+    <pk4:basicinfo pk4:programmertype="NVMCTRL_U2207"/>
+    <pk4:ptg pk4:supported="true"/>
+  </pk4:device>
+</pk4:pk4>

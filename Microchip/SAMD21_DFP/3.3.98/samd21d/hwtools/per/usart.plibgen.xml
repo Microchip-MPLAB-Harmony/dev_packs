@@ -1,0 +1,261 @@
+<per:ispPeripheral xmlns:per="http://crownking/per" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" per:id="USART" per:picalias="UART" rcsid="$Id: usart.plibgen.xml,v 1.1 2012/03/09 16:55:49 johnsonl Exp $" xsi:schemaLocation="http://crownking/per per/ispPeripheral.xsd">
+  <per:feature per:id="BaudRate">
+    <per:function per:id="BaudRateSet"/>
+    <per:featureVariant per:id="In16BitRegister">
+      <per:vreg per:id="BAUD_RATE"/>
+    </per:featureVariant>
+    <per:parameter per:id="BAUD_RATE_FACTOR">
+      <per:picval per:pic="PIC32MX795F512L" per:value="16"/>
+    </per:parameter>
+  </per:feature>
+  <per:feature per:id="EnableControl">
+    <per:function per:id="Disable"/>
+    <per:function per:id="Enable"/>
+    <per:featureVariant per:id="Default">
+      <per:vreg per:id="ENABLE_CONTROL"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="HighBaudRate">
+    <per:function per:id="BaudRateHighDisable"/>
+    <per:function per:id="BaudRateHighEnable"/>
+    <per:function per:id="BaudRateHighSet"/>
+    <per:featureVariant per:id="In16BitRegister">
+      <per:vreg per:id="BAUD_RATE"/>
+      <per:vreg per:id="HIGH_BAUD_RATE"/>
+    </per:featureVariant>
+    <per:parameter per:id="HIGH_BAUD_RATE_FACTOR">
+      <per:picval per:pic="PIC32MX795F512L" per:value="4"/>
+    </per:parameter>
+  </per:feature>
+  <per:feature per:id="ReceiverBuffer">
+    <per:function per:id="ReceiverByteReceive"/>
+    <per:featureVariant per:id="Default">
+      <per:vreg per:id="RECEIVER_BUFFER"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="ReceiverDataAvailableStatus">
+    <per:function per:id="ReceiverDataAvailable"/>
+    <per:featureVariant per:id="Default">
+      <per:vreg per:id="RECEIVER_DATA_AVAILABLE_STATUS"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="ReceiverEnable">
+    <per:featureVariant per:id="Default">
+      <per:function per:id="ReceiverDisable"/>
+      <per:function per:id="ReceiverEnable"/>
+      <per:vreg per:id="RECEIVER_ENABLE"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="TransmitterBuffer">
+    <per:featureVariant per:id="Default">
+      <per:function per:id="TransmitterByteSend"/>
+      <per:vreg per:id="TRANSMITTER_BUFFER"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="TransmitterBufferFullStatus">
+    <per:featureVariant per:id="Default">
+      <per:function per:id="TransmitterBufferFull"/>
+      <per:vreg per:id="TRANSMITTER_BUFFER_FULL_STATUS"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="TransmitterEmptyStatus">
+    <per:featureVariant per:id="Default">
+      <per:function per:id="TransmitterEmpty"/>
+      <per:vreg per:id="TRANSMITTER_EMPTY_STATUS"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:feature per:id="TransmitterEnable">
+    <per:featureVariant per:id="Default">
+      <per:function per:id="TransmitterDisable"/>
+      <per:function per:id="TransmitterEnable"/>
+      <per:vreg per:id="TRANSMITTER_ENABLE"/>
+    </per:featureVariant>
+  </per:feature>
+  <per:interface per:id="UART16-1">
+    <per:sfr per:id="UMODE" per:expr="^U(\d)MODE$">
+      <per:field per:id="STSEL" per:expr="^STSEL$"/>
+      <per:field per:id="PDSEL" per:expr="^PDSEL$"/>
+      <per:field per:id="BRGH" per:expr="^BRGH$">
+        <per:vreg_ref per:idref="HIGH_BAUD_RATE"/>
+      </per:field>
+      <per:field per:id="RXINV" per:expr="^RXINV$"/>
+      <per:field per:id="ABAUD" per:expr="^ABAUD$"/>
+      <per:field per:id="LPBACK" per:expr="^LPBACK$"/>
+      <per:field per:id="WAKE" per:expr="^WAKE$"/>
+      <per:field per:id="UEN" per:expr="^UEN$"/>
+      <per:field per:id="RTSMD" per:expr="^RTSMD$"/>
+      <per:field per:id="IREN" per:expr="^IREN$"/>
+      <per:field per:id="USIDL" per:expr="^USIDL$"/>
+      <per:field per:id="UARTEN" per:expr="^UARTEN$">
+        <per:vreg_ref per:idref="ENABLE_CONTROL"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="USTA" per:expr="^U(\d)STA$">
+      <per:field per:id="URXDA" per:expr="^URXDA$">
+        <per:vreg_ref per:idref="RECEIVER_DATA_AVAILABLE_STATUS"/>
+      </per:field>
+      <per:field per:id="OERR" per:expr="^OERR$"/>
+      <per:field per:id="FERR" per:expr="^FERR$"/>
+      <per:field per:id="PERR" per:expr="^PERR$"/>
+      <per:field per:id="RIDLE" per:expr="^RIDLE$"/>
+      <per:field per:id="ADDEN" per:expr="^ADDEN$"/>
+      <per:field per:id="URXISEL" per:expr="^URXISEL$"/>
+      <per:field per:id="TRMT" per:expr="^TRMT$">
+        <per:vreg_ref per:idref="TRANSMITTER_EMPTY_STATUS"/>
+      </per:field>
+      <per:field per:id="UTXBF" per:expr="^UTXBF$">
+        <per:vreg_ref per:idref="TRANSMITTER_BUFFER_FULL_STATUS"/>
+      </per:field>
+      <per:field per:id="UTXEN" per:expr="^UTXEN$">
+        <per:vreg_ref per:idref="TRANSMITTER_ENABLE"/>
+      </per:field>
+      <per:field per:id="UTXBRK" per:expr="^UTXBRK$"/>
+      <per:field per:id="UTXISEL0" per:expr="^UTXISEL0$"/>
+      <per:field per:id="UTXINV" per:expr="^UTXINV$"/>
+      <per:field per:id="UTXISEL1" per:expr="^UTXISEL1$"/>
+    </per:sfr>
+    <per:sfr per:id="UTXREG" per:expr="^U(\d)TXREG$">
+      <per:field per:id="ALL" per:expr="^U(\d)TXREG$">
+        <per:vreg_ref per:idref="TRANSMITTER_BUFFER"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="URXREG" per:expr="^U(\d)RXREG$">
+      <per:field per:id="ALL" per:expr="^U(\d)RXREG$">
+        <per:vreg_ref per:idref="RECEIVER_BUFFER"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="UBRG" per:expr="^U(\d)BRG$">
+      <per:field per:id="ALL" per:expr="^BRG$">
+        <per:vreg_ref per:idref="BAUD_RATE"/>
+      </per:field>
+    </per:sfr>
+  </per:interface>
+  <per:interface per:id="UART32-1">
+    <per:sfr per:id="UMODE" per:expr="^U(\d)MODE$">
+      <per:field per:id="STSEL" per:expr="^STSEL$"/>
+      <per:field per:id="PDSEL" per:expr="^PDSEL$"/>
+      <per:field per:id="BRGH" per:expr="^BRGH$">
+        <per:vreg_ref per:idref="HIGH_BAUD_RATE"/>
+      </per:field>
+      <per:field per:id="RXINV" per:expr="^RXINV$"/>
+      <per:field per:id="ABAUD" per:expr="^ABAUD$"/>
+      <per:field per:id="LPBACK" per:expr="^LPBACK$"/>
+      <per:field per:id="WAKE" per:expr="^WAKE$"/>
+      <per:field per:id="UEN" per:expr="^UEN$"/>
+      <per:field per:id="RTSMD" per:expr="^RTSMD$"/>
+      <per:field per:id="IREN" per:expr="^IREN$"/>
+      <per:field per:id="SIDL" per:expr="^SIDL$"/>
+      <per:field per:id="FRZ" per:expr="^FRZ$"/>
+      <per:field per:id="ON" per:expr="^ON$">
+        <per:vreg_ref per:idref="ENABLE_CONTROL"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="USTA" per:expr="^U(\d)STA$">
+      <per:field per:id="URXDA" per:expr="^URXDA$">
+        <per:vreg_ref per:idref="RECEIVER_DATA_AVAILABLE_STATUS"/>
+      </per:field>
+      <per:field per:id="OERR" per:expr="^OERR$"/>
+      <per:field per:id="FERR" per:expr="^FERR$"/>
+      <per:field per:id="PERR" per:expr="^PERR$"/>
+      <per:field per:id="RIDLE" per:expr="^RIDLE$"/>
+      <per:field per:id="ADDEN" per:expr="^ADDEN$"/>
+      <per:field per:id="URXISEL" per:expr="^URXISEL$"/>
+      <per:field per:id="TRMT" per:expr="^TRMT$">
+        <per:vreg_ref per:idref="TRANSMITTER_EMPTY_STATUS"/>
+      </per:field>
+      <per:field per:id="UTXBF" per:expr="^UTXBF$">
+        <per:vreg_ref per:idref="TRANSMITTER_BUFFER_FULL_STATUS"/>
+      </per:field>
+      <per:field per:id="UTXEN" per:expr="^UTXEN$">
+        <per:vreg_ref per:idref="TRANSMITTER_ENABLE"/>
+      </per:field>
+      <per:field per:id="UTXBRK" per:expr="^UTXBRK$"/>
+      <per:field per:id="URXEN" per:expr="^URXEN$">
+        <per:vreg_ref per:idref="RECEIVER_ENABLE"/>
+      </per:field>
+      <per:field per:id="UTXINV" per:expr="^UTXINV$"/>
+      <per:field per:id="UTXISEL" per:expr="^UTXISEL$"/>
+      <per:field per:id="ADDR" per:expr="^ADDR$"/>
+      <per:field per:id="ADM_EN" per:expr="^ADM_EN$"/>
+    </per:sfr>
+    <per:sfr per:id="UTXREG" per:expr="^U(\d)TXREG$">
+      <per:field per:id="ALL" per:expr="^U(\d)TXREG$">
+        <per:vreg_ref per:idref="TRANSMITTER_BUFFER"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="URXREG" per:expr="^U(\d)RXREG$">
+      <per:field per:id="ALL" per:expr="^U(\d)RXREG$">
+        <per:vreg_ref per:idref="RECEIVER_BUFFER"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="UBRG" per:expr="^U(\d)BRG$">
+      <per:field per:id="ALL" per:expr="^BRG$">
+        <per:vreg_ref per:idref="BAUD_RATE"/>
+      </per:field>
+    </per:sfr>
+  </per:interface>
+  <per:interface per:id="UART32-2">
+    <per:param per:cpu="pic32mx795f512l" per:id="BAUD_RATE_FACTOR" per:value="16"/>
+    <per:param per:cpu="pic32mx795f512l" per:id="HIGH_BAUD_RATE_FACTOR" per:value="4"/>
+    <per:sfr per:id="UMODE" per:expr="^U(\d)MODE$">
+      <per:field per:id="STSEL" per:expr="^STSEL$"/>
+      <per:field per:id="PDSEL" per:expr="^PDSEL$"/>
+      <per:field per:id="BRGH" per:expr="^BRGH$">
+        <per:vreg_ref per:idref="HIGH_BAUD_RATE"/>
+      </per:field>
+      <per:field per:id="RXINV" per:expr="^RXINV$"/>
+      <per:field per:id="ABAUD" per:expr="^ABAUD$"/>
+      <per:field per:id="LPBACK" per:expr="^LPBACK$"/>
+      <per:field per:id="WAKE" per:expr="^WAKE$"/>
+      <per:field per:id="IREN" per:expr="^IREN$"/>
+      <per:field per:id="SIDL" per:expr="^SIDL$"/>
+      <per:field per:id="FRZ" per:expr="^FRZ$"/>
+      <per:field per:id="ON" per:expr="^ON$">
+        <per:vreg_ref per:idref="ENABLE_CONTROL"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="USTA" per:expr="^U(\d)STA$">
+      <per:field per:id="URXDA" per:expr="^URXDA$">
+        <per:vreg_ref per:idref="RECEIVER_DATA_AVAILABLE_STATUS"/>
+      </per:field>
+      <per:field per:id="OERR" per:expr="^OERR$"/>
+      <per:field per:id="FERR" per:expr="^FERR$"/>
+      <per:field per:id="PERR" per:expr="^PERR$"/>
+      <per:field per:id="RIDLE" per:expr="^RIDLE$"/>
+      <per:field per:id="ADDEN" per:expr="^ADDEN$"/>
+      <per:field per:id="URXISEL" per:expr="^URXISEL$"/>
+      <per:field per:id="TRMT" per:expr="^TRMT$">
+        <per:vreg_ref per:idref="TRANSMITTER_EMPTY_STATUS"/>
+      </per:field>
+      <per:field per:id="UTXBF" per:expr="^UTXBF$">
+        <per:vreg_ref per:idref="TRANSMITTER_BUFFER_FULL_STATUS"/>
+      </per:field>
+      <per:field per:id="UTXEN" per:expr="^UTXEN$">
+        <per:vreg_ref per:idref="TRANSMITTER_ENABLE"/>
+      </per:field>
+      <per:field per:id="UTXBRK" per:expr="^UTXBRK$"/>
+      <per:field per:id="URXEN" per:expr="^URXEN$">
+        <per:vreg_ref per:idref="RECEIVER_ENABLE"/>
+      </per:field>
+      <per:field per:id="UTXINV" per:expr="^UTXINV$"/>
+      <per:field per:id="UTXISEL" per:expr="^UTXISEL$"/>
+      <per:field per:id="ADDR" per:expr="^ADDR$"/>
+      <per:field per:id="ADM_EN" per:expr="^ADM_EN$"/>
+    </per:sfr>
+    <per:sfr per:id="UTXREG" per:expr="^U(\d)TXREG$">
+      <per:field per:id="ALL" per:expr="^U(\d)TXREG$">
+        <per:vreg_ref per:idref="TRANSMITTER_BUFFER"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="URXREG" per:expr="^U(\d)RXREG$">
+      <per:field per:id="ALL" per:expr="^U(\d)RXREG$">
+        <per:vreg_ref per:idref="RECEIVER_BUFFER"/>
+      </per:field>
+    </per:sfr>
+    <per:sfr per:id="UBRG" per:expr="^U(\d)BRG$">
+      <per:field per:id="ALL" per:expr="^BRG$">
+        <per:vreg_ref per:idref="BAUD_RATE"/>
+      </per:field>
+    </per:sfr>
+  </per:interface>
+</per:ispPeripheral>

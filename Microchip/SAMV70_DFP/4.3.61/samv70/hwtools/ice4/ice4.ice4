@@ -1,0 +1,4 @@
+<ri4:ri4 xmlns:ri4="http://crownking/ri4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/ri4 ../../schema/ri4/ri4.xsd">
+  <ri4:version ri4:major="0" ri4:minor="0" ri4:rev="0"/>
+  <ri4:baseclass ri4:classname="ICD4InitInterfaceProvider"/>
+</ri4:ri4>

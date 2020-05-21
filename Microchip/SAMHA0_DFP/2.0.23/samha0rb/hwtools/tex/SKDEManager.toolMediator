@@ -1,0 +1,4 @@
+<tex:tex xmlns:tex="http://crownking/tex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/tex ../../schema/tex/tex.xsd">
+  <tex:version tex:major="0" tex:minor="0" tex:rev="0"/>
+  <tex:lookuptable/>
+</tex:tex>

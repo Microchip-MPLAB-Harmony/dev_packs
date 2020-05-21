@@ -1,0 +1,15 @@
+<emu:emu xmlns:emu="http://crownking/emu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/emu ../../schema/emu/emu.xsd">
+  <emu:version major="0" minor="0" rev="0"/>
+  <emu:indextable>
+    <emu:indextablerecord device="ATSAMD51G18A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51G19A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51J18A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51J19A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51J20A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51N19A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51N20A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51P19A" emulengine="armv7" maxprogbps="6"/>
+    <emu:indextablerecord device="ATSAMD51P20A" emulengine="armv7" maxprogbps="6"/>
+  </emu:indextable>
+  <emu:emulenginedesc name="armv7"/>
+</emu:emu>

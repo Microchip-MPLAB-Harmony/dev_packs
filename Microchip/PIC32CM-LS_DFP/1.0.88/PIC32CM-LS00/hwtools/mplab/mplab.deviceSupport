@@ -1,0 +1,31 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="PIC32CM1216LS00048">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM1216LS00064">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM1216LS00100">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM2532LS00048">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM2532LS00064">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM2532LS00100">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164LS00048">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164LS00064">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164LS00100">
+      <mp:support mp:aiced="yes" mp:aicep="yes" mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="yes" mp:nedbgp="yes" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

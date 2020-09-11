@@ -1,6 +1,0 @@
-<icd3:icd3 xmlns:icd3="http://crownking/icd3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/icd3 ../../schema/icd3/icd3.xsd">
-  <icd3:version icd3:major="0" icd3:minor="0" icd3:rev="0"/>
-  <icd3:device icd3:name="PIC32MZ1025W104132">
-    <icd3:basicinfo icd3:algorithmtype="25" icd3:debuggeralgorithm="1" icd3:minoralgorithm="1"/>
-  </icd3:device>
-</icd3:icd3>

@@ -1,0 +1,28 @@
+<icd4:icd4 xmlns:icd4="http://crownking/icd4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/icd4 ../../schema/icd4/icd4.xsd">
+  <icd4:version icd4:major="0" icd4:minor="0" icd4:rev="0"/>
+  <icd4:baseclass icd4:classname="ICD4InitInterfaceProvider"/>
+  <icd4:device icd4:name="ATSAMD21E17A">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21E18A">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21G17A">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21G17AU">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21G18A">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21G18AU">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21J17A">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+  <icd4:device icd4:name="ATSAMD21J18A">
+    <icd4:basicinfo icd4:programmertype="NVMCTRL_U2207"/>
+  </icd4:device>
+</icd4:icd4>

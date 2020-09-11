@@ -1,0 +1,10 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="PIC32CX1012BZ25032">
+      <mp:support mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="beta" mp:nedbgp="beta" mp:pk4d="beta" mp:pk4p="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CX1012BZ25048">
+      <mp:support mp:icd4d="beta" mp:icd4p="beta" mp:nedbgd="beta" mp:nedbgp="beta" mp:pk4d="beta" mp:pk4p="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

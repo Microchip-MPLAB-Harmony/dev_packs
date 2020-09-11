@@ -1,0 +1,39 @@
+
+CMSIS-SVD SVD Consistency Checker / Header File Generator V3.3.18
+Copyright (C) 2010 - 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+
+Arguments: "/pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd" -b /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd.errlog -x INFO 
+
+*** WARNING M328: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 46106) 
+  Peripheral 'ZIGBEE' has no Registers, ignoring Peripheral.
+
+*** WARNING M361: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 46261) 
+  Field name 'Reserved': 'RESERVED' items must not be defined.
+
+*** ERROR M343: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 12155) 
+  Peripheral 'RCON' (@0x44000a00) has same address as 'CRU' (Line 8877)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 8877) 
+  AddressBlock of Peripheral 'CRU' (@0x44000a00) [0x44000b93 ... 0x44000a00] overlaps 'RCON' (@0x44000a00) [0x44000a5f ... 0x44000a00] (Line 12161)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 42672) 
+  AddressBlock of Peripheral 'CoreDebug' (@0xe000edf0) [0xe000edff ... 0xe000edf0] overlaps 'NVIC' (@0xe000e100) [0xe000ef03 ... 0xe000e100] (Line 44557)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 44118) 
+  AddressBlock of Peripheral 'MPU' (@0xe000ed90) [0xe000edbb ... 0xe000ed90] overlaps 'NVIC' (@0xe000e100) [0xe000ef03 ... 0xe000e100] (Line 44557)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 44551) 
+  AddressBlock of Peripheral 'NVIC' (@0xe000e100) [0xe000ef03 ... 0xe000e100] overlaps 'SystemControl' (@0xe000e000) [0xe000ed8b ... 0xe000e000] (Line 44856)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 12155) 
+  AddressBlock of Peripheral 'RCON' (@0x44000a00) [0x44000a5f ... 0x44000a00] overlaps 'CRU' (@0x44000a00) [0x44000b93 ... 0x44000a00] (Line 8883)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 44682) 
+  AddressBlock of Peripheral 'SysTick' (@0xe000e010) [0xe000e01f ... 0xe000e010] overlaps 'SystemControl' (@0xe000e000) [0xe000ed8b ... 0xe000e000] (Line 44856)
+
+*** WARNING M352: /pack-build/packs/build/packs/Microchip.PIC32CX-BZ_DFP/BZ24/svd/PIC32CX1012BZ24032.svd (Line 44850) 
+  AddressBlock of Peripheral 'SystemControl' (@0xe000e000) [0xe000ed8b ... 0xe000e000] overlaps 'NVIC' (@0xe000e100) [0xe000ef03 ... 0xe000e100] (Line 44557)
+
+
+Found 1 Error(s) and 9 Warning(s).
+

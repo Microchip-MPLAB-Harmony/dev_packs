@@ -1,7 +1,0 @@
-<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
-  <mp:family mp:family="32x">
-    <mp:device mp:name="PIC32MZ1025W104132">
-      <mp:support mp:icd3d="beta" mp:icd3p="beta" mp:icd4d="beta" mp:icd4p="beta" mp:pk3d="beta" mp:pk3p="beta" mp:pk4d="beta" mp:pk4p="beta" mp:pm3="beta" mp:riced="beta" mp:ricep="beta" mp:sim="beta" mp:snapd="beta" mp:snapp="beta"/>
-    </mp:device>
-  </mp:family>
-</mp:deviceSupport>

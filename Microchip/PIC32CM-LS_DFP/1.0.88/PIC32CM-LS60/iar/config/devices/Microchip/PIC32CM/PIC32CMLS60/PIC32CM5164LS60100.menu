@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>PIC32CM5164LS60100</tag>
+  <display>Microchip PIC32CM5164LS60100</display>
+  <data>$CUR_DIR$\PIC32CM5164LS60100.i79</data>
+</optionMenuItem>

@@ -1,6 +1,0 @@
-<rice:rice xmlns:rice="http://crownking/rice" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/rice ../../schema/rice/rice.xsd">
-  <rice:version rice:major="0" rice:minor="0" rice:rev="0"/>
-  <rice:device rice:name="PIC32MZ1025W104132">
-    <rice:basicinfo rice:algorithmtype="25" rice:debuggeralgorithm="1" rice:minoralgorithm="1"/>
-  </rice:device>
-</rice:rice>

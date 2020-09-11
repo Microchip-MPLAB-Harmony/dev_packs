@@ -1,0 +1,2713 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAML21G16B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21G16B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21G16B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21G16B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21g16b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21g16b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21G16B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21g16b.s"/>
+        <includes pattern="system_saml21g16b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_64.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_64_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_64.FLM" value="start=0x00000000|size=0x10000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_64_EEPROM.FLM" value="start=0x00400000|size=0x00800|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21g16b.c"/>
+        <includes pattern="system_saml21g16b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21g16b_flash.ld"/>
+        <includes pattern="gcc/saml21g16b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21g16b.c"/>
+        <includes pattern="system_saml21g16b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21g16b_flash.icf"/>
+        <includes pattern="iar/saml21g16b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G16B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G16B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21G16B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21g16b/saml21g16b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21g16b/saml21g16b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21g16b/saml21g16b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21G17B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21G17B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21G17B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21G17B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21g17b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21g17b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21G17B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21g17b.s"/>
+        <includes pattern="system_saml21g17b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21g17b.c"/>
+        <includes pattern="system_saml21g17b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21g17b_flash.ld"/>
+        <includes pattern="gcc/saml21g17b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21g17b.c"/>
+        <includes pattern="system_saml21g17b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21g17b_flash.icf"/>
+        <includes pattern="iar/saml21g17b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G17B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G17B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21G17B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21g17b/saml21g17b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21g17b/saml21g17b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21g17b/saml21g17b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21G18B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21G18B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21G18B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21G18B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21g18b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21g18b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21G18B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21g18b.s"/>
+        <includes pattern="system_saml21g18b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21g18b.c"/>
+        <includes pattern="system_saml21g18b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21g18b_flash.ld"/>
+        <includes pattern="gcc/saml21g18b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21g18b.c"/>
+        <includes pattern="system_saml21g18b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21g18b_flash.icf"/>
+        <includes pattern="iar/saml21g18b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G18B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G18B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21G18B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21g18b/saml21g18b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21g18b/saml21g18b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21g18b/saml21g18b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21G18A">
+      <resource type="atdf" subdir="saml21a1/atdf">
+        <includes pattern="ATSAML21G18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21a1/edc">
+        <includes pattern="ATSAML21G18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21a1/svd">
+        <includes pattern="ATSAML21G18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21a1/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21g18a.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21g18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21G18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21a1/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21a1/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21a1/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21a1/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21a1/armcc">
+        <includes pattern="armcc/startup_saml21g18a.s"/>
+        <includes pattern="system_saml21g18a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21a1/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21a1/gcc">
+        <includes pattern="gcc/startup_saml21g18a.c"/>
+        <includes pattern="system_saml21g18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21a1/gcc">
+        <includes pattern="gcc/saml21g18a_flash.ld"/>
+        <includes pattern="gcc/saml21g18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21a1/iar">
+        <includes pattern="iar/startup_saml21g18a.c"/>
+        <includes pattern="system_saml21g18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21a1/iar">
+        <includes pattern="iar/saml21g18a_flash.icf"/>
+        <includes pattern="iar/saml21g18a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21a1/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G18A.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21G18A.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21G18A.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21a1/iar">
+        <includes pattern="config/flashloader/Atmel/saml21g18a/saml21g18a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21g18a/saml21g18a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21g18a/saml21g18a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21a1/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21a1/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21a1/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21E18A/ATSAML21E18A.ld"/>
+        <includes pattern="ATSAML21E18A/startup_atsaml21e18a.c"/>
+        <includes pattern="ATSAML21E18A/specs-ATSAML21E18A"/>
+        <includes pattern="ATSAML21E18A/configuration.data"/>
+        <includes pattern="ATSAML21G18A/specs-ATSAML21G18A"/>
+        <includes pattern="ATSAML21G18A/ATSAML21G18A.ld"/>
+        <includes pattern="ATSAML21G18A/configuration.data"/>
+        <includes pattern="ATSAML21G18A/startup_atsaml21g18a.c"/>
+        <includes pattern="ATSAML21J18A/ATSAML21J18A.ld"/>
+        <includes pattern="ATSAML21J18A/startup_atsaml21j18a.c"/>
+        <includes pattern="ATSAML21J18A/configuration.data"/>
+        <includes pattern="ATSAML21J18A/specs-ATSAML21J18A"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21a1/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21a1/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21a1/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21a1/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21E15B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21E15B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21E15B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21E15B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21e15b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21e15b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21E15B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21e15b.s"/>
+        <includes pattern="system_saml21e15b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_32.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_32_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_32.FLM" value="start=0x00000000|size=0x08000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_32_EEPROM.FLM" value="start=0x00400000|size=0x00400|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21e15b.c"/>
+        <includes pattern="system_saml21e15b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21e15b_flash.ld"/>
+        <includes pattern="gcc/saml21e15b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21e15b.c"/>
+        <includes pattern="system_saml21e15b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21e15b_flash.icf"/>
+        <includes pattern="iar/saml21e15b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E15B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E15B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21E15B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21e15b/saml21e15b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21e15b/saml21e15b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21e15b/saml21e15b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21E16B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21E16B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21E16B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21E16B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21e16b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21e16b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21E16B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21e16b.s"/>
+        <includes pattern="system_saml21e16b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_64.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_64_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_64.FLM" value="start=0x00000000|size=0x10000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_64_EEPROM.FLM" value="start=0x00400000|size=0x00800|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21e16b.c"/>
+        <includes pattern="system_saml21e16b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21e16b_flash.ld"/>
+        <includes pattern="gcc/saml21e16b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21e16b.c"/>
+        <includes pattern="system_saml21e16b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21e16b_flash.icf"/>
+        <includes pattern="iar/saml21e16b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E16B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E16B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21E16B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21e16b/saml21e16b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21e16b/saml21e16b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21e16b/saml21e16b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21E17B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21E17B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21E17B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21E17B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21e17b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21e17b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21E17B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21e17b.s"/>
+        <includes pattern="system_saml21e17b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21e17b.c"/>
+        <includes pattern="system_saml21e17b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21e17b_flash.ld"/>
+        <includes pattern="gcc/saml21e17b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21e17b.c"/>
+        <includes pattern="system_saml21e17b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21e17b_flash.icf"/>
+        <includes pattern="iar/saml21e17b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E17B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E17B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21E17B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21e17b/saml21e17b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21e17b/saml21e17b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21e17b/saml21e17b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21J17B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21J17B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21J17B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21J17B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21j17b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21j17b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21J17B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21j17b.s"/>
+        <includes pattern="system_saml21j17b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21j17b.c"/>
+        <includes pattern="system_saml21j17b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21j17b_flash.ld"/>
+        <includes pattern="gcc/saml21j17b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21j17b.c"/>
+        <includes pattern="system_saml21j17b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21j17b_flash.icf"/>
+        <includes pattern="iar/saml21j17b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J17B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J17B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21J17B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21j17b/saml21j17b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21j17b/saml21j17b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21j17b/saml21j17b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21J16B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21J16B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21J16B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21J16B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21j16b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21j16b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21J16B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21j16b.s"/>
+        <includes pattern="system_saml21j16b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_64.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_64_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_64.FLM" value="start=0x00000000|size=0x10000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_64_EEPROM.FLM" value="start=0x00400000|size=0x00800|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21j16b.c"/>
+        <includes pattern="system_saml21j16b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21j16b_flash.ld"/>
+        <includes pattern="gcc/saml21j16b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21j16b.c"/>
+        <includes pattern="system_saml21j16b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21j16b_flash.icf"/>
+        <includes pattern="iar/saml21j16b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J16B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J16B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21J16B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21j16b/saml21j16b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21j16b/saml21j16b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21j16b/saml21j16b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21J18A">
+      <resource type="atdf" subdir="saml21a1/atdf">
+        <includes pattern="ATSAML21J18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21a1/edc">
+        <includes pattern="ATSAML21J18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21a1/svd">
+        <includes pattern="ATSAML21J18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21a1/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21j18a.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21j18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21J18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21a1/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21a1/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21a1/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21a1/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21a1/armcc">
+        <includes pattern="armcc/startup_saml21j18a.s"/>
+        <includes pattern="system_saml21j18a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21a1/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21a1/gcc">
+        <includes pattern="gcc/startup_saml21j18a.c"/>
+        <includes pattern="system_saml21j18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21a1/gcc">
+        <includes pattern="gcc/saml21j18a_flash.ld"/>
+        <includes pattern="gcc/saml21j18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21a1/iar">
+        <includes pattern="iar/startup_saml21j18a.c"/>
+        <includes pattern="system_saml21j18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21a1/iar">
+        <includes pattern="iar/saml21j18a_flash.icf"/>
+        <includes pattern="iar/saml21j18a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21a1/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J18A.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J18A.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21J18A.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21a1/iar">
+        <includes pattern="config/flashloader/Atmel/saml21j18a/saml21j18a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21j18a/saml21j18a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21j18a/saml21j18a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21a1/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21a1/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21a1/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21E18A/ATSAML21E18A.ld"/>
+        <includes pattern="ATSAML21E18A/startup_atsaml21e18a.c"/>
+        <includes pattern="ATSAML21E18A/specs-ATSAML21E18A"/>
+        <includes pattern="ATSAML21E18A/configuration.data"/>
+        <includes pattern="ATSAML21G18A/specs-ATSAML21G18A"/>
+        <includes pattern="ATSAML21G18A/ATSAML21G18A.ld"/>
+        <includes pattern="ATSAML21G18A/configuration.data"/>
+        <includes pattern="ATSAML21G18A/startup_atsaml21g18a.c"/>
+        <includes pattern="ATSAML21J18A/ATSAML21J18A.ld"/>
+        <includes pattern="ATSAML21J18A/startup_atsaml21j18a.c"/>
+        <includes pattern="ATSAML21J18A/configuration.data"/>
+        <includes pattern="ATSAML21J18A/specs-ATSAML21J18A"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21a1/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21a1/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21a1/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21a1/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21J18B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21J18B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21J18B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21J18B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21j18b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21j18b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21J18B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21j18b.s"/>
+        <includes pattern="system_saml21j18b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21j18b.c"/>
+        <includes pattern="system_saml21j18b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21j18b_flash.ld"/>
+        <includes pattern="gcc/saml21j18b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21j18b.c"/>
+        <includes pattern="system_saml21j18b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21j18b_flash.icf"/>
+        <includes pattern="iar/saml21j18b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J18B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J18B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21J18B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21j18b/saml21j18b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21j18b/saml21j18b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21j18b/saml21j18b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21J17BU">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21J17BU.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21J17BU.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21J17BU.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21j17bu.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21j17bu.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21J17BU__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21j17bu.s"/>
+        <includes pattern="system_saml21j17bu.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21j17bu.c"/>
+        <includes pattern="system_saml21j17bu.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21j17bu_flash.ld"/>
+        <includes pattern="gcc/saml21j17bu_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21j17bu.c"/>
+        <includes pattern="system_saml21j17bu.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21j17bu_flash.icf"/>
+        <includes pattern="iar/saml21j17bu_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J17BU.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J17BU.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21J17BU.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21j17bu/saml21j17bu-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21j17bu/saml21j17bu-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21j17bu/saml21j17bu-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21E18A">
+      <resource type="atdf" subdir="saml21a1/atdf">
+        <includes pattern="ATSAML21E18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21a1/edc">
+        <includes pattern="ATSAML21E18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21a1/svd">
+        <includes pattern="ATSAML21E18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21a1/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21e18a.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21e18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21E18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21a1/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21a1/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21a1/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21a1/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21a1/armcc">
+        <includes pattern="armcc/startup_saml21e18a.s"/>
+        <includes pattern="system_saml21e18a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21a1/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21a1/gcc">
+        <includes pattern="gcc/startup_saml21e18a.c"/>
+        <includes pattern="system_saml21e18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21a1/gcc">
+        <includes pattern="gcc/saml21e18a_flash.ld"/>
+        <includes pattern="gcc/saml21e18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21a1/iar">
+        <includes pattern="iar/startup_saml21e18a.c"/>
+        <includes pattern="system_saml21e18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21a1/iar">
+        <includes pattern="iar/saml21e18a_flash.icf"/>
+        <includes pattern="iar/saml21e18a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21a1/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E18A.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E18A.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21E18A.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21a1/iar">
+        <includes pattern="config/flashloader/Atmel/saml21e18a/saml21e18a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21e18a/saml21e18a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21e18a/saml21e18a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21a1/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21a1/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21a1/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21E18A/ATSAML21E18A.ld"/>
+        <includes pattern="ATSAML21E18A/startup_atsaml21e18a.c"/>
+        <includes pattern="ATSAML21E18A/specs-ATSAML21E18A"/>
+        <includes pattern="ATSAML21E18A/configuration.data"/>
+        <includes pattern="ATSAML21G18A/specs-ATSAML21G18A"/>
+        <includes pattern="ATSAML21G18A/ATSAML21G18A.ld"/>
+        <includes pattern="ATSAML21G18A/configuration.data"/>
+        <includes pattern="ATSAML21G18A/startup_atsaml21g18a.c"/>
+        <includes pattern="ATSAML21J18A/ATSAML21J18A.ld"/>
+        <includes pattern="ATSAML21J18A/startup_atsaml21j18a.c"/>
+        <includes pattern="ATSAML21J18A/configuration.data"/>
+        <includes pattern="ATSAML21J18A/specs-ATSAML21J18A"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21a1/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21a1/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21a1/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21a1/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21J18BU">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21J18BU.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21J18BU.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21J18BU.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21j18bu.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21j18bu.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21J18BU__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21j18bu.s"/>
+        <includes pattern="system_saml21j18bu.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21j18bu.c"/>
+        <includes pattern="system_saml21j18bu.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21j18bu_flash.ld"/>
+        <includes pattern="gcc/saml21j18bu_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21j18bu.c"/>
+        <includes pattern="system_saml21j18bu.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21j18bu_flash.icf"/>
+        <includes pattern="iar/saml21j18bu_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J18BU.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21J18BU.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21J18BU.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21j18bu/saml21j18bu-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21j18bu/saml21j18bu-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21j18bu/saml21j18bu-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML21E18B">
+      <resource type="atdf" subdir="saml21b/atdf">
+        <includes pattern="ATSAML21E18B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="saml21b/edc">
+        <includes pattern="ATSAML21E18B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="saml21b/svd">
+        <includes pattern="ATSAML21E18B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="saml21b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml21e18b.h"/>
+        <includes pattern="system_saml21.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/opamp.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml21e18b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML21E18B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="saml21b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="saml21b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="saml21b/armcc">
+        <includes pattern="armcc/startup_saml21e18b.s"/>
+        <includes pattern="system_saml21e18b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="saml21b/keil">
+        <includes pattern="flashloader/Flash/ATSAML21_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML21_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML21/Target.lin"/>
+        <includes pattern="flashloader/Flash/ATSAML21/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML21/ATSAML21.uvopt"/>
+        <meta key="flashloader/Flash/ATSAML21_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML21_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="saml21b/gcc">
+        <includes pattern="gcc/startup_saml21e18b.c"/>
+        <includes pattern="system_saml21e18b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="saml21b/gcc">
+        <includes pattern="gcc/saml21e18b_flash.ld"/>
+        <includes pattern="gcc/saml21e18b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="saml21b/iar">
+        <includes pattern="iar/startup_saml21e18b.c"/>
+        <includes pattern="system_saml21e18b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="saml21b/iar">
+        <includes pattern="iar/saml21e18b_flash.icf"/>
+        <includes pattern="iar/saml21e18b_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="saml21b/iar">
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E18B.i79"/>
+        <includes pattern="config/devices/Atmel/SAML/ATSAML21/ATSAML21E18B.menu"/>
+        <includes optional="true" pattern="config/debugger/Atmel/Trace_SAML21.dmac"/>
+        <includes optional="true" pattern="config/debugger/Atmel/ATSAML21E18B.ddf"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="saml21b/iar">
+        <includes pattern="config/flashloader/Atmel/saml21e18b/saml21e18b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/saml21e18b/saml21e18b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/saml21e18b/saml21e18b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="saml21b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="xc32" subdir="saml21b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML21E18B/specs-ATSAML21E18B"/>
+        <includes pattern="ATSAML21E18B/ATSAML21E18B.ld"/>
+        <includes pattern="ATSAML21E18B/startup_atsaml21e18b.c"/>
+        <includes pattern="ATSAML21E18B/configuration.data"/>
+        <includes pattern="ATSAML21E17B/specs-ATSAML21E17B"/>
+        <includes pattern="ATSAML21E17B/startup_atsaml21e17b.c"/>
+        <includes pattern="ATSAML21E17B/ATSAML21E17B.ld"/>
+        <includes pattern="ATSAML21E17B/configuration.data"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAML21G18B/configuration.data"/>
+        <includes pattern="ATSAML21G18B/startup_atsaml21g18b.c"/>
+        <includes pattern="ATSAML21G18B/specs-ATSAML21G18B"/>
+        <includes pattern="ATSAML21G18B/ATSAML21G18B.ld"/>
+        <includes pattern="ATSAML21J17B/specs-ATSAML21J17B"/>
+        <includes pattern="ATSAML21J17B/ATSAML21J17B.ld"/>
+        <includes pattern="ATSAML21J17B/startup_atsaml21j17b.c"/>
+        <includes pattern="ATSAML21J17B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/startup_atsaml21g16b.c"/>
+        <includes pattern="ATSAML21G16B/specs-ATSAML21G16B"/>
+        <includes pattern="ATSAML21G16B/configuration.data"/>
+        <includes pattern="ATSAML21G16B/ATSAML21G16B.ld"/>
+        <includes pattern="ATSAML21G17B/ATSAML21G17B.ld"/>
+        <includes pattern="ATSAML21G17B/startup_atsaml21g17b.c"/>
+        <includes pattern="ATSAML21G17B/specs-ATSAML21G17B"/>
+        <includes pattern="ATSAML21G17B/configuration.data"/>
+        <includes pattern="ATSAML21J18BU/ATSAML21J18BU.ld"/>
+        <includes pattern="ATSAML21J18BU/startup_atsaml21j18bu.c"/>
+        <includes pattern="ATSAML21J18BU/specs-ATSAML21J18BU"/>
+        <includes pattern="ATSAML21J18BU/configuration.data"/>
+        <includes pattern="ATSAML21J16B/specs-ATSAML21J16B"/>
+        <includes pattern="ATSAML21J16B/startup_atsaml21j16b.c"/>
+        <includes pattern="ATSAML21J16B/ATSAML21J16B.ld"/>
+        <includes pattern="ATSAML21J16B/configuration.data"/>
+        <includes pattern="ATSAML21E16B/startup_atsaml21e16b.c"/>
+        <includes pattern="ATSAML21E16B/ATSAML21E16B.ld"/>
+        <includes pattern="ATSAML21E16B/specs-ATSAML21E16B"/>
+        <includes pattern="ATSAML21E16B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/ATSAML21J18B.ld"/>
+        <includes pattern="ATSAML21J18B/configuration.data"/>
+        <includes pattern="ATSAML21J18B/specs-ATSAML21J18B"/>
+        <includes pattern="ATSAML21J18B/startup_atsaml21j18b.c"/>
+        <includes pattern="ATSAML21E15B/startup_atsaml21e15b.c"/>
+        <includes pattern="ATSAML21E15B/ATSAML21E15B.ld"/>
+        <includes pattern="ATSAML21E15B/specs-ATSAML21E15B"/>
+        <includes pattern="ATSAML21E15B/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/ATSAML21J17BU.ld"/>
+        <includes pattern="ATSAML21J17BU/startup_atsaml21j17bu.c"/>
+        <includes pattern="ATSAML21J17BU/configuration.data"/>
+        <includes pattern="ATSAML21J17BU/specs-ATSAML21J17BU"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="saml21b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="saml21b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="saml21b/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr" subdir="saml21b/hwtools/persfr">
+        <includes pattern="pic16.persfr"/>
+        <includes pattern="pic32.persfr"/>
+        <includes pattern="dspic.persfr"/>
+        <includes pattern="pic12.persfr"/>
+        <includes pattern="pic18.persfr"/>
+        <includes pattern="arm32.persfr"/>
+        <includes pattern="avr8.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="3.4.BUILDNUMBER">Added read device ID.</release>
+      <release version="3.3.68" date="2020-05-05">Updated MPLAB X debug scripts.</release>
+      <release version="3.2.62" date="2020-03-02">Maintenance release. No functional changes.</release>
+      <release version="3.2.61" date="2020-02-12">Updated XC32 content. For revision B devices, changed enum names for OSC32KCTRL_XOSC32K__STARTUP and added SERCOM_USART_CTRLA__SAMPA enumeration.</release>
+      <release version="3.1.43" date="2019-10-07">Updated captions and registers in CCL and OPAMP. Use generated startup and system code for ARMCC and IAR. Added XC32 content.</release>
+      <release version="3.0.26" date="2019-04-17">Added programming/debugging support in MPLAB X. Removed legacy headers</release>
+      <release version="2.0.2" date="2019-01-24">Succeeds Atmel.SAML21_DFP 1.2.125.</release>
+    </releases>
+  <device Dname="ATSAML21G16B"/><device Dname="ATSAML21G17B"/><device Dname="ATSAML21G18B"/><device Dname="ATSAML21G18A"/><device Dname="ATSAML21E15B"/><device Dname="ATSAML21E16B"/><device Dname="ATSAML21E17B"/><device Dname="ATSAML21J17B"/><device Dname="ATSAML21J16B"/><device Dname="ATSAML21J18A"/><device Dname="ATSAML21J18B"/><device Dname="ATSAML21J17BU"/><device Dname="ATSAML21E18A"/><device Dname="ATSAML21J18BU"/><device Dname="ATSAML21E18B"/></pdsc>
+</package>

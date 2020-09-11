@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMR34J17B</tag>
+  <display>Microchip ATSAMR34J17B</display>
+  <data>$CUR_DIR$\ATSAMR34J17B.i79</data>
+</optionMenuItem>

@@ -1757,6 +1757,55 @@
       </value-group>
       <value-group name="DMAC_CHCTRLB__TRIGSRC">
         <value name="DISABLE" caption="Only software/event triggers" value="0x00"/>
+        <value name="SERCOM0_RX" caption="SERCOM0 RX Trigger" value="0x01"/>
+        <value name="SERCOM0_TX" caption="SERCOM0 TX Trigger" value="0x02"/>
+        <value name="SERCOM1_RX" caption="SERCOM1 RX Trigger" value="0x03"/>
+        <value name="SERCOM1_TX" caption="SERCOM1 TX Trigger" value="0x04"/>
+        <value name="SERCOM2_RX" caption="SERCOM2 RX Trigger" value="0x05"/>
+        <value name="SERCOM2_TX" caption="SERCOM2 TX Trigger" value="0x06"/>
+        <value name="SERCOM3_RX" caption="SERCOM3 RX Trigger" value="0x07"/>
+        <value name="SERCOM3_TX" caption="SERCOM3 TX Trigger" value="0x08"/>
+        <value name="SERCOM4_RX" caption="SERCOM4 RX Trigger" value="0x09"/>
+        <value name="SERCOM4_TX" caption="SERCOM4 TX Trigger" value="0x0A"/>
+        <value name="SERCOM5_RX" caption="SERCOM5 RX Trigger" value="0x0B"/>
+        <value name="SERCOM5_TX" caption="SERCOM5 TX Trigger" value="0x0C"/>
+        <value name="TCC0_OVF" caption="TCC0 Overflow Trigger" value="0x0D"/>
+        <value name="TCC0_MC0" caption="TCC0 Match/Compare 0 Trigger" value="0x0E"/>
+        <value name="TCC0_MC1" caption="TCC0 Match/Compare 1 Trigger" value="0x0F"/>
+        <value name="TCC0_MC2" caption="TCC0 Match/Compare 2 Trigger" value="0x10"/>
+        <value name="TCC0_MC3" caption="TCC0 Match/Compare 3 Trigger" value="0x11"/>
+        <value name="TCC1_OVF" caption="TCC1 Overflow Trigger" value="0x12"/>
+        <value name="TCC1_MC0" caption="TCC1 Match/Compare 0 Trigger" value="0x13"/>
+        <value name="TCC1_MC1" caption="TCC1 Match/Compare 1 Trigger" value="0x14"/>
+        <value name="TCC2_OVF" caption="TCC2 Overflow Trigger" value="0x15"/>
+        <value name="TCC2_MC0" caption="TCC2 Match/Compare 0 Trigger" value="0x16"/>
+        <value name="TCC2_MC1" caption="TCC2 Match/Compare 1 Trigger" value="0x17"/>
+        <value name="TC3_OVF" caption="TC3 Overflow Trigger" value="0x18"/>
+        <value name="TC3_MC0" caption="TC3 Match/Compare 0 Trigger" value="0x19"/>
+        <value name="TC3_MC1" caption="TC3 Match/Compare 1 Trigger" value="0x1A"/>
+        <value name="TC4_OVF" caption="TC4 Overflow Trigger" value="0x1B"/>
+        <value name="TC4_MC0" caption="TC4 Match/Compare 0 Trigger" value="0x1C"/>
+        <value name="TC4_MC1" caption="TC4 Match/Compare 1 Trigger" value="0x1D"/>
+        <value name="TC5_OVF" caption="TC5 Overflow Trigger" value="0x1E"/>
+        <value name="TC5_MC0" caption="TC5 Match/Compare 0 Trigger" value="0x1F"/>
+        <value name="TC5_MC1" caption="TC5 Match/Compare 1 Trigger" value="0x20"/>
+        <value name="TC6_OVF" caption="TC6 Overflow Trigger" value="0x21"/>
+        <value name="TC6_MC0" caption="TC6 Match/Compare 0 Trigger" value="0x22"/>
+        <value name="TC6_MC1" caption="TC6 Match/Compare 1 Trigger" value="0x23"/>
+        <value name="TC7_OVF" caption="TC7 Overflow Trigger" value="0x24"/>
+        <value name="TC7_MC0" caption="TC7 Match/Compare 0 Trigger" value="0x25"/>
+        <value name="TC7_MC1" caption="TC7 Match/Compare 1 Trigger" value="0x26"/>
+        <value name="ADC_RESRDY" caption="ADC Result Ready Trigger" value="0x27"/>
+        <value name="DAC_EMPTY" caption="DAC Empty Trigger" value="0x28"/>
+        <value name="I2S_RX_0" caption="I2S RX 0 Trigger" value="0x29"/>
+        <value name="I2S_RX_1" caption="I2S RX 1 Trigger" value="0x2A"/>
+        <value name="I2S_TX_0" caption="I2S TX 0 Trigger" value="0x2B"/>
+        <value name="I2S_TX_1" caption="I2S TX 1 Trigger" value="0x2C"/>
+        <value name="TCC3_OVF" caption="TCC3 Overflow Trigger" value="0x2D"/>
+        <value name="TCC3_MC0" caption="TCC3 Match/Compare 0 Trigger" value="0x2E"/>
+        <value name="TCC3_MC1" caption="TCC3 Match/Compare 1 Trigger" value="0x2F"/>
+        <value name="TCC3_MC2" caption="Match/Compare 2 Trigger" value="0x30"/>
+        <value name="TCC3_MC3" caption="Match/Compare 3 Trigger" value="0x31"/>
       </value-group>
     </module>
     <module name="DSU" id="U2209" version="2.0.4" caption="Device Service Unit">

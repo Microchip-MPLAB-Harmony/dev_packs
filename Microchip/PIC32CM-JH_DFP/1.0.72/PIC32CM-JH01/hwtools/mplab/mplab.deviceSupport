@@ -1,0 +1,28 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="PIC32CM2532JH01032">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM2532JH01048">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM2532JH01064">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM2532JH01100">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164JH01032">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164JH01048">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164JH01064">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="PIC32CM5164JH01100">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="alpha" mp:nedbgp="alpha" mp:pk4d="yes" mp:pk4p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

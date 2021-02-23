@@ -1,0 +1,37 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  BOOT_FLASH   Memory    0x00000000  0x00005DFF  RW
+Memory   =  FLASH        Memory    0x01000000  0x010FFFFF  RW
+Memory   =  CMCC         Memory    0x03000000  0x03FFFFFF  RW
+Memory   =  CMCC_DATARAM Memory    0x03000000  0x03000FFF  RW
+Memory   =  CMCC_TAGRAM  Memory    0x03001000  0x030013FF  RW
+Memory   =  CMCC_VALIDRAM Memory    0x03002000  0x0300203F  RW
+Memory   =  QSPI         Memory    0x04000000  0x04FFFFFF  RW
+Memory   =  HSRAM        Memory    0x20000000  0x2001FFFF  RW
+Memory   =  HSRAM_ETB    Memory    0x20000000  0x20007FFF  RW
+Memory   =  HSRAM_RET1   Memory    0x20000000  0x20007FFF  RW
+Memory   =  PBA          Memory    0x40000000  0x40FFFFFF  RW
+Memory   =  PBB          Memory    0x41000000  0x41FFFFFF  RW
+Memory   =  PBC          Memory    0x42000000  0x42FFFFFF  RW
+Memory   =  PB_PIC       Memory    0x44000000  0x4401FFFF  RW
+Memory   =  BKUPRAM      Memory    0x44014000  0x44015FFF  RW
+Memory   =  PPB          Memory    0xE0000000  0xE00FFFFF  RW
+Memory   =  SCS          Memory    0xE000E000  0xE000EFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = WBZ450.svd

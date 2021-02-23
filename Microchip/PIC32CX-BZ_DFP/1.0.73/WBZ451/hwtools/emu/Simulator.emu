@@ -1,0 +1,21 @@
+<emu:emu xmlns:emu="http://crownking/emu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/emu ../../schema/emu/emu.xsd">
+  <emu:version major="0" minor="0" rev="0"/>
+  <emu:indextable>
+    <emu:indextablerecord device="WBZ451" emulengine="pic32sim"/>
+  </emu:indextable>
+  <emu:emulenginedesc name="pic32sim">
+    <emu:bps maxdatabps="1000" maxdelaycount="1000000000" maxpasscount="1000000000" maxprogbps="1000" separate="false"/>
+    <emu:databps access="readorwriteoreither" bus="false" match="true" widths="false"/>
+    <emu:tuples maxands="1000"/>
+    <emu:sequences maxbpsinseq="1000" maxseqs="1000"/>
+    <emu:swbps supported="false"/>
+    <emu:datacapture allowed="false"/>
+    <emu:addressmask allowed="false"/>
+    <emu:dma breaksallowed="false"/>
+    <emu:stopwatch available="true" cpcontrolled="false" freerunning="true" instcpsonly="true"/>
+    <emu:trace allowed="false"/>
+    <emu:tblxxbp available="false"/>
+    <emu:nonaddressbreaks clockswitch="false" reset="false" sleep="false" stack="false" wakeup="false" watchdog="true"/>
+    <emu:runtimebps supported="false"/>
+  </emu:emulenginedesc>
+</emu:emu>

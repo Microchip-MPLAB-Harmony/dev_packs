@@ -1,0 +1,59 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmRealICE4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="PIC32MZ1025DAA169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAA176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAA288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAB169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAB176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAB288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAG169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAG176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAH169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1025DAH176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAA169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAA176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAA288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAB169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAB176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAB288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAG169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAG176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAH169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ1064DAH176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAA169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAA176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAA288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAB169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAB176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAB288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAG169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAG176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAH169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2025DAH176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAA169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAA176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAA288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAB169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAB176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAB288" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAG169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAG176" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAH169" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MZ2064DAH176" sdm:profile="ejtagonlyiflowtrace2"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:profilename="ejtagonlyiflowtrace2" sdm:profilesupported="yes">
+    <sdm:debuggermodule/>
+    <sdm:datastreams>
+      <sdm:stream sdm:type="runtimewatch">
+        <sdm:canuse sdm:connection="3" sdm:decodescheme="iflowtrace2" sdm:default="true" sdm:interleave="no" sdm:resource="iflowtrace" sdm:stallonfull="yes" sdm:supportedwidths="1,2,4"/>
+      </sdm:stream>
+      <sdm:stream sdm:type="trace">
+        <sdm:canuse sdm:connection="3" sdm:decodescheme="iflowtrace2" sdm:default="true" sdm:interleave="no" sdm:resource="iflowtrace" sdm:stallonfull="yes"/>
+      </sdm:stream>
+      <sdm:stream sdm:type="generic">
+        <sdm:canuse sdm:connection="3" sdm:decodescheme="raw" sdm:request="powermonitor" sdm:resource="debuggermodule-datacapture"/>
+      </sdm:stream>
+    </sdm:datastreams>
+  </sdm:profiledef>
+</sdm:sdm>

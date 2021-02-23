@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-
-<optionMenuItem>
-  <tag>ATSAMHA0G15WB</tag>
-  <display>Microchip ATSAMHA0G15WB</display>
-  <data>$CUR_DIR$\ATSAMHA0G15WB.i79</data>
-</optionMenuItem>

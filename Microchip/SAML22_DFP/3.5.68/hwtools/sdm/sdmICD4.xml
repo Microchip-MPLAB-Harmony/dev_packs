@@ -1,0 +1,15 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmICD4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="ATSAML22G16A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22G17A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22G18A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22J16A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22J17A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22J18A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22N16A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22N17A" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAML22N18A" sdm:profile="armv6"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:isstub="true" sdm:profilename="armv6" sdm:profilesupported="no"/>
+</sdm:sdm>

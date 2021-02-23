@@ -1,0 +1,4 @@
+<pk4:pk4 xmlns:pk4="http://crownking/pk4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pk4 ../../schema/pk4/pk4.xsd">
+  <pk4:version pk4:major="0" pk4:minor="0" pk4:rev="0"/>
+  <pk4:baseclass pk4:classname="PK4InitInterfaceProvider"/>
+</pk4:pk4>

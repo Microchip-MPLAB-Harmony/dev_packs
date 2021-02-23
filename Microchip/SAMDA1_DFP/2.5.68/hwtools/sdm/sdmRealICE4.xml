@@ -1,0 +1,4 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmRealICE4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities/>
+</sdm:sdm>

@@ -1,0 +1,31 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmRealICE.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="PIC32MK0256MCJ048" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0256MCJ064" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0512MCF064" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0512MCF100" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0512MCJ048" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0512MCJ064" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0512MCM064" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK0512MCM100" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK1024MCF064" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK1024MCF100" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK1024MCM064" sdm:profile="ejtagonlyiflowtrace2"/>
+    <sdm:device sdm:devicename="PIC32MK1024MCM100" sdm:profile="ejtagonlyiflowtrace2"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:profilename="ejtagonlyiflowtrace2" sdm:profilesupported="yes">
+    <sdm:debuggermodule/>
+    <sdm:datastreams>
+      <sdm:stream sdm:type="runtimewatch">
+        <sdm:canuse sdm:connection="3" sdm:decodescheme="iflowtrace2" sdm:default="true" sdm:interleave="no" sdm:resource="iflowtrace" sdm:stallonfull="yes" sdm:supportedwidths="1,2,4"/>
+      </sdm:stream>
+      <sdm:stream sdm:type="trace">
+        <sdm:canuse sdm:connection="3" sdm:decodescheme="iflowtrace2" sdm:default="true" sdm:interleave="no" sdm:resource="iflowtrace" sdm:stallonfull="yes"/>
+      </sdm:stream>
+      <sdm:stream sdm:type="generic">
+        <sdm:canuse sdm:connection="3" sdm:decodescheme="raw" sdm:request="powermonitor" sdm:resource="debuggermodule-datacapture"/>
+      </sdm:stream>
+    </sdm:datastreams>
+  </sdm:profiledef>
+</sdm:sdm>

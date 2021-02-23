@@ -1,0 +1,4 @@
+<icd4:icd4 xmlns:icd4="http://crownking/icd4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/icd4 ../../schema/icd4/icd4.xsd">
+  <icd4:version icd4:major="0" icd4:minor="0" icd4:rev="0"/>
+  <icd4:baseclass icd4:classname="ICD4InitInterfaceProvider"/>
+</icd4:icd4>

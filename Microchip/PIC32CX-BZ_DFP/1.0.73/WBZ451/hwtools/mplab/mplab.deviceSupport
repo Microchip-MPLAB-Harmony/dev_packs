@@ -1,0 +1,7 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="WBZ451">
+      <mp:support mp:sim="beta"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

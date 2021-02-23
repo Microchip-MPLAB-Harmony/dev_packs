@@ -1,0 +1,22 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="ATSAMHA0E14AB">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:nedbgd="no" mp:nedbgp="no" mp:pk4d="yes" mp:pk4p="yes" mp:sim="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMHA0E15AB">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:nedbgd="no" mp:nedbgp="no" mp:pk4d="yes" mp:pk4p="yes" mp:sim="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMHA0E16AB">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="no" mp:nedbgp="no" mp:pk4d="yes" mp:pk4p="yes" mp:sim="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMHA0G14AB">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="no" mp:nedbgp="no" mp:pk4d="yes" mp:pk4p="yes" mp:sim="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMHA0G15AB">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="no" mp:nedbgp="no" mp:pk4d="yes" mp:pk4p="yes" mp:sim="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAMHA0G16AB">
+      <mp:support mp:aiced="alpha" mp:aicep="alpha" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="beta" mp:ice4p="beta" mp:nedbgd="no" mp:nedbgp="no" mp:pk4d="yes" mp:pk4p="yes" mp:sim="beta" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

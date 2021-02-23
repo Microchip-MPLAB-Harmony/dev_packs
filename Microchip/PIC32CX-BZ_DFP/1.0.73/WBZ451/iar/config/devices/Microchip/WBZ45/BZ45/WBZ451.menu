@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>WBZ451</tag>
+  <display>Microchip WBZ451</display>
+  <data>$CUR_DIR$\WBZ451.i79</data>
+</optionMenuItem>

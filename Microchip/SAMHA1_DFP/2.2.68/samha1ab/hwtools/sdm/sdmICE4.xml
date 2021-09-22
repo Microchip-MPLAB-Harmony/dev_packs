@@ -1,0 +1,13 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmICE4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="ATSAMHA1E14AB" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAMHA1E15AB" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAMHA1E16AB" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAMHA1G14AB" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAMHA1G15AB" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAMHA1G16AB" sdm:profile="armv6"/>
+    <sdm:device sdm:devicename="ATSAMHA1G17AB" sdm:profile="armv6"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:isstub="true" sdm:profilename="armv6" sdm:profilesupported="no"/>
+</sdm:sdm>

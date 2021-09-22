@@ -1,0 +1,29 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  ITCM         Memory    0x00000000  0x0000FFFF  RW
+Memory   =  IFLASH       Memory    0x10000000  0x1001FFFF  RW
+Memory   =  IROM         Memory    0x11000000  0x1101FFFF  R
+Memory   =  DTCM         Memory    0x20000000  0x2001FFFF  RW
+Memory   =  FLEXRAM      Memory    0x21000000  0x2101FFFF  RW
+Memory   =  AXIMX        Memory    0x22000000  0x220FFFFF  RW
+Memory   =  PERIPHERALS  Memory    0x40000000  0x5FFFFFFF  RW
+Memory   =  EBI_CSHEMC   Memory    0x60000000  0x601FFFFF  RW
+Memory   =  SYSTEM       Memory    0xE0000000  0xEFFFFFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = ATSAMRH707F18A.svd

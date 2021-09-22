@@ -1,0 +1,15 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmICD4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="PIC32MM0016GPL020" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0016GPL028" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0016GPL036" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0032GPL020" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0032GPL028" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0032GPL036" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0064GPL020" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0064GPL028" sdm:profile="ejtagupbv1"/>
+    <sdm:device sdm:devicename="PIC32MM0064GPL036" sdm:profile="ejtagupbv1"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:profilename="ejtagupbv1" sdm:profilesupported="no"/>
+</sdm:sdm>

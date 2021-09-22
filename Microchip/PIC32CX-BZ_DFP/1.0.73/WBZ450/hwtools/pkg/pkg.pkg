@@ -1,3 +1,0 @@
-<pkg:pkg xmlns:pkg="http://crownking/pkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/pkg ../../schema/pkg/pkg.xsd">
-  <pkg:version pkg:major="0" pkg:minor="0" pkg:rev="0"/>
-</pkg:pkg>

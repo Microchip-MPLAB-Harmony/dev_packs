@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMRH707F18A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAMRH707F18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAMRH707F18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAMRH707F18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samrh707f18a.h"/>
+        <includes pattern="system_samrh707.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/crccu.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/flexramecc.h"/>
+        <includes pattern="component/hefc.h"/>
+        <includes pattern="component/hemc.h"/>
+        <includes pattern="component/hsmc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ip1553.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/nmic.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/spw.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcmecc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samrh707f18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMRH707F18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_samrh707f18a.s"/>
+        <includes pattern="system_samrh707f18a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_samrh707f18a.c"/>
+        <includes pattern="system_samrh707f18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/samrh707f18a_flash.ld"/>
+        <includes pattern="gcc/samrh707f18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_samrh707f18a.c"/>
+        <includes pattern="system_samrh707f18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsamrh707f18a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamrh707f18a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAMRH707.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAMRH707F18A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAMRH/SAMRH707/ATSAMRH707F18A.i79"/>
+        <includes pattern="config/devices/Microchip/SAMRH/SAMRH707/ATSAMRH707F18A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="icd4_cortex-m7.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMRH707F18A/ATSAMRH707F18A.ld"/>
+        <includes pattern="ATSAMRH707F18A/specs-ATSAMRH707F18A"/>
+        <includes pattern="ATSAMRH707F18A/startup_atsamrh707f18a.c"/>
+        <includes pattern="ATSAMRH707F18A/configuration.data"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="hwtools.per" subdir="hwtools/per">
+        <includes pattern="avr8.per"/>
+        <includes pattern="dspic.per"/>
+        <includes pattern="pic12.per"/>
+        <includes pattern="pic32.per"/>
+        <includes pattern="dspic33a.per"/>
+        <includes pattern="pic18.per"/>
+        <includes pattern="armcm7.per"/>
+        <includes pattern="pic16.per"/>
+        <includes pattern="usart.ispPeripheral.xml"/>
+        <includes pattern="usart.plibgen.xml"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="1.0.BUILDNUMBER">Initial release.</release>
+    </releases>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.50-"/>
+    </prerequisites>
+  </pdsc>
+</package>

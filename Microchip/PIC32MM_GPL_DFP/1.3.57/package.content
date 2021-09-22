@@ -1,0 +1,1067 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32MM0016GPL020">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0016GPL020.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0016GPL020.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0016GPL028">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0016GPL028.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0016GPL028.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0016GPL036">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0016GPL036.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0016GPL036.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0032GPL020">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0032GPL020.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0032GPL020.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0032GPL028">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0032GPL028.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0032GPL028.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0032GPL036">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0032GPL036.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0032GPL036.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0064GPL020">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0064GPL020.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0064GPL020.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0064GPL028">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0064GPL028.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0064GPL028.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32MM0064GPL036">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MM0064GPL036.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MM0064GPL036.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="device_files/32MM0064GPL028.info"/>
+        <includes pattern="device_files/32MM0016GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL036.info"/>
+        <includes pattern="device_files/32MM0032GPL020.info"/>
+        <includes pattern="device_files/32MM0032GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL036.info"/>
+        <includes pattern="device_files/32MM0016GPL028.info"/>
+        <includes pattern="device_files/32MM0064GPL020.info"/>
+        <includes pattern="32MM0032GPL020/configuration.data"/>
+        <includes pattern="32MM0032GPL020/pic32m"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020.S"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_pic.ld"/>
+        <includes pattern="32MM0032GPL020/p32MM0032GPL020_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_pic.ld"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.ld"/>
+        <includes pattern="32MM0016GPL028/configuration.data"/>
+        <includes pattern="32MM0016GPL028/pic32m"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028_div.S"/>
+        <includes pattern="32MM0016GPL028/p32MM0016GPL028.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_div.S"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.ld"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020_pic.ld"/>
+        <includes pattern="32MM0016GPL020/configuration.data"/>
+        <includes pattern="32MM0016GPL020/pic32m"/>
+        <includes pattern="32MM0016GPL020/p32MM0016GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.ld"/>
+        <includes pattern="32MM0064GPL020/configuration.data"/>
+        <includes pattern="32MM0064GPL020/pic32m"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_div.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020.S"/>
+        <includes pattern="32MM0064GPL020/p32MM0064GPL020_pic.ld"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_pic.ld"/>
+        <includes pattern="32MM0032GPL028/configuration.data"/>
+        <includes pattern="32MM0032GPL028/pic32m"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.S"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028.ld"/>
+        <includes pattern="32MM0032GPL028/p32MM0032GPL028_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.ld"/>
+        <includes pattern="32MM0032GPL036/configuration.data"/>
+        <includes pattern="32MM0032GPL036/pic32m"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_div.S"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036_pic.ld"/>
+        <includes pattern="32MM0032GPL036/p32MM0032GPL036.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_div.S"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028.ld"/>
+        <includes pattern="32MM0064GPL028/configuration.data"/>
+        <includes pattern="32MM0064GPL028/pic32m"/>
+        <includes pattern="32MM0064GPL028/p32MM0064GPL028_pic.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.ld"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_div.S"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036_pic.ld"/>
+        <includes pattern="32MM0064GPL036/configuration.data"/>
+        <includes pattern="32MM0064GPL036/pic32m"/>
+        <includes pattern="32MM0064GPL036/p32MM0064GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.ld"/>
+        <includes pattern="32MM0016GPL036/configuration.data"/>
+        <includes pattern="32MM0016GPL036/pic32m"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_div.S"/>
+        <includes pattern="32MM0016GPL036/p32MM0016GPL036_pic.ld"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/p32mm0016gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl020.h"/>
+        <includes pattern="proc/p32mm0064gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl028.h"/>
+        <includes pattern="proc/p32mm0064gpl028.h"/>
+        <includes pattern="proc/p32mm0016gpl020.h"/>
+        <includes pattern="proc/p32mm0016gpl036.h"/>
+        <includes pattern="proc/p32mm0032gpl020.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip" compliant="false">
+    <releases>
+      <release version="1.3.BUILDNUMBER">Updated clause 2 of the license text in headers, linker scripts and .S files to no require publication of copyright notice in embedded applications.</release>
+      <release version="1.2.33" date="2020-02-12">Updated XC32 linker script to only link processor.o for version less than 2.10, newer versions will use a device specific .S file instead.</release>
+      <release version="1.1.27" date="2019-10-15">Added XC32 content.</release>
+      <release version="1.0.14" date="2019-04-16">Added RevId B3.</release>
+      <release version="1.0.11" date="2019-01-24">Initial release.</release>
+    </releases>
+  </pdsc>
+</package>

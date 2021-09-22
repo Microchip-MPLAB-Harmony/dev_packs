@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-
-<optionMenuItem>
-  <tag>PIC32CM2532LE00100</tag>
-  <display>Microchip PIC32CM2532LE00100</display>
-  <data>$CUR_DIR$\PIC32CM2532LE00100.i79</data>
-</optionMenuItem>

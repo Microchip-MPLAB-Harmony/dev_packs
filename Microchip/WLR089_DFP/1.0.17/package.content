@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="WLR089U0">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="WLR089U0.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="WLR089U0.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="WLR089U0.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="wlr089u0.h"/>
+        <includes pattern="system_wlr089.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/wlr089u0.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__WLR089U0__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_wlr089u0.s"/>
+        <includes pattern="system_wlr089u0.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_wlr089u0.c"/>
+        <includes pattern="system_wlr089u0.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/wlr089u0_flash.ld"/>
+        <includes pattern="gcc/wlr089u0_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_wlr089u0.c"/>
+        <includes pattern="system_wlr089u0.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/wlr089u0/sram.icf"/>
+        <includes pattern="config/linker/Microchip/wlr089u0/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_WLR089.dmac"/>
+        <includes pattern="config/debugger/Microchip/WLR089U0.ddf"/>
+        <includes pattern="config/devices/Microchip/WLR/WLR089/WLR089U0.i79"/>
+        <includes pattern="config/devices/Microchip/WLR/WLR089/WLR089U0.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="WLR089U0/configuration.data"/>
+        <includes pattern="WLR089U0/pic32c"/>
+        <includes pattern="WLR089U0/startup_wlr089u0.c"/>
+        <includes pattern="WLR089U0/WLR089U0.ld"/>
+        <includes pattern="WLR089U0/specs-WLR089U0"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+		<releases>
+			<release version="1.0.BUILDNUMBER">Intial release.</release>
+		</releases>
+	</pdsc>
+</package>

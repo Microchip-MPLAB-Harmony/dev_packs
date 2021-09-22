@@ -1,0 +1,23 @@
+<pbs:pbs xmlns:pbs="http://crownking/mplab_pbs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab_pbs ../../schema/PluginBoardSupport.xsd">
+  <pbs:device name="*">
+    <pbs:board boardid="5" displayname="Power Monitor" name="POWERMODULE" rice="alpha" supportfwver="0x01.0x28.0x25" toolclass="RealICEPlatformTool"/>
+  </pbs:device>
+  <pbs:device name="PIC32MM0016GPL020">
+      </pbs:device>
+  <pbs:device name="PIC32MM0016GPL028">
+      </pbs:device>
+  <pbs:device name="PIC32MM0016GPL036">
+      </pbs:device>
+  <pbs:device name="PIC32MM0032GPL020">
+      </pbs:device>
+  <pbs:device name="PIC32MM0032GPL028">
+      </pbs:device>
+  <pbs:device name="PIC32MM0032GPL036">
+      </pbs:device>
+  <pbs:device name="PIC32MM0064GPL020">
+      </pbs:device>
+  <pbs:device name="PIC32MM0064GPL028">
+      </pbs:device>
+  <pbs:device name="PIC32MM0064GPL036">
+      </pbs:device>
+</pbs:pbs>

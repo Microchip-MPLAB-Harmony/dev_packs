@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>LAN9255ZMX019</tag>
+  <display>Microchip LAN9255ZMX019</display>
+  <data>$CUR_DIR$\LAN9255ZMX019.i79</data>
+</optionMenuItem>

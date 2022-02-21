@@ -1,0 +1,46 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  FLASH        Memory    0x00000000  0x0003FFFF  RW
+Memory   =  DATAFLASH    Memory    0x00400000  0x00401FFF  RW
+Memory   =  CAL          Memory    0x00800000  0x00800007  R
+Memory   =  LOCKROW      Memory    0x00802000  0x00802003  R
+Memory   =  AUX0         Memory    0x00804000  0x008040FF  RW
+Memory   =  USER_PAGE    Memory    0x00804000  0x008040FF  RW
+Memory   =  AUX1         Memory    0x00806000  0x008060FF  RW
+Memory   =  OTP1         Memory    0x00806000  0x00806007  R
+Memory   =  OTP2         Memory    0x00806008  0x0080600F  R
+Memory   =  OTP3         Memory    0x00806010  0x00806017  R
+Memory   =  OTP4         Memory    0x00806018  0x0080601F  R
+Memory   =  SW_CALIB     Memory    0x00806020  0x00806023  R
+Memory   =  AUX2         Memory    0x00808000  0x008080FF  RW
+Memory   =  AUX3         Memory    0x0080A000  0x0080A0FF  RW
+Memory   =  AUX4         Memory    0x0080C000  0x0080C0FF  RW
+Memory   =  BOCOR        Memory    0x0080C000  0x0080C0FF  RW
+Memory   =  BOCOR1       Memory    0x0080C008  0x0080C00F  R
+Memory   =  AUX5         Memory    0x0080E000  0x0080E0FF  RW
+Memory   =  TLATCH       Memory    0x00810000  0x0081FFFF  RW
+Memory   =  SHADOW       Memory    0x00820000  0x00820007  R
+Memory   =  ROM          Memory    0x00830000  0x0083FFFF  RW
+Memory   =  HSRAM        Memory    0x20000000  0x20007FFF  RW
+Memory   =  APBA         Memory    0x40000000  0x40007FFF  RW
+Memory   =  APBB         Memory    0x41000000  0x4100FFFF  RW
+Memory   =  APBC         Memory    0x42000000  0x42005FFF  RW
+Memory   =  PPB          Memory    0xE0000000  0xE00FFFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = PIC32CM2532LS00100.svd

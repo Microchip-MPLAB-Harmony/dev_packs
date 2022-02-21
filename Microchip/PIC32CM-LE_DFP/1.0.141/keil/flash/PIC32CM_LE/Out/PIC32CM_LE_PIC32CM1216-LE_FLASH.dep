@@ -1,0 +1,7 @@
+Dependencies for Project 'PIC32CM_LE', Target 'PIC32CM1216-LE_FLASH': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\FlashPrg.c)(0x60797760)(-c --cpu Cortex-M0 -D__EVAL --li -g -O2 --apcs=interwork --apcs /ropi/rwpi -Ic:\Keil_v5\ARM\Packs\ARM\CMSIS\5.7.1-dev0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="533" -DARMCM0 -DFLASH_MEM -DPIC32CM1216LE-o .\out\flashprg.o --omf_browse .\out\flashprg.crf --depend .\out\flashprg.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (..\FlashOS.h)(0x60132A18)
+F (.\FlashDev.c)(0x607977F2)(-c --cpu Cortex-M0 -D__EVAL --li -g -O2 --apcs=interwork --apcs /ropi/rwpi -Ic:\Keil_v5\ARM\Packs\ARM\CMSIS\5.7.1-dev0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="533" -DARMCM0 -DFLASH_MEM -DPIC32CM1216LE-o .\out\flashdev.o --omf_browse .\out\flashdev.crf --depend .\out\flashdev.d)
+I (..\FlashOS.h)(0x60132A18)

@@ -1,0 +1,31 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  CODE_SRAM    Memory    0x000C8000  0x00117FFF  RW
+Memory   =  DATA_SRAM    Memory    0x00118000  0x00127FFF  RW
+Memory   =  DATA_SRAM2   Memory    0x00128000  0x00137FFF  RW
+Memory   =  DATA_SRAM3   Memory    0x00138000  0x00147FFF  RW
+Memory   =  DATA_SRAM_ALIAS Memory    0x20000000  0x20007FFF  RW
+Memory   =  EC_DEVICE_REGISTERS Memory    0x40000000  0x4007FFFF  RW
+Memory   =  GPIO_REGISTERS Memory    0x40080000  0x4008FFFF  RW
+Memory   =  HOST_DEVICE_REGISTERS Memory    0x400F0000  0x401EFFFF  RW
+Memory   =  CRYPTO_RAM   Memory    0x40100000  0x40105FFF  R
+Memory   =  EXTERNAL_FLASH Memory    0x50000000  0x57FFFFFF  RW
+Memory   =  SCS          Memory    0xE000E000  0xE000EFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = CEC1736_S0_2HW.svd

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>CEC1734_S0_2HW</tag>
+  <display>Microchip CEC1734_S0_2HW</display>
+  <data>$CUR_DIR$\CEC1734_S0_2HW.i79</data>
+</optionMenuItem>

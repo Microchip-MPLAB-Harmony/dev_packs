@@ -22209,7 +22209,7 @@ Copyright (c) 2017 Microchip Technology Inc.
                   <field>
                      <name>NSID</name>
                      <bitOffset>0</bitOffset>
-                     <bitWidth>1</bitWidth>
+                     <bitWidth>2</bitWidth>
                      <enumeratedValues>
                         <name>NSIDSelect</name>
                         <enumeratedValue>
@@ -22227,7 +22227,7 @@ Copyright (c) 2017 Microchip Technology Inc.
                   <field>
                      <name>NSNID</name>
                      <bitOffset>2</bitOffset>
-                     <bitWidth>1</bitWidth>
+                     <bitWidth>2</bitWidth>
                      <enumeratedValues>
                         <name>NSNIDSelect</name>
                         <enumeratedValue>

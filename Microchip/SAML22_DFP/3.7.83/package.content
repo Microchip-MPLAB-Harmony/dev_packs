@@ -1,0 +1,1623 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAML22G16A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22G16A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22G16A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22G16A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22g16a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22g16a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22G16A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22g16a.s"/>
+        <includes pattern="system_saml22g16a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_64.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_64_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_64.FLM" value="start=0x00000000|size=0x10000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_64_EEPROM.FLM" value="start=0x00400000|size=0x00800|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22g16a.c"/>
+        <includes pattern="system_saml22g16a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22g16a_flash.ld"/>
+        <includes pattern="gcc/saml22g16a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22g16a.c"/>
+        <includes pattern="system_saml22g16a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22g16a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22g16a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22G16A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22G16A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22G16A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22G17A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22G17A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22G17A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22G17A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22g17a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22g17a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22G17A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22g17a.s"/>
+        <includes pattern="system_saml22g17a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22g17a.c"/>
+        <includes pattern="system_saml22g17a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22g17a_flash.ld"/>
+        <includes pattern="gcc/saml22g17a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22g17a.c"/>
+        <includes pattern="system_saml22g17a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22g17a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22g17a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22G17A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22G17A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22G17A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22G18A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22G18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22G18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22G18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22g18a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22g18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22G18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22g18a.s"/>
+        <includes pattern="system_saml22g18a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22g18a.c"/>
+        <includes pattern="system_saml22g18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22g18a_flash.ld"/>
+        <includes pattern="gcc/saml22g18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22g18a.c"/>
+        <includes pattern="system_saml22g18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22g18a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22g18a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22G18A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22G18A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22G18A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22J16A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22J16A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22J16A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22J16A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22j16a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22j16a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22J16A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22j16a.s"/>
+        <includes pattern="system_saml22j16a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_64.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_64_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_64.FLM" value="start=0x00000000|size=0x10000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_64_EEPROM.FLM" value="start=0x00400000|size=0x00800|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22j16a.c"/>
+        <includes pattern="system_saml22j16a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22j16a_flash.ld"/>
+        <includes pattern="gcc/saml22j16a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22j16a.c"/>
+        <includes pattern="system_saml22j16a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22j16a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22j16a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22J16A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22J16A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22J16A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22J17A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22J17A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22J17A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22J17A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22j17a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22j17a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22J17A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22j17a.s"/>
+        <includes pattern="system_saml22j17a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22j17a.c"/>
+        <includes pattern="system_saml22j17a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22j17a_flash.ld"/>
+        <includes pattern="gcc/saml22j17a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22j17a.c"/>
+        <includes pattern="system_saml22j17a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22j17a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22j17a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22J17A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22J17A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22J17A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22J18A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22J18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22J18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22J18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22j18a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22j18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22J18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22j18a.s"/>
+        <includes pattern="system_saml22j18a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22j18a.c"/>
+        <includes pattern="system_saml22j18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22j18a_flash.ld"/>
+        <includes pattern="gcc/saml22j18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22j18a.c"/>
+        <includes pattern="system_saml22j18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22j18a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22j18a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22J18A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22J18A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22J18A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22N16A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22N16A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22N16A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22N16A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22n16a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22n16a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22N16A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22n16a.s"/>
+        <includes pattern="system_saml22n16a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_64.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_64_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_64.FLM" value="start=0x00000000|size=0x10000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_64_EEPROM.FLM" value="start=0x00400000|size=0x00800|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22n16a.c"/>
+        <includes pattern="system_saml22n16a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22n16a_flash.ld"/>
+        <includes pattern="gcc/saml22n16a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22n16a.c"/>
+        <includes pattern="system_saml22n16a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22n16a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22n16a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22N16A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22N16A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22N16A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22N17A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22N17A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22N17A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22N17A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22n17a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22n17a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22N17A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22n17a.s"/>
+        <includes pattern="system_saml22n17a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_128.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_128_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_128.FLM" value="start=0x00000000|size=0x20000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_128_EEPROM.FLM" value="start=0x00400000|size=0x01000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22n17a.c"/>
+        <includes pattern="system_saml22n17a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22n17a_flash.ld"/>
+        <includes pattern="gcc/saml22n17a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22n17a.c"/>
+        <includes pattern="system_saml22n17a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22n17a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22n17a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22N17A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22N17A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22N17A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="ATSAML22N18A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAML22N18A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAML22N18A.PIC"/>
+      </resource>
+      <resource type="svd" subdir="svd">
+        <includes pattern="ATSAML22N18A.svd"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="saml22n18a.h"/>
+        <includes pattern="system_saml22.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/slcd.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/saml22n18a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAML22N18A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_saml22n18a.s"/>
+        <includes pattern="system_saml22n18a.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="keil">
+        <includes pattern="flashloader/Flash/ATSAML22_256.FLM"/>
+        <includes pattern="flashloader/Flash/ATSAML22_256_EEPROM.FLM"/>
+        <includes pattern="flashloader/Flash/FlashOS.h"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvgui"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashPrg.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/FlashDev.c"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvproj"/>
+        <includes pattern="flashloader/Flash/ATSAML22/ATSAML22.uvopt"/>
+        <includes pattern="flashloader/Flash/ATSAML22/Target.lin"/>
+        <meta key="flashloader/Flash/ATSAML22_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="flashloader/Flash/ATSAML22_256_EEPROM.FLM" value="start=0x00400000|size=0x02000|default=1"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_saml22n18a.c"/>
+        <includes pattern="system_saml22n18a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/saml22n18a_flash.ld"/>
+        <includes pattern="gcc/saml22n18a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_saml22n18a.c"/>
+        <includes pattern="system_saml22n18a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/atsaml22n18a/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsaml22n18a/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_SAML22.dmac"/>
+        <includes pattern="config/debugger/Microchip/ATSAML22N18A.ddf"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22N18A.i79"/>
+        <includes pattern="config/devices/Microchip/SAML/SAML22/ATSAML22N18A.menu"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAML22J17A/configuration.data"/>
+        <includes pattern="ATSAML22J17A/startup_atsaml22j17a.c"/>
+        <includes pattern="ATSAML22J17A/pic32c"/>
+        <includes pattern="ATSAML22J17A/specs-ATSAML22J17A"/>
+        <includes pattern="ATSAML22J17A/ATSAML22J17A.ld"/>
+        <includes pattern="ATSAML22N17A/ATSAML22N17A.ld"/>
+        <includes pattern="ATSAML22N17A/configuration.data"/>
+        <includes pattern="ATSAML22N17A/pic32c"/>
+        <includes pattern="ATSAML22N17A/startup_atsaml22n17a.c"/>
+        <includes pattern="ATSAML22N17A/specs-ATSAML22N17A"/>
+        <includes pattern="ATSAML22N18A/startup_atsaml22n18a.c"/>
+        <includes pattern="ATSAML22N18A/configuration.data"/>
+        <includes pattern="ATSAML22N18A/pic32c"/>
+        <includes pattern="ATSAML22N18A/ATSAML22N18A.ld"/>
+        <includes pattern="ATSAML22N18A/specs-ATSAML22N18A"/>
+        <includes pattern="ATSAML22G17A/startup_atsaml22g17a.c"/>
+        <includes pattern="ATSAML22G17A/configuration.data"/>
+        <includes pattern="ATSAML22G17A/pic32c"/>
+        <includes pattern="ATSAML22G17A/specs-ATSAML22G17A"/>
+        <includes pattern="ATSAML22G17A/ATSAML22G17A.ld"/>
+        <includes pattern="ATSAML22G18A/configuration.data"/>
+        <includes pattern="ATSAML22G18A/pic32c"/>
+        <includes pattern="ATSAML22G18A/specs-ATSAML22G18A"/>
+        <includes pattern="ATSAML22G18A/ATSAML22G18A.ld"/>
+        <includes pattern="ATSAML22G18A/startup_atsaml22g18a.c"/>
+        <includes pattern="ATSAML22G16A/configuration.data"/>
+        <includes pattern="ATSAML22G16A/startup_atsaml22g16a.c"/>
+        <includes pattern="ATSAML22G16A/pic32c"/>
+        <includes pattern="ATSAML22G16A/ATSAML22G16A.ld"/>
+        <includes pattern="ATSAML22G16A/specs-ATSAML22G16A"/>
+        <includes pattern="ATSAML22J16A/configuration.data"/>
+        <includes pattern="ATSAML22J16A/pic32c"/>
+        <includes pattern="ATSAML22J16A/ATSAML22J16A.ld"/>
+        <includes pattern="ATSAML22J16A/startup_atsaml22j16a.c"/>
+        <includes pattern="ATSAML22J16A/specs-ATSAML22J16A"/>
+        <includes pattern="ATSAML22J18A/configuration.data"/>
+        <includes pattern="ATSAML22J18A/pic32c"/>
+        <includes pattern="ATSAML22J18A/ATSAML22J18A.ld"/>
+        <includes pattern="ATSAML22J18A/specs-ATSAML22J18A"/>
+        <includes pattern="ATSAML22J18A/startup_atsaml22j18a.c"/>
+        <includes pattern="ATSAML22N16A/configuration.data"/>
+        <includes pattern="ATSAML22N16A/pic32c"/>
+        <includes pattern="ATSAML22N16A/specs-ATSAML22N16A"/>
+        <includes pattern="ATSAML22N16A/ATSAML22N16A.ld"/>
+        <includes pattern="ATSAML22N16A/startup_atsaml22n16a.c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="3.7.BUILDNUMBER">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="3.6.74" date="2021-09-08">Hold in reset supported for J32 probes. Included fuse description (component\fuses.h). Support for board file.</release>
+      <release version="3.5.68" date="2021-02-03">Added instance headers. Added support for programming security bit for MPLAB X. Added value groups for PMUXE and PMUXO.</release>
+      <release version="3.4.61" date="2020-08-29">Added read device ID.</release>
+      <release version="3.3.47" date="2020-05-05">Updated MPLAB X debug scripts.</release>
+      <release version="3.2.43" date="2020-02-12">Updated XOSC32K startup time value-group for OSC32KCTRL module. Added value-groups for SERCOM module. Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="3.1.30" date="2019-10-07">Updated captions and registers in CCL. Added XC32 content. Renamed SVCALL_Handler to SVC_Handler.</release>
+      <release version="3.0.20" date="2019-04-17">Added programming/debugging support in MPLAB X. Removed legacy headers</release>
+      <release version="2.0.3" date="2019-02-08">Succeeds Atmel.SAML22_DFP 1.2.77.</release>
+    </releases>
+  <device Dname="ATSAML22J16A"/><device Dname="ATSAML22N16A"/><device Dname="ATSAML22G18A"/><device Dname="ATSAML22J17A"/><device Dname="ATSAML22G17A"/><device Dname="ATSAML22N18A"/><device Dname="ATSAML22N17A"/><device Dname="ATSAML22J18A"/><device Dname="ATSAML22G16A"/></pdsc>
+</package>

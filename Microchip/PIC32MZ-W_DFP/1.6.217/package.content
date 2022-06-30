@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32MZ1025W104132">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32MZ1025W104132.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32MZ1025W104132.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="WFI32E01/pWFI32E01_pic.ld"/>
+        <includes pattern="WFI32E01/pic32m"/>
+        <includes pattern="WFI32E01/pWFI32E01.S"/>
+        <includes pattern="WFI32E01/pWFI32E01.ld"/>
+        <includes pattern="WFI32E01/pWFI32E01_div.S"/>
+        <includes pattern="WFI32E01/configuration.data"/>
+        <includes pattern="WFI32E01/pWFI32E01_voff_init.S"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132_voff_init.S"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132_div.S"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132.S"/>
+        <includes pattern="32MZ1025W104132/pic32m"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132.ld"/>
+        <includes pattern="32MZ1025W104132/configuration.data"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132_pic.ld"/>
+        <includes pattern="device_files/32MZ1025W104132.info"/>
+        <includes pattern="device_files/WFI32E01.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/pwfi32e01.h"/>
+        <includes pattern="proc/p32mz1025w104132.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="WFI32E01">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="WFI32E01.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="WFI32E01.PIC"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="xc32_device.info"/>
+        <includes pattern="WFI32E01/pWFI32E01_pic.ld"/>
+        <includes pattern="WFI32E01/pic32m"/>
+        <includes pattern="WFI32E01/pWFI32E01.S"/>
+        <includes pattern="WFI32E01/pWFI32E01.ld"/>
+        <includes pattern="WFI32E01/pWFI32E01_div.S"/>
+        <includes pattern="WFI32E01/configuration.data"/>
+        <includes pattern="WFI32E01/pWFI32E01_voff_init.S"/>
+        <includes pattern="startup/general-exception.S"/>
+        <includes pattern="startup/crti.s"/>
+        <includes pattern="startup/debug-exception-return.S"/>
+        <includes pattern="startup/simple-tlb-refill-exception.S"/>
+        <includes pattern="startup/crt0.S"/>
+        <includes pattern="startup/cache-err-exception.S"/>
+        <includes pattern="startup/defs.inc"/>
+        <includes pattern="startup/crt0_pic.S"/>
+        <includes pattern="startup/crtn.s"/>
+        <includes pattern="startup/software-debug-break.c"/>
+        <includes pattern="startup/crtstuff.c"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132_voff_init.S"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132_div.S"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132.S"/>
+        <includes pattern="32MZ1025W104132/pic32m"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132.ld"/>
+        <includes pattern="32MZ1025W104132/configuration.data"/>
+        <includes pattern="32MZ1025W104132/p32MZ1025W104132_pic.ld"/>
+        <includes pattern="device_files/32MZ1025W104132.info"/>
+        <includes pattern="device_files/WFI32E01.info"/>
+      </resource>
+      <resource type="xc32.include" subdir="include">
+        <includes pattern="xc.h"/>
+        <includes pattern="xc-pic32m.h"/>
+        <includes pattern="proc/pwfi32e01.h"/>
+        <includes pattern="proc/p32mz1025w104132.h"/>
+      </resource>
+      <resource type="hwtools.persfr.pic32" subdir="hwtools/persfr">
+        <includes pattern="pic32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip" compliant="false">
+    <releases>
+      <release version="1.6.BUILDNUMBER">NEXT</release>
+      <release version="1.5.203" date="2021-09-06">Added WFI32E01.</release>
+      <release version="1.4.193" date="2021-02-02">Updated deep sleep module.</release>
+      <release version="1.3.177" date="2020-08-03">Added CVDCON.CVDIEN and OFF168.VOFF bit fields. Updated clause 2 of the license text in headers, linker scripts and .S files to no require publication of copyright notice in embedded applications. Split RCON module.</release>
+      <release version="1.2.153" date="2020-02-12">Update interrupts, ADC and CAN information. Updated XC32 linker script to only link processor.o for version less than 2.10, newer versions will use a device specific .S file instead.</release>
+      <release version="1.1.116" date="2019-10-15">Added freeze info. Updated name of NVMDATAn.NVMDATAn. Added bits to CLKSTAT. Removed TnCON.T32 and INTCON.VS.</release>
+      <release version="1.0.79" date="2019-04-16">Added crypto revision register, fixed PTG base address naming.</release>
+      <release version="1.0.37" date="2019-01-24">Initial release.</release>
+    </releases>
+  </pdsc>
+</package>

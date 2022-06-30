@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="SAM9X60">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="SAM9X60.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="SAM9X60.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sam9x60.h"/>
+        <includes pattern="system_sam9x.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/dbgu.h"/>
+        <includes pattern="component/emac.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gfx2d.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pmecc.h"/>
+        <includes pattern="component/pmerrloc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sam9x60.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAM9X60__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="sram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="iar.header.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="qspi0.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAM9X60D1G/configuration.data"/>
+        <includes pattern="ATSAM9X60D1G/pic32c"/>
+        <includes pattern="ATSAM9X60D1G/startup_atsam9x60d1g.S"/>
+        <includes pattern="ATSAM9X60D1G/ATSAM9X60D1G.ld"/>
+        <includes pattern="ATSAM9X60D1G/specs-ATSAM9X60D1G"/>
+        <includes pattern="ATSAM9X60D5M/specs-ATSAM9X60D5M"/>
+        <includes pattern="ATSAM9X60D5M/startup_atsam9x60d5m.S"/>
+        <includes pattern="ATSAM9X60D5M/configuration.data"/>
+        <includes pattern="ATSAM9X60D5M/pic32c"/>
+        <includes pattern="ATSAM9X60D5M/ATSAM9X60D5M.ld"/>
+        <includes pattern="ATSAM9X60D6K/configuration.data"/>
+        <includes pattern="ATSAM9X60D6K/pic32c"/>
+        <includes pattern="ATSAM9X60D6K/specs-ATSAM9X60D6K"/>
+        <includes pattern="ATSAM9X60D6K/startup_atsam9x60d6k.S"/>
+        <includes pattern="ATSAM9X60D6K/ATSAM9X60D6K.ld"/>
+        <includes pattern="ATSAM9X60/startup_atsam9x60.S"/>
+        <includes pattern="ATSAM9X60/configuration.data"/>
+        <includes pattern="ATSAM9X60/pic32c"/>
+        <includes pattern="ATSAM9X60/specs-ATSAM9X60"/>
+        <includes pattern="ATSAM9X60/ATSAM9X60.ld"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_arm926ej-s.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="SAM9X60D1G">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="SAM9X60D1G.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="SAM9X60D1G.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sam9x60d1g.h"/>
+        <includes pattern="system_sam9x.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/dbgu.h"/>
+        <includes pattern="component/emac.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gfx2d.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pmecc.h"/>
+        <includes pattern="component/pmerrloc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sam9x60d1g.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAM9X60D1G__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="sram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="iar.header.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="qspi0.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAM9X60D1G/configuration.data"/>
+        <includes pattern="ATSAM9X60D1G/pic32c"/>
+        <includes pattern="ATSAM9X60D1G/startup_atsam9x60d1g.S"/>
+        <includes pattern="ATSAM9X60D1G/ATSAM9X60D1G.ld"/>
+        <includes pattern="ATSAM9X60D1G/specs-ATSAM9X60D1G"/>
+        <includes pattern="ATSAM9X60D5M/specs-ATSAM9X60D5M"/>
+        <includes pattern="ATSAM9X60D5M/startup_atsam9x60d5m.S"/>
+        <includes pattern="ATSAM9X60D5M/configuration.data"/>
+        <includes pattern="ATSAM9X60D5M/pic32c"/>
+        <includes pattern="ATSAM9X60D5M/ATSAM9X60D5M.ld"/>
+        <includes pattern="ATSAM9X60D6K/configuration.data"/>
+        <includes pattern="ATSAM9X60D6K/pic32c"/>
+        <includes pattern="ATSAM9X60D6K/specs-ATSAM9X60D6K"/>
+        <includes pattern="ATSAM9X60D6K/startup_atsam9x60d6k.S"/>
+        <includes pattern="ATSAM9X60D6K/ATSAM9X60D6K.ld"/>
+        <includes pattern="ATSAM9X60/startup_atsam9x60.S"/>
+        <includes pattern="ATSAM9X60/configuration.data"/>
+        <includes pattern="ATSAM9X60/pic32c"/>
+        <includes pattern="ATSAM9X60/specs-ATSAM9X60"/>
+        <includes pattern="ATSAM9X60/ATSAM9X60.ld"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_arm926ej-s.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="SAM9X60D5M">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="SAM9X60D5M.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="SAM9X60D5M.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sam9x60d5m.h"/>
+        <includes pattern="system_sam9x.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/dbgu.h"/>
+        <includes pattern="component/emac.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gfx2d.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pmecc.h"/>
+        <includes pattern="component/pmerrloc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sam9x60d5m.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAM9X60D5M__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="sram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="iar.header.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="qspi0.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAM9X60D1G/configuration.data"/>
+        <includes pattern="ATSAM9X60D1G/pic32c"/>
+        <includes pattern="ATSAM9X60D1G/startup_atsam9x60d1g.S"/>
+        <includes pattern="ATSAM9X60D1G/ATSAM9X60D1G.ld"/>
+        <includes pattern="ATSAM9X60D1G/specs-ATSAM9X60D1G"/>
+        <includes pattern="ATSAM9X60D5M/specs-ATSAM9X60D5M"/>
+        <includes pattern="ATSAM9X60D5M/startup_atsam9x60d5m.S"/>
+        <includes pattern="ATSAM9X60D5M/configuration.data"/>
+        <includes pattern="ATSAM9X60D5M/pic32c"/>
+        <includes pattern="ATSAM9X60D5M/ATSAM9X60D5M.ld"/>
+        <includes pattern="ATSAM9X60D6K/configuration.data"/>
+        <includes pattern="ATSAM9X60D6K/pic32c"/>
+        <includes pattern="ATSAM9X60D6K/specs-ATSAM9X60D6K"/>
+        <includes pattern="ATSAM9X60D6K/startup_atsam9x60d6k.S"/>
+        <includes pattern="ATSAM9X60D6K/ATSAM9X60D6K.ld"/>
+        <includes pattern="ATSAM9X60/startup_atsam9x60.S"/>
+        <includes pattern="ATSAM9X60/configuration.data"/>
+        <includes pattern="ATSAM9X60/pic32c"/>
+        <includes pattern="ATSAM9X60/specs-ATSAM9X60"/>
+        <includes pattern="ATSAM9X60/ATSAM9X60.ld"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_arm926ej-s.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="SAM9X60D6K">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="SAM9X60D6K.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="SAM9X60D6K.PIC"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sam9x60d6k.h"/>
+        <includes pattern="system_sam9x.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aic.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/classd.h"/>
+        <includes pattern="component/dbgu.h"/>
+        <includes pattern="component/emac.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gfx2d.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/lcdc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mpddrc.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pmecc.h"/>
+        <includes pattern="component/pmerrloc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sdramc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sam9x60d6k.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAM9X60D6K__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="cstartup.S"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="sram.ld"/>
+        <includes pattern="qspi0.ld"/>
+        <includes pattern="ddram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="cstartup.s"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.c"/>
+      </resource>
+      <resource type="iar.header.startup" subdir="iar/iar">
+        <includes pattern="arm/fault_handlers.h"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar/iar/linker">
+        <includes pattern="ddram.icf"/>
+        <includes pattern="sram.icf"/>
+        <includes pattern="qspi0.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar/config/debugger/Atmel">
+        <includes pattern="sram.mac"/>
+        <includes pattern="qspi.mac"/>
+        <includes pattern="ddram.mac"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAM9X60D1G/configuration.data"/>
+        <includes pattern="ATSAM9X60D1G/pic32c"/>
+        <includes pattern="ATSAM9X60D1G/startup_atsam9x60d1g.S"/>
+        <includes pattern="ATSAM9X60D1G/ATSAM9X60D1G.ld"/>
+        <includes pattern="ATSAM9X60D1G/specs-ATSAM9X60D1G"/>
+        <includes pattern="ATSAM9X60D5M/specs-ATSAM9X60D5M"/>
+        <includes pattern="ATSAM9X60D5M/startup_atsam9x60d5m.S"/>
+        <includes pattern="ATSAM9X60D5M/configuration.data"/>
+        <includes pattern="ATSAM9X60D5M/pic32c"/>
+        <includes pattern="ATSAM9X60D5M/ATSAM9X60D5M.ld"/>
+        <includes pattern="ATSAM9X60D6K/configuration.data"/>
+        <includes pattern="ATSAM9X60D6K/pic32c"/>
+        <includes pattern="ATSAM9X60D6K/specs-ATSAM9X60D6K"/>
+        <includes pattern="ATSAM9X60D6K/startup_atsam9x60d6k.S"/>
+        <includes pattern="ATSAM9X60D6K/ATSAM9X60D6K.ld"/>
+        <includes pattern="ATSAM9X60/startup_atsam9x60.S"/>
+        <includes pattern="ATSAM9X60/configuration.data"/>
+        <includes pattern="ATSAM9X60/pic32c"/>
+        <includes pattern="ATSAM9X60/specs-ATSAM9X60"/>
+        <includes pattern="ATSAM9X60/ATSAM9X60.ld"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_arm926ej-s.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="1.7.BUILDNUMBER">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="1.6.61" date="2021-08-17">Support for board file and use of SAM-BA applets.</release>
+      <release version="1.5.50" date="2021-01-26">Added instance headers. Adding FIFO size information for FLEXCOM peripherals.</release>
+      <release version="1.4.45" date="2020-09-30">Added read device ID. Updated MPLAB X debug scripts. Added peripherals memory segment to atdf. Rename some macro definition in SAM9x60.h</release>
+      <release version="1.3.36" date="2020-05-24">Maintenance release, fix script requirement on MPLAB X 5.40. Updated MPLAB X debug scripts.</release>
+      <release version="1.2.31" date="2020-04-28">Updated MPLAB X debug scripts.</release>
+      <release version="1.1.28" date="2020-02-12">Updated MPLAB X debug scripts. Updated XC32 content.</release>
+      <release version="1.0.19" date="2019-10-02">Initial release.</release>
+    </releases>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.50-"/>
+    </prerequisites>
+  </pdsc>
+</package>

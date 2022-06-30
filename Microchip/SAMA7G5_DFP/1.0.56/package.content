@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="SAMA7G54">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="SAMA7G54.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="SAMA7G54.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="sama7g54.h"/>
+        <includes pattern="system_sama7g.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/asrc.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/csi2dc.h"/>
+        <includes pattern="component/ddr3phy.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mipicsi2phy.h"/>
+        <includes pattern="component/nicgpv.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pdmc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spdifrx.h"/>
+        <includes pattern="component/spdiftx.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcpc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/tzaesb.h"/>
+        <includes pattern="component/tzaesbasc.h"/>
+        <includes pattern="component/tzc.h"/>
+        <includes pattern="component/tzpm.h"/>
+        <includes pattern="component/uddrc.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama7g54.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMA7G54__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc/startup">
+        <includes pattern="gcc/startup_sama7g54.c"/>
+        <includes pattern="system_sama7g54.c"/>
+      </resource>
+      <resource type="gcc.header.startup" subdir="gcc/startup">
+        <includes pattern="sama7g54.h"/>
+        <includes pattern="system_sama7g.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/asrc.h"/>
+        <includes pattern="component/bsc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/csi2dc.h"/>
+        <includes pattern="component/ddr3phy.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/i2smcc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mipicsi2phy.h"/>
+        <includes pattern="component/nicgpv.h"/>
+        <includes pattern="component/otpc.h"/>
+        <includes pattern="component/pdmc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pit64b.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sckc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/secumod.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/shdwc.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spdifrx.h"/>
+        <includes pattern="component/spdiftx.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcpc.h"/>
+        <includes pattern="component/tdes.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/tzaesb.h"/>
+        <includes pattern="component/tzaesbasc.h"/>
+        <includes pattern="component/tzc.h"/>
+        <includes pattern="component/tzpm.h"/>
+        <includes pattern="component/uddrc.h"/>
+        <includes pattern="component/udphs.h"/>
+        <includes pattern="component/uhpfs.h"/>
+        <includes pattern="component/uhphs.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="pio/sama7g54.h"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc/ld">
+        <includes pattern="gcc/sama7g54_sram.ld"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="j-link_cortex-a7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMA7G54/configuration.data"/>
+        <includes pattern="ATSAMA7G54/ATSAMA7G54.ld"/>
+        <includes pattern="ATSAMA7G54/pic32c"/>
+        <includes pattern="ATSAMA7G54/startup_atsama7g54.S"/>
+        <includes pattern="ATSAMA7G54/specs-ATSAMA7G54"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="1.0.BUILDNUMBER">
+        - Added read device ID.
+        - Initial release.
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+    </releases>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.40-"/>
+    </prerequisites>
+  </pdsc>
+</package>

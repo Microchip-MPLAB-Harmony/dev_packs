@@ -1,0 +1,1724 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMV71J19B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71J19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71J19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71J19B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71j19b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71j19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71J19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71j19b.s"/>
+        <includes pattern="system_samv71j19b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_512.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_512.FLM" value="start=0x00400000|size=0x00080000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71j19b.c"/>
+        <includes pattern="system_samv71j19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71j19b_flash.ld"/>
+        <includes pattern="gcc/samv71j19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71j19b.c"/>
+        <includes pattern="system_samv71j19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71j19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71j19b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71J19B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71J19B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71J19B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71j19b/samv71j19b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71j19b/samv71j19b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71j19b/samv71j19b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71J20B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71J20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71J20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71J20B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71j20b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71j20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71J20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71j20b.s"/>
+        <includes pattern="system_samv71j20b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_1024.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_1024.FLM" value="start=0x00400000|size=0x00100000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71j20b.c"/>
+        <includes pattern="system_samv71j20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71j20b_flash.ld"/>
+        <includes pattern="gcc/samv71j20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71j20b.c"/>
+        <includes pattern="system_samv71j20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71j20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71j20b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71J20B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71J20B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71J20B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71j20b/samv71j20b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71j20b/samv71j20b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71j20b/samv71j20b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71J21B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71J21B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71J21B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71J21B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71j21b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71j21b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71J21B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71j21b.s"/>
+        <includes pattern="system_samv71j21b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_2048.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_2048.FLM" value="start=0x00400000|size=0x00200000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71j21b.c"/>
+        <includes pattern="system_samv71j21b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71j21b_flash.ld"/>
+        <includes pattern="gcc/samv71j21b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71j21b.c"/>
+        <includes pattern="system_samv71j21b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71j21b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71j21b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71J21B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71J21B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71J21B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71j21b/samv71j21b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71j21b/samv71j21b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71j21b/samv71j21b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71N19B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71N19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71N19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71N19B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71n19b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71n19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71N19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71n19b.s"/>
+        <includes pattern="system_samv71n19b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_512.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_512.FLM" value="start=0x00400000|size=0x00080000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71n19b.c"/>
+        <includes pattern="system_samv71n19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71n19b_flash.ld"/>
+        <includes pattern="gcc/samv71n19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71n19b.c"/>
+        <includes pattern="system_samv71n19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71n19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71n19b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71N19B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71N19B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71N19B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71n19b/samv71n19b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71n19b/samv71n19b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71n19b/samv71n19b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71N20B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71N20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71N20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71N20B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71n20b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71n20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71N20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71n20b.s"/>
+        <includes pattern="system_samv71n20b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_1024.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_1024.FLM" value="start=0x00400000|size=0x00100000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71n20b.c"/>
+        <includes pattern="system_samv71n20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71n20b_flash.ld"/>
+        <includes pattern="gcc/samv71n20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71n20b.c"/>
+        <includes pattern="system_samv71n20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71n20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71n20b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71N20B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71N20B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71N20B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71n20b/samv71n20b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71n20b/samv71n20b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71n20b/samv71n20b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71N21B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71N21B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71N21B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71N21B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71n21b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71n21b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71N21B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71n21b.s"/>
+        <includes pattern="system_samv71n21b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_2048.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_2048.FLM" value="start=0x00400000|size=0x00200000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71n21b.c"/>
+        <includes pattern="system_samv71n21b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71n21b_flash.ld"/>
+        <includes pattern="gcc/samv71n21b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71n21b.c"/>
+        <includes pattern="system_samv71n21b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71n21b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71n21b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71N21B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71N21B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71N21B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71n21b/samv71n21b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71n21b/samv71n21b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71n21b/samv71n21b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71Q19B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71Q19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71Q19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71Q19B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71q19b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71q19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71Q19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71q19b.s"/>
+        <includes pattern="system_samv71q19b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_512.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_512.FLM" value="start=0x00400000|size=0x00080000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71q19b.c"/>
+        <includes pattern="system_samv71q19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71q19b_flash.ld"/>
+        <includes pattern="gcc/samv71q19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71q19b.c"/>
+        <includes pattern="system_samv71q19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71q19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71q19b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71Q19B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71Q19B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71Q19B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71q19b/samv71q19b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71q19b/samv71q19b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71q19b/samv71q19b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71Q20B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71Q20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71Q20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71Q20B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71q20b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71q20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71Q20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71q20b.s"/>
+        <includes pattern="system_samv71q20b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_1024.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_1024.FLM" value="start=0x00400000|size=0x00100000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71q20b.c"/>
+        <includes pattern="system_samv71q20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71q20b_flash.ld"/>
+        <includes pattern="gcc/samv71q20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71q20b.c"/>
+        <includes pattern="system_samv71q20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71q20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71q20b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71Q20B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71Q20B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71Q20B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71q20b/samv71q20b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71q20b/samv71q20b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71q20b/samv71q20b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAMV71Q21B">
+      <resource type="atdf" subdir="samv71b/atdf">
+        <includes pattern="ATSAMV71Q21B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samv71b/edc">
+        <includes pattern="ATSAMV71Q21B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samv71b/svd">
+        <includes pattern="ATSAMV71Q21B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samv71b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samv71q21b.h"/>
+        <includes pattern="system_samv71.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samv71q21b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMV71Q21B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samv71b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samv71b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samv71b/armcc">
+        <includes pattern="armcc/startup_samv71q21b.s"/>
+        <includes pattern="system_samv71q21b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="samv71b/keil">
+        <includes pattern="flash/ATSAMV7x_2048.FLM"/>
+        <includes pattern="flash/ATSAMV7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <meta key="flash/ATSAMV7x_2048.FLM" value="start=0x00400000|size=0x00200000|default=1"/>
+        <meta key="flash/ATSAMV7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samv71b/gcc">
+        <includes pattern="gcc/startup_samv71q21b.c"/>
+        <includes pattern="system_samv71q21b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samv71b/gcc">
+        <includes pattern="gcc/samv71q21b_flash.ld"/>
+        <includes pattern="gcc/samv71q21b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samv71b/iar">
+        <includes pattern="iar/startup_samv71q21b.c"/>
+        <includes pattern="system_samv71q21b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samv71b/iar">
+        <includes pattern="config/linker/Microchip/atsamv71q21b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamv71q21b/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="samv71b/iar">
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71Q21B.i79"/>
+        <includes pattern="config/devices/Atmel/SAMV71/ATSAMV71Q21B.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAMV71.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAMV71Q21B.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="samv71b/iar">
+        <includes pattern="config/flashloader/Atmel/samv71q21b/samv71q21b-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/samv71q21b/samv71q21b-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/samv71q21b/samv71q21b-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samv71b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samv71b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMV71J21B/startup_atsamv71j21b.c"/>
+        <includes pattern="ATSAMV71J21B/configuration.data"/>
+        <includes pattern="ATSAMV71J21B/pic32c"/>
+        <includes pattern="ATSAMV71J21B/specs-ATSAMV71J21B"/>
+        <includes pattern="ATSAMV71J21B/ATSAMV71J21B.ld"/>
+        <includes pattern="ATSAMV71Q20B/startup_atsamv71q20b.c"/>
+        <includes pattern="ATSAMV71Q20B/specs-ATSAMV71Q20B"/>
+        <includes pattern="ATSAMV71Q20B/configuration.data"/>
+        <includes pattern="ATSAMV71Q20B/pic32c"/>
+        <includes pattern="ATSAMV71Q20B/ATSAMV71Q20B.ld"/>
+        <includes pattern="ATSAMV71N20B/specs-ATSAMV71N20B"/>
+        <includes pattern="ATSAMV71N20B/startup_atsamv71n20b.c"/>
+        <includes pattern="ATSAMV71N20B/configuration.data"/>
+        <includes pattern="ATSAMV71N20B/ATSAMV71N20B.ld"/>
+        <includes pattern="ATSAMV71N20B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/specs-ATSAMV71N19B"/>
+        <includes pattern="ATSAMV71N19B/startup_atsamv71n19b.c"/>
+        <includes pattern="ATSAMV71N19B/configuration.data"/>
+        <includes pattern="ATSAMV71N19B/pic32c"/>
+        <includes pattern="ATSAMV71N19B/ATSAMV71N19B.ld"/>
+        <includes pattern="ATSAMV71N21B/specs-ATSAMV71N21B"/>
+        <includes pattern="ATSAMV71N21B/configuration.data"/>
+        <includes pattern="ATSAMV71N21B/pic32c"/>
+        <includes pattern="ATSAMV71N21B/ATSAMV71N21B.ld"/>
+        <includes pattern="ATSAMV71N21B/startup_atsamv71n21b.c"/>
+        <includes pattern="ATSAMV71J19B/ATSAMV71J19B.ld"/>
+        <includes pattern="ATSAMV71J19B/configuration.data"/>
+        <includes pattern="ATSAMV71J19B/pic32c"/>
+        <includes pattern="ATSAMV71J19B/startup_atsamv71j19b.c"/>
+        <includes pattern="ATSAMV71J19B/specs-ATSAMV71J19B"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="ATSAMV71J20B/startup_atsamv71j20b.c"/>
+        <includes pattern="ATSAMV71J20B/configuration.data"/>
+        <includes pattern="ATSAMV71J20B/ATSAMV71J20B.ld"/>
+        <includes pattern="ATSAMV71J20B/pic32c"/>
+        <includes pattern="ATSAMV71J20B/specs-ATSAMV71J20B"/>
+        <includes pattern="ATSAMV71Q21B/ATSAMV71Q21B.ld"/>
+        <includes pattern="ATSAMV71Q21B/configuration.data"/>
+        <includes pattern="ATSAMV71Q21B/pic32c"/>
+        <includes pattern="ATSAMV71Q21B/startup_atsamv71q21b.c"/>
+        <includes pattern="ATSAMV71Q21B/specs-ATSAMV71Q21B"/>
+        <includes pattern="ATSAMV71Q19B/specs-ATSAMV71Q19B"/>
+        <includes pattern="ATSAMV71Q19B/configuration.data"/>
+        <includes pattern="ATSAMV71Q19B/pic32c"/>
+        <includes pattern="ATSAMV71Q19B/ATSAMV71Q19B.ld"/>
+        <includes pattern="ATSAMV71Q19B/startup_atsamv71q19b.c"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="samv71b/hwtools/mplab">
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="16bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samv71b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samv71b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="4.9.BUILDNUMBER">Removed SDRAM references due to errata 2.14</release>
+      <release version="4.8.113" date="2022-04-06">Added configuration data required for XC32.</release>
+      <release version="4.7.110" date="2022-03-17">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="4.6.90" date="2021-06-30">Deprecated revision A devices. Fixed MPLABX debug scripts. Updated startup code. Updated header files. Updated XC32 content.</release>
+      <release version="4.5.82" date="2021-01-27">Added security bit programming for MPLAB X. Added instance headers. Fix DMA trigger information for DACn.</release>
+      <release version="4.4.78" date="2020-09-24">Added read device ID. Updated MPLABX debug scripts. Setup prerequisite for MPLAB v5.40 or newer. Fix reading/writing configbits.</release>
+      <release version="4.3.66" date="2020-04-29">Updated MPLAB X debug scripts.</release>
+      <release version="4.2.60" date="2020-02-12">Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="4.1.49" date="2019-10-07">Improvements to the flash programming algorithm. Rename SVCall_Handler to SVC_Handler. Update modes for USART.</release>
+      <release version="4.0.39" date="2019-06-26">Improvements to the flash programming algorithm: Improve programming speed. Resolve a possible flash programming issue.</release>
+      <release version="4.0.27" date="2019-05-04">Removed legacy headers.</release>
+      <release version="3.0.8" date="2019-02-14">Corrections to XML and header-files. Core modules descriptions in ATDF and SVD changed for rev. B devices. Core IRQ and interrupt handler names changed to alligne with CMSIS names. Old names mapped as aliases to new names. Several errors in SVD files corrected. Missing TC1 and TC2 to instance definitions added to header files. TC, USART and USBHS module changed (for revB devices) to reflect the modes according to the datasheet. Added ARMCC support files. Added Keil support files. Added python programming and debugging scripts for MPLAB X. Succeeds Atmel.SAMV71_DFP 2.3.136.</release>
+    </releases>
+    <deprecated>
+      <target name="ATSAMV71J19" date="2021-06-28"/>
+      <target name="ATSAMV71J20" date="2021-06-28"/>
+      <target name="ATSAMV71J21" date="2021-06-28"/>
+      <target name="ATSAMV71N19" date="2021-06-28"/>
+      <target name="ATSAMV71N20" date="2021-06-28"/>
+      <target name="ATSAMV71N21" date="2021-06-28"/>
+      <target name="ATSAMV71Q19" date="2021-06-28"/>
+      <target name="ATSAMV71Q20" date="2021-06-28"/>
+      <target name="ATSAMV71Q21" date="2021-06-28"/>
+    </deprecated>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.50-"/>
+    </prerequisites>
+  <debugvars configfile="samv71/keil/debug/SAMx7.dbgconf" version="1.0.0">
+          // Debug Access Variables
+          __var TracePCK3 = 0x00000000;                                               // Trace Clock Source Selection and Prescaler
+        </debugvars>
+     
+        <sequences>
+          <!-- Override for Pre-Defined TraceStart Sequence -->
+          <sequence name="TraceStart">
+            <block>
+              __var traceSWO    = (__traceout &amp; 0x1) != 0;                        // SWO Trace Selected?
+              __var traceTPIU   = (__traceout &amp; 0x2) != 0;                        // TPIU Trace Selected?
+            </block>
+            <control if="traceSWO">
+              <block>
+                Sequence("EnableTraceSWO");                                           // Call SWO Trace Setup
+              </block>
+            </control>
+            <control if="traceTPIU">
+              <block>
+                Sequence("EnableTraceTPIU");                                          // Call TPIU Trace Setup
+              </block>
+            </control>
+          </sequence>
+     
+          <!-- User-Defined EnableTraceSWO Sequence -->
+          <sequence name="EnableTraceSWO">
+            <block>
+              Write32(0x400E06E4, 0x504D4300);                                        // Disable PMC write protection
+              Write32(0x400E064C, TracePCK3);                                         // Select clock source and prescaler for PCK3
+              Write32(0x400E0600, (1 &lt;&lt; 11));                                   // Enable PCK3
+            </block>
+          </sequence>
+     
+          <!-- User-Defined EnableTraceTPIU Sequence -->
+          <sequence name="EnableTraceTPIU">
+            <block>
+              __var width = (__traceout &amp; 0x003F0000) &gt;&gt; 16;                // TPIU Port Width
+              __var val   = 0;
+            </block>
+            <control if="width == 1">
+              <block>
+                // 1-Bit TPIU Trace Setup
+                val = 0x00000010;                                                     // TRACED[0]
+              </block>
+            </control>
+            <control if="width == 2">
+              <block>
+                // 2-Bit TPIU Trace Setup
+                val = 0x00000030;                                                     // TRACED[0..1]
+              </block>
+            </control>
+            <control if="width == 4">
+              <block>
+                // 4-Bit TPIU Trace Setup
+                val = 0x000000F0;                                                     // TRACED[0..3]
+              </block>
+            </control>
+            <block>
+              // Write Trace Configuration to Target
+              Write32(0x400E06E4, 0x504D4300);                                        // Disable PMC write protection
+              Write32(0x400E064C, TracePCK3);                                         // Select clock source and prescaler for PCK3
+              Write32(0x400E0600, (1 &lt;&lt; 11));                                   // Enable PCK3
+              Write32(0x400E0610, (1 &lt;&lt; 16));                                   // Enable PIOD clock
+     
+              Write32(0x400E14E4, 0x50494F00);                                        // Disable PIOD write protection
+              Write32(0x400E1404, (val | 0x00000100));                                // Disable PIOD PD[4..8]
+              Write32(0x400E1470, ((Read32(0x400E1470) &amp; ~val) | 0x00000100));    // Set Peripheral Select registers
+              Write32(0x400E1474, ((Read32(0x400E1474) |      val) | 0x00000100));    // TRACED[0..3] to alternate peripheral C and TRACECLK to alternate peripheral D
+            </block>
+          </sequence>     
+        </sequences>
+
+         <device Dname="ATSAMV71J21"/><device Dname="ATSAMV71J20"/><device Dname="ATSAMV71Q20"/><device Dname="ATSAMV71J19B"/><device Dname="ATSAMV71J19"/><device Dname="ATSAMV71N19"/><device Dname="ATSAMV71Q21"/><device Dname="ATSAMV71N21"/><device Dname="ATSAMV71N20"/><device Dname="ATSAMV71J21B"/><device Dname="ATSAMV71J20B"/><device Dname="ATSAMV71Q20B"/><device Dname="ATSAMV71Q19"/><device Dname="ATSAMV71N19B"/><device Dname="ATSAMV71Q19B"/><device Dname="ATSAMV71Q21B"/><device Dname="ATSAMV71N21B"/><device Dname="ATSAMV71N20B"/></pdsc>
+</package>

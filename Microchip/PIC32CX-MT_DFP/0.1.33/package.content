@@ -1,0 +1,2372 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32CX1025MTC128">
+      <resource type="atdf" subdir="PIC32CX-MTC/atdf">
+        <includes pattern="PIC32CX1025MTC128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTC/edc">
+        <includes pattern="PIC32CX1025MTC128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTC/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx1025mtc128.h"/>
+        <includes pattern="system_pic32cxmtc.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx1025mtc128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX1025MTC128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTC/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTC128/specs-PIC32CX1025MTC128"/>
+        <includes pattern="PIC32CX1025MTC128/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="PIC32CX1025MTC128/PIC32CX1025MTC128.ld"/>
+        <includes pattern="PIC32CX1025MTC128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTC128/specs-PIC32CX5112MTC128"/>
+        <includes pattern="PIC32CX5112MTC128/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="PIC32CX5112MTC128/PIC32CX5112MTC128.ld"/>
+        <includes pattern="PIC32CX5112MTC128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="PIC32CX5112MTC128S1/PIC32CX5112MTC128S1.ld"/>
+        <includes pattern="PIC32CX5112MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/specs-PIC32CX5112MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/specs-PIC32CX1025MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="PIC32CX1025MTC128S1/PIC32CX1025MTC128S1.ld"/>
+        <includes pattern="PIC32CX1025MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="PIC32CX2051MTC128/PIC32CX2051MTC128.ld"/>
+        <includes pattern="PIC32CX2051MTC128/specs-PIC32CX2051MTC128"/>
+        <includes pattern="PIC32CX2051MTC128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128S1/PIC32CX2051MTC128S1.ld"/>
+        <includes pattern="PIC32CX2051MTC128S1/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="PIC32CX2051MTC128S1/specs-PIC32CX2051MTC128S1"/>
+        <includes pattern="PIC32CX2051MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="system_pic32cx1025mtc128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/pic32cx1025mtc128_flash.ld"/>
+        <includes pattern="gcc/pic32cx1025mtc128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTC/armcc">
+        <includes pattern="armcc/startup_pic32cx1025mtc128.s"/>
+        <includes pattern="system_pic32cx1025mtc128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTC/keil">
+        <includes pattern="flash/PIC32CXMT_1024.FLM"/>
+        <meta key="flash/PIC32CXMT_1024.FLM" value="start=0x01000000|size=0x100000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTC/iar">
+        <includes pattern="iar/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="system_pic32cx1025mtc128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTC.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX1025MTC128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX1025MTC128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX1025MTC128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/linker/Microchip/pic32cx1025mtc128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx1025mtc128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTC/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTC/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX1025MTC128S1">
+      <resource type="atdf" subdir="PIC32CX-MTC/atdf">
+        <includes pattern="PIC32CX1025MTC128S1.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTC/edc">
+        <includes pattern="PIC32CX1025MTC128S1.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTC/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx1025mtc128s1.h"/>
+        <includes pattern="system_pic32cxmtc.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="pio/pic32cx1025mtc128s1.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX1025MTC128S1__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTC/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTC128/specs-PIC32CX1025MTC128"/>
+        <includes pattern="PIC32CX1025MTC128/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="PIC32CX1025MTC128/PIC32CX1025MTC128.ld"/>
+        <includes pattern="PIC32CX1025MTC128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTC128/specs-PIC32CX5112MTC128"/>
+        <includes pattern="PIC32CX5112MTC128/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="PIC32CX5112MTC128/PIC32CX5112MTC128.ld"/>
+        <includes pattern="PIC32CX5112MTC128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="PIC32CX5112MTC128S1/PIC32CX5112MTC128S1.ld"/>
+        <includes pattern="PIC32CX5112MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/specs-PIC32CX5112MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/specs-PIC32CX1025MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="PIC32CX1025MTC128S1/PIC32CX1025MTC128S1.ld"/>
+        <includes pattern="PIC32CX1025MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="PIC32CX2051MTC128/PIC32CX2051MTC128.ld"/>
+        <includes pattern="PIC32CX2051MTC128/specs-PIC32CX2051MTC128"/>
+        <includes pattern="PIC32CX2051MTC128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128S1/PIC32CX2051MTC128S1.ld"/>
+        <includes pattern="PIC32CX2051MTC128S1/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="PIC32CX2051MTC128S1/specs-PIC32CX2051MTC128S1"/>
+        <includes pattern="PIC32CX2051MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="system_pic32cx1025mtc128s1.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/pic32cx1025mtc128s1_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTC/armcc">
+        <includes pattern="armcc/startup_pic32cx1025mtc128s1.s"/>
+        <includes pattern="system_pic32cx1025mtc128s1.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTC/iar">
+        <includes pattern="iar/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="system_pic32cx1025mtc128s1.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTC.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX1025MTC128S1.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX1025MTC128S1.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX1025MTC128S1.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/linker/Microchip/pic32cx1025mtc128s1/sram.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTC/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTC/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX1025MTG128">
+      <resource type="atdf" subdir="PIC32CX-MTG/atdf">
+        <includes pattern="PIC32CX1025MTG128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTG/edc">
+        <includes pattern="PIC32CX1025MTG128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTG/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx1025mtg128.h"/>
+        <includes pattern="system_pic32cxmtg.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx1025mtg128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX1025MTG128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTG/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTG128/specs-PIC32CX5112MTG128"/>
+        <includes pattern="PIC32CX5112MTG128/PIC32CX5112MTG128.ld"/>
+        <includes pattern="PIC32CX5112MTG128/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="PIC32CX5112MTG128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG128/specs-PIC32CX1025MTG128"/>
+        <includes pattern="PIC32CX1025MTG128/PIC32CX1025MTG128.ld"/>
+        <includes pattern="PIC32CX1025MTG128/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="PIC32CX1025MTG128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG64/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="PIC32CX1025MTG64/specs-PIC32CX1025MTG64"/>
+        <includes pattern="PIC32CX1025MTG64/PIC32CX1025MTG64.ld"/>
+        <includes pattern="PIC32CX1025MTG64/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/PIC32CX2051MTG64.ld"/>
+        <includes pattern="PIC32CX2051MTG64/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="PIC32CX2051MTG64/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/specs-PIC32CX2051MTG64"/>
+        <includes pattern="PIC32CX2051MTG128/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="PIC32CX2051MTG128/specs-PIC32CX2051MTG128"/>
+        <includes pattern="PIC32CX2051MTG128/PIC32CX2051MTG128.ld"/>
+        <includes pattern="PIC32CX2051MTG128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG128/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="system_pic32cx1025mtg128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/pic32cx1025mtg128_flash.ld"/>
+        <includes pattern="gcc/pic32cx1025mtg128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTG/armcc">
+        <includes pattern="armcc/startup_pic32cx1025mtg128.s"/>
+        <includes pattern="system_pic32cx1025mtg128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTG/keil">
+        <includes pattern="flash/PIC32CXMT_1024.FLM"/>
+        <meta key="flash/PIC32CXMT_1024.FLM" value="start=0x01000000|size=0x100000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTG/iar">
+        <includes pattern="iar/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="system_pic32cx1025mtg128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTG.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX1025MTG128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX1025MTG128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX1025MTG128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/linker/Microchip/pic32cx1025mtg128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx1025mtg128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTG/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTG/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX1025MTG64">
+      <resource type="atdf" subdir="PIC32CX-MTG/atdf">
+        <includes pattern="PIC32CX1025MTG64.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTG/edc">
+        <includes pattern="PIC32CX1025MTG64.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTG/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx1025mtg64.h"/>
+        <includes pattern="system_pic32cxmtg.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx1025mtg64.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX1025MTG64__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTG/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTG128/specs-PIC32CX5112MTG128"/>
+        <includes pattern="PIC32CX5112MTG128/PIC32CX5112MTG128.ld"/>
+        <includes pattern="PIC32CX5112MTG128/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="PIC32CX5112MTG128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG128/specs-PIC32CX1025MTG128"/>
+        <includes pattern="PIC32CX1025MTG128/PIC32CX1025MTG128.ld"/>
+        <includes pattern="PIC32CX1025MTG128/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="PIC32CX1025MTG128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG64/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="PIC32CX1025MTG64/specs-PIC32CX1025MTG64"/>
+        <includes pattern="PIC32CX1025MTG64/PIC32CX1025MTG64.ld"/>
+        <includes pattern="PIC32CX1025MTG64/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/PIC32CX2051MTG64.ld"/>
+        <includes pattern="PIC32CX2051MTG64/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="PIC32CX2051MTG64/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/specs-PIC32CX2051MTG64"/>
+        <includes pattern="PIC32CX2051MTG128/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="PIC32CX2051MTG128/specs-PIC32CX2051MTG128"/>
+        <includes pattern="PIC32CX2051MTG128/PIC32CX2051MTG128.ld"/>
+        <includes pattern="PIC32CX2051MTG128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG128/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="system_pic32cx1025mtg64.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/pic32cx1025mtg64_flash.ld"/>
+        <includes pattern="gcc/pic32cx1025mtg64_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTG/armcc">
+        <includes pattern="armcc/startup_pic32cx1025mtg64.s"/>
+        <includes pattern="system_pic32cx1025mtg64.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTG/keil">
+        <includes pattern="flash/PIC32CXMT_1024.FLM"/>
+        <meta key="flash/PIC32CXMT_1024.FLM" value="start=0x01000000|size=0x100000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTG/iar">
+        <includes pattern="iar/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="system_pic32cx1025mtg64.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTG.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX1025MTG64.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX1025MTG64.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX1025MTG64.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/linker/Microchip/pic32cx1025mtg64/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx1025mtg64/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTG/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTG/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX1025MTSH128">
+      <resource type="atdf" subdir="PIC32CX-MTSH/atdf">
+        <includes pattern="PIC32CX1025MTSH128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTSH/edc">
+        <includes pattern="PIC32CX1025MTSH128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTSH/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx1025mtsh128.h"/>
+        <includes pattern="system_pic32cxmtsh.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/emafe.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx1025mtsh128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX1025MTSH128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTSH/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTSH128S1/specs-PIC32CX1025MTSH128S1"/>
+        <includes pattern="PIC32CX1025MTSH128S1/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="PIC32CX1025MTSH128S1/PIC32CX1025MTSH128S1.ld"/>
+        <includes pattern="PIC32CX1025MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX1025MTSH128/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="PIC32CX1025MTSH128/specs-PIC32CX1025MTSH128"/>
+        <includes pattern="PIC32CX1025MTSH128/PIC32CX1025MTSH128.ld"/>
+        <includes pattern="PIC32CX1025MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX2051MTSH128/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="PIC32CX2051MTSH128/PIC32CX2051MTSH128.ld"/>
+        <includes pattern="PIC32CX2051MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128/pic32c"/>
+        <includes pattern="PIC32CX2051MTSH128/specs-PIC32CX2051MTSH128"/>
+        <includes pattern="PIC32CX2051MTSH128S1/PIC32CX2051MTSH128S1.ld"/>
+        <includes pattern="PIC32CX2051MTSH128S1/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="PIC32CX2051MTSH128S1/specs-PIC32CX2051MTSH128S1"/>
+        <includes pattern="PIC32CX2051MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="PIC32CX5112MTSH128/specs-PIC32CX5112MTSH128"/>
+        <includes pattern="PIC32CX5112MTSH128/PIC32CX5112MTSH128.ld"/>
+        <includes pattern="PIC32CX5112MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/specs-PIC32CX5112MTSH128S1"/>
+        <includes pattern="PIC32CX5112MTSH128S1/PIC32CX5112MTSH128S1.ld"/>
+        <includes pattern="PIC32CX5112MTSH128S1/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="system_pic32cx1025mtsh128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/pic32cx1025mtsh128_flash.ld"/>
+        <includes pattern="gcc/pic32cx1025mtsh128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTSH/armcc">
+        <includes pattern="armcc/startup_pic32cx1025mtsh128.s"/>
+        <includes pattern="system_pic32cx1025mtsh128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTSH/keil">
+        <includes pattern="flash/PIC32CXMT_1024.FLM"/>
+        <meta key="flash/PIC32CXMT_1024.FLM" value="start=0x01000000|size=0x100000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="iar/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="system_pic32cx1025mtsh128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTSH.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX1025MTSH128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX1025MTSH128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX1025MTSH128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/linker/Microchip/pic32cx1025mtsh128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx1025mtsh128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTSH/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTSH/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX1025MTSH128S1">
+      <resource type="atdf" subdir="PIC32CX-MTSH/atdf">
+        <includes pattern="PIC32CX1025MTSH128S1.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTSH/edc">
+        <includes pattern="PIC32CX1025MTSH128S1.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTSH/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx1025mtsh128s1.h"/>
+        <includes pattern="system_pic32cxmtsh.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/emafe.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="pio/pic32cx1025mtsh128s1.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX1025MTSH128S1__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTSH/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTSH128S1/specs-PIC32CX1025MTSH128S1"/>
+        <includes pattern="PIC32CX1025MTSH128S1/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="PIC32CX1025MTSH128S1/PIC32CX1025MTSH128S1.ld"/>
+        <includes pattern="PIC32CX1025MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX1025MTSH128/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="PIC32CX1025MTSH128/specs-PIC32CX1025MTSH128"/>
+        <includes pattern="PIC32CX1025MTSH128/PIC32CX1025MTSH128.ld"/>
+        <includes pattern="PIC32CX1025MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX2051MTSH128/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="PIC32CX2051MTSH128/PIC32CX2051MTSH128.ld"/>
+        <includes pattern="PIC32CX2051MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128/pic32c"/>
+        <includes pattern="PIC32CX2051MTSH128/specs-PIC32CX2051MTSH128"/>
+        <includes pattern="PIC32CX2051MTSH128S1/PIC32CX2051MTSH128S1.ld"/>
+        <includes pattern="PIC32CX2051MTSH128S1/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="PIC32CX2051MTSH128S1/specs-PIC32CX2051MTSH128S1"/>
+        <includes pattern="PIC32CX2051MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="PIC32CX5112MTSH128/specs-PIC32CX5112MTSH128"/>
+        <includes pattern="PIC32CX5112MTSH128/PIC32CX5112MTSH128.ld"/>
+        <includes pattern="PIC32CX5112MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/specs-PIC32CX5112MTSH128S1"/>
+        <includes pattern="PIC32CX5112MTSH128S1/PIC32CX5112MTSH128S1.ld"/>
+        <includes pattern="PIC32CX5112MTSH128S1/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="system_pic32cx1025mtsh128s1.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/pic32cx1025mtsh128s1_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTSH/armcc">
+        <includes pattern="armcc/startup_pic32cx1025mtsh128s1.s"/>
+        <includes pattern="system_pic32cx1025mtsh128s1.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="iar/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="system_pic32cx1025mtsh128s1.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTSH.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX1025MTSH128S1.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX1025MTSH128S1.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX1025MTSH128S1.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/linker/Microchip/pic32cx1025mtsh128s1/sram.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTSH/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTSH/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX2051MTC128">
+      <resource type="atdf" subdir="PIC32CX-MTC/atdf">
+        <includes pattern="PIC32CX2051MTC128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTC/edc">
+        <includes pattern="PIC32CX2051MTC128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTC/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx2051mtc128.h"/>
+        <includes pattern="system_pic32cxmtc.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx2051mtc128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX2051MTC128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTC/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTC128/specs-PIC32CX1025MTC128"/>
+        <includes pattern="PIC32CX1025MTC128/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="PIC32CX1025MTC128/PIC32CX1025MTC128.ld"/>
+        <includes pattern="PIC32CX1025MTC128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTC128/specs-PIC32CX5112MTC128"/>
+        <includes pattern="PIC32CX5112MTC128/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="PIC32CX5112MTC128/PIC32CX5112MTC128.ld"/>
+        <includes pattern="PIC32CX5112MTC128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="PIC32CX5112MTC128S1/PIC32CX5112MTC128S1.ld"/>
+        <includes pattern="PIC32CX5112MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/specs-PIC32CX5112MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/specs-PIC32CX1025MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="PIC32CX1025MTC128S1/PIC32CX1025MTC128S1.ld"/>
+        <includes pattern="PIC32CX1025MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="PIC32CX2051MTC128/PIC32CX2051MTC128.ld"/>
+        <includes pattern="PIC32CX2051MTC128/specs-PIC32CX2051MTC128"/>
+        <includes pattern="PIC32CX2051MTC128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128S1/PIC32CX2051MTC128S1.ld"/>
+        <includes pattern="PIC32CX2051MTC128S1/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="PIC32CX2051MTC128S1/specs-PIC32CX2051MTC128S1"/>
+        <includes pattern="PIC32CX2051MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="system_pic32cx2051mtc128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/pic32cx2051mtc128_flash.ld"/>
+        <includes pattern="gcc/pic32cx2051mtc128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTC/armcc">
+        <includes pattern="armcc/startup_pic32cx2051mtc128.s"/>
+        <includes pattern="system_pic32cx2051mtc128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTC/keil">
+        <includes pattern="flash/PIC32CXMT_2048.FLM"/>
+        <meta key="flash/PIC32CXMT_2048.FLM" value="start=0x01000000|size=0x200000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTC/iar">
+        <includes pattern="iar/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="system_pic32cx2051mtc128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTC.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX2051MTC128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX2051MTC128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX2051MTC128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/linker/Microchip/pic32cx2051mtc128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx2051mtc128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTC/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTC/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX2051MTC128S1">
+      <resource type="atdf" subdir="PIC32CX-MTC/atdf">
+        <includes pattern="PIC32CX2051MTC128S1.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTC/edc">
+        <includes pattern="PIC32CX2051MTC128S1.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTC/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx2051mtc128s1.h"/>
+        <includes pattern="system_pic32cxmtc.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="pio/pic32cx2051mtc128s1.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX2051MTC128S1__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTC/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTC128/specs-PIC32CX1025MTC128"/>
+        <includes pattern="PIC32CX1025MTC128/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="PIC32CX1025MTC128/PIC32CX1025MTC128.ld"/>
+        <includes pattern="PIC32CX1025MTC128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTC128/specs-PIC32CX5112MTC128"/>
+        <includes pattern="PIC32CX5112MTC128/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="PIC32CX5112MTC128/PIC32CX5112MTC128.ld"/>
+        <includes pattern="PIC32CX5112MTC128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="PIC32CX5112MTC128S1/PIC32CX5112MTC128S1.ld"/>
+        <includes pattern="PIC32CX5112MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/specs-PIC32CX5112MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/specs-PIC32CX1025MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="PIC32CX1025MTC128S1/PIC32CX1025MTC128S1.ld"/>
+        <includes pattern="PIC32CX1025MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="PIC32CX2051MTC128/PIC32CX2051MTC128.ld"/>
+        <includes pattern="PIC32CX2051MTC128/specs-PIC32CX2051MTC128"/>
+        <includes pattern="PIC32CX2051MTC128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128S1/PIC32CX2051MTC128S1.ld"/>
+        <includes pattern="PIC32CX2051MTC128S1/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="PIC32CX2051MTC128S1/specs-PIC32CX2051MTC128S1"/>
+        <includes pattern="PIC32CX2051MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="system_pic32cx2051mtc128s1.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/pic32cx2051mtc128s1_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTC/armcc">
+        <includes pattern="armcc/startup_pic32cx2051mtc128s1.s"/>
+        <includes pattern="system_pic32cx2051mtc128s1.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTC/iar">
+        <includes pattern="iar/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="system_pic32cx2051mtc128s1.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTC.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX2051MTC128S1.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX2051MTC128S1.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX2051MTC128S1.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/linker/Microchip/pic32cx2051mtc128s1/sram.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTC/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTC/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX2051MTG128">
+      <resource type="atdf" subdir="PIC32CX-MTG/atdf">
+        <includes pattern="PIC32CX2051MTG128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTG/edc">
+        <includes pattern="PIC32CX2051MTG128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTG/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx2051mtg128.h"/>
+        <includes pattern="system_pic32cxmtg.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx2051mtg128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX2051MTG128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTG/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTG128/specs-PIC32CX5112MTG128"/>
+        <includes pattern="PIC32CX5112MTG128/PIC32CX5112MTG128.ld"/>
+        <includes pattern="PIC32CX5112MTG128/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="PIC32CX5112MTG128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG128/specs-PIC32CX1025MTG128"/>
+        <includes pattern="PIC32CX1025MTG128/PIC32CX1025MTG128.ld"/>
+        <includes pattern="PIC32CX1025MTG128/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="PIC32CX1025MTG128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG64/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="PIC32CX1025MTG64/specs-PIC32CX1025MTG64"/>
+        <includes pattern="PIC32CX1025MTG64/PIC32CX1025MTG64.ld"/>
+        <includes pattern="PIC32CX1025MTG64/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/PIC32CX2051MTG64.ld"/>
+        <includes pattern="PIC32CX2051MTG64/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="PIC32CX2051MTG64/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/specs-PIC32CX2051MTG64"/>
+        <includes pattern="PIC32CX2051MTG128/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="PIC32CX2051MTG128/specs-PIC32CX2051MTG128"/>
+        <includes pattern="PIC32CX2051MTG128/PIC32CX2051MTG128.ld"/>
+        <includes pattern="PIC32CX2051MTG128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG128/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="system_pic32cx2051mtg128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/pic32cx2051mtg128_flash.ld"/>
+        <includes pattern="gcc/pic32cx2051mtg128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTG/armcc">
+        <includes pattern="armcc/startup_pic32cx2051mtg128.s"/>
+        <includes pattern="system_pic32cx2051mtg128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTG/keil">
+        <includes pattern="flash/PIC32CXMT_2048.FLM"/>
+        <meta key="flash/PIC32CXMT_2048.FLM" value="start=0x01000000|size=0x200000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTG/iar">
+        <includes pattern="iar/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="system_pic32cx2051mtg128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTG.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX2051MTG128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX2051MTG128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX2051MTG128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/linker/Microchip/pic32cx2051mtg128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx2051mtg128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTG/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTG/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX2051MTG64">
+      <resource type="atdf" subdir="PIC32CX-MTG/atdf">
+        <includes pattern="PIC32CX2051MTG64.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTG/edc">
+        <includes pattern="PIC32CX2051MTG64.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTG/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx2051mtg64.h"/>
+        <includes pattern="system_pic32cxmtg.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx2051mtg64.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX2051MTG64__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTG/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTG128/specs-PIC32CX5112MTG128"/>
+        <includes pattern="PIC32CX5112MTG128/PIC32CX5112MTG128.ld"/>
+        <includes pattern="PIC32CX5112MTG128/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="PIC32CX5112MTG128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG128/specs-PIC32CX1025MTG128"/>
+        <includes pattern="PIC32CX1025MTG128/PIC32CX1025MTG128.ld"/>
+        <includes pattern="PIC32CX1025MTG128/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="PIC32CX1025MTG128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG64/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="PIC32CX1025MTG64/specs-PIC32CX1025MTG64"/>
+        <includes pattern="PIC32CX1025MTG64/PIC32CX1025MTG64.ld"/>
+        <includes pattern="PIC32CX1025MTG64/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/PIC32CX2051MTG64.ld"/>
+        <includes pattern="PIC32CX2051MTG64/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="PIC32CX2051MTG64/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/specs-PIC32CX2051MTG64"/>
+        <includes pattern="PIC32CX2051MTG128/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="PIC32CX2051MTG128/specs-PIC32CX2051MTG128"/>
+        <includes pattern="PIC32CX2051MTG128/PIC32CX2051MTG128.ld"/>
+        <includes pattern="PIC32CX2051MTG128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG128/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="system_pic32cx2051mtg64.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/pic32cx2051mtg64_flash.ld"/>
+        <includes pattern="gcc/pic32cx2051mtg64_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTG/armcc">
+        <includes pattern="armcc/startup_pic32cx2051mtg64.s"/>
+        <includes pattern="system_pic32cx2051mtg64.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTG/keil">
+        <includes pattern="flash/PIC32CXMT_2048.FLM"/>
+        <meta key="flash/PIC32CXMT_2048.FLM" value="start=0x01000000|size=0x200000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTG/iar">
+        <includes pattern="iar/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="system_pic32cx2051mtg64.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTG.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX2051MTG64.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX2051MTG64.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX2051MTG64.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/linker/Microchip/pic32cx2051mtg64/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx2051mtg64/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTG/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTG/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX2051MTSH128">
+      <resource type="atdf" subdir="PIC32CX-MTSH/atdf">
+        <includes pattern="PIC32CX2051MTSH128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTSH/edc">
+        <includes pattern="PIC32CX2051MTSH128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTSH/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx2051mtsh128.h"/>
+        <includes pattern="system_pic32cxmtsh.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/emafe.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx2051mtsh128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX2051MTSH128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTSH/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTSH128S1/specs-PIC32CX1025MTSH128S1"/>
+        <includes pattern="PIC32CX1025MTSH128S1/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="PIC32CX1025MTSH128S1/PIC32CX1025MTSH128S1.ld"/>
+        <includes pattern="PIC32CX1025MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX1025MTSH128/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="PIC32CX1025MTSH128/specs-PIC32CX1025MTSH128"/>
+        <includes pattern="PIC32CX1025MTSH128/PIC32CX1025MTSH128.ld"/>
+        <includes pattern="PIC32CX1025MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX2051MTSH128/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="PIC32CX2051MTSH128/PIC32CX2051MTSH128.ld"/>
+        <includes pattern="PIC32CX2051MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128/pic32c"/>
+        <includes pattern="PIC32CX2051MTSH128/specs-PIC32CX2051MTSH128"/>
+        <includes pattern="PIC32CX2051MTSH128S1/PIC32CX2051MTSH128S1.ld"/>
+        <includes pattern="PIC32CX2051MTSH128S1/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="PIC32CX2051MTSH128S1/specs-PIC32CX2051MTSH128S1"/>
+        <includes pattern="PIC32CX2051MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="PIC32CX5112MTSH128/specs-PIC32CX5112MTSH128"/>
+        <includes pattern="PIC32CX5112MTSH128/PIC32CX5112MTSH128.ld"/>
+        <includes pattern="PIC32CX5112MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/specs-PIC32CX5112MTSH128S1"/>
+        <includes pattern="PIC32CX5112MTSH128S1/PIC32CX5112MTSH128S1.ld"/>
+        <includes pattern="PIC32CX5112MTSH128S1/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="system_pic32cx2051mtsh128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/pic32cx2051mtsh128_flash.ld"/>
+        <includes pattern="gcc/pic32cx2051mtsh128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTSH/armcc">
+        <includes pattern="armcc/startup_pic32cx2051mtsh128.s"/>
+        <includes pattern="system_pic32cx2051mtsh128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTSH/keil">
+        <includes pattern="flash/PIC32CXMT_2048.FLM"/>
+        <meta key="flash/PIC32CXMT_2048.FLM" value="start=0x01000000|size=0x200000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="iar/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="system_pic32cx2051mtsh128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTSH.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX2051MTSH128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX2051MTSH128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX2051MTSH128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/linker/Microchip/pic32cx2051mtsh128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx2051mtsh128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTSH/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTSH/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX2051MTSH128S1">
+      <resource type="atdf" subdir="PIC32CX-MTSH/atdf">
+        <includes pattern="PIC32CX2051MTSH128S1.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTSH/edc">
+        <includes pattern="PIC32CX2051MTSH128S1.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTSH/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx2051mtsh128s1.h"/>
+        <includes pattern="system_pic32cxmtsh.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/emafe.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="pio/pic32cx2051mtsh128s1.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX2051MTSH128S1__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTSH/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTSH128S1/specs-PIC32CX1025MTSH128S1"/>
+        <includes pattern="PIC32CX1025MTSH128S1/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="PIC32CX1025MTSH128S1/PIC32CX1025MTSH128S1.ld"/>
+        <includes pattern="PIC32CX1025MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX1025MTSH128/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="PIC32CX1025MTSH128/specs-PIC32CX1025MTSH128"/>
+        <includes pattern="PIC32CX1025MTSH128/PIC32CX1025MTSH128.ld"/>
+        <includes pattern="PIC32CX1025MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX2051MTSH128/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="PIC32CX2051MTSH128/PIC32CX2051MTSH128.ld"/>
+        <includes pattern="PIC32CX2051MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128/pic32c"/>
+        <includes pattern="PIC32CX2051MTSH128/specs-PIC32CX2051MTSH128"/>
+        <includes pattern="PIC32CX2051MTSH128S1/PIC32CX2051MTSH128S1.ld"/>
+        <includes pattern="PIC32CX2051MTSH128S1/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="PIC32CX2051MTSH128S1/specs-PIC32CX2051MTSH128S1"/>
+        <includes pattern="PIC32CX2051MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="PIC32CX5112MTSH128/specs-PIC32CX5112MTSH128"/>
+        <includes pattern="PIC32CX5112MTSH128/PIC32CX5112MTSH128.ld"/>
+        <includes pattern="PIC32CX5112MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/specs-PIC32CX5112MTSH128S1"/>
+        <includes pattern="PIC32CX5112MTSH128S1/PIC32CX5112MTSH128S1.ld"/>
+        <includes pattern="PIC32CX5112MTSH128S1/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="system_pic32cx2051mtsh128s1.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/pic32cx2051mtsh128s1_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTSH/armcc">
+        <includes pattern="armcc/startup_pic32cx2051mtsh128s1.s"/>
+        <includes pattern="system_pic32cx2051mtsh128s1.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="iar/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="system_pic32cx2051mtsh128s1.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTSH.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX2051MTSH128S1.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX2051MTSH128S1.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX2051MTSH128S1.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/linker/Microchip/pic32cx2051mtsh128s1/sram.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTSH/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTSH/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX5112MTC128">
+      <resource type="atdf" subdir="PIC32CX-MTC/atdf">
+        <includes pattern="PIC32CX5112MTC128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTC/edc">
+        <includes pattern="PIC32CX5112MTC128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTC/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx5112mtc128.h"/>
+        <includes pattern="system_pic32cxmtc.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx5112mtc128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX5112MTC128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTC/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTC128/specs-PIC32CX1025MTC128"/>
+        <includes pattern="PIC32CX1025MTC128/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="PIC32CX1025MTC128/PIC32CX1025MTC128.ld"/>
+        <includes pattern="PIC32CX1025MTC128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTC128/specs-PIC32CX5112MTC128"/>
+        <includes pattern="PIC32CX5112MTC128/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="PIC32CX5112MTC128/PIC32CX5112MTC128.ld"/>
+        <includes pattern="PIC32CX5112MTC128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="PIC32CX5112MTC128S1/PIC32CX5112MTC128S1.ld"/>
+        <includes pattern="PIC32CX5112MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/specs-PIC32CX5112MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/specs-PIC32CX1025MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="PIC32CX1025MTC128S1/PIC32CX1025MTC128S1.ld"/>
+        <includes pattern="PIC32CX1025MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="PIC32CX2051MTC128/PIC32CX2051MTC128.ld"/>
+        <includes pattern="PIC32CX2051MTC128/specs-PIC32CX2051MTC128"/>
+        <includes pattern="PIC32CX2051MTC128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128S1/PIC32CX2051MTC128S1.ld"/>
+        <includes pattern="PIC32CX2051MTC128S1/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="PIC32CX2051MTC128S1/specs-PIC32CX2051MTC128S1"/>
+        <includes pattern="PIC32CX2051MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="system_pic32cx5112mtc128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/pic32cx5112mtc128_flash.ld"/>
+        <includes pattern="gcc/pic32cx5112mtc128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTC/armcc">
+        <includes pattern="armcc/startup_pic32cx5112mtc128.s"/>
+        <includes pattern="system_pic32cx5112mtc128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTC/keil">
+        <includes pattern="flash/PIC32CXMT_512.FLM"/>
+        <meta key="flash/PIC32CXMT_512.FLM" value="start=0x01000000|size=0x80000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTC/iar">
+        <includes pattern="iar/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="system_pic32cx5112mtc128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTC.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX5112MTC128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX5112MTC128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX5112MTC128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/linker/Microchip/pic32cx5112mtc128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx5112mtc128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTC/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTC/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX5112MTC128S1">
+      <resource type="atdf" subdir="PIC32CX-MTC/atdf">
+        <includes pattern="PIC32CX5112MTC128S1.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTC/edc">
+        <includes pattern="PIC32CX5112MTC128S1.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTC/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx5112mtc128s1.h"/>
+        <includes pattern="system_pic32cxmtc.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="pio/pic32cx5112mtc128s1.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX5112MTC128S1__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTC/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTC128/specs-PIC32CX1025MTC128"/>
+        <includes pattern="PIC32CX1025MTC128/startup_pic32cx1025mtc128.c"/>
+        <includes pattern="PIC32CX1025MTC128/PIC32CX1025MTC128.ld"/>
+        <includes pattern="PIC32CX1025MTC128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTC128/specs-PIC32CX5112MTC128"/>
+        <includes pattern="PIC32CX5112MTC128/startup_pic32cx5112mtc128.c"/>
+        <includes pattern="PIC32CX5112MTC128/PIC32CX5112MTC128.ld"/>
+        <includes pattern="PIC32CX5112MTC128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="PIC32CX5112MTC128S1/PIC32CX5112MTC128S1.ld"/>
+        <includes pattern="PIC32CX5112MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTC128S1/specs-PIC32CX5112MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/specs-PIC32CX1025MTC128S1"/>
+        <includes pattern="PIC32CX1025MTC128S1/startup_pic32cx1025mtc128s1.c"/>
+        <includes pattern="PIC32CX1025MTC128S1/PIC32CX1025MTC128S1.ld"/>
+        <includes pattern="PIC32CX1025MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTC128S1/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128/startup_pic32cx2051mtc128.c"/>
+        <includes pattern="PIC32CX2051MTC128/PIC32CX2051MTC128.ld"/>
+        <includes pattern="PIC32CX2051MTC128/specs-PIC32CX2051MTC128"/>
+        <includes pattern="PIC32CX2051MTC128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128/pic32c"/>
+        <includes pattern="PIC32CX2051MTC128S1/PIC32CX2051MTC128S1.ld"/>
+        <includes pattern="PIC32CX2051MTC128S1/startup_pic32cx2051mtc128s1.c"/>
+        <includes pattern="PIC32CX2051MTC128S1/specs-PIC32CX2051MTC128S1"/>
+        <includes pattern="PIC32CX2051MTC128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTC128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="system_pic32cx5112mtc128s1.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTC/gcc">
+        <includes pattern="gcc/pic32cx5112mtc128s1_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTC/armcc">
+        <includes pattern="armcc/startup_pic32cx5112mtc128s1.s"/>
+        <includes pattern="system_pic32cx5112mtc128s1.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTC/iar">
+        <includes pattern="iar/startup_pic32cx5112mtc128s1.c"/>
+        <includes pattern="system_pic32cx5112mtc128s1.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTC.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX5112MTC128S1.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX5112MTC128S1.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTC/PIC32CX5112MTC128S1.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTC/iar">
+        <includes pattern="config/linker/Microchip/pic32cx5112mtc128s1/sram.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTC/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTC/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTC/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTC/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX5112MTG128">
+      <resource type="atdf" subdir="PIC32CX-MTG/atdf">
+        <includes pattern="PIC32CX5112MTG128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTG/edc">
+        <includes pattern="PIC32CX5112MTG128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTG/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx5112mtg128.h"/>
+        <includes pattern="system_pic32cxmtg.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx5112mtg128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX5112MTG128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTG/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX5112MTG128/specs-PIC32CX5112MTG128"/>
+        <includes pattern="PIC32CX5112MTG128/PIC32CX5112MTG128.ld"/>
+        <includes pattern="PIC32CX5112MTG128/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="PIC32CX5112MTG128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG128/specs-PIC32CX1025MTG128"/>
+        <includes pattern="PIC32CX1025MTG128/PIC32CX1025MTG128.ld"/>
+        <includes pattern="PIC32CX1025MTG128/startup_pic32cx1025mtg128.c"/>
+        <includes pattern="PIC32CX1025MTG128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG128/pic32c"/>
+        <includes pattern="PIC32CX1025MTG64/startup_pic32cx1025mtg64.c"/>
+        <includes pattern="PIC32CX1025MTG64/specs-PIC32CX1025MTG64"/>
+        <includes pattern="PIC32CX1025MTG64/PIC32CX1025MTG64.ld"/>
+        <includes pattern="PIC32CX1025MTG64/configuration.data"/>
+        <includes pattern="PIC32CX1025MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/PIC32CX2051MTG64.ld"/>
+        <includes pattern="PIC32CX2051MTG64/startup_pic32cx2051mtg64.c"/>
+        <includes pattern="PIC32CX2051MTG64/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG64/pic32c"/>
+        <includes pattern="PIC32CX2051MTG64/specs-PIC32CX2051MTG64"/>
+        <includes pattern="PIC32CX2051MTG128/startup_pic32cx2051mtg128.c"/>
+        <includes pattern="PIC32CX2051MTG128/specs-PIC32CX2051MTG128"/>
+        <includes pattern="PIC32CX2051MTG128/PIC32CX2051MTG128.ld"/>
+        <includes pattern="PIC32CX2051MTG128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTG128/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="system_pic32cx5112mtg128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTG/gcc">
+        <includes pattern="gcc/pic32cx5112mtg128_flash.ld"/>
+        <includes pattern="gcc/pic32cx5112mtg128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTG/armcc">
+        <includes pattern="armcc/startup_pic32cx5112mtg128.s"/>
+        <includes pattern="system_pic32cx5112mtg128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTG/keil">
+        <includes pattern="flash/PIC32CXMT_512.FLM"/>
+        <meta key="flash/PIC32CXMT_512.FLM" value="start=0x01000000|size=0x80000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTG/iar">
+        <includes pattern="iar/startup_pic32cx5112mtg128.c"/>
+        <includes pattern="system_pic32cx5112mtg128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTG.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX5112MTG128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX5112MTG128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTG/PIC32CX5112MTG128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTG/iar">
+        <includes pattern="config/linker/Microchip/pic32cx5112mtg128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx5112mtg128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTG/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTG/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTG/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTG/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX5112MTSH128">
+      <resource type="atdf" subdir="PIC32CX-MTSH/atdf">
+        <includes pattern="PIC32CX5112MTSH128.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTSH/edc">
+        <includes pattern="PIC32CX5112MTSH128.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTSH/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx5112mtsh128.h"/>
+        <includes pattern="system_pic32cxmtsh.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/aesb.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/cpkcc.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/emafe.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sefc.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/pic32cx5112mtsh128.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX5112MTSH128__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTSH/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTSH128S1/specs-PIC32CX1025MTSH128S1"/>
+        <includes pattern="PIC32CX1025MTSH128S1/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="PIC32CX1025MTSH128S1/PIC32CX1025MTSH128S1.ld"/>
+        <includes pattern="PIC32CX1025MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX1025MTSH128/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="PIC32CX1025MTSH128/specs-PIC32CX1025MTSH128"/>
+        <includes pattern="PIC32CX1025MTSH128/PIC32CX1025MTSH128.ld"/>
+        <includes pattern="PIC32CX1025MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX2051MTSH128/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="PIC32CX2051MTSH128/PIC32CX2051MTSH128.ld"/>
+        <includes pattern="PIC32CX2051MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128/pic32c"/>
+        <includes pattern="PIC32CX2051MTSH128/specs-PIC32CX2051MTSH128"/>
+        <includes pattern="PIC32CX2051MTSH128S1/PIC32CX2051MTSH128S1.ld"/>
+        <includes pattern="PIC32CX2051MTSH128S1/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="PIC32CX2051MTSH128S1/specs-PIC32CX2051MTSH128S1"/>
+        <includes pattern="PIC32CX2051MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="PIC32CX5112MTSH128/specs-PIC32CX5112MTSH128"/>
+        <includes pattern="PIC32CX5112MTSH128/PIC32CX5112MTSH128.ld"/>
+        <includes pattern="PIC32CX5112MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/specs-PIC32CX5112MTSH128S1"/>
+        <includes pattern="PIC32CX5112MTSH128S1/PIC32CX5112MTSH128S1.ld"/>
+        <includes pattern="PIC32CX5112MTSH128S1/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="system_pic32cx5112mtsh128.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/pic32cx5112mtsh128_flash.ld"/>
+        <includes pattern="gcc/pic32cx5112mtsh128_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTSH/armcc">
+        <includes pattern="armcc/startup_pic32cx5112mtsh128.s"/>
+        <includes pattern="system_pic32cx5112mtsh128.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CX-MTSH/keil">
+        <includes pattern="flash/PIC32CXMT_512.FLM"/>
+        <meta key="flash/PIC32CXMT_512.FLM" value="start=0x01000000|size=0x80000|default=1"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="iar/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="system_pic32cx5112mtsh128.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTSH.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX5112MTSH128.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX5112MTSH128.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX5112MTSH128.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/linker/Microchip/pic32cx5112mtsh128/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cx5112mtsh128/flash.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTSH/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTSH/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CX5112MTSH128S1">
+      <resource type="atdf" subdir="PIC32CX-MTSH/atdf">
+        <includes pattern="PIC32CX5112MTSH128S1.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CX-MTSH/edc">
+        <includes pattern="PIC32CX5112MTSH128S1.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CX-MTSH/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cx5112mtsh128s1.h"/>
+        <includes pattern="system_pic32cxmtsh.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dwdt.h"/>
+        <includes pattern="component/emafe.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/ipc.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcspi.h"/>
+        <includes pattern="component/mem2mem.h"/>
+        <includes pattern="component/osc.h"/>
+        <includes pattern="component/pdc.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sfrbu.h"/>
+        <includes pattern="component/slcdc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/syscwp.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="pio/pic32cx5112mtsh128s1.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CX5112MTSH128S1__"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CX-MTSH/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CX1025MTSH128S1/specs-PIC32CX1025MTSH128S1"/>
+        <includes pattern="PIC32CX1025MTSH128S1/startup_pic32cx1025mtsh128s1.c"/>
+        <includes pattern="PIC32CX1025MTSH128S1/PIC32CX1025MTSH128S1.ld"/>
+        <includes pattern="PIC32CX1025MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX1025MTSH128/startup_pic32cx1025mtsh128.c"/>
+        <includes pattern="PIC32CX1025MTSH128/specs-PIC32CX1025MTSH128"/>
+        <includes pattern="PIC32CX1025MTSH128/PIC32CX1025MTSH128.ld"/>
+        <includes pattern="PIC32CX1025MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX1025MTSH128/pic32c"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CX2051MTSH128/startup_pic32cx2051mtsh128.c"/>
+        <includes pattern="PIC32CX2051MTSH128/PIC32CX2051MTSH128.ld"/>
+        <includes pattern="PIC32CX2051MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128/pic32c"/>
+        <includes pattern="PIC32CX2051MTSH128/specs-PIC32CX2051MTSH128"/>
+        <includes pattern="PIC32CX2051MTSH128S1/PIC32CX2051MTSH128S1.ld"/>
+        <includes pattern="PIC32CX2051MTSH128S1/startup_pic32cx2051mtsh128s1.c"/>
+        <includes pattern="PIC32CX2051MTSH128S1/specs-PIC32CX2051MTSH128S1"/>
+        <includes pattern="PIC32CX2051MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX2051MTSH128S1/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128/startup_pic32cx5112mtsh128.c"/>
+        <includes pattern="PIC32CX5112MTSH128/specs-PIC32CX5112MTSH128"/>
+        <includes pattern="PIC32CX5112MTSH128/PIC32CX5112MTSH128.ld"/>
+        <includes pattern="PIC32CX5112MTSH128/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128/pic32c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/specs-PIC32CX5112MTSH128S1"/>
+        <includes pattern="PIC32CX5112MTSH128S1/PIC32CX5112MTSH128S1.ld"/>
+        <includes pattern="PIC32CX5112MTSH128S1/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="PIC32CX5112MTSH128S1/configuration.data"/>
+        <includes pattern="PIC32CX5112MTSH128S1/pic32c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="system_pic32cx5112mtsh128s1.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CX-MTSH/gcc">
+        <includes pattern="gcc/pic32cx5112mtsh128s1_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CX-MTSH/armcc">
+        <includes pattern="armcc/startup_pic32cx5112mtsh128s1.s"/>
+        <includes pattern="system_pic32cx5112mtsh128s1.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="iar/startup_pic32cx5112mtsh128s1.c"/>
+        <includes pattern="system_pic32cx5112mtsh128s1.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CXMTSH.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CX5112MTSH128S1.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX5112MTSH128S1.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CXMT/PIC32CXMTSH/PIC32CX5112MTSH128S1.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CX-MTSH/iar">
+        <includes pattern="config/linker/Microchip/pic32cx5112mtsh128s1/sram.icf"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CX-MTSH/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CX-MTSH/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CX-MTSH/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CX-MTSH/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip" compliant="false">
+        <releases>
+            <release version="0.1.BUILDNUMBER">Internal!</release>
+        </releases>
+    </pdsc>
+</package>

@@ -1,0 +1,7 @@
+package:
+  format-version: "1.0.0"
+  name: "dev_packs"
+  type: "package"
+  status: "production"
+  required: true
+  version: "3.13.0"

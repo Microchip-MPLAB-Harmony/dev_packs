@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         schemaVersion="1.3"
+         xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd"
+         xs:noNamespaceSchemaLocation="PACK.xsd">
+   <vendor>Microchip</vendor>
+   <url>https://packs.download.microchip.com/</url>
+   <name>SAMD10_DFP</name>
+   <description>Microchip SAMD10 Series Device Support</description>
+   <releases>
+      <release version="2.7.81" date="2022-03-17">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="2.6.70" date="2021-09-08">Hold in reset supported for J32 probes. Included fuse description (component\fuses.h). Support for board file.</release>
+      <release version="2.5.64" date="2021-02-03">Added read device ID and security bit programming for MPLAB X. Added instance headers.</release>
+      <release version="2.4.49" date="2020-05-24">Maintenance release, fix script requirement on MPLAB X 5.40. Updated MPLAB X debug scripts.</release>
+      <release version="2.3.45" date="2020-04-28">Updated MPLAB X debug scripts.</release>
+      <release version="2.2.40" date="2020-02-12">Updated XOSC32K startup time value-group for OSC32KCTRL module. Added value-groups for SERCOM module. Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="2.1.25" date="2019-10-07">Added XC32 content. Updated fuse enums. Update description of SERCOM, RTC, and SYSCTRL. Updated programming and debugging scripts.</release>
+      <release version="2.0.10" date="2019-04-11">Misc fixes. Succeeds Atmel.SAMD10_DFP 1.1.77. Added programming/debugging support in MPLAB X.</release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>SAMD10</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="SAMD10" Dvendor="Microchip:3">
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                            schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               <mchp:prerequisite component="MPLAB X IPE" version="[5.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="ATSAMD10C13A">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10C13A__"/>
+            <debug svd="svd/ATSAMD10C13A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x2000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_8.FLM"
+                       start="0x00000000"
+                       size="0x00002000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10C13A.atdf"/>
+                  <at:variant ordercode="SAMD10C13A-SSU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x2000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10C13A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10C13A"
+                  title="Device page for ATSAMD10C13A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10C13A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMD10C14A">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10C14A__"/>
+            <debug svd="svd/ATSAMD10C14A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x4000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_16.FLM"
+                       start="0x00000000"
+                       size="0x00004000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10C14A.atdf"/>
+                  <at:variant ordercode="SAMD10C14A-SSU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10C14A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10C14A"
+                  title="Device page for ATSAMD10C14A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10C14A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMD10D13AM">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10D13AM__"/>
+            <debug svd="svd/ATSAMD10D13AM.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x2000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_8.FLM"
+                       start="0x00000000"
+                       size="0x00002000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10D13AM.atdf"/>
+                  <at:variant ordercode="SAMD10D13A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x2000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10D13AM.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10D13AM"
+                  title="Device page for ATSAMD10D13AM"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10D13AM"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMD10D13AS">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10D13AS__"/>
+            <debug svd="svd/ATSAMD10D13AS.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x2000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_8.FLM"
+                       start="0x00000000"
+                       size="0x00002000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10D13AS.atdf"/>
+                  <at:variant ordercode="SAMD10D13A-SSU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x2000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10D13AS.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10D13AS"
+                  title="Device page for ATSAMD10D13AS"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10D13AS"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMD10D14AM">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10D14AM__"/>
+            <debug svd="svd/ATSAMD10D14AM.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x4000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_16.FLM"
+                       start="0x00000000"
+                       size="0x00004000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10D14AM.atdf"/>
+                  <at:variant ordercode="SAMD10D14A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10D14AM.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10D14AM"
+                  title="Device page for ATSAMD10D14AM"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10D14AM"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMD10D14AS">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10D14AS__"/>
+            <debug svd="svd/ATSAMD10D14AS.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x4000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_16.FLM"
+                       start="0x00000000"
+                       size="0x00004000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10D14AS.atdf"/>
+                  <at:variant ordercode="SAMD10D14A-SSU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10D14AS.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10D14AS"
+                  title="Device page for ATSAMD10D14AS"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10D14AS"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAMD10D14AU">
+            <processor Dcore="Cortex-M0+"
+                       Dendian="Little-endian"
+                       Dmpu="NO_MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/sam.h" define="__SAMD10D14AU__"/>
+            <debug svd="svd/ATSAMD10D14AU.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x4000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IRAM1" start="0x20000000" size="0x1000" default="1"/>
+            <algorithm name="keil/Flash/ATSAMD10_16.FLM"
+                       start="0x00000000"
+                       size="0x00004000"
+                       default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAMD10D14AU.atdf"/>
+                  <at:variant ordercode="SAMD10D14A-UU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="LOCKBIT"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806020"
+                             size="0xE0"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806030"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HMCRAMC0"
+                             start="0x20000000"
+                             size="0x1000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="HPB0"
+                             start="0x40000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB1"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HPB2"
+                             start="0x42000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB X IDE" version="[5.40-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAMD10D14AU.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAMD10D14AU"
+                  title="Device page for ATSAMD10D14AU"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAMD10D14AU"
+                  title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+   <conditions>
+      <condition id="ARMCC Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+      </condition>
+      <condition id="GCC">
+         <accept Tcompiler="GCC"/>
+      </condition>
+      <condition id="GCC Exe">
+         <accept Tcompiler="GCC" Toutput="exe"/>
+      </condition>
+      <condition id="IAR Exe">
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="XC">
+         <accept Tcompiler="XC"/>
+      </condition>
+      <condition id="C">
+         <accept Tcompiler="ARMCC"/>
+         <accept Tcompiler="GCC"/>
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="C Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+         <accept Tcompiler="GCC" Toutput="exe"/>
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C Lib">
+         <accept Tcompiler="ARMCC" Toutput="lib"/>
+         <accept Tcompiler="GCC" Toutput="lib"/>
+         <accept Tcompiler="IAR" Toutput="lib"/>
+      </condition>
+      <condition id="ATSAMD10C13A">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10C13A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMD10C14A">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10C14A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMD10D13AM">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10D13AM"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMD10D13AS">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10D13AS"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMD10D14AM">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10D14AM"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMD10D14AS">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10D14AS"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAMD10D14AU">
+         <require Dvendor="Microchip:3" Dname="ATSAMD10D14AU"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+   </conditions>
+   <components>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10C13A">
+         <description>Headers and startup code for Microchip ATSAMD10C13A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10c13a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10c13a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10c13a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10c13a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10c13a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10c13a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10c13a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10c13a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10c13a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10c13a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10C14A">
+         <description>Headers and startup code for Microchip ATSAMD10C14A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10c14a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10c14a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10c14a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10c14a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10c14a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10c14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10c14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10c14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10c14a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10c14a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10D13AM">
+         <description>Headers and startup code for Microchip ATSAMD10D13AM</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10d13am.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10d13am.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10d13am_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10d13am_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10d13am.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10d13am.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10d13am.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10d13am.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10d13am/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10d13am/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10D13AS">
+         <description>Headers and startup code for Microchip ATSAMD10D13AS</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10d13as.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10d13as.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10d13as_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10d13as_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10d13as.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10d13as.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10d13as.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10d13as.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10d13as/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10d13as/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10D14AM">
+         <description>Headers and startup code for Microchip ATSAMD10D14AM</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10d14am.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10d14am.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10d14am_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10d14am_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10d14am.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10d14am.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10d14am.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10d14am.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10d14am/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10d14am/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10D14AS">
+         <description>Headers and startup code for Microchip ATSAMD10D14AS</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10d14as.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10d14as.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10d14as_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10d14as_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10d14as.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10d14as.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10d14as.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10d14as.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10d14as/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10d14as/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="2.7.0"
+                 condition="ATSAMD10D14AU">
+         <description>Headers and startup code for Microchip ATSAMD10D14AU</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_samd10d14au.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_samd10d14au.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/samd10d14au_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/samd10d14au_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_samd10d14au.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_samd10d14au.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_samd10d14au.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_samd10d14au.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsamd10d14au/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsamd10d14au/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+   </components>
+</package>

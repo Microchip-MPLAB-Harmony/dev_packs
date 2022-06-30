@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAMRH71F20C">
+      <resource type="atdf" subdir="samrh71c/atdf">
+        <includes pattern="ATSAMRH71F20C.atdf"/>
+      </resource>
+      <resource type="pic" subdir="samrh71c/edc">
+        <includes pattern="ATSAMRH71F20C.PIC"/>
+      </resource>
+      <resource type="svd" subdir="samrh71c/svd">
+        <includes pattern="ATSAMRH71F20C.svd"/>
+      </resource>
+      <resource type="c.header" subdir="samrh71c/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="samrh71f20c.h"/>
+        <includes pattern="system_samrh71.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/flexcom.h"/>
+        <includes pattern="component/flexramecc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/hefc.h"/>
+        <includes pattern="component/hemc.h"/>
+        <includes pattern="component/hsdramc.h"/>
+        <includes pattern="component/hsmc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/ip1553.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/nmic.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/sfr.h"/>
+        <includes pattern="component/sha.h"/>
+        <includes pattern="component/spw.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcmecc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/samrh71f20c.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAMRH71F20C__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="samrh71c/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="samrh71c/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="samrh71c/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="samrh71c/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="samrh71c/armcc">
+        <includes pattern="armcc/startup_samrh71f20c.s"/>
+        <includes pattern="system_samrh71f20c.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="samrh71c/gcc">
+        <includes pattern="gcc/startup_samrh71f20c.c"/>
+        <includes pattern="system_samrh71f20c.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="samrh71c/gcc">
+        <includes pattern="gcc/samrh71f20c_flash.ld"/>
+        <includes pattern="gcc/samrh71f20c_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="samrh71c/iar">
+        <includes pattern="iar/startup_samrh71f20c.c"/>
+        <includes pattern="system_samrh71f20c.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="samrh71c/iar">
+        <includes pattern="config/linker/Microchip/atsamrh71f20c/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsamrh71f20c/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samrh71c/scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samrh71c/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samrh71c/scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samrh71c/scripts">
+        <includes pattern="icd4_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="samrh71c/scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="samrh71c/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAMRH71F20C/startup_atsamrh71f20c.c"/>
+        <includes pattern="ATSAMRH71F20C/configuration.data"/>
+        <includes pattern="ATSAMRH71F20C/pic32c"/>
+        <includes pattern="ATSAMRH71F20C/specs-ATSAMRH71F20C"/>
+        <includes pattern="ATSAMRH71F20C/ATSAMRH71F20C.ld"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="samrh71c/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="samrh71c/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="samrh71c/hwtools/sdm">
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="samrh71c/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="2.5.BUILDNUMBER">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="2.4.127" date="2021-09-01">Fixed J-Link connecton issue.</release>
+      <release version="2.3.124" date="2021-07-02">Adjusted PIO value group names. Updated startup source code. Updated header files. Added instance headers. Updated MPLABX debug scripts. Updated XC32 content.</release>
+      <release version="2.2.112" date="2021-01-26">Added instance headers. Added FIFO information to FLEXCOM instances. Replaced WDT1 with RSWDT.</release>
+      <release version="2.1.105" date="2020-09-24">Added read device ID. Updated MPLAB X debug scripts. Fixed reading/writing configbits. Fixed extra prefix 'b' in comments of header files. Setup prerequisite for MPLAB v5.45 or newer.</release>
+      <release version="2.0.89" date="2020-04-28">Removed revision B device. Updated XC32 startup code. Updated MPLAB X debug scripts.</release>
+      <release version="1.2.79" date="2020-02-18">Updated data file for revision B device. Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="1.1.67" date="2020-01-20">Added revision C device.</release>
+      <release version="1.0.42" date="2019-10-18">Initial release</release>
+    </releases>
+    <deprecated>
+      <target name="ATSAMRH71F20B" date="2020-03-26"/>
+    </deprecated>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.50-"/>
+    </prerequisites>
+  </pdsc>
+</package>

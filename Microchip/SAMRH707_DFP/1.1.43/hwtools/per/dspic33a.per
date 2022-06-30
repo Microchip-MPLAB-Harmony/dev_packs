@@ -1,0 +1,101 @@
+<per:per xmlns:per="http://crownking/per" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/per ../../schema/per/per.xsd">
+  <per:version major="0" minor="0" rev="0"/>
+  <per:peripheral name="PPS">
+    <per:periphConfig>
+      <per:sfr key="IOLOCK" sfr="RPCON" field="IOLOCK"/>
+      <per:sfr key="RPIN" sfr="RPINR[0-9]+.*"/>
+      <per:periphClassDesc class="PPS"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="AnalogPinHandler" excludeFromMgrRpt="true">
+    <per:periphConfig>
+      <per:sfr key="ControlReg" sfr="ANSEL[A-D]"/>
+      <per:periphClassDesc class="AnalogPinHandler"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PORT@">
+    <per:meta char="@" val="A|B|C|D"/>
+    <per:periphConfig>
+      <per:pin pinID="R@#" key="R@#" metaf="#" metar="0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15" optional="true"/>
+      <per:sfr sfr="TRIS@" key="TRIS"/>
+      <per:sfr sfr="LAT@" key="LAT"/>
+      <per:sfr sfr="PORT@" key="PORT"/>
+      <per:periphClassDesc class="Port"/>
+      <per:initParam param="@"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="PullUp">
+    <per:periphConfig>
+      <per:sfr key="CNPU" sfr="CNPU[A-G]"/>
+      <per:periphClassDesc class="PullUp"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="TMR@">
+    <per:meta char="@" val="1|2"/>
+    <per:periphConfig beta="In development">
+      <per:pin key="TxCK" pinID="T@CK" critical="false"/>
+      <per:sfr key="TMRx" sfr="TMR@"/>
+      <per:sfr key="TxIF" sfr="IFS[0-9]" field="T@IF"/>
+      <per:sfr key="ON" sfr="T@CON" field="ON"/>
+      <per:sfr key="SIDL" sfr="T@CON" field="SIDL"/>
+      <per:sfr key="TECS" sfr="T@CON" field="TECS"/>
+      <per:sfr key="TGATE" sfr="T@CON" field="TGATE"/>
+      <per:sfr key="TCKPS" sfr="T@CON" field="TCKPS"/>
+      <per:sfr key="TSYNC" sfr="T@CON" field="TSYNC"/>
+      <per:sfr key="TCS" sfr="T@CON" field="TCS"/>
+      <per:sfr key="PRx" sfr="PR@"/>
+      <per:periphClassDesc class="Timer"/>
+      <per:initParam param="@"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="UART@">
+    <per:meta char="@" val="1|2|3"/>
+    <per:periphConfig beta="In development">
+      <per:sfr key="UCON" sfr="U@CON"/>
+      <per:sfr key="ON" sfr="U@CON" field="ON"/>
+      <per:sfr key="RXEN" sfr="U@CON" field="RXEN"/>
+      <per:sfr key="TXEN" sfr="U@CON" field="TXEN"/>
+      <per:sfr key="STP" sfr="U@CON" field="STP"/>
+      <per:sfr key="BRGS" sfr="U@CON" field="BRGS"/>
+      <per:sfr key="SIDL" sfr="U@CON" field="SIDL"/>
+      <per:sfr key="ABDEN" sfr="U@CON" field="ABDEN"/>
+      <per:sfr key="MODE" sfr="U@CON" field="MODE"/>
+      <per:sfr key="FLO" sfr="U@CON" field="FLO"/>
+      <per:sfr key="USTAT" sfr="U@STAT"/>
+      <per:sfr key="TXCIF" sfr="U@STAT" field="TXCIF"/>
+      <per:sfr key="TXWM" sfr="U@STAT" field="TXWM"/>
+      <per:sfr key="RXWM" sfr="U@STAT" field="RXWM"/>
+      <per:sfr key="TXBE" sfr="U@STAT" field="TXBE"/>
+      <per:sfr key="TXBF" sfr="U@STAT" field="TXBF"/>
+      <per:sfr key="RXBE" sfr="U@STAT" field="RXBE"/>
+      <per:sfr key="RXBF" sfr="U@STAT" field="RXBF"/>
+      <per:sfr key="UBRG" sfr="U@BRG"/>
+      <per:sfr key="URXB" sfr="U@RXB"/>
+      <per:sfr key="UTXB" sfr="U@TXB"/>
+      <per:sfr key="UPA" sfr="U@PA"/>
+      <per:sfr key="UPB" sfr="U@PB"/>
+      <per:sfr key="UCHK" sfr="U@CHK"/>
+      <per:sfr key="USCCON" sfr="U@SCCON"/>
+      <per:sfr key="UUIR" sfr="U@UIR"/>
+      <per:sfr key="UTXIF" sfr="IFS[0-9]" field="U@TXIF"/>
+      <per:sfr key="URXIF" sfr="IFS[0-9]" field="U@RXIF"/>
+      <per:pin key="URX" pinID="U@RX" optional="true"/>
+      <per:pin key="UTX" pinID="U@TX" optional="true"/>
+      <per:periphClassDesc class="UART"/>
+      <per:initParam param="@"/>
+    </per:periphConfig>
+  </per:peripheral>
+  <per:peripheral name="WDT">
+    <per:periphConfig>
+      <per:sfr key="ON" sfr="WDTCON" field="ON"/>
+      <per:sfr key="WINSIZE" sfr="WDTCON" field="WINSIZE"/>
+      <per:sfr key="RMPS" sfr="WDTCON" field="RMPS"/>
+      <per:sfr key="RMCLK" sfr="WDTCON" field="RMCLK"/>
+      <per:sfr key="SMPS" sfr="WDTCON" field="SMPS"/>
+      <per:sfr key="WINEN" sfr="WDTCON" field="WINEN"/>
+      <per:sfr key="WDTO" sfr="RCON" field="WDTO"/>
+      <per:sfr key="WDTIF" sfr="IFS[0-9]" field="WDTIF"/>
+      <per:periphClassDesc class="WDT_UPB"/>
+    </per:periphConfig>
+  </per:peripheral>
+</per:per>

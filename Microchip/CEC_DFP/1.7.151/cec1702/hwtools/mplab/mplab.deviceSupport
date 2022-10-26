@@ -1,0 +1,7 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="CEC1702">
+      <mp:support mp:aicep="no" mp:icd4d="yes" mp:icd4p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:snapd="alpha" mp:snapp="alpha"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

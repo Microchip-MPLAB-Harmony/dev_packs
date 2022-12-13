@@ -1,0 +1,102 @@
+/**
+ * \file
+ *
+ * \brief User setup file for IAR CSPY debugger for PIC32CZ8110CA90208S1
+ *
+ * Copyright (c) 2022 Microchip Technology Inc.
+ *
+ * \license_start
+ *
+ * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * \license_stop
+ *
+ */
+
+// ---------------------------------------------------------
+//  File: Trace_PIC32CZCA90.dmac
+//  User setup file for CSPY debugger.
+// ---------------------------------------------------------
+
+/*********************************************************************
+*
+*       execUserReset()
+*  Called once after the target application is downloaded.
+*  Implement this macro to set up the memory map, breakpoints,
+*  interrupts, register macro files, etc.
+*
+*/
+execUserReset()
+{
+    __message "------------------------------ execUserReset ---------------------------------";
+    __message "-------------------------------Set PC Reset ----------------------------------";
+    __writeMemory32(0x05FA0004,0xE000ED0C,"Memory");
+
+    // Hardware Reset: CPU is automatically halted after the reset
+    //__hwReset(0);
+}
+
+/*********************************************************************
+*
+*       execUserPreload()
+* Called after communication with the target system is established
+* but before downloading the target application.
+* Implement this macro to initialize memory locations and/or
+* registers which are vital for loading data properly.
+*
+*/
+execUserPreload()
+{
+    __message "------------------------------ execUserPreload ---------------------------------";
+
+}
+
+/*********************************************************************
+*
+*       execUserFlashInit()
+*
+* Called once before the flash loader is downloaded to RAM.
+* Implement this macro typically for setting up the memory map
+* required by the flash loader. This macro is only called when you
+* are programming flash, and it should only be used for flash loader
+* functionality.
+*
+*/
+
+execUserFlashInit()
+{
+
+    __message "------------------------------ execUserFlashInit ---------------------------------";
+
+}
+
+
+/*********************************************************************
+*
+*       execUserFlashExit()
+* Called once when the debug session ends.
+* Implement this macro to save status data etc. This macro is useful
+* for flash loader functionality
+*
+*/
+execUserFlashExit()
+{
+    __message "------------------------------ execUserFlashExit ---------------------------------";
+
+    // Hardware Reset: CPU is automatically halted after the reset
+    //__hwReset(0);
+}

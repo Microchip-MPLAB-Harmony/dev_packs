@@ -1,0 +1,4488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2017 Microchip Technology Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+        schemaVersion="1.1"
+        xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
+   <vendor>Microchip Technology</vendor>
+   <vendorID>MCHP</vendorID>
+   <name>PIC32CZ8110CA90100S1</name>
+   <series>PIC32CZCA90</series>
+   <version>0</version>
+   <description>Microchip PIC32CZ8110CA90100S1 Microcontroller</description>
+   <cpu>
+      <name>CM0+</name>
+      <revision>r0p0</revision>
+      <endian>little</endian>
+      <mpuPresent>false</mpuPresent>
+      <fpuPresent>false</fpuPresent>
+      <vtorPresent>true</vtorPresent>
+      <nvicPrioBits>2</nvicPrioBits>
+      <vendorSystickConfig>false</vendorSystickConfig>
+   </cpu>
+   <addressUnitBits>8</addressUnitBits>
+   <width>32</width>
+   <size>32</size>
+   <access>read-write</access>
+   <resetValue>0x00000000</resetValue>
+   <resetMask>0xFFFFFFFF</resetMask>
+   <peripherals>
+      <peripheral>
+         <name>AI</name>
+         <version>DOS037851a0</version>
+         <description>Auxiliary Interface</description>
+         <groupName>AUXINTF</groupName>
+         <prependToName>AUXINTF_</prependToName>
+         <baseAddress>0x57000100</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x8</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>AIOFFSET</name>
+               <description>Auxiliary Interface Address Offset</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>OFFSET</name>
+                     <description>Address Offset</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>AIATTR</name>
+               <description>Auxiliary Interface Attributes</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>NSM</name>
+                     <description>Non Secure Master</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>CSM</name>
+         <version>DOS037851a0</version>
+         <description>Control and Status Module</description>
+         <groupName>CSM</groupName>
+         <prependToName>CSM_</prependToName>
+         <baseAddress>0x57000000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x1C</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <interrupt>
+            <name>CSM_COMMANDCANCEL</name>
+            <value>0</value>
+         </interrupt>
+         <interrupt>
+            <name>CSM_FCW</name>
+            <value>2</value>
+         </interrupt>
+         <registers>
+            <register>
+               <name>CSMCTRLA</name>
+               <description>CSM Control register A</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000300</resetValue>
+               <fields>
+                  <field>
+                     <name>SECURED</name>
+                     <description>Secured bit</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>RTCCLK</name>
+                     <description>RTC Clock Enable bit</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CSMCTRLB</name>
+               <description>CSM Control register B</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ERROR</name>
+                     <description>Error Interrupt Request bit.</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt Request bit.</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CSMINTENCLR</name>
+               <description>CSM INTERRUPT ENABLE Clear register</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CANCEL</name>
+                     <description>Cancel Command Interrupt Enable bit</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CSMINTENSET</name>
+               <description>CSM INTERRUPT ENABLE SET register</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CANCEL</name>
+                     <description>Cancel Command Interrupt Enable bit</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CSMINTFLAG</name>
+               <description>CSM INTERRUPT FLAG register</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CANCEL</name>
+                     <description>Cancel Command Interrupt Flag bit</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CSMSTATUS</name>
+               <description>CSM Status register</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>OTPLOCK</name>
+                     <description>OTP Lock bit</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CSMREPORT</name>
+               <description>CSM REPORT register</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>BUSY</name>
+                     <description>HSM CPU Busy</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PS</name>
+                     <description>Processing State bits</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>LCS</name>
+                     <description>Lifecycle State bits</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>SBS</name>
+                     <description>Secure Boot State bits</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>ECODE</name>
+                     <description>Error Code</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>EXTDMA</name>
+         <description>External DMA Module</description>
+         <groupName>EXTDMA</groupName>
+         <prependToName>EXTDMA_</prependToName>
+         <baseAddress>0x52000800</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x40</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>FETCH_ADDR_LSB</name>
+               <description>Lower Fetch Address</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ADDR</name>
+                     <description>Address</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FETCH_ADDR_MSB</name>
+               <description>Upper Fetch Address</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>FETCH_LEN</name>
+               <description>Fetch Length</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>LEN</name>
+                     <description>Length of data block</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>28</bitWidth>
+                  </field>
+                  <field>
+                     <name>CST_ADDR</name>
+                     <description>CST Address</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>REALIGN</name>
+                     <description>Realign</description>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FETCH_TAG</name>
+               <description>Fetch Tag</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>TAG</name>
+                     <description>User TAG</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PUSH_ADDR_LSB</name>
+               <description>Lower Push Address</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ADDR</name>
+                     <description>Address</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PUSH_ADDR_MSB</name>
+               <description>Upper Fetch Address</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>PUSH_LEN</name>
+               <description>Push Length</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>LEN</name>
+                     <description>Length of data block</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>28</bitWidth>
+                  </field>
+                  <field>
+                     <name>CST_ADDR</name>
+                     <description>CST Address</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>REALIGN</name>
+                     <description>Realign</description>
+                     <bitOffset>29</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>INT_EN</name>
+               <description>Interrupt Enable</description>
+               <addressOffset>0x1C</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INT_ENSET</name>
+               <description>Interrupt Enable Set</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INT_ENCLR</name>
+               <description>Interrupt Enable Clear</description>
+               <addressOffset>0x24</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INT_STATRAW</name>
+               <description>Interrupt Raw Status</description>
+               <addressOffset>0x28</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INT_STAT</name>
+               <description>Interrupt Status</description>
+               <addressOffset>0x2C</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INT_STAT_CLR</name>
+               <description>Interrupt Status Clear</description>
+               <addressOffset>0x30</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>CONFIG</name>
+               <description>Configuraiton</description>
+               <addressOffset>0x34</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>FETCHER_SCATTER_GATHER</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PUSHER_SCATTER_GATHER</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>STOP_PUSHER</name>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>STOP_FETCHER</name>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SOFTWARE_RESET</name>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>START</name>
+               <description>Start</description>
+               <addressOffset>0x38</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>START_FETCH</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>START_PUSH</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>STATUS</name>
+               <description>Stop</description>
+               <addressOffset>0x3C</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>FETCHER_BUSY</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PUSHER_BUSY</name>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>BUSY_FLAG</name>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FETCHER_NOT_EMPTY</name>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PUSHER_WAITING_FIFO</name>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>BYTES_NUMBER</name>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>INTCTRL</name>
+         <description>eSecure Interrupt Controller Module</description>
+         <groupName>INTCTRL</groupName>
+         <prependToName>INTCTRL_</prependToName>
+         <baseAddress>0x52000400</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x4C</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <interrupt>
+            <name>INTCTRL</name>
+            <value>1</value>
+         </interrupt>
+         <registers>
+            <register>
+               <name>STATL</name>
+               <description>Interrupt Status Register Low</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>RSRL</name>
+               <description>Interrupt Raw Status Register Low</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ENAL</name>
+               <description>Interrupt Enable Register Low</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CLRL</name>
+               <description>Interrupt Disable Register Low</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>TSTL</name>
+               <description>Interrupt Test Source Register Low</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SELL</name>
+               <description>Interrupt Source Selection Register Low</description>
+               <addressOffset>0x28</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>APRL</name>
+               <description>Interrupt Activation Polarity Register Low</description>
+               <addressOffset>0x30</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTODMA</name>
+                     <description>Crypto DMA Interrupt</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NDRNG</name>
+                     <description>RNG Interrupt</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PKENGINE</name>
+                     <description>PK Engine Interrupt</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ATRL</name>
+               <description>Interrupt Activation Type Register Low</description>
+               <addressOffset>0x38</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ITRL</name>
+               <description>Interrupt Type register Low</description>
+               <addressOffset>0x40</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>RTC</name>
+                     <description>RTC Interrupt</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER</name>
+                     <description>Tamper Interrupt</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTDMA</name>
+                     <description>External DMA Interrupt</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>WDOG</name>
+                     <description>Watch Dog Interrupt</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TAMPER_BUSY</name>
+                     <description>Tamper Busy Interrupt</description>
+                     <bitOffset>5</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER0</name>
+                     <description>Timer 0 Interrupt</description>
+                     <bitOffset>6</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TIMER1</name>
+                     <description>Timer 1 interrupt</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PWRDOWN</name>
+                     <description>Power Down Interrupt</description>
+                     <bitOffset>11</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_TX</name>
+                     <description>Mailbox TX Interrupt</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>MB_RX</name>
+                     <description>Mailbox RX Interrupt</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO0</name>
+                     <description>Crypto Interrupt 0</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO1</name>
+                     <description>Crypto Interrupt 1</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO2</name>
+                     <description>Crypto Interrupt 2</description>
+                     <bitOffset>18</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>CRYPTO3</name>
+                     <description>Crypto Interrupt 3</description>
+                     <bitOffset>19</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PIN</name>
+               <description>Interrupt Pending IRQ Num</description>
+               <addressOffset>0x48</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PIN</name>
+                     <description>Pending IRQ Num</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>6</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>MAILBOX</name>
+         <description>eSecure MailBox Module</description>
+         <groupName>MAILBOX</groupName>
+         <prependToName>MAILBOX_</prependToName>
+         <baseAddress>0x50000000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x5C</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <dim>16</dim>
+               <dimIncrement>4</dimIncrement>
+               <name>FIFO[%s]</name>
+               <description>Mailbox FIFO</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>Data</name>
+                     <description>Mailbox data</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>TX_STATUS</name>
+               <description>Transmit Status</description>
+               <addressOffset>0x40</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>TXREMAINING</name>
+                     <description>Transmit Bytes Remaining</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+                  <field>
+                     <name>TXTYPE</name>
+                     <description>Message Type</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>TXINT</name>
+                     <description>Transmit Interrupt</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TXFULL</name>
+                     <description>Transmit FIFO Full</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TXERROR</name>
+                     <description>Transmit Error</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>RX_STATUS</name>
+               <description>Receive Status</description>
+               <addressOffset>0x44</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>RXREMAINING</name>
+                     <description>Receive Bytes Remaining</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+                  <field>
+                     <name>RXTYPE</name>
+                     <description>Receive Message Type</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>RXINT</name>
+                     <description>Receive Interrupt Occurred</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>RXEMPTY</name>
+                     <description>Receive FIFO Empty</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>RXHEADER</name>
+                     <description>Receive Header</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>RXERROR</name>
+                     <description>Receive Error</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>TX_PROT</name>
+               <description>Transmit Protect</description>
+               <addressOffset>0x48</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>UNPROT</name>
+                     <description>Mailbox Message Unprotected</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRIV</name>
+                     <description>Mailbox message Privilaged</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NSEC</name>
+                     <description>Mailbox Message Unsecured</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>USER</name>
+                     <description>User bits</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>RX_PROT</name>
+               <description>Receieve Protect</description>
+               <addressOffset>0x4C</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>UNPROTECT</name>
+                     <description>Mailbox Message Unprotected</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRIV</name>
+                     <description>Mailbox message Privilaged</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NSEC</name>
+                     <description>Mailbox Message Unsecured</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>USER</name>
+                     <description>User bits</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>TX_HEADER</name>
+               <description>Transmit Header</description>
+               <addressOffset>0x50</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <fields>
+                  <field>
+                     <name>MSGSIZE</name>
+                     <description>Message Size</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+                  <field>
+                     <name>MSGINFO</name>
+                     <description>Message Info</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>UNPROT</name>
+                     <description>Unprotected Access</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRIV</name>
+                     <description>Privilaged Access</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>NSEC</name>
+                     <description>Non Secure Access</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>USER</name>
+                     <description>User Bits</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>RX_HEADER</name>
+               <description>Receive Header</description>
+               <addressOffset>0x54</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <fields>
+                  <field>
+                     <name>MSGSIZE</name>
+                     <description>Message Size</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+                  <field>
+                     <name>MSGINFO</name>
+                     <description>Message Information</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>UNPROT</name>
+                     <description>Unprotected Access</description>
+                     <bitOffset>21</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CONFIG</name>
+               <description>Configuration</description>
+               <addressOffset>0x58</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>TX_INT_ENABLE</name>
+                     <description>Transmit Interrupt Enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>RX_INT_ENABLE</name>
+                     <description>Receive Interrupt Enable</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>MCRAMC</name>
+         <version>drm_mcramc_v33a0</version>
+         <description>Multi-Channel RAM Controller Module</description>
+         <groupName>MCRAMC</groupName>
+         <prependToName>MCRAMC_</prependToName>
+         <baseAddress>0x57000300</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x2C</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>CTRLA</name>
+               <description>Control Enable A Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000002</resetValue>
+               <fields>
+                  <field>
+                     <name>SWRST</name>
+                     <description>Software Reset</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>SWRSTSelect</name>
+                        <enumeratedValue>
+                           <name>0</name>
+                           <description>No effect.</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>1</name>
+                           <description>Reset the MCRAMC. A software-triggered hardware reset of the MCRAMC user interface is performed.</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>ENABLE</name>
+                     <description>ECC Decoder Enable</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>ENABLESelect</name>
+                        <enumeratedValue>
+                           <name>0</name>
+                           <description>ECC decoding is disabled.</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>1</name>
+                           <description>ECC decoding is enabled.</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SYNCBUSY</name>
+               <description>Sync Busy Register</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SWRST</name>
+                     <description>Software reset busy bit</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FLTEN</name>
+                     <description>Fault Injection Enabled busy bit</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ENABLE</name>
+                     <description>ECC Decoder Enable busy bit</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>INTENCLR</name>
+               <description>Interrupt Enable Clear Register</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SERREN</name>
+                     <description>Single Bit Error Interrupt Enable, Clear</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DERREN</name>
+                     <description>Double Bit Error Interrupt Enable, Clear</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>INTENSET</name>
+               <description>Interrupt Enable Set Register</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SERREN</name>
+                     <description>Single Bit Error Interrupt Enable, Set</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DERREN</name>
+                     <description>Double Bit Error Interrupt Enable, Set</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>INTSTA</name>
+               <description>Interrupt Status Register</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SERR</name>
+                     <description>Single Bit Error</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DERR</name>
+                     <description>Double Bit Error</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FLTCTRL</name>
+               <description>Fault Injection Control Register</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>FLTEN</name>
+                     <description>Fault Injection Enabled</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>FLTENSelect</name>
+                        <enumeratedValue>
+                           <name>0</name>
+                           <description>Disables fault injection.</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>1</name>
+                           <description>Enables fault injection at FLTADR address offset as selected by FLTMD and FLTxPTR.</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>FLTMD</name>
+                     <description>Fault Injection Mode</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FLTPTR</name>
+               <description>Fault Injection Pointer Register</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>FLT1PTR</name>
+                     <description>Single Fault Injection Bit Pointer</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>FLT2PTR</name>
+                     <description>Double Fault Injection Bit Pointer</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FLTADR</name>
+               <description>Fault Injection Address Register</description>
+               <addressOffset>0x1C</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>FLTADR</name>
+                     <description>Fault Address Offset</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>24</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ERRCADR</name>
+               <description>Error Capture Address Register</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ERCADR</name>
+                     <description>ECC SECDED Error Capture Address</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>24</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ERRCPAR</name>
+               <description>Error Capture Parity Register</description>
+               <addressOffset>0x24</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ERCPAR</name>
+                     <description>ECC SECDED Error Capture Parity</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ERRCSYN</name>
+               <description>Error Capture Syndrome Register</description>
+               <addressOffset>0x28</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ERCSYN</name>
+                     <description>ECC SECDED Error Capture Syndrome</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>8</bitWidth>
+                     <enumeratedValues>
+                        <name>ERCSYNSelect</name>
+                        <enumeratedValue>
+                           <name>0</name>
+                           <description>Not a Single bit error.</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>1</name>
+                           <description>Single bit error.</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>ERR1</name>
+                     <description>ECC Single Bit Error</description>
+                     <bitOffset>14</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ERR2</name>
+                     <description>ECC Double Bit Error</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>ERR2Select</name>
+                        <enumeratedValue>
+                           <name>0</name>
+                           <description>Not a Double bit error.</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>1</name>
+                           <description>Double bit error.</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>NVIC</name>
+         <version>SYSTEM_IP1.0.0</version>
+         <description>Nested Vectored Interrupt Controller</description>
+         <groupName>NVIC</groupName>
+         <prependToName>NVIC_</prependToName>
+         <baseAddress>0xE000E100</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x304</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>ISER</name>
+               <description>Interrupt Set Enable Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SETENA</name>
+                     <description>Interrupt set enable bits</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ICER</name>
+               <description>Interrupt Clear Enable Register</description>
+               <addressOffset>0x80</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CLRENA</name>
+                     <description>Interrupt clear-enable bits</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ISPR</name>
+               <description>Interrupt Set Pending Register</description>
+               <addressOffset>0x100</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SETPEND</name>
+                     <description>Interrupt set-pending bits</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ICPR</name>
+               <description>Interrupt Clear Pending Register</description>
+               <addressOffset>0x180</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CLRPEND</name>
+                     <description>Interrupt clear-pending bits</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>IPR</name>
+               <description>Interrupt Priority Register n</description>
+               <addressOffset>0x300</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PRI0</name>
+                     <description>Priority of interrupt n</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRI1</name>
+                     <description>Priority of interrupt n</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRI2</name>
+                     <description>Priority of interrupt n</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRI3</name>
+                     <description>Priority of interrupt n</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>2</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>PKRAM</name>
+         <version>DOS037851a0</version>
+         <description>PKRAM Module</description>
+         <groupName>PKRAM</groupName>
+         <prependToName>PKRAM_</prependToName>
+         <baseAddress>0x57000200</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x8</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>PKRPCTRL</name>
+               <description>Parity Control</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PARITY</name>
+                     <description>RAM Parity Enable bit (1)</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FLTEN</name>
+                     <description>Fault Injection Enable bit</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>FLTPTR</name>
+                     <description>Fault Injection Bit Pointer bit</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>7</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>PKRPERROR</name>
+               <description>Parity Error</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PARITY</name>
+                     <description>PK RAM Parity Error bit</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>RTC</name>
+         <description>Real Time Clock Module</description>
+         <groupName>RTC</groupName>
+         <prependToName>RTC_</prependToName>
+         <baseAddress>0x59000000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x18</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>CNTL</name>
+               <description>Lower Count</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CNTL</name>
+                     <description>RTC Lower Counter Register</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>15</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CNTH</name>
+               <description>Upper  Count</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>CNTH</name>
+                     <description>RTC Upper Counter Register</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MATCHL</name>
+               <description>Lower Match</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>MATCHL</name>
+                     <description>RTC Match Register</description>
+                     <bitOffset>17</bitOffset>
+                     <bitWidth>15</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>MATCHH</name>
+               <description>UpperMatch</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>MATCHH</name>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>32</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CTRL</name>
+               <description>Control</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>ENI</name>
+                     <description>ENI</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ENB</name>
+                     <description>ENB</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>STAT</name>
+               <description>Status</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>STAT</name>
+                     <description>Raw match status</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>SYSREGS</name>
+         <description>eSecure System Registers Module</description>
+         <groupName>SYSREGS</groupName>
+         <prependToName>SYSREGS_</prependToName>
+         <baseAddress>0x52001C00</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x10</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>POWERCTRL</name>
+               <description>Power Control</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>STATE</name>
+                     <description>Power Control State</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                     <enumeratedValues>
+                        <name>STATESelect</name>
+                        <enumeratedValue>
+                           <name>ESECBOOTDONE</name>
+                           <description>ESecure Boot is Finished</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>POWERDOWN</name>
+                           <description>ESecure is in Power-down</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTBOOTDONE</name>
+                           <description>Host Boot is Finished</description>
+                           <value>0x3</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>IDLE</name>
+                           <description>ESecure is Idle</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>BUSY</name>
+                           <description>ESecure is Busy</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>SysTick</name>
+         <version>SYSTEM_IP1.0.0</version>
+         <description>System timer</description>
+         <groupName>SysTick</groupName>
+         <prependToName>SysTick_</prependToName>
+         <baseAddress>0xE000E010</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x10</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>CSR</name>
+               <description>SysTick Control and Status Register</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <resetValue>0x4</resetValue>
+               <fields>
+                  <field>
+                     <name>ENABLE</name>
+                     <description>SysTick Counter Enable</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>ENABLESelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Counter disabled</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Counter enabled</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>TICKINT</name>
+                     <description>SysTick Exception Request Enable</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>TICKINTSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Counting down to 0 does not assert the SysTick exception request</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Counting down to 0 asserts the SysTick exception request</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>CLKSOURCE</name>
+                     <description>Clock Source 0=external, 1=processor</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>CLKSOURCESelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>External clock</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Processor clock</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>COUNTFLAG</name>
+                     <description>Timer counted to 0 since last read of register</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>RVR</name>
+               <description>SysTick Reload Value Register</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>RELOAD</name>
+                     <description>Value to load into the SysTick Current Value Register when the counter reaches 0</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>24</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CVR</name>
+               <description>SysTick Current Value Register</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <fields>
+                  <field>
+                     <name>CURRENT</name>
+                     <description>Current value at the time the register is accessed</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>24</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CALIB</name>
+               <description>SysTick Calibration Value Register</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0</resetValue>
+               <fields>
+                  <field>
+                     <name>TENMS</name>
+                     <description>Reload value to use for 10ms timing</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>24</bitWidth>
+                  </field>
+                  <field>
+                     <name>SKEW</name>
+                     <description>TENMS is rounded from non-integer ratio</description>
+                     <bitOffset>30</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>SKEWSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>10ms calibration value is exact</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>10ms calibration value is inexact, because of the clock frequency</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>NOREF</name>
+                     <description>No Separate Reference Clock</description>
+                     <bitOffset>31</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>NOREFSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>The reference clock is provided</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>The reference clock is not provided</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>SystemControl</name>
+         <version>SYSTEM_IP1.0.0</version>
+         <description>System Control Registers</description>
+         <groupName>SystemControl</groupName>
+         <prependToName>SystemControl_</prependToName>
+         <baseAddress>0xE000E000</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0xD34</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>CPUID</name>
+               <description>CPUID Base Register</description>
+               <addressOffset>0xD00</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x410CC601</resetValue>
+               <fields>
+                  <field>
+                     <name>REVISION</name>
+                     <description>Minor revision number</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>PARTNO</name>
+                     <description>Processor Part Number, 0xC60=Cortex-M0+</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>12</bitWidth>
+                  </field>
+                  <field>
+                     <name>ARCHITECTURE</name>
+                     <description>Processor Architecture, 0xC=ARMv6-M</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>VARIANT</name>
+                     <description>Major revision number</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>4</bitWidth>
+                  </field>
+                  <field>
+                     <name>IMPLEMENTER</name>
+                     <description>Implementer code, ARM=0x41</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>ICSR</name>
+               <description>Interrupt Control and State Register</description>
+               <addressOffset>0xD04</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>VECTACTIVE</name>
+                     <description>Debug: Exception number of currently executing exception, or 0 if thread mode</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>9</bitWidth>
+                  </field>
+                  <field>
+                     <name>VECTPENDING</name>
+                     <description>Exception number of the highest priority pending enabled exception</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>9</bitWidth>
+                  </field>
+                  <field>
+                     <name>ISRPENDING</name>
+                     <description>Debug: NVIC interrupt pending</description>
+                     <bitOffset>22</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>ISRPREEMPT</name>
+                     <description>Debug: Pending exception serviced on exit from debug halt</description>
+                     <bitOffset>23</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>PENDSTCLR</name>
+                     <description>SysTick exception clear-pending bit</description>
+                     <bitOffset>25</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>PENDSTCLRSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>No effect</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Removes the pending state from the SysTick exception</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>PENDSTSET</name>
+                     <description>SysTick exception set-pending bit</description>
+                     <bitOffset>26</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>PENDSTSETSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Write: no effect; read: SysTick exception is not pending</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Write: changes SysTick exception state to pending; read: SysTick exception is pending</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>PENDSVCLR</name>
+                     <description>PendSV clear-pending bit</description>
+                     <bitOffset>27</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>PENDSVCLRSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>No effect</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Removes the pending state from the PendSV exception</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>PENDSVSET</name>
+                     <description>PendSV set-pending bit</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>PENDSVSETSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Write: no effect; read: PendSV exception is not pending</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Write: changes PendSV exception state to pending; read: PendSV exception is pending</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>NMIPENDSET</name>
+                     <description>NMI set-pending bit</description>
+                     <bitOffset>31</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>NMIPENDSETSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Write: no effect; read: NMI exception is not pending</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Write: changes NMI exception state to pending; read: NMI exception is pending</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>VTOR</name>
+               <description>Vector Table Offset Register</description>
+               <addressOffset>0xD08</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>TBLOFF</name>
+                     <description>Vector table base offset</description>
+                     <bitOffset>7</bitOffset>
+                     <bitWidth>25</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>AIRCR</name>
+               <description>Application Interrupt and Reset Control Register</description>
+               <addressOffset>0xD0C</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>VECTCLRACTIVE</name>
+                     <description>Debug: Clear state information</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>SYSRESETREQ</name>
+                     <description>System Reset Request</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>SYSRESETREQSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>No system reset request</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Asserts a signal to the outer system that requests a reset</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>ENDIANNESS</name>
+                     <description>Data Endianness, 0=little, 1=big</description>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>ENDIANNESSSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Little-endian</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Big-endian</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>VECTKEY</name>
+                     <description>Register key (0x05FA)</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SCR</name>
+               <description>System Control Register</description>
+               <addressOffset>0xD10</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SLEEPONEXIT</name>
+                     <description>Sleep-On-Exit when exiting Handler mode</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>SLEEPONEXITSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>O not sleep when returning to Thread mode</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Enter sleep, or deep sleep, on return from an ISR</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>SLEEPDEEP</name>
+                     <description>Uses Deep Sleep as low power mode</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>SLEEPDEEPSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Sleep</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Deep sleep</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>SEVONPEND</name>
+                     <description>Send Event on Pending bit</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>SEVONPENDSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Enabled events and all interrupts, including disabled interrupts, can wakeup the processor</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>CCR</name>
+               <description>Configuration and Control Register</description>
+               <addressOffset>0xD14</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000204</resetValue>
+               <fields>
+                  <field>
+                     <name>UNALIGN_TRP</name>
+                     <description>Unaligned accesses generates a Hard Fault</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>UNALIGN_TRPSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>Do not trap unaligned halfword and word accesses</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>Trap unaligned halfword and word accesses</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>STKALIGN</name>
+                     <description>Stack 8-byte aligned on exception entry</description>
+                     <bitOffset>9</bitOffset>
+                     <bitWidth>1</bitWidth>
+                     <enumeratedValues>
+                        <name>STKALIGNSelect</name>
+                        <enumeratedValue>
+                           <name>VALUE_0</name>
+                           <description>4-byte aligned</description>
+                           <value>0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>VALUE_1</name>
+                           <description>8-byte aligned</description>
+                           <value>1</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SHPR2</name>
+               <description>System Handler Priority Register 2</description>
+               <addressOffset>0xD1C</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PRI_11</name>
+                     <description>Priority of system handler 11, SVCall</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SHPR3</name>
+               <description>System Handler Priority Register 3</description>
+               <addressOffset>0xD20</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>PRI_14</name>
+                     <description>Priority of system handler 14, PendSV</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+                  <field>
+                     <name>PRI_15</name>
+                     <description>Priority of system handler 15, SysTick exception</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>8</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SHCSR</name>
+               <description>System Handler Control and State Register</description>
+               <addressOffset>0xD24</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>SVCALLPENDED</name>
+                     <bitOffset>15</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>DFSR</name>
+               <description>Debug Fault Status Register</description>
+               <addressOffset>0xD30</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>HALTED</name>
+                     <description>Halt request debug event active</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>BKPT</name>
+                     <description>Breakpoint debug event</description>
+                     <bitOffset>1</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>DWTTRAP</name>
+                     <description>DWT debug event</description>
+                     <bitOffset>2</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>VCATCH</name>
+                     <description>Vector catch debug event</description>
+                     <bitOffset>3</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>EXTERNAL</name>
+                     <description>EDBGRQ debug event</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>TAMPER</name>
+         <description>eSecure IP Core Anti-tampering</description>
+         <groupName>TAMPER</groupName>
+         <prependToName>TAMPER_</prependToName>
+         <baseAddress>0x59000400</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x38</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>LEVELA</name>
+               <description>Level A</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x11111115</resetValue>
+               <fields>
+                  <field>
+                     <name>LEVEL0</name>
+                     <description>Level 0</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL0Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL1</name>
+                     <description>Level 1</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL1Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL2</name>
+                     <description>Level 2</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL2Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL3</name>
+                     <description>Level 3</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL3Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL4</name>
+                     <description>Level 4</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL4Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL5</name>
+                     <description>Level 5</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL5Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL6</name>
+                     <description>Level 6</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL6Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL7</name>
+                     <description>Level 7</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL7Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>LEVELB</name>
+               <description>Level B</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x11111111</resetValue>
+               <fields>
+                  <field>
+                     <name>LEVEL8</name>
+                     <description>Level 8</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL8Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL9</name>
+                     <description>Level 9</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL9Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL10</name>
+                     <description>Level 10</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL10Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL11</name>
+                     <description>Level 11</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL11Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL12</name>
+                     <description>Level 12</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL12Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL13</name>
+                     <description>Level 13</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL13Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL14</name>
+                     <description>Level 14</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL14Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL15</name>
+                     <description>Level 15</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL15Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>LEVELC</name>
+               <description>Level C</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x11111111</resetValue>
+               <fields>
+                  <field>
+                     <name>LEVEL16</name>
+                     <description>Level 16</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL16Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL17</name>
+                     <description>Level 17</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL17Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL18</name>
+                     <description>Level 18</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL18Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL19</name>
+                     <description>Level 19</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL19Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL20</name>
+                     <description>Level 20</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL20Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL21</name>
+                     <description>Level 21</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL21Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL22</name>
+                     <description>Level 22</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL22Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL23</name>
+                     <description>Level 23</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL23Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>LEVELD</name>
+               <description>Level D</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x11111111</resetValue>
+               <fields>
+                  <field>
+                     <name>LEVEL24</name>
+                     <description>Level 24</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL24Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL25</name>
+                     <description>Level 25</description>
+                     <bitOffset>4</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL25Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL26</name>
+                     <description>Level 26</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL26Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL27</name>
+                     <description>Level 27</description>
+                     <bitOffset>12</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL27Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL28</name>
+                     <description>Level 28</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL28Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL29</name>
+                     <description>Level 29</description>
+                     <bitOffset>20</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL29Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL30</name>
+                     <description>Level 30</description>
+                     <bitOffset>24</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL30Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+                  <field>
+                     <name>LEVEL31</name>
+                     <description>Level 31</description>
+                     <bitOffset>28</bitOffset>
+                     <bitWidth>4</bitWidth>
+                     <enumeratedValues>
+                        <name>LEVEL31Select</name>
+                        <enumeratedValue>
+                           <name>NONE</name>
+                           <description>No Action</description>
+                           <value>0x0</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>HOSTIRQ</name>
+                           <description>Host Interrupt</description>
+                           <value>0x1</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>LEHIRQ</name>
+                           <description>Log Event and Host Interrupt</description>
+                           <value>0x2</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>SAFEMODE</name>
+                           <description>Enter Safe Mode</description>
+                           <value>0x4</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSTKEY</name>
+                           <description>Erase Tamper Key</description>
+                           <value>0x5</value>
+                        </enumeratedValue>
+                        <enumeratedValue>
+                           <name>ERSFKEY</name>
+                           <description>Erase Flash Key</description>
+                           <value>0x6</value>
+                        </enumeratedValue>
+                     </enumeratedValues>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SETLEVEL</name>
+               <description>Set Level</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>TamperLevel</name>
+                     <description>Tamper Level</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>TamperID</name>
+                     <description>Tamper ID</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+                  <field>
+                     <name>ProtectionKey</name>
+                     <description>Protection Key</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>FILTERCFG</name>
+               <description>Filter Configuraiton</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>Threshold</name>
+                     <description>Filter Threshold</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>3</bitWidth>
+                  </field>
+                  <field>
+                     <name>Period</name>
+                     <description>Filter Period</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+                  <field>
+                     <name>ProtectionKey</name>
+                     <description>Filter Protection Key</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>SOFTTAMP</name>
+               <description>Soft Tamper</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>TamperActive</name>
+                     <description>Tamper Active</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+                  <field>
+                     <name>TamperID</name>
+                     <description>Tamper ID</description>
+                     <bitOffset>8</bitOffset>
+                     <bitWidth>5</bitWidth>
+                  </field>
+                  <field>
+                     <name>ProtectionKey</name>
+                     <description>Protection Key</description>
+                     <bitOffset>16</bitOffset>
+                     <bitWidth>16</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>RAWSTAT</name>
+               <description>Raw Status</description>
+               <addressOffset>0x1C</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>STAT</name>
+               <description>Status</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000001</resetValue>
+            </register>
+            <register>
+               <name>TIMESTAMP</name>
+               <description>Time Stamp</description>
+               <addressOffset>0x24</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>FILTERCNT</name>
+               <description>Filter Count</description>
+               <addressOffset>0x28</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>SOFTINFO</name>
+               <description>Soft Information</description>
+               <addressOffset>0x2C</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>HOSTIRQ</name>
+               <description>Host Interrupt</description>
+               <addressOffset>0x30</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+            </register>
+            <register>
+               <name>SOFTRESET</name>
+               <description>Soft Reset</description>
+               <addressOffset>0x34</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+               <resetValue>0x00000000</resetValue>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>TIMERS</name>
+         <description>Timer Module</description>
+         <groupName>TIMERS</groupName>
+         <prependToName>TIMERS_</prependToName>
+         <baseAddress>0x52001800</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x28</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>RST</name>
+               <description>Reset</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>STOP</name>
+               <description>Stop</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INTEN</name>
+               <description>Interrupt Enable</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>INTDIS</name>
+               <description>Interrupt Disable</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>STAT</name>
+               <description>Status</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>CNT0</name>
+               <description>Counter 0</description>
+               <addressOffset>0x18</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>MATCH0</name>
+               <description>Match 0</description>
+               <addressOffset>0x1C</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>CNT1</name>
+               <description>Counter 1</description>
+               <addressOffset>0x20</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>MATCH1</name>
+               <description>Match 1</description>
+               <addressOffset>0x24</addressOffset>
+               <size>32</size>
+            </register>
+         </registers>
+      </peripheral>
+      <peripheral>
+         <name>WDT</name>
+         <description>Watchdog Timer Module</description>
+         <groupName>WDT</groupName>
+         <prependToName>WDT_</prependToName>
+         <baseAddress>0x52000C00</baseAddress>
+         <addressBlock>
+            <offset>0</offset>
+            <size>0x18</size>
+            <usage>registers</usage>
+         </addressBlock>
+         <registers>
+            <register>
+               <name>WDCOUNT</name>
+               <description>Count</description>
+               <addressOffset>0x0</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>WDRELOAD</name>
+               <description>Reload</description>
+               <addressOffset>0x4</addressOffset>
+               <size>32</size>
+            </register>
+            <register>
+               <name>WDKICK</name>
+               <description>Kick</description>
+               <addressOffset>0x8</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+            </register>
+            <register>
+               <name>WDCONTROL</name>
+               <description>Control</description>
+               <addressOffset>0xC</addressOffset>
+               <size>32</size>
+               <resetValue>0x00000000</resetValue>
+               <fields>
+                  <field>
+                     <name>WDRSTEN</name>
+                     <description>WDRSTEN</description>
+                     <bitOffset>0</bitOffset>
+                     <bitWidth>1</bitWidth>
+                  </field>
+               </fields>
+            </register>
+            <register>
+               <name>WDSTATUS</name>
+               <description>Status</description>
+               <addressOffset>0x10</addressOffset>
+               <size>32</size>
+               <access>read-only</access>
+            </register>
+            <register>
+               <name>WDSTOP</name>
+               <description>Stop</description>
+               <addressOffset>0x14</addressOffset>
+               <size>32</size>
+               <access>write-only</access>
+            </register>
+         </registers>
+      </peripheral>
+   </peripherals>
+</device>

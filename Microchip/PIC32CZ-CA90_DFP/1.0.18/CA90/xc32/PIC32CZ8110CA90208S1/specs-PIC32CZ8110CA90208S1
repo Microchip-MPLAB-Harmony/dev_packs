@@ -1,0 +1,103 @@
+#v2.10
+# --------------------------------------------------------------------------
+#  MPLAB XC32 Compiler -  XC32 specs file for PIC32CZ8110CA90208S1
+#  
+#  Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
+#  All rights reserved.
+#  
+#  This software is developed by Microchip Technology Inc. and its
+#  subsidiaries ("Microchip").
+#  
+#  Redistribution and use in source and binary forms, with or without
+#  modification, are permitted provided that the following conditions are 
+#  met:
+#  
+#  1.      Redistributions of source code must retain the above copyright
+#          notice, this list of conditions and the following disclaimer.
+#  2.      Redistributions in binary form must reproduce the above 
+#          copyright notice, this list of conditions and the following 
+#          disclaimer in the documentation and/or other materials provided 
+#          with the distribution.
+#  3.      Microchip's name may not be used to endorse or promote products
+#          derived from this software without specific prior written 
+#          permission.
+#  
+#  THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR PURPOSE ARE DISCLAIMED. IN NO EVENT 
+#  SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+#  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# --------------------------------------------------------------------------
+#
+# See <https://gcc.gnu.org/onlinedocs/gcc/Spec-Files.html>
+# for a documentation of spec files.
+#
+# If you intend to use an existing device specs file as a starting point
+# for a new device spec file, make sure you are copying from a specs
+# file for a device from the same core architecture and SP width.
+# See <https://gcc.gnu.org/gcc-6/changes.html> for a description
+# of how to use such own spec files.
+
+*pic32clibc_startfile:
+	crti%O%s crtbegin%O%s crt0%O%s 
+
+*pic32c_lib:
+	--start-group -lpic32c %G %L --end-group 
+
+*pic32clibc_devicelib:
+	%{!nodevicelib:-lPIC32CZ8110CA90208S1} 
+
+*cpp:
+	%{mfloat-abi=soft: %{mfloat-abi=hard: %e-mfloat-abi=soft and -mfloat-abi=hard may not be used together}} 
+
+*default_mode:
+        %{!marm: -mthumb } 
+
+*default_fpu:
+        -mfloat-abi=soft 
+
+*cc1_inst_set:
+        %(default_mode) 
+
+*cc1_device:
+	-D__32CZ8110CA90208S1__ 
+
+*cc1_fpu_device:
+        %(default_fpu) 
+
+*cc1_debug:
+	%{D__DEBUG : -mdebugger }
+
+*cc1_save_temps:
+	%{save-temps: -fverbose-asm }
+
+*cc1_smartio:
+	%{msmart-io: %{msmart-io=*: %emay not use both -msmart-io and -msmart-io=LEVEL}} %{mno-smart-io:%{msmart-io=*:%emay not use both -mno-smart-io and -msmart-io=LEVEL}} 
+
+*cc1_config_data:
+	-mconfig-data-file=%{mdfp=*:%*/xc32/PIC32CZ8110CA90208S1/configuration.data ;:%R/lib/proc/PIC32CZ8110CA90208S1/configuration.data } 
+
+*asm_arch:
+	%{mcpu=*: -mcpu=%* ;: -mcpu=cortex-m0plus }
+
+*asm_float:
+	%{mapcs-float: -mfloat }
+
+*endianness:
+        %{mbig-endian: -EB ;: -EL }
+
+*linker_script:
+	 %{!T: %{mdfp=*: -T %*/xc32/PIC32CZ8110CA90208S1/PIC32CZ8110CA90208S1.ld ;: -T %R/lib/proc/PIC32CZ8110CA90208S1/PIC32CZ8110CA90208S1.ld } }
+
+*linker_smartio:
+	%{mno-smart-io:--no-smart-io} %{msmart-io=0:--no-smart-io} 
+
+*self_spec:
+	%{mcpu=*: -mcpu=%* ;: -mcpu=cortex-m0plus } %(default_mode) %{!flto : -fno-lto } %(default_fpu) %(cc1_device) %{mdfp=*: -isystem %*/xc32/include } %{!minclude-legacy-headers: %{mdfp=*: -isystem %*/include_mcc } } %{mdfp=*: -isystem %*/include }   %{mitcm*|mdtcm*|mtcm*: %ethe -mitcm,-mdtcm,-mtcm options are not supported on this device.;: } %{!c: %{!S: %{!E: %{!mno-device-startup-code: %{mdfp=* :%*/xc32/PIC32CZ8110CA90208S1/startup_pic32cz8110ca90208s1.c ;: %R/lib/proc/PIC32CZ8110CA90208S1/startup_pic32cz8110ca90208s1.c } } } } }  
+
+# End of file

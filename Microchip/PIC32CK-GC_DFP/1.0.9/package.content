@@ -1,0 +1,2202 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32CK0512GC00064">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK0512GC00064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK0512GC00064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck0512gc00064.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck0512gc00064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK0512GC00064__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="system_pic32ck0512gc00064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck0512gc00064_flash.ld"/>
+        <includes pattern="gcc/pic32ck0512gc00064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck0512gc00064.s"/>
+        <includes pattern="system_pic32ck0512gc00064.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="system_pic32ck0512gc00064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK0512GC00064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK0512GC00064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK0512GC00064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck0512gc00064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck0512gc00064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK0512GC00100">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK0512GC00100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK0512GC00100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck0512gc00100.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck0512gc00100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK0512GC00100__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="system_pic32ck0512gc00100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck0512gc00100_flash.ld"/>
+        <includes pattern="gcc/pic32ck0512gc00100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck0512gc00100.s"/>
+        <includes pattern="system_pic32ck0512gc00100.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="system_pic32ck0512gc00100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK0512GC00100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK0512GC00100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK0512GC00100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck0512gc00100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck0512gc00100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK0512GC01064">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK0512GC01064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK0512GC01064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck0512gc01064.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck0512gc01064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK0512GC01064__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="system_pic32ck0512gc01064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck0512gc01064_flash.ld"/>
+        <includes pattern="gcc/pic32ck0512gc01064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck0512gc01064.s"/>
+        <includes pattern="system_pic32ck0512gc01064.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="system_pic32ck0512gc01064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK0512GC01064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK0512GC01064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK0512GC01064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck0512gc01064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck0512gc01064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK0512GC01100">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK0512GC01100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK0512GC01100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck0512gc01100.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck0512gc01100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK0512GC01100__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="system_pic32ck0512gc01100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck0512gc01100_flash.ld"/>
+        <includes pattern="gcc/pic32ck0512gc01100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck0512gc01100.s"/>
+        <includes pattern="system_pic32ck0512gc01100.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="system_pic32ck0512gc01100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK0512GC01100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK0512GC01100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK0512GC01100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck0512gc01100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck0512gc01100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK1025GC00064">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK1025GC00064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK1025GC00064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck1025gc00064.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck1025gc00064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK1025GC00064__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="system_pic32ck1025gc00064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck1025gc00064_flash.ld"/>
+        <includes pattern="gcc/pic32ck1025gc00064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck1025gc00064.s"/>
+        <includes pattern="system_pic32ck1025gc00064.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="system_pic32ck1025gc00064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK1025GC00064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK1025GC00064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK1025GC00064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck1025gc00064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck1025gc00064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK1025GC00100">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK1025GC00100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK1025GC00100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck1025gc00100.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck1025gc00100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK1025GC00100__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="system_pic32ck1025gc00100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck1025gc00100_flash.ld"/>
+        <includes pattern="gcc/pic32ck1025gc00100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck1025gc00100.s"/>
+        <includes pattern="system_pic32ck1025gc00100.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="system_pic32ck1025gc00100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK1025GC00100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK1025GC00100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK1025GC00100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck1025gc00100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck1025gc00100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK1025GC01064">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK1025GC01064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK1025GC01064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck1025gc01064.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck1025gc01064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK1025GC01064__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="system_pic32ck1025gc01064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck1025gc01064_flash.ld"/>
+        <includes pattern="gcc/pic32ck1025gc01064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck1025gc01064.s"/>
+        <includes pattern="system_pic32ck1025gc01064.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="system_pic32ck1025gc01064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK1025GC01064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK1025GC01064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK1025GC01064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck1025gc01064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck1025gc01064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK1025GC01100">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK1025GC01100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK1025GC01100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck1025gc01100.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck1025gc01100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK1025GC01100__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="system_pic32ck1025gc01100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck1025gc01100_flash.ld"/>
+        <includes pattern="gcc/pic32ck1025gc01100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck1025gc01100.s"/>
+        <includes pattern="system_pic32ck1025gc01100.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="system_pic32ck1025gc01100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK1025GC01100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK1025GC01100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK1025GC01100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck1025gc01100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck1025gc01100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK2051GC00064">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK2051GC00064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK2051GC00064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck2051gc00064.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck2051gc00064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK2051GC00064__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="system_pic32ck2051gc00064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck2051gc00064_flash.ld"/>
+        <includes pattern="gcc/pic32ck2051gc00064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck2051gc00064.s"/>
+        <includes pattern="system_pic32ck2051gc00064.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="system_pic32ck2051gc00064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK2051GC00064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK2051GC00064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK2051GC00064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck2051gc00064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck2051gc00064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK2051GC00100">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK2051GC00100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK2051GC00100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck2051gc00100.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck2051gc00100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK2051GC00100__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="system_pic32ck2051gc00100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck2051gc00100_flash.ld"/>
+        <includes pattern="gcc/pic32ck2051gc00100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck2051gc00100.s"/>
+        <includes pattern="system_pic32ck2051gc00100.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="system_pic32ck2051gc00100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK2051GC00100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK2051GC00100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK2051GC00100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck2051gc00100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck2051gc00100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK2051GC00144">
+      <resource type="atdf" subdir="PIC32CK-GC00/atdf">
+        <includes pattern="PIC32CK2051GC00144.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC00/edc">
+        <includes pattern="PIC32CK2051GC00144.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck2051gc00144.h"/>
+        <includes pattern="system_pic32ckgc00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck2051gc00144.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK2051GC00144__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="system_pic32ck2051gc00144.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC00/gcc">
+        <includes pattern="gcc/pic32ck2051gc00144_flash.ld"/>
+        <includes pattern="gcc/pic32ck2051gc00144_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC00/armcc">
+        <includes pattern="armcc/startup_pic32ck2051gc00144.s"/>
+        <includes pattern="system_pic32ck2051gc00144.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC00/iar">
+        <includes pattern="iar/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="system_pic32ck2051gc00144.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK2051GC00144.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK2051GC00144.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC00/PIC32CK2051GC00144.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC00/iar">
+        <includes pattern="config/linker/Microchip/pic32ck2051gc00144/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck2051gc00144/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK0512GC00100/PIC32CK0512GC00100.ld"/>
+        <includes pattern="PIC32CK0512GC00100/specs-PIC32CK0512GC00100"/>
+        <includes pattern="PIC32CK0512GC00100/startup_pic32ck0512gc00100.c"/>
+        <includes pattern="PIC32CK0512GC00100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00100/specs-PIC32CK2051GC00100"/>
+        <includes pattern="PIC32CK2051GC00100/PIC32CK2051GC00100.ld"/>
+        <includes pattern="PIC32CK2051GC00100/startup_pic32ck2051gc00100.c"/>
+        <includes pattern="PIC32CK2051GC00100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00100/pic32c"/>
+        <includes pattern="PIC32CK2051GC00144/startup_pic32ck2051gc00144.c"/>
+        <includes pattern="PIC32CK2051GC00144/PIC32CK2051GC00144.ld"/>
+        <includes pattern="PIC32CK2051GC00144/specs-PIC32CK2051GC00144"/>
+        <includes pattern="PIC32CK2051GC00144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00144/pic32c"/>
+        <includes pattern="PIC32CK1025GC00100/startup_pic32ck1025gc00100.c"/>
+        <includes pattern="PIC32CK1025GC00100/PIC32CK1025GC00100.ld"/>
+        <includes pattern="PIC32CK1025GC00100/specs-PIC32CK1025GC00100"/>
+        <includes pattern="PIC32CK1025GC00100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00100/pic32c"/>
+        <includes pattern="PIC32CK0512GC00064/specs-PIC32CK0512GC00064"/>
+        <includes pattern="PIC32CK0512GC00064/startup_pic32ck0512gc00064.c"/>
+        <includes pattern="PIC32CK0512GC00064/PIC32CK0512GC00064.ld"/>
+        <includes pattern="PIC32CK0512GC00064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC00064/pic32c"/>
+        <includes pattern="PIC32CK1025GC00064/specs-PIC32CK1025GC00064"/>
+        <includes pattern="PIC32CK1025GC00064/PIC32CK1025GC00064.ld"/>
+        <includes pattern="PIC32CK1025GC00064/startup_pic32ck1025gc00064.c"/>
+        <includes pattern="PIC32CK1025GC00064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC00064/pic32c"/>
+        <includes pattern="PIC32CK2051GC00064/specs-PIC32CK2051GC00064"/>
+        <includes pattern="PIC32CK2051GC00064/startup_pic32ck2051gc00064.c"/>
+        <includes pattern="PIC32CK2051GC00064/PIC32CK2051GC00064.ld"/>
+        <includes pattern="PIC32CK2051GC00064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC00064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC00/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC00/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK2051GC01064">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK2051GC01064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK2051GC01064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck2051gc01064.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck2051gc01064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK2051GC01064__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="system_pic32ck2051gc01064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck2051gc01064_flash.ld"/>
+        <includes pattern="gcc/pic32ck2051gc01064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck2051gc01064.s"/>
+        <includes pattern="system_pic32ck2051gc01064.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="system_pic32ck2051gc01064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK2051GC01064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK2051GC01064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK2051GC01064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck2051gc01064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck2051gc01064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK2051GC01100">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK2051GC01100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK2051GC01100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck2051gc01100.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck2051gc01100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK2051GC01100__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="system_pic32ck2051gc01100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck2051gc01100_flash.ld"/>
+        <includes pattern="gcc/pic32ck2051gc01100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck2051gc01100.s"/>
+        <includes pattern="system_pic32ck2051gc01100.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="system_pic32ck2051gc01100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK2051GC01100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK2051GC01100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK2051GC01100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck2051gc01100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck2051gc01100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CK2051GC01144">
+      <resource type="atdf" subdir="PIC32CK-GC01/atdf">
+        <includes pattern="PIC32CK2051GC01144.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CK-GC01/edc">
+        <includes pattern="PIC32CK2051GC01144.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CK-GC01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32ck2051gc01144.h"/>
+        <includes pattern="system_pic32ckgc01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hmatrix2.h"/>
+        <includes pattern="component/idau.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/sig.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32ck2051gc01144.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CK2051GC01144__"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="system_pic32ck2051gc01144.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CK-GC01/gcc">
+        <includes pattern="gcc/pic32ck2051gc01144_flash.ld"/>
+        <includes pattern="gcc/pic32ck2051gc01144_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CK-GC01/armcc">
+        <includes pattern="armcc/startup_pic32ck2051gc01144.s"/>
+        <includes pattern="system_pic32ck2051gc01144.c"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CK-GC01/iar">
+        <includes pattern="iar/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="system_pic32ck2051gc01144.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CKGC01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CK2051GC01144.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK2051GC01144.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CK/PIC32CKGC01/PIC32CK2051GC01144.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CK-GC01/iar">
+        <includes pattern="config/linker/Microchip/pic32ck2051gc01144/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32ck2051gc01144/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CK-GC01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="include/xc.h"/>
+        <includes pattern="PIC32CK1025GC01064/specs-PIC32CK1025GC01064"/>
+        <includes pattern="PIC32CK1025GC01064/startup_pic32ck1025gc01064.c"/>
+        <includes pattern="PIC32CK1025GC01064/PIC32CK1025GC01064.ld"/>
+        <includes pattern="PIC32CK1025GC01064/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01100/specs-PIC32CK2051GC01100"/>
+        <includes pattern="PIC32CK2051GC01100/PIC32CK2051GC01100.ld"/>
+        <includes pattern="PIC32CK2051GC01100/startup_pic32ck2051gc01100.c"/>
+        <includes pattern="PIC32CK2051GC01100/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/startup_pic32ck0512gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01100/PIC32CK0512GC01100.ld"/>
+        <includes pattern="PIC32CK0512GC01100/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01100/pic32c"/>
+        <includes pattern="PIC32CK0512GC01100/specs-PIC32CK0512GC01100"/>
+        <includes pattern="PIC32CK2051GC01144/startup_pic32ck2051gc01144.c"/>
+        <includes pattern="PIC32CK2051GC01144/PIC32CK2051GC01144.ld"/>
+        <includes pattern="PIC32CK2051GC01144/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01144/specs-PIC32CK2051GC01144"/>
+        <includes pattern="PIC32CK2051GC01144/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/PIC32CK1025GC01100.ld"/>
+        <includes pattern="PIC32CK1025GC01100/specs-PIC32CK1025GC01100"/>
+        <includes pattern="PIC32CK1025GC01100/configuration.data"/>
+        <includes pattern="PIC32CK1025GC01100/pic32c"/>
+        <includes pattern="PIC32CK1025GC01100/startup_pic32ck1025gc01100.c"/>
+        <includes pattern="PIC32CK0512GC01064/startup_pic32ck0512gc01064.c"/>
+        <includes pattern="PIC32CK0512GC01064/PIC32CK0512GC01064.ld"/>
+        <includes pattern="PIC32CK0512GC01064/specs-PIC32CK0512GC01064"/>
+        <includes pattern="PIC32CK0512GC01064/configuration.data"/>
+        <includes pattern="PIC32CK0512GC01064/pic32c"/>
+        <includes pattern="PIC32CK2051GC01064/startup_pic32ck2051gc01064.c"/>
+        <includes pattern="PIC32CK2051GC01064/specs-PIC32CK2051GC01064"/>
+        <includes pattern="PIC32CK2051GC01064/PIC32CK2051GC01064.ld"/>
+        <includes pattern="PIC32CK2051GC01064/configuration.data"/>
+        <includes pattern="PIC32CK2051GC01064/pic32c"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CK-GC01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CK-GC01/hwtools/sdm">
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CK-GC01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CK-GC01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CK-GC01/scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip" compliant="false">
+        <releases>
+            <release version="1.0.BUILDNUMBER">Initial release.</release>
+        </releases>
+    </pdsc>
+</package>

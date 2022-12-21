@@ -1,0 +1,48 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  CMCC_DATARAM Memory    0x00000000  0x00000FFF  RW
+Memory   =  CMCC_TAGRAM  Memory    0x00001000  0x000013FF  RW
+Memory   =  CMCC_VALIDRAM Memory    0x00003000  0x0000303F  RW
+Memory   =  PRM_ROM      Memory    0x04000000  0x04007FFF  R
+Memory   =  FLASH_BFM    Memory    0x08000000  0x0801FFFF  RW
+Memory   =  FLASH_CFM_USERCFG1 Memory    0x0A000000  0x0A000FFF  RW
+Memory   =  FLASH_CFM_USEROTP1 Memory    0x0A001000  0x0A001FFF  RW
+Memory   =  FLASH_CFM_BOOTCFG1 Memory    0x0A002000  0x0A002FFF  RW
+Memory   =  FLASH_CFM_DALCFG Memory    0x0A004000  0x0A004FFF  RW
+Memory   =  FLASH_CFM_CALBACKUP Memory    0x0A006000  0x0A006FFF  RW
+Memory   =  FLASH_CFM_CALOTP Memory    0x0A007000  0x0A007FFF  R
+Memory   =  FLASH_CFM_USERCFG2 Memory    0x0A008000  0x0A008FFF  RW
+Memory   =  FLASH_CFM_USEROTP2 Memory    0x0A009000  0x0A009FFF  RW
+Memory   =  FLASH_CFM_BOOTCFG2 Memory    0x0A00A000  0x0A00AFFF  RW
+Memory   =  FLASH_PFM    Memory    0x0C000000  0x0C1FFFFF  RW
+Memory   =  SQI_SFR      Memory    0x0FFFF000  0x0FFFFFFF  RW
+Memory   =  SQI_XIP      Memory    0x10000000  0x1FFFFFFF  RW
+Memory   =  HSRAM_RET    Memory    0x20000000  0x2007FFFF  RW
+Memory   =  HPB0_BRIDGE  Memory    0x44000000  0x4402FFFF  RW
+Memory   =  HPB1_BRIDGE  Memory    0x44800000  0x4482FFFF  RW
+Memory   =  HPB2_BRIDGE  Memory    0x45000000  0x4502FFFF  RW
+Memory   =  USBHS_SFR    Memory    0x46000000  0x460015FF  RW
+Memory   =  HSM_SFR      Memory    0x48000000  0x48000FFF  RW
+Memory   =  EBI_CS0      Memory    0x60000000  0x60FFFFFF  RW
+Memory   =  EBI_CS1      Memory    0x61000000  0x61FFFFFF  RW
+Memory   =  EBI_CS2      Memory    0x62000000  0x62FFFFFF  RW
+Memory   =  EBI_CS3      Memory    0x63000000  0x63FFFFFF  RW
+Memory   =  PPB          Memory    0xE0000000  0xE00FFFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = PIC32CK2051SG00100.svd

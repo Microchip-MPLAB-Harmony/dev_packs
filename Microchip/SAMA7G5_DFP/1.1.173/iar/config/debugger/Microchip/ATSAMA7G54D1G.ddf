@@ -1,0 +1,49 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  IROM         Memory    0x00000000  0x00013FFF  R
+Memory   =  ECC_ROM      Memory    0x00020000  0x00037FFF  R
+Memory   =  CPKCC_ROM    Memory    0x00040000  0x0004FFFF  R
+Memory   =  CPKCC_RAM    Memory    0x00051000  0x00051FFF  RW
+Memory   =  IRAM         Memory    0x00100000  0x0011FFFF  RW
+Memory   =  UDPHS_RAMA   Memory    0x00200000  0x002FFFFF  RW
+Memory   =  UDPHS_RAMB   Memory    0x00300000  0x003FFFFF  RW
+Memory   =  UHPHS_OHCI   Memory    0x00400000  0x00400FFF  RW
+Memory   =  UHPHS_EHCI   Memory    0x00500000  0x005FFFFF  RW
+Memory   =  NFC_RAM      Memory    0x00600000  0x00602FFF  RW
+Memory   =  NFC          Memory    0x10000000  0x17FFFFFF  RW
+Memory   =  QSPIMEM0     Memory    0x20000000  0x2FFFFFFF  RW
+Memory   =  QSPIMEM1     Memory    0x30000000  0x3FFFFFFF  RW
+Memory   =  EBI_CS0      Memory    0x40000000  0x47FFFFFF  RW
+Memory   =  EBI_CS1      Memory    0x48000000  0x4FFFFFFF  RW
+Memory   =  EBI_CS2      Memory    0x50000000  0x57FFFFFF  RW
+Memory   =  EBI_CS3      Memory    0x58000000  0x5FFFFFFF  RW
+Memory   =  DDR_CS       Memory    0x60000000  0xDFFFFFFF  RW
+Memory   =  SECURAM      Memory    0xE0000000  0xE0003FFF  RW
+Memory   =  PERIPHERALS  Memory    0xE0000000  0xEFFFFFFF  RW
+Memory   =  SDMMC0       Memory    0xE1204000  0xE1207FFF  RW
+Memory   =  SDMMC1       Memory    0xE1208000  0xE120BFFF  RW
+Memory   =  SDMMC2       Memory    0xE120C000  0xE120FFFF  RW
+Memory   =  APB_DBG_S    Memory    0xE8800000  0xE885FFFF  RW
+Memory   =  APB_DBG      Memory    0xE8900000  0xE8900FFF  RW
+Memory   =  NICGPV       Memory    0xE8B00000  0xE8BFFFFF  RW
+Memory   =  OTPC         Memory    0xE8C00000  0xE8C00FFF  RW
+Memory   =  CSI2DC_META  Memory    0xE8C02000  0xE8C03FFF  RW
+Memory   =  ARM_PERIPH   Memory    0xE8C10000  0xE8C17FFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = ATSAMA7G54D1G.svd

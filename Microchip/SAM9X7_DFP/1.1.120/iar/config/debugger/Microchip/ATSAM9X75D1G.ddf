@@ -1,0 +1,37 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  ECC_ROM      Memory    0x00100000  0x001FFFFF  R
+Memory   =  SRAM0        Memory    0x00300000  0x003FFFFF  RW
+Memory   =  SRAM1        Memory    0x00400000  0x004FFFFF  RW
+Memory   =  UDPHS_RAM    Memory    0x00500000  0x005FFFFF  RW
+Memory   =  UHPHS_OHCI   Memory    0x00600000  0x006FFFFF  RW
+Memory   =  UHPHS_EHCI   Memory    0x00700000  0x007FFFFF  RW
+Memory   =  EBI_CS0      Memory    0x10000000  0x1FFFFFFF  RW
+Memory   =  EBI_CS1      Memory    0x20000000  0x2FFFFFFF  RW
+Memory   =  EBI_MPDDR    Memory    0x20000000  0x2FFFFFFF  RW
+Memory   =  SDRAM_CS     Memory    0x20000000  0x2FFFFFFF  RW
+Memory   =  EBI_CS2      Memory    0x30000000  0x3FFFFFFF  RW
+Memory   =  EBI_NF       Memory    0x30000000  0x3FFFFFFF  RW
+Memory   =  QSPIMEM      Memory    0x60000000  0x7FFFFFFF  RW
+Memory   =  SDMMC0       Memory    0x80000000  0x8FFFFFFF  RW
+Memory   =  SDMMC1       Memory    0x90000000  0x9FFFFFFF  RW
+Memory   =  CSI2DC_META  Memory    0xD0000000  0xD00FFFFF  RW
+Memory   =  OTPC         Memory    0xEFF00000  0xEFF00FFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = ATSAM9X75D1G.svd

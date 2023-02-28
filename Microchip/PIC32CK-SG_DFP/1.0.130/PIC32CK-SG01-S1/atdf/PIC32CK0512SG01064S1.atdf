@@ -1,0 +1,1138 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2021 Microchip Technology Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<!--
+CHPMKR VERSION: 2.4.0
+-->
+<avr-tools-device-file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schema-version="4.5" public="true" xsi:noNamespaceSchemaLocation="https://schemas.microchip.com/com/microchip/atdf/4.5/atdf.xsd">
+  <file timestamp="2023-02-20T18:48:38Z"/>
+  <variants xmlns:mhc="http://www.atmel.com/schemas/avr-tools-device-file/mhc">
+  </variants>
+  <devices>
+    <device name="PIC32CK0512SG01064S1" architecture="CORTEX-M0PLUS" family="PIC32CK" series="PIC32CKSG01">
+      <address-spaces>
+        <address-space id="base" name="base" start="0" size="0x100000000" endianness="little">
+          <memory-segment name="RAM" start="0x10000000" size="0x20000" type="ram" rw="RW" exec="true"/>
+          <memory-segment name="ROM" start="0x20000000" size="0x8000" type="rom" rw="R" exec="true"/>
+          <memory-segment name="APBA" start="0x50000000" size="0x3000000" type="io" rw="RW"/>
+          <memory-segment name="BATTREGS" start="0x53800000" size="0x20" type="ram" rw="RW" exec="true"/>
+          <memory-segment name="APBB" start="0x54000000" size="0xC000000" type="io" rw="RW"/>
+          <memory-segment name="AUX_INTF" start="0x60000000" size="0x10000000" type="ram" rw="RW" exec="true" external="true"/>
+          <memory-segment name="PPB" start="0xE0000000" size="0x20000000" type="io" rw="RW"/>
+        </address-space>
+      </address-spaces>
+      <parameters>
+        <param name="LITTLE_ENDIAN" value="1" caption="None"/>
+        <param name="NUM_IRQ" value="3" caption="None"/>
+        <param name="__CM0P_REV" value="0x0001" caption="None"/>
+        <param name="__MPU_PRESENT" value="0" caption="None"/>
+        <param name="__NVIC_PRIO_BITS" value="2" caption="None"/>
+        <param name="__VTOR_PRESENT" value="1" caption="None"/>
+        <param name="__Vendor_SysTickConfig" value="0" caption="None"/>
+        <param name="POWER_DOMAIN" value="pd_core"/>
+        <param name="__ARCH_ARM" value="1"/>
+        <param name="__ARCH_ARM_CORTEX_M" value="1"/>
+      </parameters>
+      <peripherals>
+        <module name="AUXINTF" id="DOS03785" name2="DOS03785" version="1a0">
+          <instance name="AI">
+            <register-group name="AI" name-in-module="AUXINTF" address-space="base" offset="0x57000100"/>
+          </instance>
+        </module>
+        <module name="CSM" id="DOS03785" name2="DOS03785" version="1a0">
+          <instance name="CSM">
+            <register-group name="CSM" name-in-module="CSM" address-space="base" offset="0x57000000"/>
+          </instance>
+        </module>
+        <module name="EXTDMA" version="1.0.0">
+          <instance name="EXTDMA">
+            <register-group name="EXTDMA" name-in-module="EXTDMA" address-space="base" offset="0x52000800"/>
+          </instance>
+        </module>
+        <module name="INTCTRL" version="1.0.0">
+          <instance name="INTCTRL">
+            <register-group name="INTCTRL" name-in-module="INTCTRL" address-space="base" offset="0x52000400"/>
+          </instance>
+        </module>
+        <module name="MAILBOX" version="1.0.0">
+          <instance name="MAILBOX">
+            <register-group name="MAILBOX" name-in-module="MAILBOX" address-space="base" offset="0x50000000"/>
+          </instance>
+        </module>
+        <module name="MCRAMC" id="drm_mcramc_v3" name2="drm_mcramc_v3" version="3a0">
+          <instance name="MCRAMC">
+            <register-group name="MCRAMC" name-in-module="MCRAMC" address-space="base" offset="0x57000300"/>
+            <parameters>
+              <param name="AHB_CLOCK_ENABLE" value="1" caption="MCRAMC CLOCK GATER"/>
+              <param name="AHB_ECC" value="1" caption="ECC LOGIC"/>
+              <param name="AHB_PORTS_NB" value="1" caption="NUMBER OF AHB PORTS"/>
+              <param name="AHB_READ_PREBUFFERING" value="1" caption="AHB READ PREBUFFERING"/>
+              <param name="AHB_REQUEST_ISOLATION_REGISTER" value="1" caption="AHB REQUEST TIMING PATHS ISOLATION"/>
+              <param name="ARBITRATION_TYPE" value="2" caption="ARBITRATION SCHEME, FIXED_PRIORITY = 0, HIGHLIGHT = 1, HOPSCOTCH = 2"/>
+              <param name="BIT_STROBE_RAM" value="0" caption="Set this parameter to TRUE if the ram_wem_bundle outputs are connected to ram bit-strobe write masks"/>
+              <param name="CHANNELS_NB" value="1" caption="NUMBER OF RAM CHANNELS"/>
+              <param name="ECC_SYNDROM_REGISTER" value="1" caption="ECC TIMING PATH BALANCING"/>
+              <param name="HADDR_READ_ISOLATION_REGISTER" value="0" caption="Set to IMPLEMENTED to add 1 wait-state max (0 min) per memory new line read access for each of the AHB timing path isolations"/>
+              <param name="HRDATA_ISOLATION_REGISTER" value="1" caption="AHB REQUEST TIMING PATHS ISOLATION"/>
+              <param name="MCRAMC_CLK_GATER" value="1" caption="MCRAMC CLOCK GATER"/>
+              <param name="MCRAMC_PADDR_SIZE" value="8" caption="APB USER INTERFACE"/>
+              <param name="MEMORY_AUTO_CORRECTION" value="1" caption="Perform an automatic write-back of the corrected ram word after read"/>
+              <param name="MEMORY_ENABLE_POLARITY" value="0" caption="POSITIVE if Memory is selected when ram_me is 1'b1"/>
+              <param name="MW_CLOCK_ENABLE" value="0" caption="MCRAMC CLOCK GATER"/>
+              <param name="MW_DATA_SIZE" value="32" caption="MW DATA BUS SIZE"/>
+              <param name="MW_PORT_SLICES_NB" value="0" caption="NUMBER OF PORT SLICES FOR THE WAITED SRAM INTERFACE"/>
+              <param name="M0_CLOCK_ENABLE" value="0" caption="MCRAMC CLOCK GATER"/>
+              <param name="M0_DATA_SIZE" value="32" caption="M0 DATA BUS SIZE"/>
+              <param name="M0_HYBRID_READ_WRITE_ACCESS" value="0" caption="M0 HYBRID SIMULTANEOUS READ + WRITE ACCESS"/>
+              <param name="M0_PORT_SLICES_NB" value="0" caption="NUMBER OF PORT SLICES FOR THE 0 WS SRAM INTERFACE"/>
+              <param name="RAM_ADD_SIZE" value="14" caption="NUMBER OF ADDRESS BITS FOR ONE CHANNEL RAM CELL"/>
+              <param name="RAM_AHB_ADDRESS_OFFSET" value="0x00000" caption="RAM BLOCK AHB ADDRESS OFFSET"/>
+              <param name="STORE_BYTE_STROBE" value="0" caption="AHB byte strobes can be stored and read back through the M0 interface"/>
+              <param name="ULTRA" value="1" caption="ULTRA USER INTERFACE"/>
+              <param name="WRITE_ENABLE_POLARITY" value="0" caption="POSITIVE if Memory is written when ram_we is 1'b1"/>
+              <param name="WRITE_ENABLE_USED" value="0" caption="TRUE  if the Memory makes use of a global per channel ram_we write enable"/>
+              <param name="WRITE_MASK_POLARITY" value="0" caption="POSITIVE if Memory is written when ram_wem is 1'b1"/>
+            </parameters>
+          </instance>
+        </module>
+        <module name="NVIC" id="SYSTEM_IP" version="1.0.0">
+          <instance name="NVIC">
+            <register-group name="NVIC" name-in-module="NVIC" address-space="base" offset="0xE000E100"/>
+            <parameters>
+              <param name="NUM_IRQ" value="3" caption="Number of interrupt requests"/>
+              <param name="__NVIC_PRIO_BITS" value="2" caption="Number of NVIC interrupt priority bits"/>
+            </parameters>
+          </instance>
+        </module>
+        <module name="PKRAM" id="DOS03785" name2="DOS03785" version="1a0">
+          <instance name="PKRAM">
+            <register-group name="PKRAM" name-in-module="PKRAM" address-space="base" offset="0x57000200"/>
+          </instance>
+        </module>
+        <module name="RTC" version="1.0.0">
+          <instance name="RTC">
+            <register-group name="RTC" name-in-module="RTC" address-space="base" offset="0x59000000"/>
+          </instance>
+        </module>
+        <module name="SYSREGS" version="1.0.0">
+          <instance name="SYSREGS">
+            <register-group name="SYSREGS" name-in-module="SYSREGS" address-space="base" offset="0x52001C00"/>
+          </instance>
+        </module>
+        <module name="SysTick" id="SYSTEM_IP" version="1.0.0">
+          <instance name="SysTick">
+            <register-group name="SysTick" name-in-module="SysTick" address-space="base" offset="0xE000E010"/>
+          </instance>
+        </module>
+        <module name="SystemControl" id="SYSTEM_IP" version="1.0.0">
+          <instance name="SystemControl">
+            <register-group name="SystemControl" name-in-module="SystemControl" address-space="base" offset="0xE000E000"/>
+            <parameters>
+              <param name="__VTOR_PRESENT" value="1" caption="Vector Table Offset Register present"/>
+            </parameters>
+          </instance>
+        </module>
+        <module name="TAMPER" version="1.0.0">
+          <instance name="TAMPER">
+            <register-group name="TAMPER" name-in-module="TAMPER" address-space="base" offset="0x59000400"/>
+          </instance>
+        </module>
+        <module name="TIMERS" version="1.0.0">
+          <instance name="TIMERS">
+            <register-group name="TIMERS" name-in-module="TIMERS" address-space="base" offset="0x52001800"/>
+          </instance>
+        </module>
+        <module name="WDT" version="1.0.0">
+          <instance name="WDT">
+            <register-group name="WDT" name-in-module="WDT" address-space="base" offset="0x52000C00"/>
+          </instance>
+        </module>
+      </peripherals>
+      <interrupts>
+        <interrupt name="Reset" index="-15" caption="Reset Vector, invoked on Power up and warm reset"/>
+        <interrupt name="NonMaskableInt" index="-14" caption="Non maskable Interrupt, cannot be stopped or preempted"/>
+        <interrupt name="HardFault" index="-13" caption="Hard Fault, all classes of Fault"/>
+        <interrupt name="SVCall" index="-5" caption="System Service Call via SVC instruction"/>
+        <interrupt name="PendSV" index="-2" caption="Pendable request for system service"/>
+        <interrupt name="SysTick" index="-1" caption="System Tick Timer"/>
+        <interrupt name="CSM_COMMANDCANCEL" index="0" module-instance="CSM"/>
+        <interrupt name="INTCTRL" index="1" module-instance="INTCTRL"/>
+        <interrupt name="CSM_FCW" index="2" module-instance="CSM"/>
+      </interrupts>
+      <interfaces>
+        <interface name="SWD" type="swd"/>
+      </interfaces>
+    </device>
+  </devices>
+  <modules>
+    <module name="AUXINTF" id="DOS03785" name2="DOS03785" version="1a0" caption="Auxiliary Interface">
+      <register-group name="AUXINTF" caption="Auxiliary Interface">
+        <register name="AIOFFSET" offset="0x0" rw="RW" size="4" atomic-op="set:AIOFFSET" initval="0x00000000" caption="Auxiliary Interface Address Offset">
+          <bitfield name="OFFSET" caption="Address Offset" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="AIATTR" offset="0x4" rw="RW" size="4" initval="0x00000000" caption="Auxiliary Interface Attributes">
+          <bitfield name="NSM" caption="Non Secure Master" mask="0x1"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="CSM" id="DOS03785" name2="DOS03785" version="1a0" caption="Control and Status Module">
+      <register-group name="CSM" caption="Control and Status Module">
+        <register name="CSMCTRLA" offset="0x0" rw="RW" size="4" initval="0x00000300" caption="CSM Control register A">
+          <bitfield name="SECURED" caption="Secured bit" mask="0x4"/>
+          <bitfield name="RTCCLK" caption="RTC Clock Enable bit" mask="0x8"/>
+        </register>
+        <register name="CSMCTRLB" offset="0x4" rw="RW" size="4" initval="0x00000000" caption="CSM Control register B">
+          <bitfield name="ERROR" caption="Error Interrupt Request bit." mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt Request bit." mask="0x2"/>
+        </register>
+        <register name="CSMINTENCLR" offset="0x8" rw="R" size="4" atomic-op="clear:CSMINTENCLR" initval="0x00000000" caption="CSM INTERRUPT ENABLE Clear register">
+          <bitfield name="CANCEL" caption="Cancel Command Interrupt Enable bit" mask="0x1"/>
+        </register>
+        <register name="CSMINTENSET" offset="0xC" rw="RW" size="4" atomic-op="set:CSMINTENSET" initval="0x00000000" caption="CSM INTERRUPT ENABLE SET register">
+          <bitfield name="CANCEL" caption="Cancel Command Interrupt Enable bit" mask="0x1"/>
+        </register>
+        <register name="CSMINTFLAG" offset="0x10" rw="R" size="4" atomic-op="clear:CSMINTFLAG" initval="0x00000000" caption="CSM INTERRUPT FLAG register">
+          <bitfield name="CANCEL" caption="Cancel Command Interrupt Flag bit" mask="0x1"/>
+        </register>
+        <register name="CSMSTATUS" offset="0x14" rw="R" size="4" initval="0x00000000" caption="CSM Status register">
+          <bitfield name="OTPLOCK" caption="OTP Lock bit" mask="0x1"/>
+        </register>
+        <register name="CSMREPORT" offset="0x18" rw="RW" size="4" initval="0x00000000" caption="CSM REPORT register">
+          <bitfield name="BUSY" caption="HSM CPU Busy" mask="0x1"/>
+          <bitfield name="PS" caption="Processing State bits" mask="0x70"/>
+          <bitfield name="LCS" caption="Lifecycle State bits" mask="0x700"/>
+          <bitfield name="SBS" caption="Secure Boot State bits" mask="0x7000"/>
+          <bitfield name="ECODE" caption="Error Code" mask="0xF0000"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="EXTDMA" version="1.0.0" caption="External DMA Module">
+      <register-group name="EXTDMA" caption="External DMA Module">
+        <register name="FETCH_ADDR_LSB" offset="0x0" rw="RW" size="4" initval="0x00000000" caption="Lower Fetch Address">
+          <bitfield name="ADDR" caption="Address" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="FETCH_ADDR_MSB" offset="0x4" rw="RW" size="4" initval="0x00000000" caption="Upper Fetch Address">
+        </register>
+        <register name="FETCH_LEN" offset="0x8" rw="RW" size="4" initval="0x00000000" caption="Fetch Length">
+          <bitfield name="LEN" caption="Length of data block" mask="0xFFFFFFF"/>
+          <bitfield name="CST_ADDR" caption="CST Address" mask="0x10000000"/>
+          <bitfield name="REALIGN" caption="Realign" mask="0x20000000"/>
+        </register>
+        <register name="FETCH_TAG" offset="0xC" rw="RW" size="4" initval="0x00000000" caption="Fetch Tag">
+          <bitfield name="TAG" caption="User TAG" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="PUSH_ADDR_LSB" offset="0x10" rw="RW" size="4" initval="0x00000000" caption="Lower Push Address">
+          <bitfield name="ADDR" caption="Address" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="PUSH_ADDR_MSB" offset="0x14" rw="RW" size="4" initval="0x00000000" caption="Upper Fetch Address">
+        </register>
+        <register name="PUSH_LEN" offset="0x18" rw="RW" size="4" initval="0x00000000" caption="Push Length">
+          <bitfield name="LEN" caption="Length of data block" mask="0xFFFFFFF"/>
+          <bitfield name="CST_ADDR" caption="CST Address" mask="0x10000000"/>
+          <bitfield name="REALIGN" caption="Realign" mask="0x20000000"/>
+        </register>
+        <register name="INT_EN" offset="0x1C" rw="RW" size="4" caption="Interrupt Enable">
+        </register>
+        <register name="INT_ENSET" offset="0x20" rw="RW" size="4" atomic-op="set:INT_EN" caption="Interrupt Enable Set">
+        </register>
+        <register name="INT_ENCLR" offset="0x24" rw="RW" size="4" atomic-op="clear:INT_EN" caption="Interrupt Enable Clear">
+        </register>
+        <register name="INT_STATRAW" offset="0x28" rw="RW" size="4" caption="Interrupt Raw Status">
+        </register>
+        <register name="INT_STAT" offset="0x2C" rw="RW" size="4" caption="Interrupt Status">
+        </register>
+        <register name="INT_STAT_CLR" offset="0x30" rw="RW" size="4" atomic-op="clear:INT_STAT_CLR" caption="Interrupt Status Clear">
+        </register>
+        <register name="CONFIG" offset="0x34" rw="RW" size="4" caption="Configuraiton">
+          <bitfield name="FETCHER_SCATTER_GATHER" caption="" mask="0x1"/>
+          <bitfield name="PUSHER_SCATTER_GATHER" caption="" mask="0x2"/>
+          <bitfield name="STOP_PUSHER" caption="" mask="0x4"/>
+          <bitfield name="STOP_FETCHER" caption="" mask="0x8"/>
+          <bitfield name="SOFTWARE_RESET" caption="" mask="0x10"/>
+        </register>
+        <register name="START" offset="0x38" rw="RW" size="4" caption="Start">
+          <bitfield name="START_FETCH" caption="" mask="0x1"/>
+          <bitfield name="START_PUSH" caption="" mask="0x2"/>
+        </register>
+        <register name="STATUS" offset="0x3C" rw="RW" size="4" caption="Stop">
+          <bitfield name="FETCHER_BUSY" caption="" mask="0x1"/>
+          <bitfield name="PUSHER_BUSY" caption="" mask="0x2"/>
+          <bitfield name="BUSY_FLAG" caption="" mask="0x8"/>
+          <bitfield name="FETCHER_NOT_EMPTY" caption="" mask="0x10"/>
+          <bitfield name="PUSHER_WAITING_FIFO" caption="" mask="0x20"/>
+          <bitfield name="BYTES_NUMBER" caption="" mask="0xFFFF0000"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="INTCTRL" version="1.0.0" caption="eSecure Interrupt Controller Module">
+      <register-group name="INTCTRL" caption="eSecure Interrupt Controller Module">
+        <register name="STATL" offset="0x0" rw="R" size="4" initval="0x00000000" caption="Interrupt Status Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="RSRL" offset="0x8" rw="RW" size="4" atomic-op="clear:RSRL" initval="0x00000000" caption="Interrupt Raw Status Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="ENAL" offset="0x10" rw="RW" size="4" atomic-op="set:ENAL" initval="0x00000000" caption="Interrupt Enable Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="CLRL" offset="0x18" rw="W" size="4" atomic-op="clear:CLRL" initval="0x00000000" caption="Interrupt Disable Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="TSTL" offset="0x20" rw="RW" size="4" initval="0x00000000" caption="Interrupt Test Source Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="SELL" offset="0x28" rw="RW" size="4" initval="0x00000000" caption="Interrupt Source Selection Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="APRL" offset="0x30" rw="RW" size="4" initval="0x00000000" caption="Interrupt Activation Polarity Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTODMA" caption="Crypto DMA Interrupt" mask="0x10000"/>
+          <bitfield name="NDRNG" caption="RNG Interrupt" mask="0x20000"/>
+          <bitfield name="PKENGINE" caption="PK Engine Interrupt" mask="0x40000"/>
+        </register>
+        <register name="ATRL" offset="0x38" rw="RW" size="4" initval="0x00000000" caption="Interrupt Activation Type Register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="ITRL" offset="0x40" rw="RW" size="4" initval="0x00000000" caption="Interrupt Type register Low">
+          <bitfield name="RTC" caption="RTC Interrupt" mask="0x1"/>
+          <bitfield name="TAMPER" caption="Tamper Interrupt" mask="0x2"/>
+          <bitfield name="EXTDMA" caption="External DMA Interrupt" mask="0x4"/>
+          <bitfield name="WDOG" caption="Watch Dog Interrupt" mask="0x8"/>
+          <bitfield name="TAMPER_BUSY" caption="Tamper Busy Interrupt" mask="0x20"/>
+          <bitfield name="TIMER0" caption="Timer 0 Interrupt" mask="0x40"/>
+          <bitfield name="TIMER1" caption="Timer 1 interrupt" mask="0x80"/>
+          <bitfield name="PWRDOWN" caption="Power Down Interrupt" mask="0x800"/>
+          <bitfield name="MB_TX" caption="Mailbox TX Interrupt" mask="0x4000"/>
+          <bitfield name="MB_RX" caption="Mailbox RX Interrupt" mask="0x8000"/>
+          <bitfield name="CRYPTO0" caption="Crypto Interrupt 0" mask="0x10000"/>
+          <bitfield name="CRYPTO1" caption="Crypto Interrupt 1" mask="0x20000"/>
+          <bitfield name="CRYPTO2" caption="Crypto Interrupt 2" mask="0x40000"/>
+          <bitfield name="CRYPTO3" caption="Crypto Interrupt 3" mask="0x80000"/>
+        </register>
+        <register name="PIN" offset="0x48" rw="R" size="4" initval="0x00000000" caption="Interrupt Pending IRQ Num">
+          <bitfield name="PIN" caption="Pending IRQ Num" mask="0x3F"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="MAILBOX" version="1.0.0" caption="eSecure MailBox Module">
+      <register-group name="MAILBOX" caption="eSecure MailBox Module">
+        <register name="FIFO" offset="0x0" rw="RW" ocd-rw="" size="4" count="16" caption="Mailbox FIFO">
+          <bitfield name="Data" caption="Mailbox data" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="TX_STATUS" offset="0x40" rw="R" size="4" caption="Transmit Status">
+          <bitfield name="TXREMAINING" caption="Transmit Bytes Remaining" mask="0xFFFF"/>
+          <bitfield name="TXTYPE" caption="Message Type" mask="0xF0000"/>
+          <bitfield name="TXINT" caption="Transmit Interrupt" mask="0x100000"/>
+          <bitfield name="TXFULL" caption="Transmit FIFO Full" mask="0x200000"/>
+          <bitfield name="TXERROR" caption="Transmit Error" mask="0x800000"/>
+        </register>
+        <register name="RX_STATUS" offset="0x44" rw="R" size="4" caption="Receive Status">
+          <bitfield name="RXREMAINING" caption="Receive Bytes Remaining" mask="0xFFFF"/>
+          <bitfield name="RXTYPE" caption="Receive Message Type" mask="0xF0000"/>
+          <bitfield name="RXINT" caption="Receive Interrupt Occurred" mask="0x100000"/>
+          <bitfield name="RXEMPTY" caption="Receive FIFO Empty" mask="0x200000"/>
+          <bitfield name="RXHEADER" caption="Receive Header" mask="0x400000"/>
+          <bitfield name="RXERROR" caption="Receive Error" mask="0x800000"/>
+        </register>
+        <register name="TX_PROT" offset="0x48" rw="R" size="4" caption="Transmit Protect">
+          <bitfield name="UNPROT" caption="Mailbox Message Unprotected" mask="0x200000"/>
+          <bitfield name="PRIV" caption="Mailbox message Privilaged" mask="0x400000"/>
+          <bitfield name="NSEC" caption="Mailbox Message Unsecured" mask="0x800000"/>
+          <bitfield name="USER" caption="User bits" mask="0xFF000000"/>
+        </register>
+        <register name="RX_PROT" offset="0x4C" rw="R" size="4" caption="Receieve Protect">
+          <bitfield name="UNPROTECT" caption="Mailbox Message Unprotected" mask="0x200000"/>
+          <bitfield name="PRIV" caption="Mailbox message Privilaged" mask="0x400000"/>
+          <bitfield name="NSEC" caption="Mailbox Message Unsecured" mask="0x800000"/>
+          <bitfield name="USER" caption="User bits" mask="0xFF000000"/>
+        </register>
+        <register name="TX_HEADER" offset="0x50" rw="W" ocd-rw="" size="4" caption="Transmit Header">
+          <bitfield name="MSGSIZE" caption="Message Size" mask="0xFFFF"/>
+          <bitfield name="MSGINFO" caption="Message Info" mask="0xF0000"/>
+          <bitfield name="UNPROT" caption="Unprotected Access" mask="0x200000"/>
+          <bitfield name="PRIV" caption="Privilaged Access" mask="0x400000"/>
+          <bitfield name="NSEC" caption="Non Secure Access" mask="0x800000"/>
+          <bitfield name="USER" caption="User Bits" mask="0xFF000000"/>
+        </register>
+        <register name="RX_HEADER" offset="0x54" rw="R" ocd-rw="" size="4" caption="Receive Header">
+          <bitfield name="MSGSIZE" caption="Message Size" mask="0xFFFF"/>
+          <bitfield name="MSGINFO" caption="Message Information" mask="0xF0000"/>
+          <bitfield name="UNPROT" caption="Unprotected Access" mask="0x200000"/>
+        </register>
+        <register name="CONFIG" offset="0x58" rw="RW" size="4" caption="Configuration">
+          <bitfield name="TX_INT_ENABLE" caption="Transmit Interrupt Enable" mask="0x1"/>
+          <bitfield name="RX_INT_ENABLE" caption="Receive Interrupt Enable" mask="0x2"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="MCRAMC" id="drm_mcramc_v3" name2="drm_mcramc_v3" version="3a0" caption="Multi-Channel RAM Controller Module">
+      <register-group name="MCRAMC" caption="Multi-Channel RAM Controller Module">
+        <register name="CTRLA" offset="0x0" rw="RW" size="4" initval="0x00000002" caption="Control Enable A Register">
+          <bitfield name="SWRST" caption="Software Reset" mask="0x1" values="CTRLA__SWRST"/>
+          <bitfield name="ENABLE" caption="ECC Decoder Enable" mask="0x2" values="CTRLA__ENABLE"/>
+        </register>
+        <register name="SYNCBUSY" offset="0x4" rw="R" size="4" initval="0x00000000" caption="Sync Busy Register">
+          <bitfield name="SWRST" caption="Software reset busy bit" mask="0x1"/>
+          <bitfield name="FLTEN" caption="Fault Injection Enabled busy bit" mask="0x2"/>
+          <bitfield name="ENABLE" caption="ECC Decoder Enable busy bit" mask="0x4"/>
+        </register>
+        <register name="INTENCLR" offset="0x8" rw="RW" size="4" atomic-op="clear:INTENCLR" initval="0x00000000" caption="Interrupt Enable Clear Register">
+          <bitfield name="SERREN" caption="Single Bit Error Interrupt Enable, Clear" mask="0x1"/>
+          <bitfield name="DERREN" caption="Double Bit Error Interrupt Enable, Clear" mask="0x2"/>
+        </register>
+        <register name="INTENSET" offset="0xC" rw="RW" size="4" atomic-op="set:INTENSET" initval="0x00000000" caption="Interrupt Enable Set Register">
+          <bitfield name="SERREN" caption="Single Bit Error Interrupt Enable, Set" mask="0x1"/>
+          <bitfield name="DERREN" caption="Double Bit Error Interrupt Enable, Set" mask="0x2"/>
+        </register>
+        <register name="INTSTA" offset="0x10" rw="RW" size="4" atomic-op="clear:INTSTA" initval="0x00000000" caption="Interrupt Status Register">
+          <bitfield name="SERR" caption="Single Bit Error" mask="0x1"/>
+          <bitfield name="DERR" caption="Double Bit Error" mask="0x2"/>
+        </register>
+        <register name="FLTCTRL" offset="0x14" rw="RW" size="4" initval="0x00000000" caption="Fault Injection Control Register">
+          <bitfield name="FLTEN" caption="Fault Injection Enabled" mask="0x2" values="FLTCTRL__FLTEN"/>
+          <bitfield name="FLTMD" caption="Fault Injection Mode" mask="0x3000"/>
+        </register>
+        <register name="FLTPTR" offset="0x18" rw="RW" size="4" initval="0x00000000" caption="Fault Injection Pointer Register">
+          <bitfield name="FLT1PTR" caption="Single Fault Injection Bit Pointer" mask="0xFF"/>
+          <bitfield name="FLT2PTR" caption="Double Fault Injection Bit Pointer" mask="0xFF0000"/>
+        </register>
+        <register name="FLTADR" offset="0x1C" rw="RW" size="4" initval="0x00000000" caption="Fault Injection Address Register">
+          <bitfield name="FLTADR" caption="Fault Address Offset" mask="0xFFFFFF"/>
+        </register>
+        <register name="ERRCADR" offset="0x20" rw="R" size="4" initval="0x00000000" caption="Error Capture Address Register">
+          <bitfield name="ERCADR" caption="ECC SECDED Error Capture Address" mask="0xFFFFFF"/>
+        </register>
+        <register name="ERRCPAR" offset="0x24" rw="R" size="4" initval="0x00000000" caption="Error Capture Parity Register">
+          <bitfield name="ERCPAR" caption="ECC SECDED Error Capture Parity" mask="0xFF"/>
+        </register>
+        <register name="ERRCSYN" offset="0x28" rw="R" size="4" initval="0x00000000" caption="Error Capture Syndrome Register">
+          <bitfield name="ERCSYN" caption="ECC SECDED Error Capture Syndrome" mask="0xFF" values="ERRCSYN__ERCSYN"/>
+          <bitfield name="ERR1" caption="ECC Single Bit Error" mask="0x4000"/>
+          <bitfield name="ERR2" caption="ECC Double Bit Error" mask="0x8000" values="ERRCSYN__ERR2"/>
+        </register>
+      </register-group>
+      <value-group name="CTRLA__SWRST">
+        <value name="0" caption="No effect." value="0"/>
+        <value name="1" caption="Reset the MCRAMC. A software-triggered hardware reset of the MCRAMC user interface is performed." value="1"/>
+      </value-group>
+      <value-group name="CTRLA__ENABLE">
+        <value name="0" caption="ECC decoding is disabled." value="0"/>
+        <value name="1" caption="ECC decoding is enabled." value="1"/>
+      </value-group>
+      <value-group name="FLTCTRL__FLTEN">
+        <value name="0" caption="Disables fault injection." value="0"/>
+        <value name="1" caption="Enables fault injection at FLTADR address offset as selected by FLTMD and FLTxPTR." value="1"/>
+      </value-group>
+      <value-group name="ERRCSYN__ERCSYN">
+        <value name="0" caption="Not a Single bit error." value="0"/>
+        <value name="1" caption="Single bit error." value="1"/>
+      </value-group>
+      <value-group name="ERRCSYN__ERR2">
+        <value name="0" caption="Not a Double bit error." value="0"/>
+        <value name="1" caption="Double bit error." value="1"/>
+      </value-group>
+    </module>
+    <module name="NVIC" id="SYSTEM_IP" version="1.0.0" caption="Nested Vectored Interrupt Controller">
+      <register-group name="NVIC" caption="Nested Vectored Interrupt Controller">
+        <register name="ISER" offset="0x0" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Interrupt Set Enable Register">
+          <bitfield name="SETENA" caption="Interrupt set enable bits" mask="0x7"/>
+        </register>
+        <register name="ICER" offset="0x80" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Interrupt Clear Enable Register">
+          <bitfield name="CLRENA" caption="Interrupt clear-enable bits" mask="0x7"/>
+        </register>
+        <register name="ISPR" offset="0x100" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Interrupt Set Pending Register">
+          <bitfield name="SETPEND" caption="Interrupt set-pending bits" mask="0x7"/>
+        </register>
+        <register name="ICPR" offset="0x180" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Interrupt Clear Pending Register">
+          <bitfield name="CLRPEND" caption="Interrupt clear-pending bits" mask="0x7"/>
+        </register>
+        <register name="IPR" offset="0x300" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Interrupt Priority Register n">
+          <bitfield name="PRI0" caption="Priority of interrupt n" mask="0x3"/>
+          <bitfield name="PRI1" caption="Priority of interrupt n" mask="0x300"/>
+          <bitfield name="PRI2" caption="Priority of interrupt n" mask="0x30000"/>
+          <bitfield name="PRI3" caption="Priority of interrupt n" mask="0x3000000"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="PKRAM" id="DOS03785" name2="DOS03785" version="1a0" caption="PKRAM Module">
+      <register-group name="PKRAM" caption="PKRAM Module">
+        <register name="PKRPCTRL" offset="0x0" rw="RW" size="4" initval="0x00000000" caption="Parity Control">
+          <bitfield name="PARITY" caption="RAM Parity Enable bit (1)" mask="0x1"/>
+          <bitfield name="FLTEN" caption="Fault Injection Enable bit" mask="0x2"/>
+          <bitfield name="FLTPTR" caption="Fault Injection Bit Pointer bit" mask="0x7F00"/>
+        </register>
+        <register name="PKRPERROR" offset="0x4" rw="R" size="4" initval="0x00000000" caption="Parity Error">
+          <bitfield name="PARITY" caption="PK RAM Parity Error bit" mask="0x1"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="RTC" version="1.0.0" caption="Real Time Clock Module">
+      <register-group name="RTC" caption="Real Time Clock Module">
+        <register name="CNTL" offset="0x0" rw="RW" size="4" initval="0x00000000" caption="Lower Count">
+          <bitfield name="CNTL" caption="RTC Lower Counter Register" mask="0xFFFE0000"/>
+        </register>
+        <register name="CNTH" offset="0x4" rw="RW" size="4" initval="0x00000000" caption="Upper  Count">
+          <bitfield name="CNTH" caption="RTC Upper Counter Register" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="MATCHL" offset="0x8" rw="RW" size="4" initval="0x00000000" caption="Lower Match">
+          <bitfield name="MATCHL" caption="RTC Match Register" mask="0xFFFE0000"/>
+        </register>
+        <register name="MATCHH" offset="0xC" rw="RW" size="4" initval="0x00000000" caption="UpperMatch">
+          <bitfield name="MATCHH" caption="" mask="0xFFFFFFFF"/>
+        </register>
+        <register name="CTRL" offset="0x10" rw="RW" size="4" initval="0x00000000" caption="Control">
+          <bitfield name="ENI" caption="ENI" mask="0x1"/>
+          <bitfield name="ENB" caption="ENB" mask="0x2"/>
+        </register>
+        <register name="STAT" offset="0x14" rw="R" size="4" initval="0x00000000" caption="Status">
+          <bitfield name="STAT" caption="Raw match status" mask="0x1"/>
+        </register>
+      </register-group>
+    </module>
+    <module name="SYSREGS" version="1.0.0" caption="eSecure System Registers Module">
+      <register-group name="SYSREGS" caption="eSecure System Registers Module">
+        <register name="POWERCTRL" offset="0xC" rw="RW" size="4" initval="0x00000000" caption="Power Control">
+          <bitfield name="STATE" caption="Power Control State" mask="0x7" values="POWERCTRL__STATE"/>
+        </register>
+      </register-group>
+      <value-group name="POWERCTRL__STATE">
+        <value name="ESECBOOTDONE" caption="ESecure Boot is Finished" value="0x1"/>
+        <value name="POWERDOWN" caption="ESecure is in Power-down" value="0x2"/>
+        <value name="HOSTBOOTDONE" caption="Host Boot is Finished" value="0x3"/>
+        <value name="IDLE" caption="ESecure is Idle" value="0x4"/>
+        <value name="BUSY" caption="ESecure is Busy" value="0x5"/>
+      </value-group>
+    </module>
+    <module name="SysTick" id="SYSTEM_IP" version="1.0.0" caption="System timer">
+      <register-group name="SysTick" caption="System timer">
+        <register name="CSR" offset="0x0" rw="RW" size="4" access-size="4" initval="0x4" caption="SysTick Control and Status Register">
+          <bitfield name="ENABLE" caption="SysTick Counter Enable" mask="0x1" values="CSR__ENABLE"/>
+          <bitfield name="TICKINT" caption="SysTick Exception Request Enable" mask="0x2" values="CSR__TICKINT"/>
+          <bitfield name="CLKSOURCE" caption="Clock Source 0=external, 1=processor" mask="0x4" values="CSR__CLKSOURCE"/>
+          <bitfield name="COUNTFLAG" caption="Timer counted to 0 since last read of register" mask="0x10000"/>
+        </register>
+        <register name="RVR" offset="0x4" rw="RW" size="4" access-size="4" caption="SysTick Reload Value Register">
+          <bitfield name="RELOAD" caption="Value to load into the SysTick Current Value Register when the counter reaches 0" mask="0xFFFFFF"/>
+        </register>
+        <register name="CVR" offset="0x8" rw="RW" size="4" access-size="4" caption="SysTick Current Value Register">
+          <bitfield name="CURRENT" caption="Current value at the time the register is accessed" mask="0xFFFFFF"/>
+        </register>
+        <register name="CALIB" offset="0xC" rw="R" size="4" access-size="4" initval="0" caption="SysTick Calibration Value Register">
+          <bitfield name="TENMS" caption="Reload value to use for 10ms timing" mask="0xFFFFFF"/>
+          <bitfield name="SKEW" caption="TENMS is rounded from non-integer ratio" mask="0x40000000" values="CALIB__SKEW"/>
+          <bitfield name="NOREF" caption="No Separate Reference Clock" mask="0x80000000" values="CALIB__NOREF"/>
+        </register>
+      </register-group>
+      <value-group name="CSR__ENABLE">
+        <value name="VALUE_0" caption="Counter disabled" value="0"/>
+        <value name="VALUE_1" caption="Counter enabled" value="1"/>
+      </value-group>
+      <value-group name="CSR__TICKINT">
+        <value name="VALUE_0" caption="Counting down to 0 does not assert the SysTick exception request" value="0"/>
+        <value name="VALUE_1" caption="Counting down to 0 asserts the SysTick exception request" value="1"/>
+      </value-group>
+      <value-group name="CSR__CLKSOURCE">
+        <value name="VALUE_0" caption="External clock" value="0"/>
+        <value name="VALUE_1" caption="Processor clock" value="1"/>
+      </value-group>
+      <value-group name="CALIB__SKEW">
+        <value name="VALUE_0" caption="10ms calibration value is exact" value="0"/>
+        <value name="VALUE_1" caption="10ms calibration value is inexact, because of the clock frequency" value="1"/>
+      </value-group>
+      <value-group name="CALIB__NOREF">
+        <value name="VALUE_0" caption="The reference clock is provided" value="0"/>
+        <value name="VALUE_1" caption="The reference clock is not provided" value="1"/>
+      </value-group>
+    </module>
+    <module name="SystemControl" id="SYSTEM_IP" version="1.0.0" caption="System Control Registers">
+      <register-group name="SystemControl" caption="System Control Registers">
+        <register name="CPUID" offset="0xD00" rw="R" size="4" access-size="4" initval="0x410CC601" caption="CPUID Base Register">
+          <bitfield name="REVISION" caption="Minor revision number" mask="0xF"/>
+          <bitfield name="PARTNO" caption="Processor Part Number, 0xC60=Cortex-M0+" mask="0xFFF0"/>
+          <bitfield name="ARCHITECTURE" caption="Processor Architecture, 0xC=ARMv6-M" mask="0xF0000"/>
+          <bitfield name="VARIANT" caption="Major revision number" mask="0xF00000"/>
+          <bitfield name="IMPLEMENTER" caption="Implementer code, ARM=0x41" mask="0xFF000000"/>
+        </register>
+        <register name="ICSR" offset="0xD04" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Interrupt Control and State Register">
+          <bitfield name="VECTACTIVE" caption="Debug: Exception number of currently executing exception, or 0 if thread mode" mask="0x1FF"/>
+          <bitfield name="VECTPENDING" caption="Exception number of the highest priority pending enabled exception" mask="0x1FF000"/>
+          <bitfield name="ISRPENDING" caption="Debug: NVIC interrupt pending" mask="0x400000"/>
+          <bitfield name="ISRPREEMPT" caption="Debug: Pending exception serviced on exit from debug halt" mask="0x800000"/>
+          <bitfield name="PENDSTCLR" caption="SysTick exception clear-pending bit" mask="0x2000000" values="ICSR__PENDSTCLR"/>
+          <bitfield name="PENDSTSET" caption="SysTick exception set-pending bit" mask="0x4000000" values="ICSR__PENDSTSET"/>
+          <bitfield name="PENDSVCLR" caption="PendSV clear-pending bit" mask="0x8000000" values="ICSR__PENDSVCLR"/>
+          <bitfield name="PENDSVSET" caption="PendSV set-pending bit" mask="0x10000000" values="ICSR__PENDSVSET"/>
+          <bitfield name="NMIPENDSET" caption="NMI set-pending bit" mask="0x80000000" values="ICSR__NMIPENDSET"/>
+        </register>
+        <register name="VTOR" offset="0xD08" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Vector Table Offset Register">
+          <bitfield name="TBLOFF" caption="Vector table base offset" mask="0xFFFFFF80"/>
+        </register>
+        <register name="AIRCR" offset="0xD0C" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Application Interrupt and Reset Control Register">
+          <bitfield name="VECTCLRACTIVE" caption="Debug: Clear state information" mask="0x2"/>
+          <bitfield name="SYSRESETREQ" caption="System Reset Request" mask="0x4" values="AIRCR__SYSRESETREQ"/>
+          <bitfield name="ENDIANNESS" caption="Data Endianness, 0=little, 1=big" mask="0x8000" values="AIRCR__ENDIANNESS"/>
+          <bitfield name="VECTKEY" caption="Register key (0x05FA)" mask="0xFFFF0000"/>
+        </register>
+        <register name="SCR" offset="0xD10" rw="RW" size="4" access-size="4" initval="0x00000000" caption="System Control Register">
+          <bitfield name="SLEEPONEXIT" caption="Sleep-On-Exit when exiting Handler mode" mask="0x2" values="SCR__SLEEPONEXIT"/>
+          <bitfield name="SLEEPDEEP" caption="Uses Deep Sleep as low power mode" mask="0x4" values="SCR__SLEEPDEEP"/>
+          <bitfield name="SEVONPEND" caption="Send Event on Pending bit" mask="0x10" values="SCR__SEVONPEND"/>
+        </register>
+        <register name="CCR" offset="0xD14" rw="R" size="4" access-size="4" initval="0x00000204" caption="Configuration and Control Register">
+          <bitfield name="UNALIGN_TRP" caption="Unaligned accesses generates a Hard Fault" mask="0x8" values="CCR__UNALIGN_TRP"/>
+          <bitfield name="STKALIGN" caption="Stack 8-byte aligned on exception entry" mask="0x200" values="CCR__STKALIGN"/>
+        </register>
+        <register name="SHPR2" offset="0xD1C" rw="RW" size="4" access-size="4" initval="0x00000000" caption="System Handler Priority Register 2">
+          <bitfield name="PRI_11" caption="Priority of system handler 11, SVCall" mask="0xFF000000"/>
+        </register>
+        <register name="SHPR3" offset="0xD20" rw="RW" size="4" access-size="4" initval="0x00000000" caption="System Handler Priority Register 3">
+          <bitfield name="PRI_14" caption="Priority of system handler 14, PendSV" mask="0xFF0000"/>
+          <bitfield name="PRI_15" caption="Priority of system handler 15, SysTick exception" mask="0xFF000000"/>
+        </register>
+        <register name="SHCSR" offset="0xD24" rw="RW" size="4" access-size="4" initval="0x00000000" caption="System Handler Control and State Register">
+          <bitfield name="SVCALLPENDED" caption="no description available" mask="0x8000"/>
+        </register>
+        <register name="DFSR" offset="0xD30" rw="RW" size="4" access-size="4" initval="0x00000000" caption="Debug Fault Status Register">
+          <bitfield name="HALTED" caption="Halt request debug event active" mask="0x1"/>
+          <bitfield name="BKPT" caption="Breakpoint debug event" mask="0x2"/>
+          <bitfield name="DWTTRAP" caption="DWT debug event" mask="0x4"/>
+          <bitfield name="VCATCH" caption="Vector catch debug event" mask="0x8"/>
+          <bitfield name="EXTERNAL" caption="EDBGRQ debug event" mask="0x10"/>
+        </register>
+      </register-group>
+      <value-group name="ICSR__PENDSTCLR">
+        <value name="VALUE_0" caption="No effect" value="0"/>
+        <value name="VALUE_1" caption="Removes the pending state from the SysTick exception" value="1"/>
+      </value-group>
+      <value-group name="ICSR__PENDSTSET">
+        <value name="VALUE_0" caption="Write: no effect; read: SysTick exception is not pending" value="0"/>
+        <value name="VALUE_1" caption="Write: changes SysTick exception state to pending; read: SysTick exception is pending" value="1"/>
+      </value-group>
+      <value-group name="ICSR__PENDSVCLR">
+        <value name="VALUE_0" caption="No effect" value="0"/>
+        <value name="VALUE_1" caption="Removes the pending state from the PendSV exception" value="1"/>
+      </value-group>
+      <value-group name="ICSR__PENDSVSET">
+        <value name="VALUE_0" caption="Write: no effect; read: PendSV exception is not pending" value="0"/>
+        <value name="VALUE_1" caption="Write: changes PendSV exception state to pending; read: PendSV exception is pending" value="1"/>
+      </value-group>
+      <value-group name="ICSR__NMIPENDSET">
+        <value name="VALUE_0" caption="Write: no effect; read: NMI exception is not pending" value="0"/>
+        <value name="VALUE_1" caption="Write: changes NMI exception state to pending; read: NMI exception is pending" value="1"/>
+      </value-group>
+      <value-group name="AIRCR__SYSRESETREQ">
+        <value name="VALUE_0" caption="No system reset request" value="0"/>
+        <value name="VALUE_1" caption="Asserts a signal to the outer system that requests a reset" value="1"/>
+      </value-group>
+      <value-group name="AIRCR__ENDIANNESS">
+        <value name="VALUE_0" caption="Little-endian" value="0"/>
+        <value name="VALUE_1" caption="Big-endian" value="1"/>
+      </value-group>
+      <value-group name="SCR__SLEEPONEXIT">
+        <value name="VALUE_0" caption="O not sleep when returning to Thread mode" value="0"/>
+        <value name="VALUE_1" caption="Enter sleep, or deep sleep, on return from an ISR" value="1"/>
+      </value-group>
+      <value-group name="SCR__SLEEPDEEP">
+        <value name="VALUE_0" caption="Sleep" value="0"/>
+        <value name="VALUE_1" caption="Deep sleep" value="1"/>
+      </value-group>
+      <value-group name="SCR__SEVONPEND">
+        <value name="VALUE_0" caption="Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded" value="0"/>
+        <value name="VALUE_1" caption="Enabled events and all interrupts, including disabled interrupts, can wakeup the processor" value="1"/>
+      </value-group>
+      <value-group name="CCR__UNALIGN_TRP">
+        <value name="VALUE_0" caption="Do not trap unaligned halfword and word accesses" value="0"/>
+        <value name="VALUE_1" caption="Trap unaligned halfword and word accesses" value="1"/>
+      </value-group>
+      <value-group name="CCR__STKALIGN">
+        <value name="VALUE_0" caption="4-byte aligned" value="0"/>
+        <value name="VALUE_1" caption="8-byte aligned" value="1"/>
+      </value-group>
+    </module>
+    <module name="TAMPER" version="1.0.0" caption="eSecure IP Core Anti-tampering">
+      <register-group name="TAMPER" caption="eSecure IP Core Anti-tampering">
+        <register name="LEVELA" offset="0x0" rw="R" size="4" initval="0x11111115" caption="Level A">
+          <bitfield name="LEVEL0" caption="Level 0" mask="0xF" values="LEVELA__LEVEL0"/>
+          <bitfield name="LEVEL1" caption="Level 1" mask="0xF0" values="LEVELA__LEVEL1"/>
+          <bitfield name="LEVEL2" caption="Level 2" mask="0xF00" values="LEVELA__LEVEL2"/>
+          <bitfield name="LEVEL3" caption="Level 3" mask="0xF000" values="LEVELA__LEVEL3"/>
+          <bitfield name="LEVEL4" caption="Level 4" mask="0xF0000" values="LEVELA__LEVEL4"/>
+          <bitfield name="LEVEL5" caption="Level 5" mask="0xF00000" values="LEVELA__LEVEL5"/>
+          <bitfield name="LEVEL6" caption="Level 6" mask="0xF000000" values="LEVELA__LEVEL6"/>
+          <bitfield name="LEVEL7" caption="Level 7" mask="0xF0000000" values="LEVELA__LEVEL7"/>
+        </register>
+        <register name="LEVELB" offset="0x4" rw="R" size="4" initval="0x11111111" caption="Level B">
+          <bitfield name="LEVEL8" caption="Level 8" mask="0xF" values="LEVELB__LEVEL8"/>
+          <bitfield name="LEVEL9" caption="Level 9" mask="0xF0" values="LEVELB__LEVEL9"/>
+          <bitfield name="LEVEL10" caption="Level 10" mask="0xF00" values="LEVELB__LEVEL10"/>
+          <bitfield name="LEVEL11" caption="Level 11" mask="0xF000" values="LEVELB__LEVEL11"/>
+          <bitfield name="LEVEL12" caption="Level 12" mask="0xF0000" values="LEVELB__LEVEL12"/>
+          <bitfield name="LEVEL13" caption="Level 13" mask="0xF00000" values="LEVELB__LEVEL13"/>
+          <bitfield name="LEVEL14" caption="Level 14" mask="0xF000000" values="LEVELB__LEVEL14"/>
+          <bitfield name="LEVEL15" caption="Level 15" mask="0xF0000000" values="LEVELB__LEVEL15"/>
+        </register>
+        <register name="LEVELC" offset="0x8" rw="R" size="4" initval="0x11111111" caption="Level C">
+          <bitfield name="LEVEL16" caption="Level 16" mask="0xF" values="LEVELC__LEVEL16"/>
+          <bitfield name="LEVEL17" caption="Level 17" mask="0xF0" values="LEVELC__LEVEL17"/>
+          <bitfield name="LEVEL18" caption="Level 18" mask="0xF00" values="LEVELC__LEVEL18"/>
+          <bitfield name="LEVEL19" caption="Level 19" mask="0xF000" values="LEVELC__LEVEL19"/>
+          <bitfield name="LEVEL20" caption="Level 20" mask="0xF0000" values="LEVELC__LEVEL20"/>
+          <bitfield name="LEVEL21" caption="Level 21" mask="0xF00000" values="LEVELC__LEVEL21"/>
+          <bitfield name="LEVEL22" caption="Level 22" mask="0xF000000" values="LEVELC__LEVEL22"/>
+          <bitfield name="LEVEL23" caption="Level 23" mask="0xF0000000" values="LEVELC__LEVEL23"/>
+        </register>
+        <register name="LEVELD" offset="0xC" rw="R" size="4" initval="0x11111111" caption="Level D">
+          <bitfield name="LEVEL24" caption="Level 24" mask="0xF" values="LEVELD__LEVEL24"/>
+          <bitfield name="LEVEL25" caption="Level 25" mask="0xF0" values="LEVELD__LEVEL25"/>
+          <bitfield name="LEVEL26" caption="Level 26" mask="0xF00" values="LEVELD__LEVEL26"/>
+          <bitfield name="LEVEL27" caption="Level 27" mask="0xF000" values="LEVELD__LEVEL27"/>
+          <bitfield name="LEVEL28" caption="Level 28" mask="0xF0000" values="LEVELD__LEVEL28"/>
+          <bitfield name="LEVEL29" caption="Level 29" mask="0xF00000" values="LEVELD__LEVEL29"/>
+          <bitfield name="LEVEL30" caption="Level 30" mask="0xF000000" values="LEVELD__LEVEL30"/>
+          <bitfield name="LEVEL31" caption="Level 31" mask="0xF0000000" values="LEVELD__LEVEL31"/>
+        </register>
+        <register name="SETLEVEL" offset="0x10" rw="W" size="4" initval="0x00000000" caption="Set Level">
+          <bitfield name="TamperLevel" caption="Tamper Level" mask="0x7"/>
+          <bitfield name="TamperID" caption="Tamper ID" mask="0x1F00"/>
+          <bitfield name="ProtectionKey" caption="Protection Key" mask="0xFFFF0000"/>
+        </register>
+        <register name="FILTERCFG" offset="0x14" rw="RW" size="4" initval="0x00000000" caption="Filter Configuraiton">
+          <bitfield name="Threshold" caption="Filter Threshold" mask="0x7"/>
+          <bitfield name="Period" caption="Filter Period" mask="0x1F00"/>
+          <bitfield name="ProtectionKey" caption="Filter Protection Key" mask="0xFFFF0000"/>
+        </register>
+        <register name="SOFTTAMP" offset="0x18" rw="RW" size="4" initval="0x00000000" caption="Soft Tamper">
+          <bitfield name="TamperActive" caption="Tamper Active" mask="0x1"/>
+          <bitfield name="TamperID" caption="Tamper ID" mask="0x1F00"/>
+          <bitfield name="ProtectionKey" caption="Protection Key" mask="0xFFFF0000"/>
+        </register>
+        <register name="RAWSTAT" offset="0x1C" rw="R" size="4" initval="0x00000000" caption="Raw Status">
+        </register>
+        <register name="STAT" offset="0x20" rw="RW" size="4" initval="0x00000001" caption="Status">
+        </register>
+        <register name="TIMESTAMP" offset="0x24" rw="R" size="4" initval="0x00000000" caption="Time Stamp">
+        </register>
+        <register name="FILTERCNT" offset="0x28" rw="R" size="4" initval="0x00000000" caption="Filter Count">
+        </register>
+        <register name="SOFTINFO" offset="0x2C" rw="RW" size="4" initval="0x00000000" caption="Soft Information">
+        </register>
+        <register name="HOSTIRQ" offset="0x30" rw="RW" size="4" initval="0x00000000" caption="Host Interrupt">
+        </register>
+        <register name="SOFTRESET" offset="0x34" rw="R" size="4" atomic-op="set:SOFTRESET" initval="0x00000000" caption="Soft Reset">
+        </register>
+      </register-group>
+      <value-group name="LEVELA__LEVEL0">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL1">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL2">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL3">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL4">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL5">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL6">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELA__LEVEL7">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL8">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL9">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL10">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL11">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL12">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL13">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL14">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELB__LEVEL15">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL16">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL17">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL18">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL19">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL20">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL21">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL22">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELC__LEVEL23">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL24">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL25">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL26">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL27">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL28">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL29">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL30">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+      <value-group name="LEVELD__LEVEL31">
+        <value name="NONE" caption="No Action" value="0x0"/>
+        <value name="HOSTIRQ" caption="Host Interrupt" value="0x1"/>
+        <value name="LEHIRQ" caption="Log Event and Host Interrupt" value="0x2"/>
+        <value name="SAFEMODE" caption="Enter Safe Mode" value="0x4"/>
+        <value name="ERSTKEY" caption="Erase Tamper Key" value="0x5"/>
+        <value name="ERSFKEY" caption="Erase Flash Key" value="0x6"/>
+      </value-group>
+    </module>
+    <module name="TIMERS" version="1.0.0" caption="Timer Module">
+      <register-group name="TIMERS" caption="Timer Module">
+        <register name="RST" offset="0x0" rw="RW" size="4" caption="Reset">
+        </register>
+        <register name="STOP" offset="0x4" rw="RW" size="4" caption="Stop">
+        </register>
+        <register name="INTEN" offset="0x8" rw="RW" size="4" caption="Interrupt Enable">
+        </register>
+        <register name="INTDIS" offset="0xC" rw="RW" size="4" caption="Interrupt Disable">
+        </register>
+        <register name="STAT" offset="0x10" rw="RW" size="4" caption="Status">
+        </register>
+        <register name="CNT0" offset="0x18" rw="RW" size="4" caption="Counter 0">
+        </register>
+        <register name="MATCH0" offset="0x1C" rw="RW" size="4" caption="Match 0">
+        </register>
+        <register name="CNT1" offset="0x20" rw="RW" size="4" caption="Counter 1">
+        </register>
+        <register name="MATCH1" offset="0x24" rw="RW" size="4" caption="Match 1">
+        </register>
+      </register-group>
+    </module>
+    <module name="WDT" version="1.0.0" caption="Watchdog Timer Module">
+      <register-group name="WDT" caption="Watchdog Timer Module">
+        <register name="WDCOUNT" offset="0x0" rw="R" size="4" caption="Count">
+        </register>
+        <register name="WDRELOAD" offset="0x4" rw="RW" size="4" caption="Reload">
+        </register>
+        <register name="WDKICK" offset="0x8" rw="W" size="4" caption="Kick">
+        </register>
+        <register name="WDCONTROL" offset="0xC" rw="RW" size="4" initval="0x00000000" caption="Control">
+          <bitfield name="WDRSTEN" caption="WDRSTEN" mask="0x1"/>
+        </register>
+        <register name="WDSTATUS" offset="0x10" rw="R" size="4" caption="Status">
+        </register>
+        <register name="WDSTOP" offset="0x14" rw="W" size="4" caption="Stop">
+        </register>
+      </register-group>
+    </module>
+  </modules>
+  <pinouts>
+  </pinouts>
+</avr-tools-device-file>

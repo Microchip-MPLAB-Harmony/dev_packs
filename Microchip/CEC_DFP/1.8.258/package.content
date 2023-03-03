@@ -1,0 +1,1052 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="CEC1702">
+      <resource type="atdf" subdir="cec1702/atdf">
+        <includes pattern="CEC1702.atdf"/>
+      </resource>
+      <resource type="pic" subdir="cec1702/edc">
+        <includes pattern="CEC1702.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1702/include">
+        <includes pattern="MCHP_CEC1702.h"/>
+        <includes pattern="sam.h"/>
+      </resource>
+      <resource type="c.header.mcc" subdir="cec1702/include_mcc">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1702.h"/>
+        <includes pattern="system_cec1702q.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer16.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cnt_tmr.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/week.h"/>
+        <includes pattern="component/tach.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/fan.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/rc_id.h"/>
+        <includes pattern="component/kms.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/gp_spi.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vci.h"/>
+        <includes pattern="component/vbat_ram.h"/>
+        <includes pattern="component/vbat.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/efuse.h"/>
+        <includes pattern="pio/cec1702.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1702__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1702/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1702/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1702/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1702/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1702/armcc">
+        <includes pattern="armcc/startup_cec1702.s"/>
+        <includes pattern="system_cec1702.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1702/gcc">
+        <includes pattern="startup_ARMCM4.S"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1702/gcc">
+        <includes pattern="demo_linker.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1702/iar">
+        <includes pattern="iar/startup_cec1702.c"/>
+        <includes pattern="system_cec1702.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1702/iar">
+        <includes pattern="config/linker/Microchip/cec1702/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1702/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1702/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC1702Q.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1702.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC1702/CEC1702Q/CEC1702.i79"/>
+        <includes pattern="config/devices/Microchip/CEC1702/CEC1702Q/CEC1702.menu"/>
+      </resource>
+      <resource type="xc32.source.startup" subdir="cec1702/xc32">
+        <includes pattern="startup_cec1702.c"/>
+      </resource>
+      <resource type="xc32.linker" subdir="cec1702/xc32">
+        <includes pattern="CEC1702.ld"/>
+      </resource>
+      <resource type="xc32" subdir="cec1702/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1702/startup_cec1702.c"/>
+        <includes pattern="CEC1702/CEC1702.ld"/>
+        <includes pattern="CEC1702/specs-CEC1702"/>
+        <includes pattern="CEC1702/configuration.data"/>
+        <includes pattern="CEC1702/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="cec1702/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="cec1702/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1702/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1702/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="CEC1712H_B2_SX">
+      <resource type="atdf" subdir="cec1712/atdf">
+        <includes pattern="CEC1712H_B2_SX.atdf"/>
+      </resource>
+      <resource type="pic" subdir="cec1712/edc">
+        <includes pattern="CEC1712H_B2_SX.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1712/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1712h_b2_sx.h"/>
+        <includes pattern="system_cec1712h_b2_sx.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer16.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/week.h"/>
+        <includes pattern="component/tach.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/i2c.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vci.h"/>
+        <includes pattern="component/vbat_ram.h"/>
+        <includes pattern="component/vbat.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/espi_scratch.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="pio/cec1712h_b2_sx.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1712H_B2_SX__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1712/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1712/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1712/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1712/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1712/armcc">
+        <includes pattern="armcc/startup_cec1712h_b2_sx.s"/>
+        <includes pattern="system_cec1712h_b2_sx.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1712/gcc">
+        <includes pattern="gcc/startup_cec1712h_b2_sx.c"/>
+        <includes pattern="system_cec1712h_b2_sx.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1712/gcc">
+        <includes pattern="gcc/cec1712h_b2_sx_flash.ld"/>
+        <includes pattern="gcc/cec1712h_b2_sx_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1712/iar">
+        <includes pattern="iar/startup_cec1712h_b2_sx.c"/>
+        <includes pattern="system_cec1712h_b2_sx.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1712/iar">
+        <includes pattern="config/linker/Microchip/cec1712h_b2_sx/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1712h_b2_sx/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1712/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC1712H_B2_SX.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1712H_B2_SX.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC1712H_B2_SX/CEC1712H_B2_SX/CEC1712H_B2_SX.i79"/>
+        <includes pattern="config/devices/Microchip/CEC1712H_B2_SX/CEC1712H_B2_SX/CEC1712H_B2_SX.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1712/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1712H_B2_SX/startup_cec1712h_b2_sx.c"/>
+        <includes pattern="CEC1712H_B2_SX/CEC1712H_B2_SX.ld"/>
+        <includes pattern="CEC1712H_B2_SX/specs-CEC1712H_B2_SX"/>
+        <includes pattern="CEC1712H_B2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_B2_SX/pic32c"/>
+        <includes pattern="CEC1712H_N2_SX/startup_cec1712h_n2_sx.c"/>
+        <includes pattern="CEC1712H_N2_SX/CEC1712H_N2_SX.ld"/>
+        <includes pattern="CEC1712H_N2_SX/specs-CEC1712H_N2_SX"/>
+        <includes pattern="CEC1712H_N2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_N2_SX/pic32c"/>
+        <includes pattern="CEC1712H_S2_SX/startup_cec1712h_s2_sx.c"/>
+        <includes pattern="CEC1712H_S2_SX/CEC1712H_S2_SX.ld"/>
+        <includes pattern="CEC1712H_S2_SX/specs-CEC1712H_S2_SX"/>
+        <includes pattern="CEC1712H_S2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_S2_SX/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1712/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1712/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1712/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1712/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="CEC1712H_N2_SX">
+      <resource type="atdf" subdir="cec1712/atdf">
+        <includes pattern="CEC1712H_N2_SX.atdf"/>
+      </resource>
+      <resource type="pic" subdir="cec1712/edc">
+        <includes pattern="CEC1712H_N2_SX.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1712/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1712h_n2_sx.h"/>
+        <includes pattern="system_cec1712h_n2_sx.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer16.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/week.h"/>
+        <includes pattern="component/tach.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/i2c.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vci.h"/>
+        <includes pattern="component/vbat_ram.h"/>
+        <includes pattern="component/vbat.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/espi_scratch.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="pio/cec1712h_n2_sx.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1712H_N2_SX__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1712/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1712/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1712/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1712/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1712/armcc">
+        <includes pattern="armcc/startup_cec1712h_n2_sx.s"/>
+        <includes pattern="system_cec1712h_n2_sx.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1712/gcc">
+        <includes pattern="gcc/startup_cec1712h_n2_sx.c"/>
+        <includes pattern="system_cec1712h_n2_sx.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1712/gcc">
+        <includes pattern="gcc/cec1712h_n2_sx_flash.ld"/>
+        <includes pattern="gcc/cec1712h_n2_sx_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1712/iar">
+        <includes pattern="iar/startup_cec1712h_n2_sx.c"/>
+        <includes pattern="system_cec1712h_n2_sx.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1712/iar">
+        <includes pattern="config/linker/Microchip/cec1712h_n2_sx/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1712h_n2_sx/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1712/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC1712H_N2_SX.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1712H_N2_SX.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC1712H_N2_SX/CEC1712H_N2_SX/CEC1712H_N2_SX.i79"/>
+        <includes pattern="config/devices/Microchip/CEC1712H_N2_SX/CEC1712H_N2_SX/CEC1712H_N2_SX.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1712/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1712H_B2_SX/startup_cec1712h_b2_sx.c"/>
+        <includes pattern="CEC1712H_B2_SX/CEC1712H_B2_SX.ld"/>
+        <includes pattern="CEC1712H_B2_SX/specs-CEC1712H_B2_SX"/>
+        <includes pattern="CEC1712H_B2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_B2_SX/pic32c"/>
+        <includes pattern="CEC1712H_N2_SX/startup_cec1712h_n2_sx.c"/>
+        <includes pattern="CEC1712H_N2_SX/CEC1712H_N2_SX.ld"/>
+        <includes pattern="CEC1712H_N2_SX/specs-CEC1712H_N2_SX"/>
+        <includes pattern="CEC1712H_N2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_N2_SX/pic32c"/>
+        <includes pattern="CEC1712H_S2_SX/startup_cec1712h_s2_sx.c"/>
+        <includes pattern="CEC1712H_S2_SX/CEC1712H_S2_SX.ld"/>
+        <includes pattern="CEC1712H_S2_SX/specs-CEC1712H_S2_SX"/>
+        <includes pattern="CEC1712H_S2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_S2_SX/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1712/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1712/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1712/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1712/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="CEC1712H_S2_SX">
+      <resource type="atdf" subdir="cec1712/atdf">
+        <includes pattern="CEC1712H_S2_SX.atdf"/>
+      </resource>
+      <resource type="pic" subdir="cec1712/edc">
+        <includes pattern="CEC1712H_S2_SX.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1712/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1712h_s2_sx.h"/>
+        <includes pattern="system_cec1712h_s2_sx.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer16.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/week.h"/>
+        <includes pattern="component/tach.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/i2c.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vci.h"/>
+        <includes pattern="component/vbat_ram.h"/>
+        <includes pattern="component/vbat.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/espi_scratch.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="pio/cec1712h_s2_sx.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1712H_S2_SX__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1712/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1712/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1712/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1712/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1712/armcc">
+        <includes pattern="armcc/startup_cec1712h_s2_sx.s"/>
+        <includes pattern="system_cec1712h_s2_sx.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1712/gcc">
+        <includes pattern="gcc/startup_cec1712h_s2_sx.c"/>
+        <includes pattern="system_cec1712h_s2_sx.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1712/gcc">
+        <includes pattern="gcc/cec1712h_s2_sx_flash.ld"/>
+        <includes pattern="gcc/cec1712h_s2_sx_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1712/iar">
+        <includes pattern="iar/startup_cec1712h_s2_sx.c"/>
+        <includes pattern="system_cec1712h_s2_sx.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1712/iar">
+        <includes pattern="config/linker/Microchip/cec1712h_s2_sx/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1712h_s2_sx/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1712/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC1712H_S2_SX.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1712H_S2_SX.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC1712H_S2_SX/CEC1712H_S2_SX/CEC1712H_S2_SX.i79"/>
+        <includes pattern="config/devices/Microchip/CEC1712H_S2_SX/CEC1712H_S2_SX/CEC1712H_S2_SX.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1712/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1712H_B2_SX/startup_cec1712h_b2_sx.c"/>
+        <includes pattern="CEC1712H_B2_SX/CEC1712H_B2_SX.ld"/>
+        <includes pattern="CEC1712H_B2_SX/specs-CEC1712H_B2_SX"/>
+        <includes pattern="CEC1712H_B2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_B2_SX/pic32c"/>
+        <includes pattern="CEC1712H_N2_SX/startup_cec1712h_n2_sx.c"/>
+        <includes pattern="CEC1712H_N2_SX/CEC1712H_N2_SX.ld"/>
+        <includes pattern="CEC1712H_N2_SX/specs-CEC1712H_N2_SX"/>
+        <includes pattern="CEC1712H_N2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_N2_SX/pic32c"/>
+        <includes pattern="CEC1712H_S2_SX/startup_cec1712h_s2_sx.c"/>
+        <includes pattern="CEC1712H_S2_SX/CEC1712H_S2_SX.ld"/>
+        <includes pattern="CEC1712H_S2_SX/specs-CEC1712H_S2_SX"/>
+        <includes pattern="CEC1712H_S2_SX/configuration.data"/>
+        <includes pattern="CEC1712H_S2_SX/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1712/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1712/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1712/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1712/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="CEC1734_S0_2HW">
+      <resource type="atdf" subdir="cec1734/atdf">
+        <includes pattern="CEC1734_S0_2HW.atdf"/>
+      </resource>
+      <resource type="svd" subdir="cec1734/svd">
+        <includes pattern="CEC1734_S0_2HW.svd"/>
+      </resource>
+      <resource type="pic" subdir="cec1734/edc">
+        <includes pattern="CEC1734_S0_2HW.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1734/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1734_s0_2hw.h"/>
+        <includes pattern="system_cec.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vtr_reg_bank.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="component/spt.h"/>
+        <includes pattern="component/imspi.h"/>
+        <includes pattern="component/env_mon.h"/>
+        <includes pattern="component/spi_mon.h"/>
+        <includes pattern="pio/cec1734_s0_2hw.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1734_S0_2HW__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1734/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1734/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1734/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1734/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1734/armcc">
+        <includes pattern="armcc/startup_cec1734_s0_2hw.s"/>
+        <includes pattern="system_cec1734_s0_2hw.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1734/gcc">
+        <includes pattern="gcc/startup_cec1734_s0_2hw.c"/>
+        <includes pattern="system_cec1734_s0_2hw.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1734/gcc">
+        <includes pattern="gcc/cec1734_s0_2hw_flash.ld"/>
+        <includes pattern="gcc/cec1734_s0_2hw_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1734/iar">
+        <includes pattern="iar/startup_cec1734_s0_2hw.c"/>
+        <includes pattern="system_cec1734_s0_2hw.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1734/iar">
+        <includes pattern="config/linker/Microchip/cec1734_s0_2hw/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1734_s0_2hw/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1734/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1734_S0_2HW.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1734_S0_2HW.i79"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1734_S0_2HW.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1734/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1734_S0_2HW/startup_cec1734_s0_2hw.c"/>
+        <includes pattern="CEC1734_S0_2HW/CEC1734_S0_2HW.ld"/>
+        <includes pattern="CEC1734_S0_2HW/specs-CEC1734_S0_2HW"/>
+        <includes pattern="CEC1734_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2HW/pic32c"/>
+        <includes pattern="CEC1734_S0_2ZW/startup_cec1734_s0_2zw.c"/>
+        <includes pattern="CEC1734_S0_2ZW/CEC1734_S0_2ZW.ld"/>
+        <includes pattern="CEC1734_S0_2ZW/specs-CEC1734_S0_2ZW"/>
+        <includes pattern="CEC1734_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2ZW/pic32c"/>
+        <includes pattern="CEC1736_S0_2HW/startup_cec1736_s0_2hw.c"/>
+        <includes pattern="CEC1736_S0_2HW/CEC1736_S0_2HW.ld"/>
+        <includes pattern="CEC1736_S0_2HW/specs-CEC1736_S0_2HW"/>
+        <includes pattern="CEC1736_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2HW/pic32c"/>
+        <includes pattern="CEC1736_S0_2ZW/startup_cec1736_s0_2zw.c"/>
+        <includes pattern="CEC1736_S0_2ZW/CEC1736_S0_2ZW.ld"/>
+        <includes pattern="CEC1736_S0_2ZW/specs-CEC1736_S0_2ZW"/>
+        <includes pattern="CEC1736_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2ZW/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1734/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1734/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1734/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1734/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="CEC1734_S0_2ZW">
+      <resource type="atdf" subdir="cec1734/atdf">
+        <includes pattern="CEC1734_S0_2ZW.atdf"/>
+      </resource>
+      <resource type="svd" subdir="cec1734/svd">
+        <includes pattern="CEC1734_S0_2ZW.svd"/>
+      </resource>
+      <resource type="pic" subdir="cec1734/edc">
+        <includes pattern="CEC1734_S0_2ZW.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1734/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1734_s0_2zw.h"/>
+        <includes pattern="system_cec.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vtr_reg_bank.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="component/spt.h"/>
+        <includes pattern="component/imspi.h"/>
+        <includes pattern="component/env_mon.h"/>
+        <includes pattern="component/spi_mon.h"/>
+        <includes pattern="pio/cec1734_s0_2zw.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1734_S0_2ZW__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1734/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1734/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1734/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1734/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1734/armcc">
+        <includes pattern="armcc/startup_cec1734_s0_2zw.s"/>
+        <includes pattern="system_cec1734_s0_2zw.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1734/gcc">
+        <includes pattern="gcc/startup_cec1734_s0_2zw.c"/>
+        <includes pattern="system_cec1734_s0_2zw.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1734/gcc">
+        <includes pattern="gcc/cec1734_s0_2zw_flash.ld"/>
+        <includes pattern="gcc/cec1734_s0_2zw_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1734/iar">
+        <includes pattern="iar/startup_cec1734_s0_2zw.c"/>
+        <includes pattern="system_cec1734_s0_2zw.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1734/iar">
+        <includes pattern="config/linker/Microchip/cec1734_s0_2zw/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1734_s0_2zw/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1734/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1734_S0_2ZW.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1734_S0_2ZW.i79"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1734_S0_2ZW.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1734/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1734_S0_2HW/startup_cec1734_s0_2hw.c"/>
+        <includes pattern="CEC1734_S0_2HW/CEC1734_S0_2HW.ld"/>
+        <includes pattern="CEC1734_S0_2HW/specs-CEC1734_S0_2HW"/>
+        <includes pattern="CEC1734_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2HW/pic32c"/>
+        <includes pattern="CEC1734_S0_2ZW/startup_cec1734_s0_2zw.c"/>
+        <includes pattern="CEC1734_S0_2ZW/CEC1734_S0_2ZW.ld"/>
+        <includes pattern="CEC1734_S0_2ZW/specs-CEC1734_S0_2ZW"/>
+        <includes pattern="CEC1734_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2ZW/pic32c"/>
+        <includes pattern="CEC1736_S0_2HW/startup_cec1736_s0_2hw.c"/>
+        <includes pattern="CEC1736_S0_2HW/CEC1736_S0_2HW.ld"/>
+        <includes pattern="CEC1736_S0_2HW/specs-CEC1736_S0_2HW"/>
+        <includes pattern="CEC1736_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2HW/pic32c"/>
+        <includes pattern="CEC1736_S0_2ZW/startup_cec1736_s0_2zw.c"/>
+        <includes pattern="CEC1736_S0_2ZW/CEC1736_S0_2ZW.ld"/>
+        <includes pattern="CEC1736_S0_2ZW/specs-CEC1736_S0_2ZW"/>
+        <includes pattern="CEC1736_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2ZW/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1734/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1734/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1734/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1734/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="CEC1736_S0_2HW">
+      <resource type="atdf" subdir="cec1736/atdf">
+        <includes pattern="CEC1736_S0_2HW.atdf"/>
+      </resource>
+      <resource type="svd" subdir="cec1736/svd">
+        <includes pattern="CEC1736_S0_2HW.svd"/>
+      </resource>
+      <resource type="pic" subdir="cec1736/edc">
+        <includes pattern="CEC1736_S0_2HW.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1736/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1736_s0_2hw.h"/>
+        <includes pattern="system_cec.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vtr_reg_bank.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="component/spt.h"/>
+        <includes pattern="component/imspi.h"/>
+        <includes pattern="component/env_mon.h"/>
+        <includes pattern="component/spi_mon.h"/>
+        <includes pattern="pio/cec1736_s0_2hw.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1736_S0_2HW__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1736/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1736/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1736/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1736/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1736/armcc">
+        <includes pattern="armcc/startup_cec1736_s0_2hw.s"/>
+        <includes pattern="system_cec1736_s0_2hw.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1736/gcc">
+        <includes pattern="gcc/startup_cec1736_s0_2hw.c"/>
+        <includes pattern="system_cec1736_s0_2hw.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1736/gcc">
+        <includes pattern="gcc/cec1736_s0_2hw_flash.ld"/>
+        <includes pattern="gcc/cec1736_s0_2hw_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1736/iar">
+        <includes pattern="iar/startup_cec1736_s0_2hw.c"/>
+        <includes pattern="system_cec1736_s0_2hw.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1736/iar">
+        <includes pattern="config/linker/Microchip/cec1736_s0_2hw/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1736_s0_2hw/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1736/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1736_S0_2HW.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1736_S0_2HW.i79"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1736_S0_2HW.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1736/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1734_S0_2HW/startup_cec1734_s0_2hw.c"/>
+        <includes pattern="CEC1734_S0_2HW/CEC1734_S0_2HW.ld"/>
+        <includes pattern="CEC1734_S0_2HW/specs-CEC1734_S0_2HW"/>
+        <includes pattern="CEC1734_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2HW/pic32c"/>
+        <includes pattern="CEC1734_S0_2ZW/startup_cec1734_s0_2zw.c"/>
+        <includes pattern="CEC1734_S0_2ZW/CEC1734_S0_2ZW.ld"/>
+        <includes pattern="CEC1734_S0_2ZW/specs-CEC1734_S0_2ZW"/>
+        <includes pattern="CEC1734_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2ZW/pic32c"/>
+        <includes pattern="CEC1736_S0_2HW/startup_cec1736_s0_2hw.c"/>
+        <includes pattern="CEC1736_S0_2HW/CEC1736_S0_2HW.ld"/>
+        <includes pattern="CEC1736_S0_2HW/specs-CEC1736_S0_2HW"/>
+        <includes pattern="CEC1736_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2HW/pic32c"/>
+        <includes pattern="CEC1736_S0_2ZW/startup_cec1736_s0_2zw.c"/>
+        <includes pattern="CEC1736_S0_2ZW/CEC1736_S0_2ZW.ld"/>
+        <includes pattern="CEC1736_S0_2ZW/specs-CEC1736_S0_2ZW"/>
+        <includes pattern="CEC1736_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2ZW/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1736/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1736/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1736/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1736/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="CEC1736_S0_2ZW">
+      <resource type="atdf" subdir="cec1736/atdf">
+        <includes pattern="CEC1736_S0_2ZW.atdf"/>
+      </resource>
+      <resource type="svd" subdir="cec1736/svd">
+        <includes pattern="CEC1736_S0_2ZW.svd"/>
+      </resource>
+      <resource type="pic" subdir="cec1736/edc">
+        <includes pattern="CEC1736_S0_2ZW.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="cec1736/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="cec1736_s0_2zw.h"/>
+        <includes pattern="system_cec.h"/>
+        <includes pattern="component/pcr.h"/>
+        <includes pattern="component/dma_main.h"/>
+        <includes pattern="component/dma_chan00.h"/>
+        <includes pattern="component/dma_chan01.h"/>
+        <includes pattern="component/dma_chan02.h"/>
+        <includes pattern="component/ecia.h"/>
+        <includes pattern="component/gcr.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/gpio.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/timer32.h"/>
+        <includes pattern="component/cct.h"/>
+        <includes pattern="component/htm.h"/>
+        <includes pattern="component/rtos.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/led.h"/>
+        <includes pattern="component/smb.h"/>
+        <includes pattern="component/qmspi.h"/>
+        <includes pattern="component/tfdp.h"/>
+        <includes pattern="component/vtr_reg_bank.h"/>
+        <includes pattern="component/ec_reg_bank.h"/>
+        <includes pattern="component/otp.h"/>
+        <includes pattern="component/spt.h"/>
+        <includes pattern="component/imspi.h"/>
+        <includes pattern="component/env_mon.h"/>
+        <includes pattern="component/spi_mon.h"/>
+        <includes pattern="pio/cec1736_s0_2zw.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__CEC1736_S0_2ZW__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="cec1736/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="cec1736/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="cec1736/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="cec1736/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="cec1736/armcc">
+        <includes pattern="armcc/startup_cec1736_s0_2zw.s"/>
+        <includes pattern="system_cec1736_s0_2zw.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="cec1736/gcc">
+        <includes pattern="gcc/startup_cec1736_s0_2zw.c"/>
+        <includes pattern="system_cec1736_s0_2zw.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="cec1736/gcc">
+        <includes pattern="gcc/cec1736_s0_2zw_flash.ld"/>
+        <includes pattern="gcc/cec1736_s0_2zw_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="cec1736/iar">
+        <includes pattern="iar/startup_cec1736_s0_2zw.c"/>
+        <includes pattern="system_cec1736_s0_2zw.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="cec1736/iar">
+        <includes pattern="config/linker/Microchip/cec1736_s0_2zw/sram.icf"/>
+        <includes pattern="config/linker/Microchip/cec1736_s0_2zw/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="cec1736/iar">
+        <includes pattern="config/debugger/Microchip/Trace_CEC.dmac"/>
+        <includes pattern="config/debugger/Microchip/CEC1736_S0_2ZW.ddf"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1736_S0_2ZW.i79"/>
+        <includes pattern="config/devices/Microchip/CEC173X/CEC/CEC1736_S0_2ZW.menu"/>
+      </resource>
+      <resource type="xc32" subdir="cec1736/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="CEC1734_S0_2HW/startup_cec1734_s0_2hw.c"/>
+        <includes pattern="CEC1734_S0_2HW/CEC1734_S0_2HW.ld"/>
+        <includes pattern="CEC1734_S0_2HW/specs-CEC1734_S0_2HW"/>
+        <includes pattern="CEC1734_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2HW/pic32c"/>
+        <includes pattern="CEC1734_S0_2ZW/startup_cec1734_s0_2zw.c"/>
+        <includes pattern="CEC1734_S0_2ZW/CEC1734_S0_2ZW.ld"/>
+        <includes pattern="CEC1734_S0_2ZW/specs-CEC1734_S0_2ZW"/>
+        <includes pattern="CEC1734_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1734_S0_2ZW/pic32c"/>
+        <includes pattern="CEC1736_S0_2HW/startup_cec1736_s0_2hw.c"/>
+        <includes pattern="CEC1736_S0_2HW/CEC1736_S0_2HW.ld"/>
+        <includes pattern="CEC1736_S0_2HW/specs-CEC1736_S0_2HW"/>
+        <includes pattern="CEC1736_S0_2HW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2HW/pic32c"/>
+        <includes pattern="CEC1736_S0_2ZW/startup_cec1736_s0_2zw.c"/>
+        <includes pattern="CEC1736_S0_2ZW/CEC1736_S0_2ZW.ld"/>
+        <includes pattern="CEC1736_S0_2ZW/specs-CEC1736_S0_2ZW"/>
+        <includes pattern="CEC1736_S0_2ZW/configuration.data"/>
+        <includes pattern="CEC1736_S0_2ZW/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="cec1736/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="cec1736/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="cec1736/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="cec1736/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="1.8.BUILDNUMBER">
+		  - Changed interrupt name to MemoryManagement and added value-groups
+		  - Added bit [7] current status of VTR1 and bit [15] Current status of VTR2 in Pad Monitor Status Register at offset 0x248 in EC REG Bank Module
+	  </release>
+      <release version="1.7.151" date="2022-09-23">
+        - Added memory management interrupt description.
+      </release>
+      <release version="1.6.149" date="2022-09-19">
+        - Added module parameters to support MPLAB Harmony.
+        - Fixed bits for SPIMON1 in GIRQ24.
+        - Updated device id for some parts.
+      </release>
+      <release version="1.5.142" date="2022-04-18">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+        - Added CEC1734_S0_2HW, CEC1734_S0_2ZW, CEC1736_S0_2HW, and CEC1736_S0_2ZW.
+        - Removed CEC1734_S0_SX and CEC1736_S0_SX, use _2ZW devices instead.
+        - Fixed core name in i79 files for IAR.
+        - Changed WDT.STS register from read only to read-write.
+      </release>
+      <release version="1.4.114" date="2021-09-13">
+        - Added CEC1734 and CEC1736 parts.
+        - DEVXML-3850 Added parameterized memory sizes to gcc linker scripts.
+        - DEVXML-3625 Added _on_reset and _on_bootstrap hooks to gcc startup code.
+      </release>
+      <release version="1.3.106" date="2021-04-09">
+        - Added memory range for external flash.
+        - Renamed GPIO.CTRL2 to GPIO.CTRL2B.
+        - Fixed error in memory layout for CEC171x devices.
+        - Updated ECIA module description.
+        - Updated GPIO.CTRLn registers.
+        - Removed _u32, _u16 and _u8 versions of registers. Use the main register without these suffixes.
+        - Added CEC1712H_N2_SX.</release>
+      <release version="1.2.87" date="2020-05-04">Updated device id information for MPLAB X. Fix project configuration to include CMSIS Core.</release>
+      <release version="1.1.80" date="2020-02-12">Support CEC1712H devices. Added and updated support files for XC32, ARMCC, and IAR for CEC1702.</release>
+      <release version="1.0.73" date="2019-10-22">Updated size of EmulatorSector to contain all CoreSight modules.</release>
+      <release version="1.0.64" date="2019-06-20">Added isexecutable attribute.</release>
+      <release version="1.0.56" date="2019-01-24">Initial release.</release>
+    </releases>
+    <deprecated>
+      <target name="CEC1734_S0_SX" date="2021-10-21"/>
+      <target name="CEC1736_S0_SX" date="2021-10-21"/>
+    </deprecated>
+  </pdsc>
+</package>

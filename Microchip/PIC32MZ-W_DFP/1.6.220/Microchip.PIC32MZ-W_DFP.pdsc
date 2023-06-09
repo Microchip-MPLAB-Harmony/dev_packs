@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         schemaVersion="1.3"
+         xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd"
+         xs:noNamespaceSchemaLocation="PACK.ATMEL.xsd">
+   <vendor>Microchip</vendor>
+   <url>https://packs.download.microchip.com/</url>
+   <name>PIC32MZ-W_DFP</name>
+   <description>Microchip PIC32MZ-W Series Device Support</description>
+   <releases>
+      <release version="1.6.220" date="2022-04-06">NEXT</release>
+      <release version="1.5.203" date="2021-09-06">Added WFI32E01.</release>
+      <release version="1.4.193" date="2021-02-02">Updated deep sleep module.</release>
+      <release version="1.3.177" date="2020-08-03">Added CVDCON.CVDIEN and OFF168.VOFF bit fields. Updated clause 2 of the license text in headers, linker scripts and .S files to no require publication of copyright notice in embedded applications. Split RCON module.</release>
+      <release version="1.2.153" date="2020-02-12">Update interrupts, ADC and CAN information. Updated XC32 linker script to only link processor.o for version less than 2.10, newer versions will use a device specific .S file instead.</release>
+      <release version="1.1.116" date="2019-10-15">Added freeze info. Updated name of NVMDATAn.NVMDATAn. Added bits to CLKSTAT. Removed TnCON.T32 and INTCON.VS.</release>
+      <release version="1.0.79" date="2019-04-16">Added crypto revision register, fixed PTG base address naming.</release>
+      <release version="1.0.37" date="2019-01-24">Initial release.</release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>PIC32MZ-W</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="PIC32MZ-W" Dvendor="Microchip:3">
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                            schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.10-"/>
+               <mchp:prerequisite component="MPLAB X IPE" version="[5.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="PIC32MZ1025W104132">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32MZ1025W104132.atdf"/>
+                  <at:variant ordercode=""
+                              vccmin="3.0"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+85"/>
+                  <at:memory exec=""
+                             name="altCodeProtect"
+                             rw=""
+                             size="0x4"
+                             start="0x1FC55EBC"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="altConfig"
+                             rw=""
+                             size="0x2c"
+                             start="0x1FC55E88"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="lowerbootalias"
+                             rw=""
+                             size="0x10000"
+                             start="0x1FC00000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="otpmemory"
+                             rw=""
+                             size="0x1000"
+                             start="0x1FC16000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="code"
+                             rw=""
+                             size="0x100000"
+                             start="0x10000000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="codeProtect"
+                             rw=""
+                             size="0x4"
+                             start="0x1FC55FBC"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="config"
+                             rw=""
+                             size="0x2c"
+                             start="0x1FC55F88"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="devid"
+                             rw=""
+                             size="0x0"
+                             start="0xffffffff"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="emulation"
+                             rw=""
+                             size="0x100000"
+                             start="0xff300000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="kseg0_data_mem"
+                             rw=""
+                             size="0x40000"
+                             start="0x0"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="wcmDataMem"
+                             rw=""
+                             size="0x2000"
+                             start="0x1f803000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="crypto1SCM"
+                             rw=""
+                             size="0x2000"
+                             start="0x1F900000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="crypto1UCM"
+                             rw=""
+                             size="0x2000"
+                             start="0x1F902000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="configSfr0"
+                             rw=""
+                             size="0x70"
+                             start="0x1F800000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="configSfr1"
+                             rw=""
+                             size="0x490"
+                             start="0x1F800070"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb1a"
+                             rw=""
+                             size="0x2b00"
+                             start="0x1F800500"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb1b"
+                             rw=""
+                             size="0x5100"
+                             start="0x1f80fe00"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb2"
+                             rw=""
+                             size="0x20000"
+                             start="0x1F820000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb3"
+                             rw=""
+                             size="0x20000"
+                             start="0x1F840000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb4"
+                             rw=""
+                             size="0x10000"
+                             start="0x1F870000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_indep_a"
+                             rw=""
+                             size="0x26000"
+                             start="0x1F8C0000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_indep_b"
+                             rw=""
+                             size="0x20000"
+                             start="0x1F920000"
+                             type=""
+                             address-space="base"/>
+                  <at:interface type="jtag" name="JTAG"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32MZ1025W104132.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/pic32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32MZ1025W104132"
+                  title="Device page for PIC32MZ1025W104132"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32MZ1025W104132"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="WFI32E01">
+            <processor Dcore="32xxxx" Dendian="Little-endian" Dmpu="MPU" Dfpu="SP_FPU"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/WFI32E01.atdf"/>
+                  <at:variant ordercode=""
+                              vccmin="3.0"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+85"/>
+                  <at:memory exec=""
+                             name="altCodeProtect"
+                             rw=""
+                             size="0x4"
+                             start="0x1FC55EBC"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="altConfig"
+                             rw=""
+                             size="0x2c"
+                             start="0x1FC55E88"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="lowerbootalias"
+                             rw=""
+                             size="0x10000"
+                             start="0x1FC00000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="otpmemory"
+                             rw=""
+                             size="0x1000"
+                             start="0x1FC16000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="code"
+                             rw=""
+                             size="0x100000"
+                             start="0x10000000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="codeProtect"
+                             rw=""
+                             size="0x4"
+                             start="0x1FC55FBC"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="config"
+                             rw=""
+                             size="0x2c"
+                             start="0x1FC55F88"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="devid"
+                             rw=""
+                             size="0x0"
+                             start="0xffffffff"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="emulation"
+                             rw=""
+                             size="0x100000"
+                             start="0xff300000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="kseg0_data_mem"
+                             rw=""
+                             size="0x40000"
+                             start="0x0"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="wcmDataMem"
+                             rw=""
+                             size="0x2000"
+                             start="0x1f803000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="crypto1SCM"
+                             rw=""
+                             size="0x2000"
+                             start="0x1F900000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="crypto1UCM"
+                             rw=""
+                             size="0x2000"
+                             start="0x1F902000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="configSfr0"
+                             rw=""
+                             size="0x70"
+                             start="0x1F800000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="configSfr1"
+                             rw=""
+                             size="0x490"
+                             start="0x1F800070"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb1a"
+                             rw=""
+                             size="0x2b00"
+                             start="0x1F800500"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb1b"
+                             rw=""
+                             size="0x5100"
+                             start="0x1f80fe00"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb2"
+                             rw=""
+                             size="0x20000"
+                             start="0x1F820000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb3"
+                             rw=""
+                             size="0x20000"
+                             start="0x1F840000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_pb4"
+                             rw=""
+                             size="0x10000"
+                             start="0x1F870000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_indep_a"
+                             rw=""
+                             size="0x26000"
+                             start="0x1F8C0000"
+                             type=""
+                             address-space="base"/>
+                  <at:memory exec=""
+                             name="periph_indep_b"
+                             rw=""
+                             size="0x20000"
+                             start="0x1F920000"
+                             type=""
+                             address-space="base"/>
+                  <at:interface type="jtag" name="JTAG"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/WFI32E01.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/pic32.persfr"/>
+                  </mchp:hwtool>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=WFI32E01"
+                  title="Device page for WFI32E01"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/WFI32E01"
+                  title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+</package>

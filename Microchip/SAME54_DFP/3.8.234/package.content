@@ -1,0 +1,627 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAME54N19A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAME54N19A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAME54N19A.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same54n19a.h"/>
+        <includes pattern="system_same54.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/pukcc.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/ramecc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdhc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/same54n19a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME54N19A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_same54n19a.s"/>
+        <includes pattern="system_same54n19a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_same54n19a.c"/>
+        <includes pattern="system_same54n19a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/same54n19a_flash.ld"/>
+        <includes pattern="gcc/same54n19a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_same54n19a.c"/>
+        <includes pattern="system_same54n19a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="iar/same54n19a_flash.icf"/>
+        <includes pattern="iar/same54n19a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54N19A.i79"/>
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54N19A.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAME54.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAME54N19A.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/same54n19a/same54n19a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/same54n19a/same54n19a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/same54n19a/same54n19a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+        <includes pattern="j-link_cortex-m4.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME54N19A/startup_atsame54n19a.c"/>
+        <includes pattern="ATSAME54N19A/ATSAME54N19A.ld"/>
+        <includes pattern="ATSAME54N19A/specs-ATSAME54N19A"/>
+        <includes pattern="ATSAME54N19A/configuration.data"/>
+        <includes pattern="ATSAME54N19A/pic32c"/>
+        <includes pattern="ATSAME54N20A/startup_atsame54n20a.c"/>
+        <includes pattern="ATSAME54N20A/ATSAME54N20A.ld"/>
+        <includes pattern="ATSAME54N20A/specs-ATSAME54N20A"/>
+        <includes pattern="ATSAME54N20A/configuration.data"/>
+        <includes pattern="ATSAME54N20A/pic32c"/>
+        <includes pattern="ATSAME54P19A/startup_atsame54p19a.c"/>
+        <includes pattern="ATSAME54P19A/ATSAME54P19A.ld"/>
+        <includes pattern="ATSAME54P19A/specs-ATSAME54P19A"/>
+        <includes pattern="ATSAME54P19A/configuration.data"/>
+        <includes pattern="ATSAME54P19A/pic32c"/>
+        <includes pattern="ATSAME54P20A/startup_atsame54p20a.c"/>
+        <includes pattern="ATSAME54P20A/ATSAME54P20A.ld"/>
+        <includes pattern="ATSAME54P20A/specs-ATSAME54P20A"/>
+        <includes pattern="ATSAME54P20A/configuration.data"/>
+        <includes pattern="ATSAME54P20A/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME54N20A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAME54N20A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAME54N20A.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same54n20a.h"/>
+        <includes pattern="system_same54.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/pukcc.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/ramecc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdhc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/same54n20a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME54N20A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_same54n20a.s"/>
+        <includes pattern="system_same54n20a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_same54n20a.c"/>
+        <includes pattern="system_same54n20a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/same54n20a_flash.ld"/>
+        <includes pattern="gcc/same54n20a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_same54n20a.c"/>
+        <includes pattern="system_same54n20a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="iar/same54n20a_flash.icf"/>
+        <includes pattern="iar/same54n20a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54N20A.i79"/>
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54N20A.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAME54.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAME54N20A.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/same54n20a/same54n20a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/same54n20a/same54n20a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/same54n20a/same54n20a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+        <includes pattern="j-link_cortex-m4.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME54N19A/startup_atsame54n19a.c"/>
+        <includes pattern="ATSAME54N19A/ATSAME54N19A.ld"/>
+        <includes pattern="ATSAME54N19A/specs-ATSAME54N19A"/>
+        <includes pattern="ATSAME54N19A/configuration.data"/>
+        <includes pattern="ATSAME54N19A/pic32c"/>
+        <includes pattern="ATSAME54N20A/startup_atsame54n20a.c"/>
+        <includes pattern="ATSAME54N20A/ATSAME54N20A.ld"/>
+        <includes pattern="ATSAME54N20A/specs-ATSAME54N20A"/>
+        <includes pattern="ATSAME54N20A/configuration.data"/>
+        <includes pattern="ATSAME54N20A/pic32c"/>
+        <includes pattern="ATSAME54P19A/startup_atsame54p19a.c"/>
+        <includes pattern="ATSAME54P19A/ATSAME54P19A.ld"/>
+        <includes pattern="ATSAME54P19A/specs-ATSAME54P19A"/>
+        <includes pattern="ATSAME54P19A/configuration.data"/>
+        <includes pattern="ATSAME54P19A/pic32c"/>
+        <includes pattern="ATSAME54P20A/startup_atsame54p20a.c"/>
+        <includes pattern="ATSAME54P20A/ATSAME54P20A.ld"/>
+        <includes pattern="ATSAME54P20A/specs-ATSAME54P20A"/>
+        <includes pattern="ATSAME54P20A/configuration.data"/>
+        <includes pattern="ATSAME54P20A/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME54P19A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAME54P19A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAME54P19A.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same54p19a.h"/>
+        <includes pattern="system_same54.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/pukcc.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/ramecc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdhc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/same54p19a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME54P19A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_same54p19a.s"/>
+        <includes pattern="system_same54p19a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_same54p19a.c"/>
+        <includes pattern="system_same54p19a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/same54p19a_flash.ld"/>
+        <includes pattern="gcc/same54p19a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_same54p19a.c"/>
+        <includes pattern="system_same54p19a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="iar/same54p19a_flash.icf"/>
+        <includes pattern="iar/same54p19a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54P19A.i79"/>
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54P19A.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAME54.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAME54P19A.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/same54p19a/same54p19a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/same54p19a/same54p19a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/same54p19a/same54p19a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+        <includes pattern="j-link_cortex-m4.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME54N19A/startup_atsame54n19a.c"/>
+        <includes pattern="ATSAME54N19A/ATSAME54N19A.ld"/>
+        <includes pattern="ATSAME54N19A/specs-ATSAME54N19A"/>
+        <includes pattern="ATSAME54N19A/configuration.data"/>
+        <includes pattern="ATSAME54N19A/pic32c"/>
+        <includes pattern="ATSAME54N20A/startup_atsame54n20a.c"/>
+        <includes pattern="ATSAME54N20A/ATSAME54N20A.ld"/>
+        <includes pattern="ATSAME54N20A/specs-ATSAME54N20A"/>
+        <includes pattern="ATSAME54N20A/configuration.data"/>
+        <includes pattern="ATSAME54N20A/pic32c"/>
+        <includes pattern="ATSAME54P19A/startup_atsame54p19a.c"/>
+        <includes pattern="ATSAME54P19A/ATSAME54P19A.ld"/>
+        <includes pattern="ATSAME54P19A/specs-ATSAME54P19A"/>
+        <includes pattern="ATSAME54P19A/configuration.data"/>
+        <includes pattern="ATSAME54P19A/pic32c"/>
+        <includes pattern="ATSAME54P20A/startup_atsame54p20a.c"/>
+        <includes pattern="ATSAME54P20A/ATSAME54P20A.ld"/>
+        <includes pattern="ATSAME54P20A/specs-ATSAME54P20A"/>
+        <includes pattern="ATSAME54P20A/configuration.data"/>
+        <includes pattern="ATSAME54P20A/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME54P20A">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="ATSAME54P20A.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="ATSAME54P20A.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same54p20a.h"/>
+        <includes pattern="system_same54.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/cmcc.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/hmatrixb.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/i2s.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pcc.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/pukcc.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/ramecc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdhc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usb.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/same54p20a.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME54P20A__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_same54p20a.s"/>
+        <includes pattern="system_same54p20a.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_same54p20a.c"/>
+        <includes pattern="system_same54p20a.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/same54p20a_flash.ld"/>
+        <includes pattern="gcc/same54p20a_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_same54p20a.c"/>
+        <includes pattern="system_same54p20a.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="iar/same54p20a_flash.icf"/>
+        <includes pattern="iar/same54p20a_sram.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54P20A.i79"/>
+        <includes pattern="config/devices/Atmel/SAME/ATSAME54/ATSAME54P20A.menu"/>
+        <includes pattern="config/debugger/Atmel/Trace_SAME54.dmac" optional="true"/>
+        <includes pattern="config/debugger/Atmel/ATSAME54P20A.ddf" optional="true"/>
+      </resource>
+      <resource type="iar.flashloader" subdir="iar">
+        <includes pattern="config/flashloader/Atmel/same54p20a/same54p20a-flash.board"/>
+        <includes pattern="config/flashloader/Atmel/same54p20a/same54p20a-flash.flash"/>
+        <includes pattern="config/flashloader/Atmel/same54p20a/same54p20a-flash.out"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m4.py"/>
+        <includes pattern="j-link_cortex-m4.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME54N19A/startup_atsame54n19a.c"/>
+        <includes pattern="ATSAME54N19A/ATSAME54N19A.ld"/>
+        <includes pattern="ATSAME54N19A/specs-ATSAME54N19A"/>
+        <includes pattern="ATSAME54N19A/configuration.data"/>
+        <includes pattern="ATSAME54N19A/pic32c"/>
+        <includes pattern="ATSAME54N20A/startup_atsame54n20a.c"/>
+        <includes pattern="ATSAME54N20A/ATSAME54N20A.ld"/>
+        <includes pattern="ATSAME54N20A/specs-ATSAME54N20A"/>
+        <includes pattern="ATSAME54N20A/configuration.data"/>
+        <includes pattern="ATSAME54N20A/pic32c"/>
+        <includes pattern="ATSAME54P19A/startup_atsame54p19a.c"/>
+        <includes pattern="ATSAME54P19A/ATSAME54P19A.ld"/>
+        <includes pattern="ATSAME54P19A/specs-ATSAME54P19A"/>
+        <includes pattern="ATSAME54P19A/configuration.data"/>
+        <includes pattern="ATSAME54P19A/pic32c"/>
+        <includes pattern="ATSAME54P20A/startup_atsame54p20a.c"/>
+        <includes pattern="ATSAME54P20A/ATSAME54P20A.ld"/>
+        <includes pattern="ATSAME54P20A/specs-ATSAME54P20A"/>
+        <includes pattern="ATSAME54P20A/configuration.data"/>
+        <includes pattern="ATSAME54P20A/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="3.8.BUILDNUMBER">
+		- Fixed DSU_DID__FAMILY naming
+		- Defined SMARTEEPROM and NOSMARTEEPROM values for NVMCTRL_PARAM__SEE
+		- Fixed SISR registers initial value
+		- Defined APSR register
+		- Updated debugger scripts for EDBG, Atmel-ICE and JLink support
+	  </release>
+      <release version="3.7.122" date="2022-03-17">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="3.6.95" date="2021-04-26">Hold in reset supported for JLink. Updated MPLAB X debug scripts. Fuse description included.</release>
+      <release version="3.5.87" date="2021-02-03">Added security bit programming for MPLAB X. Added instance headers. Removed OSCULP32K.CALIB. Removed DMAOS from TC CTRLB command enumeration. Added PMUXE and PMUXO value groups. Added RXLPISBC bit to GMAC registers.</release>
+      <release version="3.4.76" date="2020-10-09">Added read device ID. Updated the way of writing Memories. Fix the issue of program/debug error when chip is secured.</release>
+      <release version="3.3.64" date="2020-04-28">Updated MPLAB X debug scripts.</release>
+      <release version="3.2.56" date="2020-02-12">Added value-groups for SERCOM module. Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="3.1.43" date="2019-10-07">Updated captions and registers in CCL. Added XC32 content. Updated programming and debugging scripts.</release>
+      <release version="3.0.27" date="2019-04-10">Fixed bug EDBG/Atmel-ICE programming &gt;8kB flash. Removed legacy headers.</release>
+      <release version="2.0.12" date="2019-02-12">Fix: Modes in SVD, Value-group for USER_FUSES, define in GCLK. Added python programming and debugging scripts for MPLAB X. Succeeds Atmel.SAME54_DFP 1.0.87.</release>
+    </releases>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.50-"/>
+    </prerequisites>
+  </pdsc>
+</package>

@@ -1,0 +1,3287 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32CM2532JH00032">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM2532JH00032.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM2532JH00032.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh00032.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh00032.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH00032__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="system_pic32cm2532jh00032.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm2532jh00032_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh00032_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh00032.s"/>
+        <includes pattern="system_pic32cm2532jh00032.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="system_pic32cm2532jh00032.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH00032.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00032.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00032.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00032/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00032/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH00048">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM2532JH00048.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM2532JH00048.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh00048.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh00048.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH00048__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="system_pic32cm2532jh00048.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm2532jh00048_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh00048_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh00048.s"/>
+        <includes pattern="system_pic32cm2532jh00048.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="system_pic32cm2532jh00048.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH00048.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00048.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00048.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00048/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00048/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH00064">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM2532JH00064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM2532JH00064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh00064.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh00064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH00064__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="system_pic32cm2532jh00064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm2532jh00064_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh00064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh00064.s"/>
+        <includes pattern="system_pic32cm2532jh00064.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="system_pic32cm2532jh00064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH00064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH00100">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM2532JH00100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM2532JH00100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh00100.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh00100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH00100__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="system_pic32cm2532jh00100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm2532jh00100_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh00100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh00100.s"/>
+        <includes pattern="system_pic32cm2532jh00100.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="system_pic32cm2532jh00100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH00100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM2532JH00100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh00100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH01032">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM2532JH01032.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM2532JH01032.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh01032.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh01032.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH01032__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="system_pic32cm2532jh01032.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm2532jh01032_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh01032_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh01032.s"/>
+        <includes pattern="system_pic32cm2532jh01032.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="system_pic32cm2532jh01032.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH01032.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01032.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01032.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01032/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01032/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH01048">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM2532JH01048.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM2532JH01048.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh01048.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh01048.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH01048__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="system_pic32cm2532jh01048.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm2532jh01048_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh01048_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh01048.s"/>
+        <includes pattern="system_pic32cm2532jh01048.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="system_pic32cm2532jh01048.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH01048.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01048.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01048.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01048/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01048/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH01064">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM2532JH01064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM2532JH01064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh01064.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh01064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH01064__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="system_pic32cm2532jh01064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm2532jh01064_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh01064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh01064.s"/>
+        <includes pattern="system_pic32cm2532jh01064.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="system_pic32cm2532jh01064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH01064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM2532JH01100">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM2532JH01100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM2532JH01100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm2532jh01100.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm2532jh01100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM2532JH01100__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="system_pic32cm2532jh01100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm2532jh01100_flash.ld"/>
+        <includes pattern="gcc/pic32cm2532jh01100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm2532jh01100.s"/>
+        <includes pattern="system_pic32cm2532jh01100.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_256.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_256_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_256.FLM" value="start=0x00000000|size=0x40000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_256_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="system_pic32cm2532jh01100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM2532JH01100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM2532JH01100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm2532jh01100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH00032">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM5164JH00032.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM5164JH00032.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh00032.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh00032.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH00032__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="system_pic32cm5164jh00032.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm5164jh00032_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh00032_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh00032.s"/>
+        <includes pattern="system_pic32cm5164jh00032.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="system_pic32cm5164jh00032.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH00032.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00032.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00032.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00032/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00032/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH00048">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM5164JH00048.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM5164JH00048.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh00048.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh00048.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH00048__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="system_pic32cm5164jh00048.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm5164jh00048_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh00048_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh00048.s"/>
+        <includes pattern="system_pic32cm5164jh00048.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="system_pic32cm5164jh00048.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH00048.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00048.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00048.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00048/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00048/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH00064">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM5164JH00064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM5164JH00064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh00064.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh00064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH00064__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="system_pic32cm5164jh00064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm5164jh00064_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh00064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh00064.s"/>
+        <includes pattern="system_pic32cm5164jh00064.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="system_pic32cm5164jh00064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH00064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH00100">
+      <resource type="atdf" subdir="PIC32CM-JH00/atdf">
+        <includes pattern="PIC32CM5164JH00100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH00/edc">
+        <includes pattern="PIC32CM5164JH00100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH00/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh00100.h"/>
+        <includes pattern="system_pic32cmjh00.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh00100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH00100__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH00/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="system_pic32cm5164jh00100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH00/gcc">
+        <includes pattern="gcc/pic32cm5164jh00100_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh00100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH00/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh00100.s"/>
+        <includes pattern="system_pic32cm5164jh00100.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH00/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH00/iar">
+        <includes pattern="iar/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="system_pic32cm5164jh00100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH00.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH00100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH00/PIC32CM5164JH00100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH00/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh00100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH00/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH00032/startup_pic32cm2532jh00032.c"/>
+        <includes pattern="PIC32CM2532JH00032/PIC32CM2532JH00032.ld"/>
+        <includes pattern="PIC32CM2532JH00032/specs-PIC32CM2532JH00032"/>
+        <includes pattern="PIC32CM2532JH00032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00032/pic32c"/>
+        <includes pattern="PIC32CM2532JH00048/startup_pic32cm2532jh00048.c"/>
+        <includes pattern="PIC32CM2532JH00048/PIC32CM2532JH00048.ld"/>
+        <includes pattern="PIC32CM2532JH00048/specs-PIC32CM2532JH00048"/>
+        <includes pattern="PIC32CM2532JH00048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00048/pic32c"/>
+        <includes pattern="PIC32CM2532JH00064/startup_pic32cm2532jh00064.c"/>
+        <includes pattern="PIC32CM2532JH00064/PIC32CM2532JH00064.ld"/>
+        <includes pattern="PIC32CM2532JH00064/specs-PIC32CM2532JH00064"/>
+        <includes pattern="PIC32CM2532JH00064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00064/pic32c"/>
+        <includes pattern="PIC32CM2532JH00100/startup_pic32cm2532jh00100.c"/>
+        <includes pattern="PIC32CM2532JH00100/PIC32CM2532JH00100.ld"/>
+        <includes pattern="PIC32CM2532JH00100/specs-PIC32CM2532JH00100"/>
+        <includes pattern="PIC32CM2532JH00100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH00100/pic32c"/>
+        <includes pattern="PIC32CM5164JH00032/startup_pic32cm5164jh00032.c"/>
+        <includes pattern="PIC32CM5164JH00032/PIC32CM5164JH00032.ld"/>
+        <includes pattern="PIC32CM5164JH00032/specs-PIC32CM5164JH00032"/>
+        <includes pattern="PIC32CM5164JH00032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00032/pic32c"/>
+        <includes pattern="PIC32CM5164JH00048/startup_pic32cm5164jh00048.c"/>
+        <includes pattern="PIC32CM5164JH00048/PIC32CM5164JH00048.ld"/>
+        <includes pattern="PIC32CM5164JH00048/specs-PIC32CM5164JH00048"/>
+        <includes pattern="PIC32CM5164JH00048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00048/pic32c"/>
+        <includes pattern="PIC32CM5164JH00064/startup_pic32cm5164jh00064.c"/>
+        <includes pattern="PIC32CM5164JH00064/PIC32CM5164JH00064.ld"/>
+        <includes pattern="PIC32CM5164JH00064/specs-PIC32CM5164JH00064"/>
+        <includes pattern="PIC32CM5164JH00064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00064/pic32c"/>
+        <includes pattern="PIC32CM5164JH00100/startup_pic32cm5164jh00100.c"/>
+        <includes pattern="PIC32CM5164JH00100/PIC32CM5164JH00100.ld"/>
+        <includes pattern="PIC32CM5164JH00100/specs-PIC32CM5164JH00100"/>
+        <includes pattern="PIC32CM5164JH00100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH00100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH00/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH00/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH00/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH00/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH01032">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM5164JH01032.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM5164JH01032.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh01032.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh01032.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH01032__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="system_pic32cm5164jh01032.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm5164jh01032_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh01032_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh01032.s"/>
+        <includes pattern="system_pic32cm5164jh01032.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="system_pic32cm5164jh01032.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH01032.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01032.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01032.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01032/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01032/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH01048">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM5164JH01048.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM5164JH01048.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh01048.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh01048.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH01048__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="system_pic32cm5164jh01048.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm5164jh01048_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh01048_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh01048.s"/>
+        <includes pattern="system_pic32cm5164jh01048.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="system_pic32cm5164jh01048.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH01048.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01048.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01048.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01048/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01048/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH01064">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM5164JH01064.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM5164JH01064.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh01064.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh01064.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH01064__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="system_pic32cm5164jh01064.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm5164jh01064_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh01064_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh01064.s"/>
+        <includes pattern="system_pic32cm5164jh01064.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="system_pic32cm5164jh01064.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH01064.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01064.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01064.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01064/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01064/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CM5164JH01100">
+      <resource type="atdf" subdir="PIC32CM-JH01/atdf">
+        <includes pattern="PIC32CM5164JH01100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="PIC32CM-JH01/edc">
+        <includes pattern="PIC32CM5164JH01100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="PIC32CM-JH01/include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cm5164jh01100.h"/>
+        <includes pattern="system_pic32cmjh01.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/ccl.h"/>
+        <includes pattern="component/dac.h"/>
+        <includes pattern="component/divas.h"/>
+        <includes pattern="component/dmac.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/smbist.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mtb.h"/>
+        <includes pattern="component/nvmctrl.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pdec.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cm5164jh01100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CM5164JH01100__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="PIC32CM-JH01/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="system_pic32cm5164jh01100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="PIC32CM-JH01/gcc">
+        <includes pattern="gcc/pic32cm5164jh01100_flash.ld"/>
+        <includes pattern="gcc/pic32cm5164jh01100_sram.ld"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="PIC32CM-JH01/armcc">
+        <includes pattern="armcc/startup_pic32cm5164jh01100.s"/>
+        <includes pattern="system_pic32cm5164jh01100.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="PIC32CM-JH01/keil">
+        <includes pattern="Flash/PIC32CM-JH_512.FLM"/>
+        <includes pattern="Flash/PIC32CM-JH_512_Data.FLM"/>
+        <includes pattern="Flash/FlashOS.h"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashDev.c"/>
+        <includes pattern="Flash/PIC32CM-JH/FlashPrg.c"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvguix.margun01"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvoptx"/>
+        <includes pattern="Flash/PIC32CM-JH/PIC32CM-JH.uvprojx"/>
+        <includes pattern="Flash/PIC32CM-JH/Target.lin"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashdev.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.crf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.d"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/flashprg.o"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_256_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.axf"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.build_log.htm"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.lnp"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_512_Data.map"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_256_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/Out/PIC32CM-JH_PIC32CM-JH_512_Data.dep"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_256_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-JH_512_Data/RTE_Components.h"/>
+        <includes pattern="Flash/PIC32CM-JH/RTE/_PIC32CM-MC_32/RTE_Components.h"/>
+        <meta key="Flash/PIC32CM-JH_512.FLM" value="start=0x00000000|size=0x80000|default=1"/>
+        <meta key="Flash/PIC32CM-JH_512_Data.FLM" value="start=0x00400000|size=0x02000|default=0"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="PIC32CM-JH01/iar">
+        <includes pattern="iar/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="system_pic32cm5164jh01100.c"/>
+      </resource>
+      <resource type="iar.config" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CMJH01.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CM5164JH01100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32CM/PIC32CMJH01/PIC32CM5164JH01100.menu"/>
+      </resource>
+      <resource type="iar.linker" subdir="PIC32CM-JH01/iar">
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cm5164jh01100/flash.icf"/>
+      </resource>
+      <resource type="xc32" subdir="PIC32CM-JH01/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CM2532JH01032/startup_pic32cm2532jh01032.c"/>
+        <includes pattern="PIC32CM2532JH01032/PIC32CM2532JH01032.ld"/>
+        <includes pattern="PIC32CM2532JH01032/specs-PIC32CM2532JH01032"/>
+        <includes pattern="PIC32CM2532JH01032/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01032/pic32c"/>
+        <includes pattern="PIC32CM2532JH01048/startup_pic32cm2532jh01048.c"/>
+        <includes pattern="PIC32CM2532JH01048/PIC32CM2532JH01048.ld"/>
+        <includes pattern="PIC32CM2532JH01048/specs-PIC32CM2532JH01048"/>
+        <includes pattern="PIC32CM2532JH01048/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01048/pic32c"/>
+        <includes pattern="PIC32CM2532JH01064/startup_pic32cm2532jh01064.c"/>
+        <includes pattern="PIC32CM2532JH01064/PIC32CM2532JH01064.ld"/>
+        <includes pattern="PIC32CM2532JH01064/specs-PIC32CM2532JH01064"/>
+        <includes pattern="PIC32CM2532JH01064/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01064/pic32c"/>
+        <includes pattern="PIC32CM2532JH01100/startup_pic32cm2532jh01100.c"/>
+        <includes pattern="PIC32CM2532JH01100/PIC32CM2532JH01100.ld"/>
+        <includes pattern="PIC32CM2532JH01100/specs-PIC32CM2532JH01100"/>
+        <includes pattern="PIC32CM2532JH01100/configuration.data"/>
+        <includes pattern="PIC32CM2532JH01100/pic32c"/>
+        <includes pattern="PIC32CM5164JH01032/startup_pic32cm5164jh01032.c"/>
+        <includes pattern="PIC32CM5164JH01032/PIC32CM5164JH01032.ld"/>
+        <includes pattern="PIC32CM5164JH01032/specs-PIC32CM5164JH01032"/>
+        <includes pattern="PIC32CM5164JH01032/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01032/pic32c"/>
+        <includes pattern="PIC32CM5164JH01048/startup_pic32cm5164jh01048.c"/>
+        <includes pattern="PIC32CM5164JH01048/PIC32CM5164JH01048.ld"/>
+        <includes pattern="PIC32CM5164JH01048/specs-PIC32CM5164JH01048"/>
+        <includes pattern="PIC32CM5164JH01048/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01048/pic32c"/>
+        <includes pattern="PIC32CM5164JH01064/startup_pic32cm5164jh01064.c"/>
+        <includes pattern="PIC32CM5164JH01064/PIC32CM5164JH01064.ld"/>
+        <includes pattern="PIC32CM5164JH01064/specs-PIC32CM5164JH01064"/>
+        <includes pattern="PIC32CM5164JH01064/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01064/pic32c"/>
+        <includes pattern="PIC32CM5164JH01100/startup_pic32cm5164jh01100.c"/>
+        <includes pattern="PIC32CM5164JH01100/PIC32CM5164JH01100.ld"/>
+        <includes pattern="PIC32CM5164JH01100/specs-PIC32CM5164JH01100"/>
+        <includes pattern="PIC32CM5164JH01100/configuration.data"/>
+        <includes pattern="PIC32CM5164JH01100/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="dap_cortex-m0plus.py"/>
+        <includes pattern="j-link_cortex-m0plus.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="PIC32CM-JH01/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="PIC32CM-JH01/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="PIC32CM-JH01/hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="PIC32CM-JH01/hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="1.1.BUILDNUMBER">
+          - Fixed enumeration of PERIPHERAL_FUNCTION_K in device desciption xml
+      </release>
+      <release version="1.0.88" date="2022-05-20">
+                - Initial release.
+            </release>
+    </releases>
+  <device Dname="PIC32CM2532JH00032"/><device Dname="PIC32CM2532JH00048"/><device Dname="PIC32CM2532JH00064"/><device Dname="PIC32CM2532JH00100"/><device Dname="PIC32CM2532JH01032"/><device Dname="PIC32CM2532JH01048"/><device Dname="PIC32CM2532JH01064"/><device Dname="PIC32CM2532JH01100"/><device Dname="PIC32CM5164JH00032"/><device Dname="PIC32CM5164JH00048"/><device Dname="PIC32CM5164JH00064"/><device Dname="PIC32CM5164JH00100"/><device Dname="PIC32CM5164JH01032"/><device Dname="PIC32CM5164JH01048"/><device Dname="PIC32CM5164JH01064"/><device Dname="PIC32CM5164JH01100"/></pdsc>
+</package>

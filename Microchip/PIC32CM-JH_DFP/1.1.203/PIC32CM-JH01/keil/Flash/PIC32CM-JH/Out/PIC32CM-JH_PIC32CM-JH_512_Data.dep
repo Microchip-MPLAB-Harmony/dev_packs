@@ -1,0 +1,6 @@
+Dependencies for Project 'PIC32CM-JH', Target 'PIC32CM-JH_512_Data': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\FlashPrg.c)(0x634803B5)(-c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --apcs /ropi/rwpi -I.\RTE\_PIC32CM-JH_512_Data-IC:\Keil_v5_Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5_Packs\ARM\CMSIS\5.9.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="537" -D_RTE_ -DARMCM0 -D_RTE_ -DPIC32CM_JH_512 -DFLASH_DATA-o .\out\flashprg.o --omf_browse .\out\flashprg.crf --depend .\out\flashprg.d)
+I (..\FlashOS.h)(0x62331610)
+F (.\FlashDev.c)(0x6348028B)(-c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --apcs /ropi/rwpi -I.\RTE\_PIC32CM-JH_512_Data-IC:\Keil_v5_Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Keil_v5_Packs\ARM\CMSIS\5.9.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="537" -D_RTE_ -DARMCM0 -D_RTE_ -DPIC32CM_JH_512 -DFLASH_DATA-o .\out\flashdev.o --omf_browse .\out\flashdev.crf --depend .\out\flashdev.d)
+I (..\FlashOS.h)(0x62331610)

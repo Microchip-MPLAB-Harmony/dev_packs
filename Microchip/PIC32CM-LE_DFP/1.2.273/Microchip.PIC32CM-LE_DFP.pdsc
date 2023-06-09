@@ -1,0 +1,2920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         schemaVersion="1.3"
+         xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd"
+         xs:noNamespaceSchemaLocation="PACK.xsd">
+   <vendor>Microchip</vendor>
+   <url>https://packs.download.microchip.com/</url>
+   <name>PIC32CM-LE_DFP</name>
+   <description>Microchip PIC32CM-LE Series Device Support</description>
+   <releases>
+      <release version="1.2.273" date="2023-05-23">
+                - Added support for PIC32CM1216LE00032 and PIC32CM1216LE00048</release>
+      <release version="1.1.162" date="2022-06-03">
+                - Improved memory area naming.
+      </release>
+      <release version="1.0.154" date="2022-03-24">
+                - Initial release.
+	  </release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>PIC32CM-LE</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="PIC32CM-LE" Dvendor="Microchip:3">
+         <sequences><!-- added by ARM --><!-- Reset Stuff -->
+            <sequence name="ForceCoreHalt">
+               <block>
+              __var DHCSR_Addr = 0xE000EDF0;
+              __var DCRSR_Addr = 0xE000EDF4;
+              __var DCRDR_Addr = 0xE000EDF8;
+            </block>
+               <!-- wait until core has stopped -->
+               <control while="(Read32(DHCSR_Addr) &amp; 0x00020000) == 0" timeout="100000"/>
+               <block info="Halt core">
+              Write32(DHCSR_Addr,0xA05F0003);                                  // halt core in any case
+            </block>
+               <block info="Update xPSR register">
+              Write32(DCRDR_Addr, 0x01000000);
+              Write32(DCRSR_Addr, 0x00010010);                                 // update xPSR register
+            </block>
+               <control while="(Read32(DHCSR_Addr) &amp; 0x00010000) == 0" timeout="100000"/>
+            </sequence>
+            <sequence name="ResetSystem" info="SYSRESETREQ">
+               <block>
+              __var AIRCR_Addr = 0xE000ED0C;
+              __var DHCSR_Addr = 0xE000EDF0;
+
+              __errorcontrol = 1;                                              // ignore errors
+              Write32(AIRCR_Addr, 0x05FA0004);                                 // Execute SYSRESETREQ via AIRCR
+              __errorcontrol = 0;                                              // check errors
+
+              DAP_Delay(1000);                                                 // time for bootloader
+            </block>
+               <!-- Reset Recovery: Wait for DHCSR.S_RESET_ST bit to clear on read -->
+               <control while="(Read32(DHCSR_Addr) &amp; 0x02000000) != 0" timeout="100000"/>
+               <block>
+              Sequence("ForceCoreHalt");                                       // halt the core
+            </block>
+            </sequence>
+            <sequence name="ResetProcessor" disable="true" info="VECTRESET"><!-- ResetProcessor not available for CM23 --></sequence>
+            <sequence name="ResetHardware" info="HW RESET">
+               <block>
+              __var nReset      = 0x80;
+              __var canReadPins = 0;
+
+              canReadPins = (DAP_SWJ_Pins(0x00, nReset, 0) != 0xFFFFFFFF);     // Deassert nRESET line
+            </block>
+               <control while="(DAP_SWJ_Pins(0x00, nReset, 0) &amp; nReset) == nReset"
+                        timeout="1000000"/>
+               <!-- Keep reset active for 50 ms -->
+               <control while="1" timeout="50000"/>
+               <control if="canReadPins"><!-- Assert nRESET line and wait max. 1s for recovery -->
+                  <control while="(DAP_SWJ_Pins(nReset, nReset, 0) &amp; nReset) == 0"
+                           timeout="1000000"/>
+               </control>
+               <control if="!canReadPins">
+                  <block>
+                DAP_SWJ_Pins(nReset, nReset, 0);                               // Assert nRESET line
+              </block>
+                  <!-- Wait 100ms for recovery if nRESET not readable -->
+                  <control while="1" timeout="100000"/>
+               </control>
+               <!-- check if connection is used for target debug -->
+               <control if="(__connection &amp; 0xFF) == 1">
+                  <block>
+                Sequence("ForceCoreHalt");                                     // halt the core
+              </block>
+               </control>
+            </sequence>
+            <!-- Reset Stuff -->
+            <!-- Stop After Bootloader -->
+            <sequence name="ResetCatchSet">
+               <block>
+              __var DHCSR_Addr    = 0xE000EDF0;
+              __var DEMCR_Addr    = 0xE000EDFC;
+              __var FP_CTRL_Addr  = 0xE0002000;
+              __var FP_COMP0_Addr = 0xE0002008;
+              __var FPB_KEY       = 0x00000002;
+              __var FPB_ENABLE    = 0x00000001;
+              __var value         = 0;
+              __var resetVect     = 0x00000000;
+
+              value = Read32(DEMCR_Addr);
+              Write32(DEMCR_Addr, (value &amp; ~0x00000001));                  // Disable Reset Vector Catch
+
+
+              resetVect = Read32(0x00000004);                                  // Read Reset Vector
+              Write32(FP_COMP0_Addr, (resetVect | FPB_ENABLE));                // Set BP0 to Reset Vector (ARMv8M)
+              Write32(FP_CTRL_Addr,  (FPB_KEY   | FPB_ENABLE));                // Enable FPB
+            </block>
+               <block>
+              Read32(DHCSR_Addr);                                              // Read DHCSR to clear potentially set DHCSR.S_RESET_ST bit
+            </block>
+            </sequence>
+            <sequence name="ResetCatchClear">
+               <block>
+              __var DEMCR_Addr    = 0xE000EDFC;
+              __var FP_CTRL_Addr  = 0xE0002000;
+              __var FP_COMP0_Addr = 0xE0002008;
+              __var FPB_KEY       = 0x00000002;
+              __var value         = 0;
+
+              value = Read32(DEMCR_Addr);
+              Write32(DEMCR_Addr, (value &amp; ~0x00000001));                  // Disable Reset Vector Catch in DEMCR
+
+              Write32(FP_COMP0_Addr, 0x00000000);                              // Clear BP0
+              Write32(FP_CTRL_Addr,  FPB_KEY   );                              // Disable FPB
+            </block>
+            </sequence>
+            <!-- Stop After Bootloader -->
+         </sequences>
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                            schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.10-"/>
+               <mchp:prerequisite component="MPLAB X IPE" version="[5.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="PIC32CM1216LE00032">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM1216LE00032__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x20000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x1000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x4000" default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM1216LE00032.atdf"/>
+                  <at:variant ordercode="PIC32CM1216LE00032-I/PT"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="PIC32CM1216LE00032-I/RTB"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x20000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x1000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x4000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM1216LE00032.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM1216LE00032"
+                  title="Device page for PIC32CM1216LE00032"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM1216LE00032"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM1216LE00048">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM1216LE00048__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x20000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x1000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x4000" default="1"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM1216LE00048.atdf"/>
+                  <at:variant ordercode="PIC32CM1216LE00048-I/Y8X"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="PIC32CM1216LE00048-I/U5B"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x20000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x1000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x4000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM1216LE00048.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM1216LE00048"
+                  title="Device page for PIC32CM1216LE00048"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM1216LE00048"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM2532LE00048">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM2532LE00048__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x40000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x2000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x8000" default="1"/>
+            <algorithm name="keil/flash/PIC32CM2532LE_FLASH.FLM"
+                       start="0x00000000"
+                       size="0x40000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CM2532LE_DFLASH.FLM"
+                       start="0x00400000"
+                       size="0x2000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CMLE_UROW.FLM"
+                       start="0x00804000"
+                       size="0x00000008"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM2532LE00048.atdf"/>
+                  <at:variant ordercode="PIC32CM2532LE00048-I/Y8X"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="PIC32CM2532LE00048-I/U5B"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x40000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x2000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x8000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM2532LE00048.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM2532LE00048"
+                  title="Device page for PIC32CM2532LE00048"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM2532LE00048"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM2532LE00064">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM2532LE00064__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x40000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x2000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x8000" default="1"/>
+            <algorithm name="keil/flash/PIC32CM2532LE_FLASH.FLM"
+                       start="0x00000000"
+                       size="0x40000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CM2532LE_DFLASH.FLM"
+                       start="0x00400000"
+                       size="0x2000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CMLE_UROW.FLM"
+                       start="0x00804000"
+                       size="0x00000008"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM2532LE00064.atdf"/>
+                  <at:variant ordercode="PIC32CM2532LE00064-I/PT"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="PIC32CM2532LE00064-I/5LX"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x40000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x2000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x8000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM2532LE00064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM2532LE00064"
+                  title="Device page for PIC32CM2532LE00064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM2532LE00064"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM2532LE00100">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM2532LE00100__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x40000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x2000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x8000" default="1"/>
+            <algorithm name="keil/flash/PIC32CM2532LE_FLASH.FLM"
+                       start="0x00000000"
+                       size="0x40000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CM2532LE_DFLASH.FLM"
+                       start="0x00400000"
+                       size="0x2000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CMLE_UROW.FLM"
+                       start="0x00804000"
+                       size="0x00000008"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM2532LE00100.atdf"/>
+                  <at:variant ordercode="PIC32CM2532LE00100-I/PF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x40000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x2000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x8000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM2532LE00100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM2532LE00100"
+                  title="Device page for PIC32CM2532LE00100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM2532LE00100"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM5164LE00048">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM5164LE00048__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x80000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x4000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x10000" default="1"/>
+            <algorithm name="keil/flash/PIC32CM5164LE_FLASH.FLM"
+                       start="0x00000000"
+                       size="0x80000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CM5164LE_DFLASH.FLM"
+                       start="0x00400000"
+                       size="0x4000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CMLE_UROW.FLM"
+                       start="0x00804000"
+                       size="0x00000008"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM5164LE00048.atdf"/>
+                  <at:variant ordercode="PIC32CM5164LE00048-I/Y8X"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="PIC32CM5164LE00048-I/U5B"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x80000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x10000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM5164LE00048.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM5164LE00048"
+                  title="Device page for PIC32CM5164LE00048"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM5164LE00048"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM5164LE00064">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM5164LE00064__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x80000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x4000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x10000" default="1"/>
+            <algorithm name="keil/flash/PIC32CM5164LE_FLASH.FLM"
+                       start="0x00000000"
+                       size="0x80000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CM5164LE_DFLASH.FLM"
+                       start="0x00400000"
+                       size="0x4000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CMLE_UROW.FLM"
+                       start="0x00804000"
+                       size="0x00000008"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM5164LE00064.atdf"/>
+                  <at:variant ordercode="PIC32CM5164LE00064-I/PT"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="PIC32CM5164LE00064-I/5LX"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x80000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x10000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM5164LE00064.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM5164LE00064"
+                  title="Device page for PIC32CM5164LE00064"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM5164LE00064"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="PIC32CM5164LE00100">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"/>
+            <compile header="include/pic32c.h" define="__PIC32CM5164LE00100__"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x80000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x4000"/>
+            <memory id="IRAM1" start="0x20000000" size="0x10000" default="1"/>
+            <algorithm name="keil/flash/PIC32CM5164LE_FLASH.FLM"
+                       start="0x00000000"
+                       size="0x80000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CM5164LE_DFLASH.FLM"
+                       start="0x00400000"
+                       size="0x4000"
+                       default="1"/>
+            <algorithm name="keil/flash/PIC32CMLE_UROW.FLM"
+                       start="0x00804000"
+                       size="0x00000008"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/PIC32CM5164LE00100.atdf"/>
+                  <at:variant ordercode="PIC32CM5164LE00100-I/PF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x80000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX0"
+                             start="0x00804000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX1"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX2"
+                             start="0x00808000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX3"
+                             start="0x0080A000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX4"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="AUX5"
+                             start="0x0080E000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR1"
+                             start="0x0080C008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="CAL"
+                             start="0x00800000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="LOCKROW"
+                             start="0x00802000"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP1"
+                             start="0x00806000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP2"
+                             start="0x00806008"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP3"
+                             start="0x00806010"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="OTP4"
+                             start="0x00806018"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="ROM"
+                             start="0x00830000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SHADOW"
+                             start="0x00820000"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x4"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TLATCH"
+                             start="0x00810000"
+                             size="0x10000"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x10000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x6000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/PIC32CM5164LE00100.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=PIC32CM5164LE00100"
+                  title="Device page for PIC32CM5164LE00100"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/PIC32CM5164LE00100"
+                  title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+   <conditions>
+      <condition id="ARMCC Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+      </condition>
+      <condition id="GCC">
+         <accept Tcompiler="GCC"/>
+      </condition>
+      <condition id="GCC Exe">
+         <accept Tcompiler="GCC" Toutput="exe"/>
+      </condition>
+      <condition id="IAR Exe">
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="XC">
+         <accept Tcompiler="XC"/>
+      </condition>
+      <condition id="C">
+         <accept Tcompiler="ARMCC"/>
+         <accept Tcompiler="GCC"/>
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="C Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+         <accept Tcompiler="GCC" Toutput="exe"/>
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C Lib">
+         <accept Tcompiler="ARMCC" Toutput="lib"/>
+         <accept Tcompiler="GCC" Toutput="lib"/>
+         <accept Tcompiler="IAR" Toutput="lib"/>
+      </condition>
+      <condition id="PIC32CM1216LE00032">
+         <require Dvendor="Microchip:3" Dname="PIC32CM1216LE00032"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM1216LE00048">
+         <require Dvendor="Microchip:3" Dname="PIC32CM1216LE00048"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM2532LE00048">
+         <require Dvendor="Microchip:3" Dname="PIC32CM2532LE00048"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM2532LE00064">
+         <require Dvendor="Microchip:3" Dname="PIC32CM2532LE00064"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM2532LE00100">
+         <require Dvendor="Microchip:3" Dname="PIC32CM2532LE00100"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM5164LE00048">
+         <require Dvendor="Microchip:3" Dname="PIC32CM5164LE00048"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM5164LE00064">
+         <require Dvendor="Microchip:3" Dname="PIC32CM5164LE00064"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="PIC32CM5164LE00100">
+         <require Dvendor="Microchip:3" Dname="PIC32CM5164LE00100"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+   </conditions>
+   <components>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM1216LE00032">
+         <description>Headers and startup code for Microchip PIC32CM1216LE00032</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm1216le00032.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm1216le00032.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm1216le00032_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm1216le00032_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm1216le00032.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm1216le00032.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm1216le00032.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm1216le00032.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm1216le00032/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm1216le00032/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM1216LE00048">
+         <description>Headers and startup code for Microchip PIC32CM1216LE00048</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm1216le00048.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm1216le00048.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm1216le00048_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm1216le00048_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm1216le00048.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm1216le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm1216le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm1216le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm1216le00048/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm1216le00048/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM2532LE00048">
+         <description>Headers and startup code for Microchip PIC32CM2532LE00048</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm2532le00048.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm2532le00048.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm2532le00048_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm2532le00048_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm2532le00048.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm2532le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm2532le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm2532le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm2532le00048/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm2532le00048/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM2532LE00064">
+         <description>Headers and startup code for Microchip PIC32CM2532LE00064</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm2532le00064.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm2532le00064.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm2532le00064_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm2532le00064_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm2532le00064.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm2532le00064.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm2532le00064.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm2532le00064.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm2532le00064/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm2532le00064/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM2532LE00100">
+         <description>Headers and startup code for Microchip PIC32CM2532LE00100</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm2532le00100.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm2532le00100.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm2532le00100_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm2532le00100_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm2532le00100.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm2532le00100.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm2532le00100.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm2532le00100.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm2532le00100/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm2532le00100/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM5164LE00048">
+         <description>Headers and startup code for Microchip PIC32CM5164LE00048</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm5164le00048.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm5164le00048.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm5164le00048_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm5164le00048_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm5164le00048.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm5164le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm5164le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm5164le00048.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm5164le00048/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm5164le00048/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM5164LE00064">
+         <description>Headers and startup code for Microchip PIC32CM5164LE00064</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm5164le00064.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm5164le00064.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm5164le00064_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm5164le00064_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm5164le00064.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm5164le00064.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm5164le00064.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm5164le00064.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm5164le00064/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm5164le00064/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="1.2.0"
+                 condition="PIC32CM5164LE00100">
+         <description>Headers and startup code for Microchip PIC32CM5164LE00100</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/pic32c.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_pic32cm5164le00100.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_pic32cm5164le00100.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/pic32cm5164le00100_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/pic32cm5164le00100_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_pic32cm5164le00100.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_pic32cm5164le00100.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_pic32cm5164le00100.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_pic32cm5164le00100.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/pic32cm5164le00100/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/pic32cm5164le00100/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+   </components>
+</package>

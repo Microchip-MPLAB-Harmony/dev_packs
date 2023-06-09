@@ -3,6 +3,14 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## dev_packs Release v3.16.0
+
+### Following Device Family Packs have been updated
+
+| DFP name              | Version           |
+| ---                   | ---               |
+| CEC_DFP               | 1.8.258           |
+
 ## dev_packs Release v3.16.0-E1
 
 ### Following Device Family Packs have been updated

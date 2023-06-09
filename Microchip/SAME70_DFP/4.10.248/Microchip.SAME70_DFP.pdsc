@@ -1,0 +1,2365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         schemaVersion="1.3"
+         xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd"
+         xs:noNamespaceSchemaLocation="PACK.xsd">
+   <vendor>Microchip</vendor>
+   <url>https://packs.download.microchip.com/</url>
+   <name>SAME70_DFP</name>
+   <description>Microchip SAME70 Series Device Support</description>
+   <releases>
+      <release version="4.10.248" date="2023-03-27">
+        - Updated MPLAB XC32 content to correctly describe #pragma config. Requires MPLAB XC32 &gt;= 4.10.
+        - Fixed path issue with debugvars for µVision.
+        - Fixed size of ITCM segment.
+        - Added CoreSight debug register view.
+        - Updated SVD file to emit information introduced in SVD version 1.3.
+      </release>
+      <release version="4.9.129" date="2022-05-18">Removed SDRAM references due to errata 2.14</release>
+      <release version="4.8.125" date="2022-04-07">Added configuration data required for XC32.</release>
+      <release version="4.7.120" date="2022-03-17">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+        </release>
+      <release version="4.6.98" date="2021-06-30">Deprecated revision A devices. Fixed MPLABX debug scripts. Updated startup code. Updated header files. Updated XC32 content.</release>
+      <release version="4.5.86" date="2021-01-27">Added security bit programming for MPLAB X. Added instance headers. Fix DMA trigger information for DACn.</release>
+      <release version="4.4.78" date="2020-09-24">Added read device ID. Fixed reading/writing configbits issues.</release>
+      <release version="4.3.67" date="2020-04-29">Updated MPLAB X debug scripts. Removed SDA13 pin description from B devices. Added CCW and CCF interrupts to A devices. Setup prerequisite for MPLAB v5.40 or newer</release>
+      <release version="4.2.59" date="2020-02-12">Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="4.1.50" date="2019-10-03">Improvements to the flash programming algorithm. Rename SVCall_Handler to SVC_Handler. Update modes for USART.</release>
+      <release version="4.0.40" date="2019-06-26">Improvements to the flash programming algorithm: Improve programming speed. Resolve a possible flash programming issue.</release>
+      <release version="4.0.29" date="2019-05-04">Removed legacy headers.</release>
+      <release version="3.0.10" date="2019-02-14">Corrections to XML and header-files. Core modules descriptions in ATDF and SVD changed for rev. B devices. Core IRQ and interrupt handler names changed to alligne with CMSIS names. Old names mapped as aliases to new names. Several errors in SVD files corrected. Missing TC1 and TC2 to instance definitions added to header files. TC, USART and USBHS module changed (for revB devices) to reflect the modes according to the datasheet. Added ARMCC support files. Added Keil support files. Added python programming and debugging scripts for MPLAB X. Succeeds Atmel.SAME70_DFP 2.3.98.</release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>SAME70</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="SAME70" Dvendor="Microchip:3">
+         <processor Dcore="Cortex-M7"
+                    Dendian="Little-endian"
+                    Dmpu="MPU"
+                    Dfpu="DP_FPU"/>
+         <debugvars configfile="same70b/keil/debug/SAMx7.dbgconf" version="1.0.0">
+           // Debug Access Variables
+           __var TracePCK3 = 0x00000000;                                               // Trace Clock Source Selection and Prescaler
+         </debugvars>
+         <sequences><!-- Override for Pre-Defined TraceStart Sequence -->
+            <sequence name="TraceStart">
+               <block>
+               __var traceSWO    = (__traceout &amp; 0x1) != 0;                        // SWO Trace Selected?
+               __var traceTPIU   = (__traceout &amp; 0x2) != 0;                        // TPIU Trace Selected?
+             </block>
+               <control if="traceSWO">
+                  <block>
+                 Sequence("EnableTraceSWO");                                           // Call SWO Trace Setup
+               </block>
+               </control>
+               <control if="traceTPIU">
+                  <block>
+                 Sequence("EnableTraceTPIU");                                          // Call TPIU Trace Setup
+               </block>
+               </control>
+            </sequence>
+            <!-- User-Defined EnableTraceSWO Sequence -->
+            <sequence name="EnableTraceSWO">
+               <block>
+               Write32(0x400E06E4, 0x504D4300);                                        // Disable PMC write protection
+               Write32(0x400E064C, TracePCK3);                                         // Select clock source and prescaler for PCK3
+               Write32(0x400E0600, (1 &lt;&lt; 11));                                   // Enable PCK3
+             </block>
+            </sequence>
+            <!-- User-Defined EnableTraceTPIU Sequence -->
+            <sequence name="EnableTraceTPIU">
+               <block>
+               __var width = (__traceout &amp; 0x003F0000) &gt;&gt; 16;                // TPIU Port Width
+               __var val   = 0;
+             </block>
+               <control if="width == 1">
+                  <block>
+                 // 1-Bit TPIU Trace Setup
+                 val = 0x00000010;                                                     // TRACED[0]
+               </block>
+               </control>
+               <control if="width == 2">
+                  <block>
+                 // 2-Bit TPIU Trace Setup
+                 val = 0x00000030;                                                     // TRACED[0..1]
+               </block>
+               </control>
+               <control if="width == 4">
+                  <block>
+                 // 4-Bit TPIU Trace Setup
+                 val = 0x000000F0;                                                     // TRACED[0..3]
+               </block>
+               </control>
+               <block>
+               // Write Trace Configuration to Target
+               Write32(0x400E06E4, 0x504D4300);                                        // Disable PMC write protection
+               Write32(0x400E064C, TracePCK3);                                         // Select clock source and prescaler for PCK3
+               Write32(0x400E0600, (1 &lt;&lt; 11));                                   // Enable PCK3
+               Write32(0x400E0610, (1 &lt;&lt; 16));                                   // Enable PIOD clock
+
+               Write32(0x400E14E4, 0x50494F00);                                        // Disable PIOD write protection
+               Write32(0x400E1404, (val | 0x00000100));                                // Disable PIOD PD[4..8]
+               Write32(0x400E1470, ((Read32(0x400E1470) &amp; ~val) | 0x00000100));    // Set Peripheral Select registers
+               Write32(0x400E1474, ((Read32(0x400E1474) |      val) | 0x00000100));    // TRACED[0..3] to alternate peripheral C and TRACECLK to alternate peripheral D
+             </block>
+            </sequence>
+         </sequences>
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                            schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+               <mchp:prerequisite component="MPLAB X IPE" version="[5.10-"/>
+               <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="ATSAME70J19">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70J20">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70J21">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70N19">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70N20">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70N21">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70Q19">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70Q20">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70Q21">
+            <deprecated>2021-06-28</deprecated>
+         </device>
+         <device Dname="ATSAME70J19B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70J19B__"/>
+            <debug svd="same70b/svd/ATSAME70J19B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00080000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00040000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_512.FLM"
+                       start="0x00400000"
+                       size="0x00080000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70J19B.atdf"/>
+                  <at:variant ordercode="ATSAME70J19B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00080000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00040000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70J19B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70J19B"
+                  title="Device page for ATSAME70J19B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70J19B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70J20B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70J20B__"/>
+            <debug svd="same70b/svd/ATSAME70J20B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00100000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00060000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_1024.FLM"
+                       start="0x00400000"
+                       size="0x00100000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70J20B.atdf"/>
+                  <at:variant ordercode="ATSAME70J20B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00100000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00060000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70J20B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70J20B"
+                  title="Device page for ATSAME70J20B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70J20B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70J21B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70J21B__"/>
+            <debug svd="same70b/svd/ATSAME70J21B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00200000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00060000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_2048.FLM"
+                       start="0x00400000"
+                       size="0x00200000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70J21B.atdf"/>
+                  <at:variant ordercode="ATSAME70J21B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00200000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00060000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70J21B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70J21B"
+                  title="Device page for ATSAME70J21B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70J21B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70N19B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70N19B__"/>
+            <debug svd="same70b/svd/ATSAME70N19B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00080000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00040000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_512.FLM"
+                       start="0x00400000"
+                       size="0x00080000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70N19B.atdf"/>
+                  <at:variant ordercode="ATSAME70N19B-CN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70N19B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00080000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00040000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70N19B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70N19B"
+                  title="Device page for ATSAME70N19B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70N19B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70N20B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70N20B__"/>
+            <debug svd="same70b/svd/ATSAME70N20B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00100000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00060000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_1024.FLM"
+                       start="0x00400000"
+                       size="0x00100000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70N20B.atdf"/>
+                  <at:variant ordercode="ATSAME70N20B-CN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70N20B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00100000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00060000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70N20B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70N20B"
+                  title="Device page for ATSAME70N20B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70N20B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70N21B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70N21B__"/>
+            <debug svd="same70b/svd/ATSAME70N21B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00200000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00060000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_2048.FLM"
+                       start="0x00400000"
+                       size="0x00200000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70N21B.atdf"/>
+                  <at:variant ordercode="ATSAME70N21B-CN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70N21B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00200000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00060000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70N21B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70N21B"
+                  title="Device page for ATSAME70N21B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70N21B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70Q19B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70Q19B__"/>
+            <debug svd="same70b/svd/ATSAME70Q19B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00080000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00040000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_512.FLM"
+                       start="0x00400000"
+                       size="0x00080000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70Q19B.atdf"/>
+                  <at:variant ordercode="ATSAME70Q19B-CN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70Q19B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70Q19B-CFN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00080000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00040000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS0"
+                             start="0x60000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS1"
+                             start="0x61000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS2"
+                             start="0x62000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS3"
+                             start="0x63000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70Q19B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70Q19B"
+                  title="Device page for ATSAME70Q19B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70Q19B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70Q20B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70Q20B__"/>
+            <debug svd="same70b/svd/ATSAME70Q20B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00100000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00060000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_1024.FLM"
+                       start="0x00400000"
+                       size="0x00100000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70Q20B.atdf"/>
+                  <at:variant ordercode="ATSAME70Q20B-CN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70Q20B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70Q20B-CFN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00100000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00060000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS0"
+                             start="0x60000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS1"
+                             start="0x61000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS2"
+                             start="0x62000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS3"
+                             start="0x63000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70Q20B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70Q20B"
+                  title="Device page for ATSAME70Q20B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70Q20B"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAME70Q21B">
+            <processor Dcore="Cortex-M7"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="DP_FPU"/>
+            <compile header="same70b/include/sam.h" define="__SAME70Q21B__"/>
+            <debug svd="same70b/svd/ATSAME70Q21B.svd"/>
+            <memory id="IROM1"
+                    start="0x00400000"
+                    size="0x00200000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00800000" size="0x00004000"/>
+            <memory id="IRAM1" start="0x20400000" size="0x00060000" default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_2048.FLM"
+                       start="0x00400000"
+                       size="0x00200000"
+                       default="1"/>
+            <algorithm name="same70b/keil/flash/ATSAME7x_GPNVM.FLM"
+                       start="0x1FFFFFF0"
+                       size="0x00000010"
+                       default="0"/>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="same70b/atdf/ATSAME70Q21B.atdf"/>
+                  <at:variant ordercode="ATSAME70Q21B-CN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70Q21B-AN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:variant ordercode="ATSAME70Q21B-CFN"
+                              vccmin="1.62"
+                              vccmax="3.6"
+                              tempmin="-40"
+                              tempmax="+105"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SYSTEM"
+                             start="0xE0000000"
+                             size="0x10000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="QSPIMEM"
+                             start="0x80000000"
+                             size="0x20000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AXIMX"
+                             start="0xA0000000"
+                             size="0x00100000"
+                             type="other"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="ITCM"
+                             start="0x00000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IFLASH"
+                             start="0x00400000"
+                             size="0x00200000"
+                             type="flash"
+                             pagesize="512"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IROM"
+                             start="0x00800000"
+                             size="0x00004000"
+                             type="rom"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="DTCM"
+                             start="0x20000000"
+                             size="0x00020000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="IRAM"
+                             start="0x20400000"
+                             size="0x00060000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS0"
+                             start="0x60000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS1"
+                             start="0x61000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS2"
+                             start="0x62000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="EBI_CS3"
+                             start="0x63000000"
+                             size="0x01000000"
+                             type="other"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:interface type="samjtag" name="JTAG"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+                  <at:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="same70b/edc/ATSAME70Q21B.PIC"/>
+                  <mchp:xc32 name="same70b/xc32"/>
+                  <mchp:hwtool type="mplab.nmmrs">
+                     <mchp:file name="same70b/hwtools/mplab/16bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/8bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/arm.32bit.NMMRs.xml"/>
+                     <mchp:file name="same70b/hwtools/mplab/avr.8bit.NMMRs.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.devicesupport">
+                     <mchp:file name="same70b/hwtools/mplab/mplab.deviceSupport"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="same70b/hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="same70b/hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.50-"/>
+                  <mchp:prerequisite component="MPLAB XC32" version="[4.10-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAME70Q21B"
+                  title="Device page for ATSAME70Q21B"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAME70Q21B"
+                  title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+   <conditions>
+      <condition id="ARMCC Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+      </condition>
+      <condition id="GCC">
+         <accept Tcompiler="GCC"/>
+      </condition>
+      <condition id="GCC Exe">
+         <accept Tcompiler="GCC" Toutput="exe"/>
+      </condition>
+      <condition id="IAR Exe">
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="XC">
+         <accept Tcompiler="XC"/>
+      </condition>
+      <condition id="C">
+         <accept Tcompiler="ARMCC"/>
+         <accept Tcompiler="GCC"/>
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="C Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+         <accept Tcompiler="GCC" Toutput="exe"/>
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C Lib">
+         <accept Tcompiler="ARMCC" Toutput="lib"/>
+         <accept Tcompiler="GCC" Toutput="lib"/>
+         <accept Tcompiler="IAR" Toutput="lib"/>
+      </condition>
+      <condition id="ATSAME70J19B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70J19B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70J20B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70J20B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70J21B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70J21B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70N19B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70N19B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70N20B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70N20B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70N21B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70N21B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70Q19B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70Q19B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70Q20B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70Q20B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAME70Q21B">
+         <require Dvendor="Microchip:3" Dname="ATSAME70Q21B"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+   </conditions>
+   <components>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70J19B">
+         <description>Headers and startup code for Microchip ATSAME70J19B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70j19b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70j19b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70j19b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70j19b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70j19b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70j19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70j19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70j19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70j19b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70j19b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70J20B">
+         <description>Headers and startup code for Microchip ATSAME70J20B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70j20b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70j20b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70j20b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70j20b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70j20b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70j20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70j20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70j20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70j20b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70j20b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70J21B">
+         <description>Headers and startup code for Microchip ATSAME70J21B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70j21b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70j21b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70j21b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70j21b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70j21b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70j21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70j21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70j21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70j21b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70j21b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70N19B">
+         <description>Headers and startup code for Microchip ATSAME70N19B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70n19b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70n19b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70n19b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70n19b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70n19b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70n19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70n19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70n19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70n19b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70n19b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70N20B">
+         <description>Headers and startup code for Microchip ATSAME70N20B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70n20b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70n20b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70n20b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70n20b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70n20b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70n20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70n20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70n20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70n20b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70n20b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70N21B">
+         <description>Headers and startup code for Microchip ATSAME70N21B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70n21b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70n21b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70n21b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70n21b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70n21b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70n21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70n21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70n21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70n21b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70n21b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70Q19B">
+         <description>Headers and startup code for Microchip ATSAME70Q19B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70q19b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70q19b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70q19b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70q19b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70q19b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70q19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70q19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70q19b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70q19b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70q19b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70Q20B">
+         <description>Headers and startup code for Microchip ATSAME70Q20B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70q20b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70q20b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70q20b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70q20b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70q20b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70q20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70q20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70q20b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70q20b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70q20b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.10.0"
+                 condition="ATSAME70Q21B">
+         <description>Headers and startup code for Microchip ATSAME70Q21B</description>
+         <files>
+            <file condition="C" category="include" name="same70b/include/"/>
+            <file condition="C" category="header" name="same70b/include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="same70b/templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="same70b/templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/gcc/startup_same70q21b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="same70b/gcc/system_same70q21b.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="same70b/gcc/gcc/same70q21b_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="same70b/gcc/gcc/same70q21b_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/armcc/startup_same70q21b.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="same70b/armcc/system_same70q21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/iar/startup_same70q21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="same70b/iar/system_same70q21b.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="same70b/iar/config/linker/Microchip/atsame70q21b/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="same70b/iar/config/linker/Microchip/atsame70q21b/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+   </components>
+</package>

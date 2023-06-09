@@ -1,0 +1,36 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  ROM_SECURE_BOOT_ROM Memory    0x00000000  0x0000FFFF  R
+Memory   =  ROM_SECURE_BOOT_PATCH Memory    0x00018000  0x000187FF  R
+Memory   =  FCR_BFM      Memory    0x00800000  0x00804FFF  RW
+Memory   =  FCR_CFM      Memory    0x00805000  0x00805FFF  RW
+Memory   =  FCR_OTP_PAGE Memory    0x00806000  0x00806FFF  R
+Memory   =  FCR_PFM      Memory    0x01000000  0x0107FFFF  RW
+Memory   =  CMCC_TCM     Memory    0x02000000  0x02000FFF  RW
+Memory   =  QSPI         Memory    0x04000000  0x04FFFFFF  RW
+Memory   =  RAM_SYSTEM_RAM Memory    0x20000000  0x20017FFF  RW
+Memory   =  PBA_BRIDGE   Memory    0x40000000  0x40003FFF  RW
+Memory   =  PBB_BRIDGE   Memory    0x41000000  0x41016FFF  RW
+Memory   =  PBC_BRIDGE   Memory    0x42000000  0x42011FFF  RW
+Memory   =  SILEX_SFR    Memory    0x43000000  0x4301FFFF  RW
+Memory   =  PBPIC_BRIDGE Memory    0x44000000  0x44013FFF  RW
+Memory   =  MCROM_ROM    Memory    0x45000000  0x45001FFF  R
+Memory   =  SYSTEM_CM4F_SYSTEM_REGISTERS Memory    0xE0000000  0xFFFF3FFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = PIC32CX5109BZ31048.svd

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-
-<optionMenuItem>
-  <tag>ATSAMV71J21B</tag>
-  <display>Atmel SAMV71J21B</display>
-  <data>$CUR_DIR$\ATSAMV71J21B.i79</data>
-</optionMenuItem>

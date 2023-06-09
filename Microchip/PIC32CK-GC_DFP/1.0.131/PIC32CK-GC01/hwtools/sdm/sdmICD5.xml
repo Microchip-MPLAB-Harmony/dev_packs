@@ -1,0 +1,13 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmICD5.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="PIC32CK0512GC01064" sdm:profile="armv8"/>
+    <sdm:device sdm:devicename="PIC32CK0512GC01100" sdm:profile="armv8"/>
+    <sdm:device sdm:devicename="PIC32CK1025GC01064" sdm:profile="armv8"/>
+    <sdm:device sdm:devicename="PIC32CK1025GC01100" sdm:profile="armv8"/>
+    <sdm:device sdm:devicename="PIC32CK2051GC01064" sdm:profile="armv8"/>
+    <sdm:device sdm:devicename="PIC32CK2051GC01100" sdm:profile="armv8"/>
+    <sdm:device sdm:devicename="PIC32CK2051GC01144" sdm:profile="armv8"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:isstub="true" sdm:profilename="armv8" sdm:profilesupported="no"/>
+</sdm:sdm>

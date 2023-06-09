@@ -1,0 +1,26 @@
+;; IAR device description file
+
+;; Memory information ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Used to define address zones within the ARM address space (Memory).
+;;
+;;   Name      may be almost anything
+;;   AdrSpace  must be Memory
+;;   StartAdr  start of memory block
+;;   EndAdr    end of memory block
+;;   AccType   type of access, read-only (R), read-write (RW) or SFR (W)
+
+[Memory]
+;;       =  Name         AdrSpace  StartAdr    EndAdr      AccType
+Memory   =  IFLASH       Memory    0x00400000  0x0047FFFF  RW
+Memory   =  IROM         Memory    0x00800000  0x00BFFFFF  R
+Memory   =  CMCC         Memory    0x1FC00000  0x1FC03FFF  RW
+Memory   =  IRAM         Memory    0x20000000  0x20027FFF  RW
+Memory   =  PERIPHERALS  Memory    0x40000000  0x5FFFFFFF  RW
+Memory   =  SYSTEM       Memory    0xE0000000  0xEFFFFFFF  RW
+
+TrustedRanges = true
+UseSfrFilter = true
+
+[SfrInclude]
+File = ATSAMG55G19.svd

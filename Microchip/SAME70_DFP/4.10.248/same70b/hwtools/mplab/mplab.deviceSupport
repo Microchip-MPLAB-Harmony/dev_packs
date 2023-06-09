@@ -1,0 +1,31 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="ATSAME70J19B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70J20B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70J21B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70N19B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk3d="no" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70N20B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70N21B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70Q19B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70Q20B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME70Q21B">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

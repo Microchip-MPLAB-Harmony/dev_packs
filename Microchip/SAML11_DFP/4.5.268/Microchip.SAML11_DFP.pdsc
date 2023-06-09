@@ -1,0 +1,3011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+         schemaVersion="1.3"
+         xs:schemaLocation="http://www.atmel.com/schemas/pack-device-atmel-extension PACK.DEVICE.ATMEL.EXTENSION.xsd"
+         xs:noNamespaceSchemaLocation="PACK.xsd">
+   <vendor>Microchip</vendor>
+   <url>https://packs.download.microchip.com/</url>
+   <name>SAML11_DFP</name>
+   <description>Microchip SAML11 Series Device Support</description>
+   <releases>
+      <release version="4.5.268" date="2023-05-23">
+        - Fixed OPAMP PLIB register configuration code.
+        - Set DSU_DID__FAMILY to Ultra Low Power.
+        - Updated debug and programming scripts.
+      </release>
+      <release version="4.4.149" date="2022-03-17">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+      </release>
+      <release version="4.3.139" date="2021-08-02">Added fuses header file. Updated MPLAB X debug scripts. Added RXN and DXN bits to USER_WORD_1.</release>
+      <release version="4.2.130" date="2021-01-28">Added User ID write and security bit programming for MPLAB X. Added instance headers. Updated default value of USER_WORD_0. Added value groups for PMUXE and PMUXO. Removed TRAM.PERMSW and TRAM.PERMR registers.</release>
+      <release version="4.1.119" date="2020-10-20">Re-release 4.1 to fix version history.</release>
+      <release version="4.1.118" date="2020-10-08">Fix the issue of program/debug error when chip is secured.</release>
+      <release version="4.0.115" date="2020-08-29">Added read device ID. Updated XC32 linker-script TrustZone macro names to BOOTPROT_SIZE, AS_SIZE, RS_SIZE, ANSC_SIZE, and DS_SIZE.</release>
+      <release version="3.2.86" date="2020-04-28">Update MSP, PSP, PRIMASK and CONTROL registers for Secure mode for MPLAB X. Updated μVision support files. Updated MPLAB X debug scripts.</release>
+      <release version="3.1.75" date="2020-02-12">Updated XOSC32K startup time value-group for OSC32KCTRL module. Added value-groups for SERCOM module. Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="3.0.48" date="2019-10-08">Updated captions and registers in CCL, EIC, GCLK, OPAMP, OSC32KCTRL, OSCCTRL, RTC, SERCOM and SUPC. Added XC32 content. Updated programming and debugging scripts.</release>
+      <release version="2.0.33" date="2019-04-29">Fixes. Succeeds Atmel.SAML11_DFP 1.0.91.</release>
+   </releases>
+   <keywords>
+      <keyword>Microchip</keyword>
+      <keyword>Device Family Package Microchip</keyword>
+      <keyword>Device Support</keyword>
+      <keyword>SAML11</keyword>
+   </keywords>
+   <devices>
+      <family Dfamily="SAML11" Dvendor="Microchip:3">
+         <description>The Microchip SAM L11 family of microcontrollers is based on the Arm® Cortex®-M23 core, featuring Arm TrustZone® technology for ARMv8M, a programmable environment that provides hardware isolation between certified libraries, IP and application code.
+		
+		In addition to TrustZone, the SAML11 security features include an on-board cryptographic module  supporting Advanced Encryption Standard (AES), Galois Counter Mode (GCM) and Secure Hash Algorithm (SHA). The secure boot and secure key storage with tamper detection capabilities establish hardware root of trust. It also offers secure bootloader for secure firmware upgrades.
+		
+		SAML11 is ultra-low power and offers latest generation Peripheral Touch Controller (PTC) for capacitive touch capabilities. The PTC adds Driven Shield Plus to provide superior water tolerance and excellent noise immunity enabling elegant touch interfaces. The SAML10/L11 family is ideal for a myriad of IoT and security, automotive, appliance, medical and consumer applications whether hardwired or battery powered.
+        </description>
+         <flashinfo name="NVM User Row (UROW)"
+                    start="0x00804000"
+                    blankval="0xFFFFFFFF"
+                    pagesize="0x00000020"
+                    ptime="100000"
+                    etime="1000000">
+            <block count="1" size="0x20" arg="0"/>
+         </flashinfo>
+         <flashinfo name="NVM Boot Configuration Row (BOCOR)"
+                    start="0x0080C000"
+                    blankval="0xFFFFFFFF"
+                    pagesize="0x00000100"
+                    ptime="100000"
+                    etime="1000000">
+            <block count="1" size="0x100" arg="0"/>
+         </flashinfo>
+         <debugvars configfile="keil/debug/SAML11.dbgconf">
+          // Debugger Setup
+          __var CE_Select               = 0x00000002;
+          __var CE0_Keyword0            = 0xFFFFFFFF;
+          __var CE0_Keyword1            = 0xFFFFFFFF;
+          __var CE0_Keyword2            = 0xFFFFFFFF;
+          __var CE0_Keyword3            = 0xFFFFFFFF;
+          __var CE1_Keyword0            = 0xFFFFFFFF;
+          __var CE1_Keyword1            = 0xFFFFFFFF;
+          __var CE1_Keyword2            = 0xFFFFFFFF;
+          __var CE1_Keyword3            = 0xFFFFFFFF;
+          __var CE2_Keyword0            = 0xFFFFFFFF;
+          __var CE2_Keyword1            = 0xFFFFFFFF;
+          __var CE2_Keyword2            = 0xFFFFFFFF;
+          __var CE2_Keyword3            = 0xFFFFFFFF;
+          // Device Setup
+          __var ProgramDebugAccessLevel = 0x00000002;
+          __var UROW_Program            = 0x00000000;
+          __var BOCOR_Program           = 0x00000000;
+          //   UROW Configuration
+          __var UROW_Config0            = 0x0000E03F;
+          __var UROW_Config1            = 0x00001800;
+          __var UROW_Config2            = 0x7F0800FF;
+          __var UROW_Config3            = 0x00000001;
+          __var UROW_NONSECA            = 0x00000000;
+          __var UROW_NONSECB            = 0x00000000;
+          __var UROW_NONSECC            = 0x00000000;
+          //   BOCOR Configuration
+          __var BOCOR_Config0           = 0xA0000000;
+          __var BOCOR_Config1           = 0x00030000;
+          __var BOCOR_ROMVersion        = 0x0000003A;
+          __var BOCOR_CE0_Keyword0      = 0xFFFFFFFF;
+          __var BOCOR_CE0_Keyword1      = 0xFFFFFFFF;
+          __var BOCOR_CE0_Keyword2      = 0xFFFFFFFF;
+          __var BOCOR_CE0_Keyword3      = 0xFFFFFFFF;
+          __var BOCOR_CE1_Keyword0      = 0xFFFFFFFF;
+          __var BOCOR_CE1_Keyword1      = 0xFFFFFFFF;
+          __var BOCOR_CE1_Keyword2      = 0xFFFFFFFF;
+          __var BOCOR_CE1_Keyword3      = 0xFFFFFFFF;
+          __var BOCOR_CE2_Keyword0      = 0xFFFFFFFF;
+          __var BOCOR_CE2_Keyword1      = 0xFFFFFFFF;
+          __var BOCOR_CE2_Keyword2      = 0xFFFFFFFF;
+          __var BOCOR_CE2_Keyword3      = 0xFFFFFFFF;
+          __var BOCOR_CRC_Keyword0      = 0xFFFFFFFF;
+          __var BOCOR_CRC_Keyword1      = 0xFFFFFFFF;
+          __var BOCOR_CRC_Keyword2      = 0xFFFFFFFF;
+          __var BOCOR_CRC_Keyword3      = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword0     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword1     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword2     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword3     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword4     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword5     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword6     = 0xFFFFFFFF;
+          __var BOCOR_BOOT_Keyword7     = 0xFFFFFFFF;
+        </debugvars>
+         <sequences><!-- added by ARM -->
+            <sequence name="ResetHardwareAssert">
+               <block>
+                __var nReset = 0x80;
+              
+                // De-assert nRESET line to activate the hardware reset
+                DAP_SWJ_Pins(0, nReset, 0);
+            </block>
+               <control if="__connection &amp; (1 &lt;&lt; 16)"
+                        info="Connection under reset - Cold Plugin - otherwise DP is not accessible">
+                  <block>
+                Sequence("ColdPlugin");
+              </block>
+               </control>
+            </sequence>
+            <sequence name="ResetHardwareDeassertDefault">
+               <block>
+              __var nReset      = 0x80;
+              __var SWCLK_TCK   = 0x01;
+              __var canReadPins = 0;
+
+              // Assert nRESET line and check if nRESET is readable
+              canReadPins = (DAP_SWJ_Pins(nReset, nReset, 0) != 0xFFFFFFFF);
+            </block>
+               <!-- Wait max. 1s for nRESET to recover from reset if readable-->
+               <control if="canReadPins"
+                        while="(DAP_SWJ_Pins(nReset, nReset, 0) &amp; nReset) == 0"
+                        timeout="1000000"/>
+               <!-- Wait 100ms for recovery if nRESET not readable -->
+               <control if="!canReadPins">
+                  <block>
+                DAP_Delay(100000);
+              </block>
+               </control>
+            </sequence>
+            <sequence name="ResetHardwareDeassert">
+               <block>
+              __var SWCLK_TCK   = 0x01;
+              
+              DAP_SWJ_Pins(SWCLK_TCK, SWCLK_TCK, 0);  // Make sure that SWCLK/TCK is HIGH for hot-plugin
+              
+              Sequence("ResetHardwareDeassertDefault");
+            </block>
+            </sequence>
+            <sequence name="BootDelay">
+               <block>
+              // Typical Boot Timings for SAML11
+              // - BOOTOPT=0         : 2.30 ms
+              // - BOOTOPT=1, BS=0x40:  207 ms
+              // - BOOTOPT=1, BS=0x80:  409 ms
+              // - BOOTOPT=2, BS=0x40:  209 ms
+              // - BOOTOPT=2, BS=0x80:  411 ms
+              DAP_Delay(420000);                                               // Time for bootloader : Longest period + a few extra ms
+                                                                               // Possible Enhancement: Read out Boot options to optimize
+            </block>
+            </sequence>
+            <!-- To be callable in uVision (current limitation) -->
+            <sequence name="DebugPortSetup">
+               <block>
+              __var isSWJ    = ((__protocol &amp; 0x00010000) != 0);
+              __var protType = __protocol &amp; 0x0000FFFF;
+            </block>
+               <!-- JTAG Protocol -->
+               <control if="protType == 1">
+                  <control if="isSWJ">
+                     <block atomic="1">
+                  // Ensure current debug interface is in reset state
+                  DAP_SWJ_Sequence(51, 0x0007FFFFFFFFFFFF);
+                  
+                  // Execute SWJ-DP Switch Sequence SWD to JTAG (0xE73C)
+                  // Change if SWJ-DP uses deprecated switch code (0xAEAE)
+                  DAP_SWJ_Sequence(16, 0xE73C);
+                  
+                  // Ensure JTAG interface is reset
+                  DAP_SWJ_Sequence(6, 0x3F);
+                </block>
+                  </control>
+                  <block atomic="1">
+                // JTAG "Soft" Reset
+                DAP_JTAG_Sequence(6, 1, 0x3F);
+                DAP_JTAG_Sequence(1, 0, 0x01);
+              </block>
+               </control>
+               <!-- SWD Protocol -->
+               <control if="protType == 2">
+                  <control if="isSWJ">
+                     <block atomic="1">
+                  // Ensure current debug interface is in reset state
+                  DAP_SWJ_Sequence(51, 0x0007FFFFFFFFFFFF);
+                  
+                  // Execute SWJ-DP Switch Sequence JTAG to SWD (0xE79E)
+                  // Change if SWJ-DP uses deprecated switch code (0xEDB6)
+                  DAP_SWJ_Sequence(16, 0xE79E);
+                  
+                  // Enter SWD Line Reset State
+                  DAP_SWJ_Sequence(51, 0x0007FFFFFFFFFFFF);  // &gt; 50 cycles SWDIO/TMS High
+                  DAP_SWJ_Sequence(3,  0x00);                // At least 2 idle cycles (SWDIO/TMS Low)
+                </block>
+                  </control>
+                  <control if="!isSWJ">
+                     <block atomic="1">
+                  // Enter SWD Line Reset State
+                  DAP_SWJ_Sequence(51, 0x0007FFFFFFFFFFFF);  // &gt; 50 cycles SWDIO/TMS High
+                  DAP_SWJ_Sequence(3,  0x00);                // At least 2 idle cycles (SWDIO/TMS Low)
+                </block>
+                  </control>
+                  <block>
+                // Read DPIDR to enable SWD interface (SW-DPv1 and SW-DPv2)
+                ReadDP(0x0);
+              </block>
+               </control>
+            </sequence>
+            <!-- To be callable in uVision (current limitation) -->
+            <sequence name="DebugPortStart">
+               <block>
+              __var SW_DP_ABORT  = 0x0;
+              __var DP_CTRL_STAT = 0x4;
+              __var DP_SELECT    = 0x8;
+              __var powered_down = 0;
+              
+              // Switch to DP Register Bank 0
+              WriteDP(DP_SELECT, 0x00000000);
+            
+              // Read DP CTRL/STAT Register and check if CSYSPWRUPACK and CDBGPWRUPACK bits are set
+              powered_down = ((ReadDP(DP_CTRL_STAT) &amp; 0xA0000000) != 0xA0000000);
+            </block>
+               <control if="powered_down">
+                  <block>
+                // Request Debug/System Power-Up
+                WriteDP(DP_CTRL_STAT, 0x50000000);
+              </block>
+                  <!-- Wait for Power-Up Request to be acknowledged -->
+                  <control while="(ReadDP(DP_CTRL_STAT) &amp; 0xA0000000) != 0xA0000000"
+                           timeout="1000000"/>
+                  <!-- JTAG Specific Part of sequence -->
+                  <control if="(__protocol &amp; 0xFFFF) == 1">
+                     <block>
+                  // Init AP Transfer Mode, Transaction Counter, and Lane Mask (Normal Transfer Mode, Include all Byte Lanes)
+                  // Additionally clear STICKYORUN, STICKYCMP, and STICKYERR bits by writing '1'
+                  WriteDP(DP_CTRL_STAT, 0x50000F32);
+                </block>
+                  </control>
+                  <!-- SWD Specific Part of sequence -->
+                  <control if="(__protocol &amp; 0xFFFF) == 2">
+                     <block>
+                  // Init AP Transfer Mode, Transaction Counter, and Lane Mask (Normal Transfer Mode, Include all Byte Lanes)
+                  WriteDP(DP_CTRL_STAT, 0x50000F00);
+                  
+                  // Clear WDATAERR, STICKYORUN, STICKYCMP, and STICKYERR bits of CTRL/STAT Register by write to ABORT register
+                  WriteDP(SW_DP_ABORT, 0x0000001E);
+                </block>
+                  </control>
+               </control>
+            </sequence>
+            <sequence name="ColdPlugin">
+               <block>
+              DAP_SWJ_Pins(0x00, 0x01, 0);  // Pull down SWCLK/TCK for cold-plugin
+              Sequence("ResetHardwareDeassertDefault");
+            </block>
+            </sequence>
+            <!-- Check Boot ROM Status and Flag Errors-->
+            <sequence name="Bootrom_CheckError">
+               <block>
+              __var DSU_BCC1_Addr = 0x41002124;  // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC1_Val  = 0;
+              __var msgType       = 0;
+
+              DSU_BCC1_Val = Read32(DSU_BCC1_Addr);
+            </block>
+               <control if="(DSU_BCC1_Val &gt;= 0xEC000010) &amp;&amp; (DSU_BCC1_Val &lt;= 0xEC000015)"
+                        info="error?">
+                  <block>
+                msgType = 1;
+              </block>
+               </control>
+               <control if="(DSU_BCC1_Val &gt;= 0xEC000022) &amp;&amp; (DSU_BCC1_Val &lt;= 0xEC000023)"
+                        info="error?">
+                  <block>
+                msgType = 2;
+              </block>
+               </control>
+               <control if="(DSU_BCC1_Val == 0xEC000025)" info="error?">
+                  <block>
+                msgType = 1;
+              </block>
+               </control>
+               <control if="(DSU_BCC1_Val &gt;= 0xEC000027) &amp;&amp; (DSU_BCC1_Val &lt;= 0xEC000036)"
+                        info="error?">
+                  <block>
+                msgType = 2;
+              </block>
+               </control>
+               <control if="(DSU_BCC1_Val &gt;= 0xEC000040) &amp;&amp; (DSU_BCC1_Val &lt;= 0xEC0000F0)"
+                        info="error?">
+                  <block>
+                msgType = 1;
+              </block>
+               </control>
+               <control if="msgType == 2">
+                  <block>
+                Sequence("ResetPulse");                 // Bring device (and boot ROM) back into defined state
+              </block>
+               </control>
+               <control if="msgType &gt; 0">
+                  <block>
+                Message(msgType, "Boot ROM error - 0x%08X", DSU_BCC1_Val);
+              </block>
+               </control>
+            </sequence>
+            <sequence name="CheckForChecksumError">
+               <block>
+              __var DSU_BCC1_Addr      = 0x41002124;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC1_Val       = 0;
+              __var ChecksumErr        = 0;
+              
+              DSU_BCC1_Val = Read32(DSU_BCC1_Addr);
+              ChecksumErr = (DSU_BCC1_Val == 0xEC000011) || (DSU_BCC1_Val == 0xEC000013) || (DSU_BCC1_Val == 0xEC000041) || (DSU_BCC1_Val == 0xEC000041);
+            </block>
+               <control if="ChecksumErr">
+                  <block>
+                Query(0, "Checksum/hash error!\nErase and reprogram chip under reset.", 1);
+                Message(2, "Checksum/hash error (0x%08X)! Erase and reprogram chip under reset.", DSU_BCC1_Val);
+              </block>
+               </control>
+            </sequence>
+            <!-- Establish Connection to Boot ROM -->
+            <sequence name="Bootrom_Connect">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              
+              Write32(DSU_Ctrl_Stat_Addr, 0x00001C00);  // Clear Error Flags in DSU.STATA (PERR, FAIL, BERR)
+              Write32(DSU_Ctrl_Stat_Addr, 0x00000200);  // Clear CPU Reset Extension in DSU.STATA
+              DAP_Delay(5000);                          // Wait 5 ms after CPU Release
+              Sequence("Bootrom_CheckError");           // Check Boot ROM Status
+            </block>
+            </sequence>
+            <!-- Enter Interactive Boot ROM Mode -->
+            <sequence name="Bootrom_CMD_INIT">
+               <block>
+              __var DSU_BCC0_Addr = 0x41002120;         // Access DSU External Address Range (for all DALs)
+              
+              Write32(DSU_BCC0_Addr, 0x44424755);       // Write CMD_INIT
+              Sequence("Bootrom_CheckError");
+            </block>
+            </sequence>
+            <!-- Execute Full Chip Erase -->
+            <sequence name="Bootrom_CMD_CEx" info="Selected Chip Erase">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC0_Addr      = 0x41002120;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC1_Addr      = 0x41002124;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC1_Val       = 0;
+              __var CE_Keyword0        = CE2_Keyword0;  // CE2_Keyword0 by default
+              __var CE_Keyword1        = CE2_Keyword1;  // CE2_Keyword1 by default
+              __var CE_Keyword2        = CE2_Keyword2;  // CE2_Keyword2 by default
+              __var CE_Keyword3        = CE2_Keyword3;  // CE2_Keyword3 by default
+              __var CE_CMD             = 0x444247E2;    // CMD_CE2 by default
+              
+              Message(0, "Execute Chip Erase (CE%u)...", CE_Select);
+            </block>
+               <control if="CE_Select == 0" info="Set CE0 Parameters">
+                  <block>
+                CE_CMD      = 0x444247E0;         // Use CE0
+                CE_Keyword0 = CE0_Keyword0;       // Use CE0_Keyword0
+                CE_Keyword1 = CE0_Keyword1;       // Use CE0_Keyword1
+                CE_Keyword2 = CE0_Keyword2;       // Use CE0_Keyword2
+                CE_Keyword3 = CE0_Keyword3;       // Use CE0_Keyword3
+              </block>
+               </control>
+               <control if="CE_Select == 1" info="Set CE1 Parameters">
+                  <block>
+                CE_CMD      = 0x444247E1;         // Use CE1
+                CE_Keyword0 = CE1_Keyword0;       // Use CE1_Keyword0
+                CE_Keyword1 = CE1_Keyword1;       // Use CE1_Keyword1
+                CE_Keyword2 = CE1_Keyword2;       // Use CE1_Keyword2
+                CE_Keyword3 = CE1_Keyword3;       // Use CE1_Keyword3
+              </block>
+               </control>
+               <block>
+              Write32(DSU_BCC0_Addr, CE_CMD);           // Write CMD_CE1
+              Sequence("Bootrom_CheckError");
+            </block>
+               <block>
+              Write32(DSU_BCC0_Addr, CE_Keyword0);      // Write CE_Keyword0
+            </block>
+               <control while="(Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00400000)"
+                        timeout="1000000"
+                        info="Poll DSU STATUSB.BCCD0 until cleared"/>
+               <block>
+              Write32(DSU_BCC0_Addr, CE_Keyword1);      // Write CE_Keyword1
+            </block>
+               <control while="(Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00400000)"
+                        timeout="1000000"
+                        info="Poll DSU STATUSB.BCCD0 until cleared"/>
+               <block>
+              Write32(DSU_BCC0_Addr, CE_Keyword2);      // Write CE_Keyword2
+            </block>
+               <control while="(Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00400000)"
+                        timeout="1000000"
+                        info="Poll DSU STATUSB.BCCD0 until cleared"/>
+               <block>
+              Write32(DSU_BCC0_Addr, CE_Keyword3);      // Write CE_Keyword3
+            </block>
+               <control while="(Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00400000)"
+                        timeout="1000000"
+                        info="Poll DSU STATUSB.BCCD0 until cleared"/>
+               <control while="(DSU_BCC1_Val = Read32(DSU_BCC1_Addr)) != 0xEC000021"
+                        timeout="3000000"
+                        info="Wait for SIG_CMD_SUCCESS">
+                  <block>
+                Sequence("Bootrom_CheckError");
+              </block>
+               </control>
+            </sequence>
+            <!-- Exit Boot ROM to User Application (not possible after CMD_INIT) -->
+            <sequence name="Bootrom_CMD_EXIT_ToApp">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC0_Addr      = 0x41002120;    // Access DSU External Address Range (for all DALs)
+              
+              Write32(DSU_Ctrl_Stat_Addr, 0x00002000);  // Boot Rom Phase Extension in DSU.STATA to return to app after CMD_EXIT
+              Write32(DSU_BCC0_Addr, 0x444247AA);       // Write CMD_EXIT
+              Sequence("Bootrom_CheckError");
+            </block>
+            </sequence>
+            <!-- Exit Boot ROM to CPU Park Mode (allows access to NVMCTRL while CPU still halted, not possible after CMD_INIT) -->
+            <sequence name="Bootrom_CMD_EXIT_ToPark">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC0_Addr      = 0x41002120;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC1_Addr      = 0x41002124;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC1_Val       = 0;
+              
+              Write32(DSU_BCC0_Addr, 0x444247AA);       // Write CMD_EXIT
+              Sequence("Bootrom_CheckError");
+            </block>
+            </sequence>
+            <!-- Execute System Reset via Boot ROM -->
+            <sequence name="Bootrom_CMD_RESET" info="System Reset">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              __var DSU_BCC0_Addr      = 0x41002120;    // Access DSU External Address Range (for all DALs)
+              
+              Message(0, "Execute Bootrom Reset...");
+              
+              __errorcontrol = 1;                       // Ignore errors
+              Write32(DSU_BCC0_Addr, 0x44424752);       // Write CMD_RESET
+              __errorcontrol = 0;                       // Check errors
+              
+              Sequence("DebugPortSetup");
+              Sequence("DebugPortStart");
+            </block>
+            </sequence>
+            <!-- Program Debug Access Level 1 -->
+            <sequence name="NVMCTRL_SetDAL1">
+               <block>
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;  // Access DSU External Address Range (for all DALs)
+              __var PAC_WRCTRL_Addr      = 0x40000000;
+              __var NVMCTRL_CTRLA_Addr   = 0x41004000;
+              __var DebugAccessLevel     = 0;
+              
+              Message(0, "Set Debug Access Level 1...");
+              
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                PAC_WRCTRL_Addr    += 0x0200;           // Use secure alias
+                NVMCTRL_CTRLA_Addr += 0x1000;           // Use secure alias
+              </block>
+               </control>
+               <block>
+              Write32(PAC_WRCTRL_Addr, (( 1 &lt;&lt; 16) | (34 &lt;&lt;  0)));  // Disable NVMCTRL Write Protection
+              Write32(NVMCTRL_CTRLA_Addr, 0xA54C);                              // Set Debug Access Level 1 (Non-Volatile until next Chip Erase or Set DAL 0)
+            </block>
+            </sequence>
+            <!-- Program Debug Access Level 0 -->
+            <sequence name="NVMCTRL_SetDAL0">
+               <block>
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;  // Access DSU External Address Range (for all DALs)
+              __var PAC_WRCTRL_Addr      = 0x40000000;
+              __var NVMCTRL_CTRLA_Addr   = 0x41004000;
+              __var DebugAccessLevel     = 0;
+              
+              Message(0, "Set Debug Access Level 0...");
+              
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                PAC_WRCTRL_Addr    += 0x0200;           // Use secure alias
+                NVMCTRL_CTRLA_Addr += 0x1000;           // Use secure alias
+              </block>
+               </control>
+               <block>
+              Write32(PAC_WRCTRL_Addr, (( 1 &lt;&lt; 16) | (34 &lt;&lt;  0)));  // Disable NVMCTRL Write Protection
+              Write32(NVMCTRL_CTRLA_Addr, 0xA54B);                              // Set Debug Access Level 0 (Non-Volatile until next Chip Erase)
+            </block>
+            </sequence>
+            <!-- Force CPU into Debug Halt - To be reviewed -->
+            <sequence name="ForceCoreHalt">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              __var DHCSR_Addr         = 0xE000EDF0;
+              __var DCRSR_Addr         = 0xE000EDF4;
+              __var DCRDR_Addr         = 0xE000EDF8;
+              __var DebugAccessLevel   = 0;
+              
+              DAP_Delay(5000);                          // Workaround for MDK issue to be fixed
+            </block>
+               <!-- wait until core has stopped -->
+               <control while="(Read32(DHCSR_Addr) &amp; 0x00020000) == 0" timeout="100000"/>
+               <block info="Halt core">
+              Write32(DHCSR_Addr,0xA05F0003);                                  // halt core in any case
+            </block>
+               <block info="Update xPSR register">
+              Write32(DCRDR_Addr, 0x01000000);
+              Write32(DCRSR_Addr, 0x00010010);                                 // update xPSR register (TODO: why?)
+            </block>
+               <control while="(Read32(DHCSR_Addr) &amp; 0x00010000) == 0" timeout="100000"/>
+            </sequence>
+            <!-- Unlock Device -->
+            <sequence name="DebugDeviceUnlock">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;    // Access DSU External Address Range (for all DALs)
+              __var DSU_Ctrl_Stat_Val  = 0;
+              __var DebugAccessLevel   = 0;
+              __var QueryResult        = 0;
+
+              DSU_Ctrl_Stat_Val = Read32(DSU_Ctrl_Stat_Addr);
+            </block>
+               <!-- "under reset" bit not in current uVision build -->
+               <control if="DSU_Ctrl_Stat_Val &amp; 0x00000200"
+                        info="STATUSB.CRSTEXT active - Cold Plugin">
+                  <control if="(__connection &amp; 0xFF) != 2"><!-- Release to App for normal debug connection -->
+                     <block>
+                  Sequence("CheckForChecksumError");
+                  Sequence("Bootrom_Connect");
+                  Sequence("Bootrom_CMD_EXIT_ToApp");
+                  Sequence("BootDelay");
+                  Sequence("ForceCoreHalt");
+                </block>
+                  </control>
+                  <control if="(__connection &amp; 0xFF) == 2"><!-- Selected Chip Erase for Flash Download connection under reset -->
+                     <block>
+                  Sequence("Bootrom_Connect");
+                  Sequence("Bootrom_CMD_INIT");
+                  Sequence("Bootrom_CMD_CEx");
+                  Sequence("ResetHardware");
+                  Sequence("ForceCoreHalt");
+                </block>
+                  </control>
+               </control>
+            </sequence>
+            <!-- SYSRESETREQ -->
+            <sequence name="ResetSystem" info="SYSRESETREQ">
+               <block>
+              __var AIRCR_Addr = 0xE000ED0C;
+              __var DHCSR_Addr = 0xE000EDF0;
+
+              __errorcontrol = 1;                                              // ignore errors
+              Write32(AIRCR_Addr, 0x05FA0004);                                 // Execute SYSRESETREQ via AIRCR
+              __errorcontrol = 0;                                              // check errors
+
+              Sequence("BootDelay");
+            </block>
+               <!-- Reset Recovery: Wait for DHCSR.S_RESET_ST bit to clear on read -->
+               <control while="(Read32(DHCSR_Addr) &amp; 0x02000000) != 0" timeout="100000"/>
+               <block>
+              Sequence("ForceCoreHalt");                                       // halt the core
+            </block>
+            </sequence>
+            <!-- VECTRESET - Disabled -->
+            <sequence name="ResetProcessor" disable="true" info="VECTRESET"><!-- ResetProcessor not available for CM23 --></sequence>
+            <sequence name="ResetPulse">
+               <block>
+              __var nReset      = 0x80;
+              __var SWCLK_TCK   = 0x01;
+              __var canReadPins = 0;
+
+              canReadPins = (DAP_SWJ_Pins(0x00, nReset, 0) != 0xFFFFFFFF);     // Deassert nRESET line
+            </block>
+               <control while="(DAP_SWJ_Pins(0x00, nReset, 0) &amp; nReset) == nReset"
+                        timeout="1000000"/>
+               <!-- Keep reset active for 50 ms -->
+               <block>
+              DAP_Delay(50000);
+            </block>
+               <block>
+              DAP_SWJ_Pins(SWCLK_TCK, SWCLK_TCK, 0);  // Make sure that SWCLK/TCK is HIGH for SAML11 hot-plugin
+            </block>
+               <control if="canReadPins"><!-- Assert nRESET line and wait max. 1s for recovery -->
+                  <control while="(DAP_SWJ_Pins(nReset, nReset, 0) &amp; nReset) == 0"
+                           timeout="1000000"/>
+               </control>
+               <control if="!canReadPins">
+                  <block>
+                DAP_SWJ_Pins(nReset, nReset, 0);                               // Assert nRESET line
+                DAP_Delay(100000);                                             // Wait 100ms for recovery if nRESET not readable
+              </block>
+               </control>
+            </sequence>
+            <!-- HW Reset -->
+            <sequence name="ResetHardware" info="HW RESET">
+               <block>
+              Sequence("ResetPulse");
+              Sequence("BootDelay");
+              Sequence("DebugPortSetup");
+              Sequence("DebugPortStart");
+            </block>
+            </sequence>
+            <!-- Stop After Bootloader -->
+            <sequence name="ResetCatchSet">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;  // Access DSU External Address Range (for all DALs)
+              __var DHCSR_Addr         = 0xE000EDF0;
+              __var DEMCR_Addr         = 0xE000EDFC;
+              __var FP_CTRL_Addr       = 0xE0002000;
+              __var FP_COMP0_Addr      = 0xE0002008;
+              __var FPB_KEY            = 0x00000002;
+              __var FPB_ENABLE         = 0x00000001;
+              __var DWT_COMP0_Addr     = 0xE0001020;
+              __var DWT_FUNCTION0_Addr = 0xE0001028;
+              __var DWT_COMP1_Addr     = 0xE0001030;
+              __var DWT_FUNCTION1_Addr = 0xE0001038;
+              __var DebugAccessLevel   = 0;
+              __var value              = 0;
+              __var resetVect          = 0x00000000;
+              
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Use Secure Reset Vector">
+                  <block>
+                value = Read32(DEMCR_Addr);
+                Write32(DEMCR_Addr, (value &amp; ~0x00000001));                  // Disable Reset Vector Catch
+
+
+                resetVect = Read32(0x00000004);                                  // Read Reset Vector
+                Write32(FP_COMP0_Addr, (resetVect | FPB_ENABLE));                // Set BP0 to Reset Vector (ARMv8M)
+                Write32(FP_CTRL_Addr,  (FPB_KEY   | FPB_ENABLE));                // Enable FPB
+              </block>
+               </control>
+               <control if="DebugAccessLevel == 1"
+                        info="Use Instruction Address Range Match for DAL1">
+                  <block>
+                Write32(DWT_FUNCTION0_Addr, 0x00000412);                         // DWT_FUNCTION0: DATAVSIZE - 2, ACTION - Debug Event, MATCH - Instrucion Address
+                Write32(DWT_COMP0_Addr,     0x00000000);                         // DWT_COMP0: Start of available code flash
+                Write32(DWT_COMP1_Addr,     0x00400000);                         // DWT_COMP1: Start of available data flash
+                Write32(DWT_FUNCTION1_Addr, 0x00000403);                         // DWT_FUNCTION1: DATAVSIZE - 2, ACTION - Trigger only, MATCH - Instrucion Address Limit
+                
+                value      = Read32(DEMCR_Addr);                                 // Read DEMCR
+                value &amp;= ~0x00000001;                                        // Disable Reset Vector Catch
+                value     |= 0x01000000;                                         // Ensure TRCENA is set
+                Write32(DEMCR_Addr, value);                                      // Write back DEMCR
+              </block>
+               </control>
+               <block>
+              Read32(DHCSR_Addr);                                                // Read DHCSR to clear potentially set DHCSR.S_RESET_ST bit
+            </block>
+               <!-- Do nothing for DebugAccessLevel == 0 -->
+            </sequence>
+            <sequence name="ResetCatchClear">
+               <block>
+              __var DSU_Ctrl_Stat_Addr = 0x41002100;  // Access DSU External Address Range (for all DALs)
+              __var FP_CTRL_Addr       = 0xE0002000;
+              __var FP_COMP0_Addr      = 0xE0002008;
+              __var FPB_KEY            = 0x00000002;
+              __var DWT_COMP0_Addr     = 0xE0001020;
+              __var DWT_FUNCTION0_Addr = 0xE0001028;
+              __var DWT_COMP1_Addr     = 0xE0001030;
+              __var DWT_FUNCTION1_Addr = 0xE0001038;
+              __var DebugAccessLevel   = 0;
+
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Clear used FPB resources">
+                  <block>
+                Write32(FP_COMP0_Addr, 0x00000000);              // Clear BP0
+                Write32(FP_CTRL_Addr,  FPB_KEY   );              // Disable FPB
+              </block>
+               </control>
+               <control if="DebugAccessLevel == 1" info="Clear used DWT resources">
+                  <block>
+                Write32(DWT_FUNCTION0_Addr, 0x00000000);         // Clear DWT_FUNCTION0
+                Write32(DWT_FUNCTION1_Addr, 0x00000000);         // Clear DWT_FUNCTION1
+                Write32(DWT_COMP0_Addr,     0x00000000);         // Clear DWT_COMP0
+                Write32(DWT_COMP1_Addr,     0x00000000);         // Clear DWT_COMP1
+              </block>
+               </control>
+            </sequence>
+            <sequence name="ClearFlashPageBuffer">
+               <block>
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;           // Access DSU External Address Range (for DALs)
+              __var PageBufferDirty      = 0;
+              __var DebugAccessLevel     = 0;
+              
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                NVMCTRL_Base_Addr += 0x1000;                     // Use secure alias
+              </block>
+               </control>
+               <block>
+              PageBufferDirty = Read8(NVMCTRL_Base_Addr + 0x18) &amp; 0x02;           // NVMCTRL.STATUS: Check if LOAD bit set (page buffer not empty)
+            </block>
+               <control if="PageBufferDirty"
+                        info="Only clear page buffer if necessary. PBC commands can otherwise fail.">
+                  <block info="Clear page buffer command">
+                Write8 (NVMCTRL_Base_Addr + 0x14, 0x1F);                              // NVMCTRL.INTFLAG: Clear all errors and DONE flag
+                Write16(NVMCTRL_Base_Addr, ((0xA5 &lt;&lt; 8) | (0x44 &lt;&lt; 0)));  // NVMCTRL.CTRLA:   Clear page buffer command
+              </block>
+                  <control while="(Read16(NVMCTRL_Base_Addr + 0x18) &amp; 0x06) != (1 &lt;&lt; 2)"
+                           timeout="100000"
+                           info="NVMCTRL.STATUS: READY and not LOAD (page buffer cleared)"/>
+                  <control if="(Read8(NVMCTRL_Base_Addr + 0x14) &amp; 0x1F) != 0x01"
+                           info="NVMCTRL.INTFLAG: Check for errors and command done">
+                     <block>
+                  __Result = -1;                                                      // Clear page buffer finished with errors
+                </block>
+                  </control>
+               </control>
+            </sequence>
+            <sequence name="PrepareFlashOperation">
+               <block info="initalize local variables">
+              __var PAC_WRCTRL_Addr      = 0x40000000;
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;  // Access DSU External Address Range (for all DALs)
+              __var DebugAccessLevel     = 0;
+              
+              __Result = 0;                             // Initialize __Result to OK
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                PAC_WRCTRL_Addr   += 0x0200;            // Use secure alias
+                NVMCTRL_Base_Addr += 0x1000;            // Use secure alias
+              </block>
+               </control>
+               <block info="configure Flash access">
+              Write32(PAC_WRCTRL_Addr,          (( 1 &lt;&lt; 16) | (34 &lt;&lt;  0)));  // PAC.WRCTRL: disable NVMCTRL Write Protection via Secure alias
+              Write32(NVMCTRL_Base_Addr + 0x04, (( 1 &lt;&lt; 18) | (15 &lt;&lt;  1)));  // NVMCTRL.CTRLB: cache disabled, read wait states = 15
+              Write8 (NVMCTRL_Base_Addr + 0x08, (( 1 &lt;&lt;  0)                   ));  // NVMCTRL.CTRLC: manual write
+            </block>
+            </sequence>
+            <!-- CMSIS Flash Algorithm - FlashInit -->
+            <sequence name="FlashInit">
+               <block>
+              Sequence("PrepareFlashOperation");
+            </block>
+               <control if="__FlashOp == 1"><!-- special initialization code for erase -->
+                  <block/>
+               </control>
+               <control if="__FlashOp == 2"><!-- special initialization code for program -->
+                  <block>
+                Sequence("ClearFlashPageBuffer");
+              </block>
+               </control>
+            </sequence>
+            <!-- CMSIS Flash Algorithm - FlashUninit -->
+            <sequence name="FlashUninit">
+               <block info="initalize result to OK">
+              __Result = 0;
+            </block>
+            </sequence>
+            <!-- CMSIS Flash Algorithm - FlashEraseChip - Disabled -->
+            <sequence name="FlashEraseChip" disable="0"><!-- FlashEraseChip not implemented --></sequence>
+            <sequence name="EraseUROW">
+               <block info="initalize local variables">
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;              // Access DSU External Address Range (for DALs)
+              __var IndirectAddressing   = 0;
+              __var DebugAccessLevel     = 0;
+              __var SectorAddr           = 0x00804000;
+              
+              Message(0, "Erase UROW...");
+
+              __Result = 0;                                         // Initialize __Result to OK
+              
+              DebugAccessLevel   = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;           // Read Debug Access Level
+              IndirectAddressing = (DebugAccessLevel &lt; 2);                                           // DAL1 and Code/Data Flash
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                NVMCTRL_Base_Addr += 0x1000;                        // Use secure alias
+              </block>
+               </control>
+               <block>
+              Sequence("PrepareFlashOperation");
+              Sequence("ClearFlashPageBuffer");
+            </block>
+               <block info="Erase row command - Clear Status">
+              Write8 (NVMCTRL_Base_Addr + 0x14, 0x1F);              // NVMCTRL.INTFLAG: Clear all errors and DONE flag
+            </block>
+               <control if="IndirectAddressing"
+                        info="Erase row command - Set Page Address (Indirect Addressing)">
+                  <block>
+                Sequence("ClearFlashPageBuffer");
+                Write32(SectorAddr, 0xFFFFFFFF);                   // Indirect setting of NVMCTRL.ADDR: Cannot be directly written at DAL1
+              </block>
+               </control>
+               <control if="!IndirectAddressing"
+                        info="Erase row command - Set Page Address (Direct Addressing)">
+                  <block>
+                Write32(NVMCTRL_Base_Addr + 0x1C, SectorAddr);     // NVMCTRL.ADDR: 0..15 offset, 22..23 array (0 = Flash, 1 = DataFlsh, 2= AuxFlash)
+              </block>
+               </control>
+               <block info="Erase row command - Do Erase">
+              Write16(NVMCTRL_Base_Addr, ((0xA5 &lt;&lt; 8) | (0x02 &lt;&lt; 0)));  // NVMCTRL.CTRLA: Erase row command
+            </block>
+               <control while="(Read16(NVMCTRL_Base_Addr + 0x18) &amp; (1 &lt;&lt; 2)) == 0"
+                        timeout="100000"
+                        info="NVMCTRL.STATUS: Wait for operation to finish"/>
+               <control if="(Read8(NVMCTRL_Base_Addr + 0x14) &amp; 0x1F) != 0x01"
+                        info="NVMCTRL.INTFLAG: Check for errors">
+                  <block>
+                __Result = -1;                                      // Erase row finished with errors
+              </block>
+               </control>
+            </sequence>
+            <sequence name="EraseBOCOR">
+               <block info="initalize local variables">
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;              // Access DSU External Address Range (for DALs)
+              __var IndirectAddressing   = 0;
+              __var DebugAccessLevel     = 0;
+              __var SectorAddr           = 0x0080C000;
+              
+              Message(0, "Erase BOCOR...");
+
+              __Result = 0;                                         // Initialize __Result to OK
+              
+              DebugAccessLevel   = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;           // Read Debug Access Level
+              IndirectAddressing = (DebugAccessLevel &lt; 2);                                           // DAL1 and Code/Data Flash
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                NVMCTRL_Base_Addr += 0x1000;                        // Use secure alias
+              </block>
+               </control>
+               <control while="__Result == 0 &amp;&amp; (SectorAddr &lt; 0x0080C100)">
+                  <block>
+                Sequence("PrepareFlashOperation");
+                Sequence("ClearFlashPageBuffer");
+              </block>
+                  <block info="Erase row command - Clear Status">
+                Write8 (NVMCTRL_Base_Addr + 0x14, 0x1F);              // NVMCTRL.INTFLAG: Clear all errors and DONE flag
+              </block>
+                  <control if="IndirectAddressing"
+                           info="Erase row command - Set Page Address (Indirect Addressing)">
+                     <block>
+                  Sequence("ClearFlashPageBuffer");
+                  Write32(SectorAddr, 0xFFFFFFFF);                   // Indirect setting of NVMCTRL.ADDR: Cannot be directly written at DAL1
+                </block>
+                  </control>
+                  <control if="!IndirectAddressing"
+                           info="Erase row command - Set Page Address (Direct Addressing)">
+                     <block>
+                  Write32(NVMCTRL_Base_Addr + 0x1C, SectorAddr);     // NVMCTRL.ADDR: 0..15 offset, 22..23 array (0 = Flash, 1 = DataFlsh, 2= AuxFlash)
+                </block>
+                  </control>
+                  <block info="Erase row command - Do Erase">
+                Write16(NVMCTRL_Base_Addr, ((0xA5 &lt;&lt; 8) | (0x02 &lt;&lt; 0)));  // NVMCTRL.CTRLA: Erase row command
+              </block>
+                  <control while="(Read16(NVMCTRL_Base_Addr + 0x18) &amp; (1 &lt;&lt; 2)) == 0"
+                           timeout="100000"
+                           info="NVMCTRL.STATUS: Wait for operation to finish"/>
+                  <control if="(Read8(NVMCTRL_Base_Addr + 0x14) &amp; 0x1F) != 0x01"
+                           info="NVMCTRL.INTFLAG: Check for errors">
+                     <block>
+                  __Result = -1;                                      // Erase row finished with errors
+                </block>
+                  </control>
+                  <block>
+                SectorAddr += 0x20;
+              </block>
+               </control>
+            </sequence>
+            <sequence name="EraseBSHashRow">
+               <block info="initalize local variables">
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;              // Access DSU External Address Range (for DALs)
+              __var IndirectAddressing   = 0;
+              __var DebugAccessLevel     = 0;
+              __var SectorAddr           = 0x00000000;
+              __var SectorSize           = 0x100;
+              __var BS_HashAddr          = 0x00000000;
+              __var BS_Length            = 0;
+              __var BNSC_Length          = 0;
+              __var BS_Setup             = 0;
+              
+              Message(0, "Erase Row for Boot Image hashsum...");
+
+              __Result = 0;                                         // Initialize __Result to OK
+              
+              DebugAccessLevel   = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16; // Read Debug Access Level
+              IndirectAddressing = (DebugAccessLevel &lt; 2);                                 // DAL1 and Code/Data Flash
+              
+              BS_Setup     = Read32(0x0080C000);
+              BS_Length    = (BS_Setup &amp; 0x0000FF00) &gt;&gt;  8;
+              BS_Length   *= 0x100;
+              BNSC_Length  = (BS_Setup &amp; 0x007F0000) &gt;&gt; 16;  // should go into if block
+              BNSC_Length *= 0x20;
+              BS_HashAddr  = BS_Length - BNSC_Length - 0x20;
+              SectorAddr   = BS_HashAddr &amp; ~(SectorSize - 1);
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                NVMCTRL_Base_Addr += 0x1000;                        // Use secure alias
+              </block>
+               </control>
+               <block>
+              Sequence("PrepareFlashOperation");
+              Sequence("ClearFlashPageBuffer");
+            </block>
+               <block info="Erase row command - Clear Status">
+              Write8 (NVMCTRL_Base_Addr + 0x14, 0x1F);              // NVMCTRL.INTFLAG: Clear all errors and DONE flag
+            </block>
+               <control if="IndirectAddressing"
+                        info="Erase row command - Set Page Address (Indirect Addressing)">
+                  <block>
+                Sequence("ClearFlashPageBuffer");
+                Write32(SectorAddr, 0xFFFFFFFF);                   // Indirect setting of NVMCTRL.ADDR: Cannot be directly written at DAL1
+              </block>
+               </control>
+               <control if="!IndirectAddressing"
+                        info="Erase row command - Set Page Address (Direct Addressing)">
+                  <block>
+                Write32(NVMCTRL_Base_Addr + 0x1C, SectorAddr);     // NVMCTRL.ADDR: 0..15 offset, 22..23 array (0 = Flash, 1 = DataFlsh, 2= AuxFlash)
+              </block>
+               </control>
+               <block info="Erase row command - Do Erase">
+              Write16(NVMCTRL_Base_Addr, ((0xA5 &lt;&lt; 8) | (0x02 &lt;&lt; 0)));  // NVMCTRL.CTRLA: Erase row command
+            </block>
+               <control while="(Read16(NVMCTRL_Base_Addr + 0x18) &amp; (1 &lt;&lt; 2)) == 0"
+                        timeout="100000"
+                        info="NVMCTRL.STATUS: Wait for operation to finish"/>
+               <control if="(Read8(NVMCTRL_Base_Addr + 0x14) &amp; 0x1F) != 0x01"
+                        info="NVMCTRL.INTFLAG: Check for errors">
+                  <block>
+                __Result = -1;                                      // Erase row finished with errors
+              </block>
+               </control>
+            </sequence>
+            <!-- CMSIS Flash Algorithm - FlashEraseSector -->
+            <sequence name="FlashEraseSector">
+               <block info="initalize local variables">
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;              // Access DSU External Address Range (for DALs)
+              __var IndirectAddressing   = 0;
+              __var DebugAccessLevel     = 0;
+              
+              // Message(0, "Erase Row: 0x%08X...", __FlashAddr);
+
+              __Result = 0;                                         // Initialize __Result to OK
+              
+              DebugAccessLevel   = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;           // Read Debug Access Level
+              IndirectAddressing = (DebugAccessLevel &lt; 2);                                           // DAL1 and Code/Data Flash
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                NVMCTRL_Base_Addr += 0x1000;                        // Use secure alias
+              </block>
+               </control>
+               <block info="Erase row command - Clear Status">
+              Write8 (NVMCTRL_Base_Addr + 0x14, 0x1F);              // NVMCTRL.INTFLAG: Clear all errors and DONE flag
+            </block>
+               <control if="IndirectAddressing"
+                        info="Erase row command - Set Page Address (Indirect Addressing)">
+                  <block>
+                Sequence("ClearFlashPageBuffer");
+                Write32(__FlashAddr, 0xFFFFFFFF);                   // Indirect setting of NVMCTRL.ADDR: Cannot be directly written at DAL1
+              </block>
+               </control>
+               <control if="!IndirectAddressing"
+                        info="Erase row command - Set Page Address (Direct Addressing)">
+                  <block>
+                Write32(NVMCTRL_Base_Addr + 0x1C, __FlashAddr);     // NVMCTRL.ADDR: 0..15 offset, 22..23 array (0 = Flash, 1 = DataFlsh, 2= AuxFlash)
+              </block>
+               </control>
+               <block info="Erase row command - Do Erase">
+              Write16(NVMCTRL_Base_Addr, ((0xA5 &lt;&lt; 8) | (0x02 &lt;&lt; 0)));  // NVMCTRL.CTRLA: Erase row command
+            </block>
+               <control while="(Read16(NVMCTRL_Base_Addr + 0x18) &amp; (1 &lt;&lt; 2)) == 0"
+                        timeout="100000"
+                        info="NVMCTRL.STATUS: Wait for operation to finish"/>
+               <control if="(Read8(NVMCTRL_Base_Addr + 0x14) &amp; 0x1F) != 0x01"
+                        info="NVMCTRL.INTFLAG: Check for errors">
+                  <block>
+                __Result = -1;                                      // Erase row finished with errors
+              </block>
+               </control>
+            </sequence>
+            <sequence name="ExecPageWrite">
+               <block>
+              __var NVMCTRL_Base_Addr    = 0x41004000;
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;              // Access DSU External Address Range (for DALs)
+              __var DebugAccessLevel     = 0;
+
+              DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+            </block>
+               <control if="DebugAccessLevel == 2" info="Secure Debug Access?">
+                  <block>
+                NVMCTRL_Base_Addr += 0x1000;                        // Use secure alias
+              </block>
+               </control>
+               <block info="Write page command">
+              Write8 (NVMCTRL_Base_Addr + 0x14, 0x1F);                                     // NVMCTRL.INTFLAG: Clear all errors and DONE flag
+              Write16(NVMCTRL_Base_Addr,        ((0xA5 &lt;&lt; 8) | (0x04 &lt;&lt; 0)));  // NVMCTRL.CTRLA: Write page command
+            </block>
+               <control while="(Read16(NVMCTRL_Base_Addr + 0x18) &amp; (1 &lt;&lt; 2)) == 0"
+                        timeout="100000"
+                        info="NVMCTRL.STATUS"/>
+               <control if="(Read8(NVMCTRL_Base_Addr + 0x14) &amp; 0x1F) != 0x01"
+                        info="NVMCTRL.INTFLAG: Check for errors and command done">
+                  <block>
+                __Result = -1;                                                             // Write page finished with errors
+              </block>
+               </control>
+            </sequence>
+            <!-- CMSIS Flash Algorithm - FlashProgramPage -->
+            <sequence name="FlashProgramPage">
+               <block info="initalize local variables">
+              __var write_size           = __FlashLen;
+              
+              // Message(0, "Program Page: 0x%08X...", __FlashAddr);
+
+              __Result   = 0;                                            // Initialize __Result to OK
+              write_size = (__FlashLen + 3) &amp; ~3;                    // Adjust size to word
+              FlashWriteBuffer (__FlashAddr, 0, write_size, (32 | 1) );  // Write Page Buffer
+              Sequence("ExecPageWrite");                                 // Execute the page write
+            </block>
+            </sequence>
+            <!-- UROW Programming based on dbgconf setup -->
+            <sequence name="ProgramUROW">
+               <block>
+              __var value = 0;
+            </block>
+               <control if="UROW_Program">
+                  <block>
+                // Prepare UROW Content Buffer
+                BufferSet(0, 0x00, 0x20, 1, 0xFF);
+
+                // Read BOD12 setup from target (must not be changed, calibrated in factory)
+                value  = (Read32(0x00804000) &amp; 0x01FF0000);
+                value |= UROW_Config0 &amp; 0xFE00FFFF;
+                
+                // Set UROW contents for programming
+                BufferSet(0, 0x00, 0x01, 4, value);
+                BufferSet(0, 0x04, 0x01, 4, UROW_Config1);
+                BufferSet(0, 0x08, 0x01, 4, UROW_Config2);
+                BufferSet(0, 0x0C, 0x01, 4, UROW_Config3);
+                BufferSet(0, 0x10, 0x01, 4, UROW_NONSECA);
+                BufferSet(0, 0x14, 0x01, 4, UROW_NONSECB);
+                BufferSet(0, 0x18, 0x01, 4, UROW_NONSECC);
+                
+                // Generate UROW Checksum
+                Message (0, "Generate UROW checksum...");
+                BufferStreamOut(0, 0x08, 0x14, "$P/UROW_contents.bin", 0, 0);
+                RunApplication("$S/keil/utilities/GenerateCRC.exe", "\"$P/UROW_contents.bin\" -o \"$P/UROW_crc32.bin\"", "$P", 10000000);
+                BufferStreamIn(0, 0x1C, 0x4, "$P/UROW_crc32.bin", 0, 0);
+                
+                // Erase UROW
+                Sequence("EraseUROW");
+                
+                // Program UROW
+                Message (0, "Program UROW...");
+                Sequence("PrepareFlashOperation");
+                Sequence("ClearFlashPageBuffer");
+                BufferWrite(0, 0, 0x00804000, 0x20, 32|1);
+                Sequence("ExecPageWrite");
+              </block>
+               </control>
+            </sequence>
+            <!-- BOCOR Programming based on dbgconf setup -->
+            <sequence name="ProgramBOCOR">
+               <block>
+              __var PageOffset = 0x00000000;
+              __var BOCOR_Addr = 0x0080C000;
+              __var BS_BootOpt  = 0;
+            </block>
+               <control if="BOCOR_Program">
+                  <block>
+                // Prepare BOCOR Content Buffer
+                BufferSet(0, 0x00, 0x100, 1, 0xFF);
+                
+                // Set BOCOR contents for programming - Part 1
+                BufferSet(0, 0x00, 0x01, 4, BOCOR_Config0);
+                BufferSet(0, 0x04, 0x01, 4, BOCOR_Config1);
+                
+                // Generate BOCOR Checksum
+                Message (0, "Generate BOCOR checksum...");
+                BufferStreamOut(0, 0, 0x08, "$P/BOCOR_contents_crc32.bin", 0, 0);
+                RunApplication("$S/keil/utilities/GenerateCRC.exe", "\"$P/BOCOR_contents_crc32.bin\" -o \"$P/BOCOR_crc32.bin\"", "$P", 10000000);
+                BufferStreamIn(0, 0x08, 0x04, "$P/BOCOR_crc32.bin", 0, 0);
+                
+                // Set BOCOR contents for programming - Part 2
+                BufferSet(0, 0x0C, 0x01, 4, BOCOR_ROMVersion);
+                
+                BufferSet(0, 0x10, 0x01, 4, BOCOR_CE0_Keyword0);
+                BufferSet(0, 0x14, 0x01, 4, BOCOR_CE0_Keyword1);
+                BufferSet(0, 0x18, 0x01, 4, BOCOR_CE0_Keyword2);
+                BufferSet(0, 0x1C, 0x01, 4, BOCOR_CE0_Keyword3);
+                
+                BufferSet(0, 0x20, 0x01, 4, BOCOR_CE1_Keyword0);
+                BufferSet(0, 0x24, 0x01, 4, BOCOR_CE1_Keyword1);
+                BufferSet(0, 0x28, 0x01, 4, BOCOR_CE1_Keyword2);
+                BufferSet(0, 0x2C, 0x01, 4, BOCOR_CE1_Keyword3);
+
+                BufferSet(0, 0x30, 0x01, 4, BOCOR_CE2_Keyword0);
+                BufferSet(0, 0x34, 0x01, 4, BOCOR_CE2_Keyword1);
+                BufferSet(0, 0x38, 0x01, 4, BOCOR_CE2_Keyword2);
+                BufferSet(0, 0x3C, 0x01, 4, BOCOR_CE2_Keyword3);
+                
+                BufferSet(0, 0x40, 0x01, 4, BOCOR_CRC_Keyword0);
+                BufferSet(0, 0x44, 0x01, 4, BOCOR_CRC_Keyword1);
+                BufferSet(0, 0x48, 0x01, 4, BOCOR_CRC_Keyword2);
+                BufferSet(0, 0x4C, 0x01, 4, BOCOR_CRC_Keyword3);
+                
+                BufferSet(0, 0x50, 0x01, 4, BOCOR_BOOT_Keyword0);
+                BufferSet(0, 0x54, 0x01, 4, BOCOR_BOOT_Keyword1);
+                BufferSet(0, 0x58, 0x01, 4, BOCOR_BOOT_Keyword2);
+                BufferSet(0, 0x5C, 0x01, 4, BOCOR_BOOT_Keyword3);
+
+                BufferSet(0, 0x60, 0x01, 4, BOCOR_BOOT_Keyword4);
+                BufferSet(0, 0x64, 0x01, 4, BOCOR_BOOT_Keyword5);
+                BufferSet(0, 0x68, 0x01, 4, BOCOR_BOOT_Keyword6);
+                BufferSet(0, 0x6C, 0x01, 4, BOCOR_BOOT_Keyword7);
+
+                // Determine BOOTOPT setting for hashsum
+                BS_BootOpt = (BOCOR_Config0 &amp; 0x03000000) &gt;&gt; 24;
+
+                Message (0, "Generate BOCOR hashsum...");
+              </block>
+                  <control if="BS_BootOpt &lt; 2">
+                     <block>
+                  // Write hashsum input
+                  BufferStreamOut(0, 0, 0xE0, "$P/BOCOR_contents.bin", 0x00, 0);  // Write BOCOR contents
+                </block>
+                  </control>
+                  <control if="BS_BootOpt &gt;= 2">
+                     <block>
+                  // Write hashsum input (including 2*BOOTKEY)
+                  BufferStreamOut(0, 0x50, 0x20, "$P/BOCOR_contents.bin", 0x00, 0);  // Write  BOOTKEY: First Time
+                  BufferStreamOut(0, 0x50, 0x20, "$P/BOCOR_contents.bin", 0x10, 0);  // Append BOOTKEY: Second Time
+                  BufferStreamOut(0, 0x00, 0xE0, "$P/BOCOR_contents.bin", 0x10, 0);  // Append BOCOR contents
+                </block>
+                  </control>
+                  <block>
+                // Generate hashsum
+                RunApplication("$S/keil/utilities/GenerateSHA.exe", "\"$P/BOCOR_contents.bin\" -o \"$P/BOCOR_sha256.bin\"", "$P", 10000000);
+                BufferStreamIn(0, 0xE0, 0x20, "$P/BOCOR_sha256.bin", 0, 0);
+                
+                // Erase BOCOR
+                Sequence("EraseBOCOR");
+                
+                // Prepare BOCOR programming
+                Message (0, "Program BOCOR...");
+                Sequence("PrepareFlashOperation");
+              </block>
+                  <control while="(__Result == 0) &amp;&amp; (PageOffset &lt; 0x100)">
+                     <block>
+                  // Program BOCOR pages
+                  Sequence("ClearFlashPageBuffer");
+                  BufferWrite(0, PageOffset, BOCOR_Addr + PageOffset, 0x20, 32|1);
+                  Sequence("ExecPageWrite");
+                  PageOffset += 0x20;
+                </block>
+                  </control>
+               </control>
+            </sequence>
+            <sequence name="ProgramBootImageHash">
+               <block>
+              __var BS_Address  = 0x00000000;
+              __var BS_HashAddr = 0x00000000;
+              __var BS_Length   = 0;
+              __var BNSC_Length = 0;
+              __var BS_Setup    = 0;
+              __var BS_BootOpt  = 0;
+              __var SectorSize  = 0x100;
+              __var SectorAddr  = 0x00000000;
+              __var PageAddr    = 0x00000000;
+              
+              BS_Setup     = Read32(0x0080C000);
+              BS_BootOpt   = (BS_Setup &amp; 0x03000000) &gt;&gt; 24;
+              BS_Length    = (BS_Setup &amp; 0x0000FF00) &gt;&gt;  8;
+              BS_Length   *= 0x100;
+              BNSC_Length  = (BS_Setup &amp; 0x003F0000) &gt;&gt; 16;
+              BNSC_Length *= 0x20;
+              BS_HashAddr  = BS_Length - BNSC_Length - 0x20;
+              SectorAddr   = BS_HashAddr &amp; ~(SectorSize - 1);
+            </block>
+               <control if="(BS_BootOpt &gt; 0) &amp;&amp; (BS_Length &gt; 0)">
+                  <block>
+                Message (0, "Generate Boot Image hashsum...");
+                // Read Boot Secure and Non-Secure Callable Code from target
+                BufferRead(0, 0, BS_Address, BS_Length, 32|1);
+              </block>
+                  <control if="BS_BootOpt == 1">
+                     <block>
+                  // Write hashsum input
+                  BufferStreamOut(0, 0, BS_HashAddr, "$P/Boot_contents.bin", 0x00, 0);  // Boot Secure Code: Write to file
+                </block>
+                  </control>
+                  <control if="BS_BootOpt &gt; 1">
+                     <block>
+                  BufferRead(1, 0, 0x0080C050, 0x20, 32|1);  // Read BOOTKEY from target
+                  
+                  BufferStreamOut(1, 0,        0x20, "$P/Boot_contents.bin", 0x00, 0);  // Write  BOOTKEY: First Time
+                  BufferStreamOut(1, 0,        0x20, "$P/Boot_contents.bin", 0x10, 0);  // Append BOOTKEY: Second Time
+                  BufferStreamOut(0, 0, BS_HashAddr, "$P/Boot_contents.bin", 0x10, 0);  // Append Boot Secure Code
+                </block>
+                  </control>
+                  <control if="BNSC_Length &gt; 0">
+                     <block>
+                  BufferStreamOut(0, BS_Length - BNSC_Length, BNSC_Length, "$P/Boot_contents.bin", 0x10, 0);  // Append Boot Non-Secure Callable Code
+                </block>
+                  </control>
+                  <block>
+                RunApplication("$S/keil/utilities/GenerateSHA.exe", "\"$P/Boot_contents.bin\" -o \"$P/Boot_sha256.bin\"", "$P", 10000000);
+                BufferStreamIn(0, BS_HashAddr, 0x20, "$P/Boot_sha256.bin", 0, 0);
+                
+                // Erase 
+                Sequence("EraseBSHashRow");
+
+                // Prepare hashsum programming (entire row)
+                Message (0, "Program Boot Image hashsum...");
+                PageAddr = SectorAddr;
+                Sequence("PrepareFlashOperation");
+              </block>
+                  <control while="PageAddr &lt; (SectorAddr + SectorSize)">
+                     <block>
+                  // Program row pages for hashsum
+                  Sequence("ClearFlashPageBuffer");
+                  BufferWrite(0, PageAddr, PageAddr, 0x20, 32|1);
+                  Sequence("ExecPageWrite");
+                  PageAddr += 0x20;
+                </block>
+                  </control>
+               </control>
+            </sequence>
+            <!-- FlashProgramDone -->
+            <sequence name="FlashProgramDone">
+               <block info="initalize local variables">
+              __var DSU_Ctrl_Stat_Addr   = 0x41002100;                       // Access DSU External Address Range (for DALs)
+              __var DebugAccessLevel     = 0;
+            </block>
+               <control if="ProgramDebugAccessLevel == 2">
+                  <block>
+                // Program Configuration Rows and Boot Image Hashsum
+                Sequence("ProgramUROW");
+                Sequence("ProgramBOCOR");
+                Sequence("ProgramBootImageHash");
+              </block>
+               </control>
+               <control if="ProgramDebugAccessLevel &lt; 2">
+                  <block>
+                DebugAccessLevel = (Read32(DSU_Ctrl_Stat_Addr) &amp; 0x00030000) &gt;&gt; 16;  // Read Debug Access Level
+              </block>
+                  <control if="(ProgramDebugAccessLevel == 1) &amp;&amp; DebugAccessLevel == 2"
+                           info="Set DAL to 1">
+                     <block>
+                  Sequence("NVMCTRL_SetDAL1");
+                </block>
+                  </control>
+                  <control if="(ProgramDebugAccessLevel == 0) &amp;&amp; DebugAccessLevel &gt; 0"
+                           info="Set DAL to 0">
+                     <block>
+                  Sequence("NVMCTRL_SetDAL0");
+                </block>
+                  </control>
+               </control>
+            </sequence>
+         </sequences>
+         <environment name="microchip">
+            <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                            schemaVersion="1.0">
+               <mchp:prerequisite component="MPLAB X IDE" version="[5.10-"/>
+               <mchp:prerequisite component="MPLAB X IPE" version="[5.10-"/>
+            </mchp:extension>
+         </environment>
+         <device Dname="ATSAML11D14A">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"
+                       Dtz="TZ"/>
+            <compile header="include/sam.h" define="__SAML11D14A__"/>
+            <debug svd="svd/ATSAML11D14A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x4000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x800"/>
+            <memory id="IRAM1" start="0x20000000" size="0x2000" default="1"/>
+            <flashinfo name="Internal Flash (code) 16KB"
+                       start="0x00000000"
+                       blankval="0xFFFFFFFF"
+                       pagesize="0x00000040"
+                       ptime="100000"
+                       etime="1000000">
+               <block count="64" size="0x100" arg="0"/>
+               <!-- Sector Size 256B (1 row = 4 * page a 64 Byte) -->
+            </flashinfo>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAML11D14A.atdf"/>
+                  <at:variant ordercode="ATSAML11D14A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11D14A-MF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11D14A-YU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11D14A-YF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x800"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806038"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x2000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x4000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAML11D14A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAML11D14A"
+                  title="Device page for ATSAML11D14A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAML11D14A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAML11D15A">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"
+                       Dtz="TZ"/>
+            <compile header="include/sam.h" define="__SAML11D15A__"/>
+            <debug svd="svd/ATSAML11D15A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x8000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x800"/>
+            <memory id="IRAM1" start="0x20000000" size="0x2000" default="1"/>
+            <flashinfo name="Internal Flash (code) 32KB"
+                       start="0x00000000"
+                       blankval="0xFFFFFFFF"
+                       pagesize="0x00000040"
+                       ptime="100000"
+                       etime="1000000">
+               <block count="128" size="0x100" arg="0"/>
+               <!-- Sector Size 256B (1 row = 4 * page a 64 Byte) -->
+            </flashinfo>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAML11D15A.atdf"/>
+                  <at:variant ordercode="ATSAML11D15A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11D15A-MF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11D15A-YU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11D15A-YF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x8000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x800"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806038"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x2000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x4000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAML11D15A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAML11D15A"
+                  title="Device page for ATSAML11D15A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAML11D15A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAML11D16A">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"
+                       Dtz="TZ"/>
+            <compile header="include/sam.h" define="__SAML11D16A__"/>
+            <debug svd="svd/ATSAML11D16A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x10000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x800"/>
+            <memory id="IRAM1" start="0x20000000" size="0x4000" default="1"/>
+            <flashinfo name="Internal Flash (code) 64KB"
+                       start="0x00000000"
+                       blankval="0xFFFFFFFF"
+                       pagesize="0x00000040"
+                       ptime="100000"
+                       etime="1000000">
+               <block count="256" size="0x100" arg="0"/>
+               <!-- Sector Size 256B (1 row = 4 * page a 64 Byte) -->
+            </flashinfo>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAML11D16A.atdf"/>
+                  <at:variant ordercode="ATSAML11D16A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11D16A-MF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11D16A-YU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11D16A-YF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x10000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x800"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806038"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x4000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x4000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAML11D16A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAML11D16A"
+                  title="Device page for ATSAML11D16A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAML11D16A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAML11E14A">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"
+                       Dtz="TZ"/>
+            <compile header="include/sam.h" define="__SAML11E14A__"/>
+            <debug svd="svd/ATSAML11E14A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x4000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x800"/>
+            <memory id="IRAM1" start="0x20000000" size="0x2000" default="1"/>
+            <flashinfo name="Internal Flash (code) 16KB"
+                       start="0x00000000"
+                       blankval="0xFFFFFFFF"
+                       pagesize="0x00000040"
+                       ptime="100000"
+                       etime="1000000">
+               <block count="64" size="0x100" arg="0"/>
+               <!-- Sector Size 256B (1 row = 4 * page a 64 Byte) -->
+            </flashinfo>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAML11E14A.atdf"/>
+                  <at:variant ordercode="ATSAML11E14A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11E14A-MF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11E14A-AU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11E14A-AF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11E14A-UU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x4000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x800"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806038"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x2000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x4000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAML11E14A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAML11E14A"
+                  title="Device page for ATSAML11E14A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAML11E14A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAML11E15A">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"
+                       Dtz="TZ"/>
+            <compile header="include/sam.h" define="__SAML11E15A__"/>
+            <debug svd="svd/ATSAML11E15A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x8000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x800"/>
+            <memory id="IRAM1" start="0x20000000" size="0x2000" default="1"/>
+            <flashinfo name="Internal Flash (code) 32KB"
+                       start="0x00000000"
+                       blankval="0xFFFFFFFF"
+                       pagesize="0x00000040"
+                       ptime="100000"
+                       etime="1000000">
+               <block count="128" size="0x100" arg="0"/>
+               <!-- Sector Size 256B (1 row = 4 * page a 64 Byte) -->
+            </flashinfo>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAML11E15A.atdf"/>
+                  <at:variant ordercode="ATSAML11E15A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11E15A-MF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11E15A-AU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11E15A-AF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11E15A-UU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x8000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x800"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806038"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x2000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x4000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAML11E15A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAML11E15A"
+                  title="Device page for ATSAML11E15A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAML11E15A"
+                  title="Datasheet"/>
+         </device>
+         <device Dname="ATSAML11E16A">
+            <processor Dcore="Cortex-M23"
+                       Dendian="Little-endian"
+                       Dmpu="MPU"
+                       Dfpu="NO_FPU"
+                       Dtz="TZ"/>
+            <compile header="include/sam.h" define="__SAML11E16A__"/>
+            <debug svd="svd/ATSAML11E16A.svd"/>
+            <memory id="IROM1"
+                    start="0x00000000"
+                    size="0x10000"
+                    default="1"
+                    startup="1"/>
+            <memory id="IROM2" start="0x00400000" size="0x800"/>
+            <memory id="IRAM1" start="0x20000000" size="0x4000" default="1"/>
+            <flashinfo name="Internal Flash (code) 64KB"
+                       start="0x00000000"
+                       blankval="0xFFFFFFFF"
+                       pagesize="0x00000040"
+                       ptime="100000"
+                       etime="1000000">
+               <block count="256" size="0x100" arg="0"/>
+               <!-- Sector Size 256B (1 row = 4 * page a 64 Byte) -->
+            </flashinfo>
+            <environment name="atmel">
+               <at:extension xmlns:at="http://www.atmel.com/schemas/pack-device-atmel-extension"
+                             schemaVersion="1.0">
+                  <at:atdf name="atdf/ATSAML11E16A.atdf"/>
+                  <at:variant ordercode="ATSAML11E16A-MU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11E16A-MF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11E16A-AU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:variant ordercode="ATSAML11E16A-AF"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="125"/>
+                  <at:variant ordercode="ATSAML11E16A-UU"
+                              vccmin="1.62"
+                              vccmax="3.63"
+                              tempmin="-40"
+                              tempmax="85"/>
+                  <at:memory name="FLASH"
+                             start="0x00000000"
+                             size="0x10000"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="AUX"
+                             start="0x00806000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="BOCOR"
+                             start="0x0080C000"
+                             size="0x100"
+                             type="fuses"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="DATAFLASH"
+                             start="0x00400000"
+                             size="0x800"
+                             type="flash"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SW_CALIB"
+                             start="0x00806020"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="TEMP_LOG"
+                             start="0x00806038"
+                             size="0x8"
+                             type="fuses"
+                             rw="R"
+                             address-space="base"/>
+                  <at:memory name="USER_PAGE"
+                             start="0x00804000"
+                             size="0x100"
+                             type="user_page"
+                             pagesize="64"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="HSRAM"
+                             start="0x20000000"
+                             size="0x4000"
+                             type="ram"
+                             rw="RW"
+                             exec="true"
+                             address-space="base"/>
+                  <at:memory name="APBA"
+                             start="0x40000000"
+                             size="0x8000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBB"
+                             start="0x41000000"
+                             size="0x10000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="APBC"
+                             start="0x42000000"
+                             size="0x4000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PPB"
+                             start="0xE0000000"
+                             size="0x100000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="SCS"
+                             start="0xE000E000"
+                             size="0x00001000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:memory name="PERIPHERALS"
+                             start="0x40000000"
+                             size="0x20000000"
+                             type="io"
+                             rw="RW"
+                             address-space="base"/>
+                  <at:interface type="swd" name="SWD"/>
+                  <at:tool id="com.atmel.avrdbg.tool.atmelice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.edbgc"/>
+                  <at:tool id="com.atmel.avrdbg.tool.ice4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagice3plus"/>
+                  <at:tool id="com.atmel.avrdbg.tool.jtagicemk3"/>
+                  <at:tool id="com.atmel.avrdbg.tool.medbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.nedbg"/>
+                  <at:tool id="com.atmel.avrdbg.tool.pickit4"/>
+                  <at:tool id="com.atmel.avrdbg.tool.powerdebugger"/>
+                  <at:tool id="com.atmel.avrdbg.tool.samice"/>
+                  <at:tool id="com.atmel.avrdbg.tool.snap"/>
+                  <at:project name="Barebone C Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.c)"/>
+                     </at:component>
+                  </at:project>
+                  <at:project name="Barebone Cpp Project">
+                     <at:component Cvendor="ARM" Cclass="CMSIS" Cgroup="CORE"/>
+                     <at:component Cvendor="Microchip" Cclass="Device" Cgroup="Startup">
+                        <at:template select="Main file (.cpp)"/>
+                     </at:component>
+                  </at:project>
+                  <at:prerequisite context="compiling" Tcompiler="GCC" component="ARM-GCC"/>
+                  <at:prerequisite context="compiling" Tcompiler="IAR" component="ARM-IAR"/>
+                  <at:prerequisite context="compiling" Tcompiler="ARMCC" component="ARMCC"/>
+               </at:extension>
+            </environment>
+            <environment name="microchip">
+               <mchp:extension xmlns:mchp="http://crownking/pack-device-microchip-extension"
+                               schemaVersion="1.0">
+                  <mchp:pic name="edc/ATSAML11E16A.PIC"/>
+                  <mchp:xc32 name="xc32"/>
+                  <mchp:hwtool type="mplab.mpheader">
+                     <mchp:file name="hwtools/mplab/MPHeader.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="mplab.pluginboardsupport">
+                     <mchp:file name="hwtools/mplab/PluginBoardSupport.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="sdm">
+                     <mchp:file name="hwtools/sdm/sdmCompilers.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmDebuggerMap.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD3.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICD5.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmRealICE4.xml"/>
+                     <mchp:file name="hwtools/sdm/sdmSimulator.xml"/>
+                  </mchp:hwtool>
+                  <mchp:hwtool type="persfr">
+                     <mchp:file name="hwtools/persfr/arm32.persfr"/>
+                  </mchp:hwtool>
+                  <mchp:prerequisite component="MPLAB X IDE" version="[5.20-"/>
+               </mchp:extension>
+            </environment>
+            <book name="https://www.microchip.com/wwwproducts/Devices.aspx?product=ATSAML11E16A"
+                  title="Device page for ATSAML11E16A"/>
+            <book name="https://www.microchip.com/wwwproducts/productds/ATSAML11E16A"
+                  title="Datasheet"/>
+         </device>
+      </family>
+   </devices>
+   <conditions>
+      <condition id="ARMCC Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+      </condition>
+      <condition id="GCC">
+         <accept Tcompiler="GCC"/>
+      </condition>
+      <condition id="GCC Exe">
+         <accept Tcompiler="GCC" Toutput="exe"/>
+      </condition>
+      <condition id="IAR Exe">
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="XC">
+         <accept Tcompiler="XC"/>
+      </condition>
+      <condition id="C">
+         <accept Tcompiler="ARMCC"/>
+         <accept Tcompiler="GCC"/>
+         <accept Tcompiler="IAR"/>
+      </condition>
+      <condition id="C Exe">
+         <accept Tcompiler="ARMCC" Toutput="exe"/>
+         <accept Tcompiler="GCC" Toutput="exe"/>
+         <accept Tcompiler="IAR" Toutput="exe"/>
+      </condition>
+      <condition id="C Lib">
+         <accept Tcompiler="ARMCC" Toutput="lib"/>
+         <accept Tcompiler="GCC" Toutput="lib"/>
+         <accept Tcompiler="IAR" Toutput="lib"/>
+      </condition>
+      <condition id="ATSAML11D14A">
+         <require Dvendor="Microchip:3" Dname="ATSAML11D14A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAML11D15A">
+         <require Dvendor="Microchip:3" Dname="ATSAML11D15A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAML11D16A">
+         <require Dvendor="Microchip:3" Dname="ATSAML11D16A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAML11E14A">
+         <require Dvendor="Microchip:3" Dname="ATSAML11E14A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAML11E15A">
+         <require Dvendor="Microchip:3" Dname="ATSAML11E15A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+      <condition id="ATSAML11E16A">
+         <require Dvendor="Microchip:3" Dname="ATSAML11E16A"/>
+         <require Cclass="CMSIS" Cgroup="CORE"/>
+      </condition>
+   </conditions>
+   <components>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.5.0"
+                 condition="ATSAML11D14A">
+         <description>Headers and startup code for Microchip ATSAML11D14A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_saml11d14a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_saml11d14a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/saml11d14a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/saml11d14a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_saml11d14a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_saml11d14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_saml11d14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_saml11d14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsaml11d14a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsaml11d14a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.5.0"
+                 condition="ATSAML11D15A">
+         <description>Headers and startup code for Microchip ATSAML11D15A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_saml11d15a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_saml11d15a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/saml11d15a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/saml11d15a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_saml11d15a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_saml11d15a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_saml11d15a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_saml11d15a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsaml11d15a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsaml11d15a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.5.0"
+                 condition="ATSAML11D16A">
+         <description>Headers and startup code for Microchip ATSAML11D16A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_saml11d16a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_saml11d16a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/saml11d16a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/saml11d16a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_saml11d16a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_saml11d16a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_saml11d16a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_saml11d16a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsaml11d16a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsaml11d16a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.5.0"
+                 condition="ATSAML11E14A">
+         <description>Headers and startup code for Microchip ATSAML11E14A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_saml11e14a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_saml11e14a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/saml11e14a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/saml11e14a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_saml11e14a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_saml11e14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_saml11e14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_saml11e14a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsaml11e14a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsaml11e14a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.5.0"
+                 condition="ATSAML11E15A">
+         <description>Headers and startup code for Microchip ATSAML11E15A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_saml11e15a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_saml11e15a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/saml11e15a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/saml11e15a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_saml11e15a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_saml11e15a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_saml11e15a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_saml11e15a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsaml11e15a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsaml11e15a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+      <component Cvendor="Microchip"
+                 Cclass="Device"
+                 Cgroup="Startup"
+                 Cversion="4.5.0"
+                 condition="ATSAML11E16A">
+         <description>Headers and startup code for Microchip ATSAML11E16A</description>
+         <files>
+            <file condition="C" category="include" name="include/"/>
+            <file condition="C" category="header" name="include/sam.h"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Exe"
+                  category="source"
+                  name="templates/main.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.c"
+                  attr="template"
+                  select="Main file (.c)"/>
+            <file condition="C Lib"
+                  category="source"
+                  name="templates/library.cpp"
+                  attr="template"
+                  select="Main file (.cpp)"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/gcc/startup_saml11e16a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="source"
+                  name="gcc/system_saml11e16a.c"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="linkerScript"
+                  name="gcc/gcc/saml11e16a_flash.ld"
+                  attr="config"/>
+            <file condition="GCC Exe"
+                  category="other"
+                  name="gcc/gcc/saml11e16a_sram.ld"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/armcc/startup_saml11e16a.s"
+                  attr="config"/>
+            <file condition="ARMCC Exe"
+                  category="source"
+                  name="armcc/system_saml11e16a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/iar/startup_saml11e16a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="source"
+                  name="iar/system_saml11e16a.c"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="linkerScript"
+                  name="iar/config/linker/Microchip/atsaml11e16a/sram.icf"
+                  attr="config"/>
+            <file condition="IAR Exe"
+                  category="other"
+                  name="iar/config/linker/Microchip/atsaml11e16a/flash.icf"
+                  attr="config"/>
+         </files>
+      </component>
+   </components>
+</package>

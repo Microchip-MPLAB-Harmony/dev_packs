@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<optionMenuItem>
+  <tag>ATSAMG55G19</tag>
+  <display>Microchip ATSAMG55G19</display>
+  <data>$CUR_DIR$\ATSAMG55G19.i79</data>
+</optionMenuItem>

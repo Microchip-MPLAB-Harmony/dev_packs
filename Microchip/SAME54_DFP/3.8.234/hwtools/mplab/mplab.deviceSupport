@@ -1,0 +1,16 @@
+<mp:deviceSupport xmlns:mp="http://crownking/mplab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/mplab ../../schema/mplab/deviceSupport.xsd">
+  <mp:family mp:family="arm32bit">
+    <mp:device mp:name="ATSAME54N19A">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:nedbgd="beta" mp:nedbgp="beta" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME54N20A">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:nedbgd="beta" mp:nedbgp="beta" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME54P19A">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:nedbgd="beta" mp:nedbgp="beta" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+    <mp:device mp:name="ATSAME54P20A">
+      <mp:support mp:aiced="beta" mp:aicep="beta" mp:icd4d="yes" mp:icd4p="yes" mp:icd5d="yes" mp:icd5p="yes" mp:ice4d="yes" mp:ice4p="yes" mp:nedbgd="beta" mp:nedbgp="beta" mp:pk4d="yes" mp:pk4p="yes" mp:pk5d="yes" mp:pk5p="yes" mp:sim="yes" mp:snapd="yes" mp:snapp="yes"/>
+    </mp:device>
+  </mp:family>
+</mp:deviceSupport>

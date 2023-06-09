@@ -1,0 +1,1687 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="ATSAME70J19B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70J19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70J19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70J19B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70j19b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70j19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70J19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70j19b.s"/>
+        <includes pattern="system_same70j19b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_512.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_512.FLM" value="start=0x00400000|size=0x00080000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70j19b.c"/>
+        <includes pattern="system_same70j19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70j19b_flash.ld"/>
+        <includes pattern="gcc/same70j19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70j19b.c"/>
+        <includes pattern="system_same70j19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70j19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70j19b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70J20B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70J20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70J20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70J20B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70j20b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70j20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70J20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70j20b.s"/>
+        <includes pattern="system_same70j20b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_1024.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_1024.FLM" value="start=0x00400000|size=0x00100000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70j20b.c"/>
+        <includes pattern="system_same70j20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70j20b_flash.ld"/>
+        <includes pattern="gcc/same70j20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70j20b.c"/>
+        <includes pattern="system_same70j20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70j20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70j20b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70J21B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70J21B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70J21B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70J21B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70j21b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70j21b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70J21B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70j21b.s"/>
+        <includes pattern="system_same70j21b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_2048.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_2048.FLM" value="start=0x00400000|size=0x00200000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70j21b.c"/>
+        <includes pattern="system_same70j21b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70j21b_flash.ld"/>
+        <includes pattern="gcc/same70j21b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70j21b.c"/>
+        <includes pattern="system_same70j21b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70j21b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70j21b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70N19B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70N19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70N19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70N19B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70n19b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70n19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70N19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70n19b.s"/>
+        <includes pattern="system_same70n19b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_512.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_512.FLM" value="start=0x00400000|size=0x00080000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70n19b.c"/>
+        <includes pattern="system_same70n19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70n19b_flash.ld"/>
+        <includes pattern="gcc/same70n19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70n19b.c"/>
+        <includes pattern="system_same70n19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70n19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70n19b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70N20B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70N20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70N20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70N20B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70n20b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70n20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70N20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70n20b.s"/>
+        <includes pattern="system_same70n20b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_1024.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_1024.FLM" value="start=0x00400000|size=0x00100000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70n20b.c"/>
+        <includes pattern="system_same70n20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70n20b_flash.ld"/>
+        <includes pattern="gcc/same70n20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70n20b.c"/>
+        <includes pattern="system_same70n20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70n20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70n20b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70N21B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70N21B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70N21B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70N21B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70n21b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70n21b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70N21B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70n21b.s"/>
+        <includes pattern="system_same70n21b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_2048.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_2048.FLM" value="start=0x00400000|size=0x00200000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70n21b.c"/>
+        <includes pattern="system_same70n21b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70n21b_flash.ld"/>
+        <includes pattern="gcc/same70n21b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70n21b.c"/>
+        <includes pattern="system_same70n21b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70n21b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70n21b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70Q19B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70Q19B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70Q19B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70Q19B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70q19b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70q19b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70Q19B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70q19b.s"/>
+        <includes pattern="system_same70q19b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_512.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_512.FLM" value="start=0x00400000|size=0x00080000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70q19b.c"/>
+        <includes pattern="system_same70q19b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70q19b_flash.ld"/>
+        <includes pattern="gcc/same70q19b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70q19b.c"/>
+        <includes pattern="system_same70q19b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70q19b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70q19b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70Q20B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70Q20B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70Q20B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70Q20B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70q20b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70q20b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70Q20B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70q20b.s"/>
+        <includes pattern="system_same70q20b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_1024.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_1024.FLM" value="start=0x00400000|size=0x00100000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70q20b.c"/>
+        <includes pattern="system_same70q20b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70q20b_flash.ld"/>
+        <includes pattern="gcc/same70q20b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70q20b.c"/>
+        <includes pattern="system_same70q20b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70q20b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70q20b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+    <resources target="ATSAME70Q21B">
+      <resource type="atdf" subdir="same70b/atdf">
+        <includes pattern="ATSAME70Q21B.atdf"/>
+      </resource>
+      <resource type="pic" subdir="same70b/edc">
+        <includes pattern="ATSAME70Q21B.PIC"/>
+      </resource>
+      <resource type="svd" subdir="same70b/svd">
+        <includes pattern="ATSAME70Q21B.svd"/>
+      </resource>
+      <resource type="c.header" subdir="same70b/include">
+        <includes pattern="sam.h"/>
+        <includes pattern="same70q21b.h"/>
+        <includes pattern="system_same70.h"/>
+        <includes pattern="component/acc.h"/>
+        <includes pattern="component/aes.h"/>
+        <includes pattern="component/afec.h"/>
+        <includes pattern="component/chipid.h"/>
+        <includes pattern="component/dacc.h"/>
+        <includes pattern="component/efc.h"/>
+        <includes pattern="component/gmac.h"/>
+        <includes pattern="component/gpbr.h"/>
+        <includes pattern="component/hsmci.h"/>
+        <includes pattern="component/i2sc.h"/>
+        <includes pattern="component/icm.h"/>
+        <includes pattern="component/isi.h"/>
+        <includes pattern="component/matrix.h"/>
+        <includes pattern="component/mcan.h"/>
+        <includes pattern="component/pio.h"/>
+        <includes pattern="component/pmc.h"/>
+        <includes pattern="component/pwm.h"/>
+        <includes pattern="component/qspi.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rswdt.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/rtt.h"/>
+        <includes pattern="component/smc.h"/>
+        <includes pattern="component/spi.h"/>
+        <includes pattern="component/ssc.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tc.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/twihs.h"/>
+        <includes pattern="component/uart.h"/>
+        <includes pattern="component/usart.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/utmi.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="component/xdmac.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="pio/same70q21b.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__SAME70Q21B__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="same70b/templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="same70b/templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="same70b/armcc">
+        <includes pattern="armcc/startup_same70q21b.s"/>
+        <includes pattern="system_same70q21b.c"/>
+      </resource>
+      <resource type="keil.flashloader" subdir="same70b/keil">
+        <includes pattern="flash/ATSAME7x_2048.FLM"/>
+        <includes pattern="flash/ATSAME7x_GPNVM.FLM"/>
+        <includes pattern="debug/SAMx7.dbgconf"/>
+        <includes pattern="flash/FlashOS.h"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvgui"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvopt"/>
+        <includes pattern="flash/ATSAME7x/ATSAME7x.uvproj"/>
+        <includes pattern="flash/ATSAME7x/FlashDev.c"/>
+        <includes pattern="flash/ATSAME7x/FlashPrg.c"/>
+        <includes pattern="flash/ATSAME7x/Target.lin"/>
+        <meta key="flash/ATSAME7x_2048.FLM" value="start=0x00400000|size=0x00200000|default=1"/>
+        <meta key="flash/ATSAME7x_GPNVM.FLM" value="start=0x1FFFFFF0|size=0x00000010|default=0"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="same70b/gcc">
+        <includes pattern="gcc/startup_same70q21b.c"/>
+        <includes pattern="system_same70q21b.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="same70b/gcc">
+        <includes pattern="gcc/same70q21b_flash.ld"/>
+        <includes pattern="gcc/same70q21b_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="same70b/iar">
+        <includes pattern="iar/startup_same70q21b.c"/>
+        <includes pattern="system_same70q21b.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="same70b/iar">
+        <includes pattern="config/linker/Microchip/atsame70q21b/sram.icf"/>
+        <includes pattern="config/linker/Microchip/atsame70q21b/flash.icf"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="same70b/../scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="xc32" subdir="same70b/xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="ATSAME70J19B/startup_atsame70j19b.c"/>
+        <includes pattern="ATSAME70J19B/ATSAME70J19B.ld"/>
+        <includes pattern="ATSAME70J19B/specs-ATSAME70J19B"/>
+        <includes pattern="ATSAME70J19B/configuration.data"/>
+        <includes pattern="ATSAME70J19B/pic32c"/>
+        <includes pattern="ATSAME70J20B/startup_atsame70j20b.c"/>
+        <includes pattern="ATSAME70J20B/ATSAME70J20B.ld"/>
+        <includes pattern="ATSAME70J20B/specs-ATSAME70J20B"/>
+        <includes pattern="ATSAME70J20B/configuration.data"/>
+        <includes pattern="ATSAME70J20B/pic32c"/>
+        <includes pattern="ATSAME70J21B/startup_atsame70j21b.c"/>
+        <includes pattern="ATSAME70J21B/ATSAME70J21B.ld"/>
+        <includes pattern="ATSAME70J21B/specs-ATSAME70J21B"/>
+        <includes pattern="ATSAME70J21B/configuration.data"/>
+        <includes pattern="ATSAME70J21B/pic32c"/>
+        <includes pattern="ATSAME70N19B/startup_atsame70n19b.c"/>
+        <includes pattern="ATSAME70N19B/ATSAME70N19B.ld"/>
+        <includes pattern="ATSAME70N19B/specs-ATSAME70N19B"/>
+        <includes pattern="ATSAME70N19B/configuration.data"/>
+        <includes pattern="ATSAME70N19B/pic32c"/>
+        <includes pattern="ATSAME70N20B/startup_atsame70n20b.c"/>
+        <includes pattern="ATSAME70N20B/ATSAME70N20B.ld"/>
+        <includes pattern="ATSAME70N20B/specs-ATSAME70N20B"/>
+        <includes pattern="ATSAME70N20B/configuration.data"/>
+        <includes pattern="ATSAME70N20B/pic32c"/>
+        <includes pattern="ATSAME70N21B/startup_atsame70n21b.c"/>
+        <includes pattern="ATSAME70N21B/ATSAME70N21B.ld"/>
+        <includes pattern="ATSAME70N21B/specs-ATSAME70N21B"/>
+        <includes pattern="ATSAME70N21B/configuration.data"/>
+        <includes pattern="ATSAME70N21B/pic32c"/>
+        <includes pattern="ATSAME70Q19B/startup_atsame70q19b.c"/>
+        <includes pattern="ATSAME70Q19B/ATSAME70Q19B.ld"/>
+        <includes pattern="ATSAME70Q19B/specs-ATSAME70Q19B"/>
+        <includes pattern="ATSAME70Q19B/configuration.data"/>
+        <includes pattern="ATSAME70Q19B/pic32c"/>
+        <includes pattern="ATSAME70Q20B/startup_atsame70q20b.c"/>
+        <includes pattern="ATSAME70Q20B/ATSAME70Q20B.ld"/>
+        <includes pattern="ATSAME70Q20B/specs-ATSAME70Q20B"/>
+        <includes pattern="ATSAME70Q20B/configuration.data"/>
+        <includes pattern="ATSAME70Q20B/pic32c"/>
+        <includes pattern="ATSAME70Q21B/startup_atsame70q21b.c"/>
+        <includes pattern="ATSAME70Q21B/ATSAME70Q21B.ld"/>
+        <includes pattern="ATSAME70Q21B/specs-ATSAME70Q21B"/>
+        <includes pattern="ATSAME70Q21B/configuration.data"/>
+        <includes pattern="ATSAME70Q21B/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="hwtools.mplab.nmmrs" subdir="same70b/hwtools/mplab">
+        <includes pattern="16bit.NMMRs.xml"/>
+        <includes pattern="32bit.NMMRs.xml"/>
+        <includes pattern="8bit.NMMRs.xml"/>
+        <includes pattern="arm.32bit.NMMRs.xml"/>
+        <includes pattern="avr.8bit.NMMRs.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.devicesupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="mplab.deviceSupport"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="same70b/hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="same70b/hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="4.10.BUILDNUMBER">
+        - Updated MPLAB XC32 content to correctly describe #pragma config. Requires MPLAB XC32 &gt;= 4.10.
+        - Fixed path issue with debugvars for &#181;Vision.
+        - Fixed size of ITCM segment.
+        - Added CoreSight debug register view.
+        - Updated SVD file to emit information introduced in SVD version 1.3.
+      </release>
+      <release version="4.9.129" date="2022-05-18">Removed SDRAM references due to errata 2.14</release>
+      <release version="4.8.125" date="2022-04-07">Added configuration data required for XC32.</release>
+      <release version="4.7.120" date="2022-03-17">
+        - Headers minor version increased to v2.1.0.
+        - Changed integer constant literal macros from _Ux_ to _UNITxx_ (where xx is 32, 16 or 8) (MISRA C2012:R12.2).
+        </release>
+      <release version="4.6.98" date="2021-06-30">Deprecated revision A devices. Fixed MPLABX debug scripts. Updated startup code. Updated header files. Updated XC32 content.</release>
+      <release version="4.5.86" date="2021-01-27">Added security bit programming for MPLAB X. Added instance headers. Fix DMA trigger information for DACn.</release>
+      <release version="4.4.78" date="2020-09-24">Added read device ID. Fixed reading/writing configbits issues.</release>
+      <release version="4.3.67" date="2020-04-29">Updated MPLAB X debug scripts. Removed SDA13 pin description from B devices. Added CCW and CCF interrupts to A devices. Setup prerequisite for MPLAB v5.40 or newer</release>
+      <release version="4.2.59" date="2020-02-12">Updated XC32 content. Updated MPLAB X debug scripts.</release>
+      <release version="4.1.50" date="2019-10-03">Improvements to the flash programming algorithm. Rename SVCall_Handler to SVC_Handler. Update modes for USART.</release>
+      <release version="4.0.40" date="2019-06-26">Improvements to the flash programming algorithm: Improve programming speed. Resolve a possible flash programming issue.</release>
+      <release version="4.0.29" date="2019-05-04">Removed legacy headers.</release>
+      <release version="3.0.10" date="2019-02-14">Corrections to XML and header-files. Core modules descriptions in ATDF and SVD changed for rev. B devices. Core IRQ and interrupt handler names changed to alligne with CMSIS names. Old names mapped as aliases to new names. Several errors in SVD files corrected. Missing TC1 and TC2 to instance definitions added to header files. TC, USART and USBHS module changed (for revB devices) to reflect the modes according to the datasheet. Added ARMCC support files. Added Keil support files. Added python programming and debugging scripts for MPLAB X. Succeeds Atmel.SAME70_DFP 2.3.98.</release>
+    </releases>
+    <deprecated>
+      <target name="ATSAME70J19" date="2021-06-28"/>
+      <target name="ATSAME70J20" date="2021-06-28"/>
+      <target name="ATSAME70J21" date="2021-06-28"/>
+      <target name="ATSAME70N19" date="2021-06-28"/>
+      <target name="ATSAME70N20" date="2021-06-28"/>
+      <target name="ATSAME70N21" date="2021-06-28"/>
+      <target name="ATSAME70Q19" date="2021-06-28"/>
+      <target name="ATSAME70Q20" date="2021-06-28"/>
+      <target name="ATSAME70Q21" date="2021-06-28"/>
+    </deprecated>
+    <prerequisites>
+      <prerequisite component="MPLAB X IDE" version="[5.50-"/>
+      <prerequisite component="MPLAB XC32" version="[4.10-"/>
+    </prerequisites>
+  <debugvars configfile="same70b/keil/debug/SAMx7.dbgconf" version="1.0.0">
+           // Debug Access Variables
+           __var TracePCK3 = 0x00000000;                                               // Trace Clock Source Selection and Prescaler
+         </debugvars>
+
+         <sequences>
+           <!-- Override for Pre-Defined TraceStart Sequence -->
+           <sequence name="TraceStart">
+             <block>
+               __var traceSWO    = (__traceout &amp; 0x1) != 0;                        // SWO Trace Selected?
+               __var traceTPIU   = (__traceout &amp; 0x2) != 0;                        // TPIU Trace Selected?
+             </block>
+             <control if="traceSWO">
+               <block>
+                 Sequence("EnableTraceSWO");                                           // Call SWO Trace Setup
+               </block>
+             </control>
+             <control if="traceTPIU">
+               <block>
+                 Sequence("EnableTraceTPIU");                                          // Call TPIU Trace Setup
+               </block>
+             </control>
+           </sequence>
+
+           <!-- User-Defined EnableTraceSWO Sequence -->
+           <sequence name="EnableTraceSWO">
+             <block>
+               Write32(0x400E06E4, 0x504D4300);                                        // Disable PMC write protection
+               Write32(0x400E064C, TracePCK3);                                         // Select clock source and prescaler for PCK3
+               Write32(0x400E0600, (1 &lt;&lt; 11));                                   // Enable PCK3
+             </block>
+           </sequence>
+
+           <!-- User-Defined EnableTraceTPIU Sequence -->
+           <sequence name="EnableTraceTPIU">
+             <block>
+               __var width = (__traceout &amp; 0x003F0000) &gt;&gt; 16;                // TPIU Port Width
+               __var val   = 0;
+             </block>
+             <control if="width == 1">
+               <block>
+                 // 1-Bit TPIU Trace Setup
+                 val = 0x00000010;                                                     // TRACED[0]
+               </block>
+             </control>
+             <control if="width == 2">
+               <block>
+                 // 2-Bit TPIU Trace Setup
+                 val = 0x00000030;                                                     // TRACED[0..1]
+               </block>
+             </control>
+             <control if="width == 4">
+               <block>
+                 // 4-Bit TPIU Trace Setup
+                 val = 0x000000F0;                                                     // TRACED[0..3]
+               </block>
+             </control>
+             <block>
+               // Write Trace Configuration to Target
+               Write32(0x400E06E4, 0x504D4300);                                        // Disable PMC write protection
+               Write32(0x400E064C, TracePCK3);                                         // Select clock source and prescaler for PCK3
+               Write32(0x400E0600, (1 &lt;&lt; 11));                                   // Enable PCK3
+               Write32(0x400E0610, (1 &lt;&lt; 16));                                   // Enable PIOD clock
+
+               Write32(0x400E14E4, 0x50494F00);                                        // Disable PIOD write protection
+               Write32(0x400E1404, (val | 0x00000100));                                // Disable PIOD PD[4..8]
+               Write32(0x400E1470, ((Read32(0x400E1470) &amp; ~val) | 0x00000100));    // Set Peripheral Select registers
+               Write32(0x400E1474, ((Read32(0x400E1474) |      val) | 0x00000100));    // TRACED[0..3] to alternate peripheral C and TRACECLK to alternate peripheral D
+             </block>
+           </sequence>
+
+         </sequences>
+         <device Dname="ATSAME70J19"/><device Dname="ATSAME70Q20"/><device Dname="ATSAME70Q21"/><device Dname="ATSAME70N19"/><device Dname="ATSAME70J21"/><device Dname="ATSAME70J20"/><device Dname="ATSAME70Q21B"/><device Dname="ATSAME70J21B"/><device Dname="ATSAME70J20B"/><device Dname="ATSAME70Q19"/><device Dname="ATSAME70Q20B"/><device Dname="ATSAME70J19B"/><device Dname="ATSAME70N21"/><device Dname="ATSAME70N20"/><device Dname="ATSAME70N21B"/><device Dname="ATSAME70N20B"/><device Dname="ATSAME70N19B"/><device Dname="ATSAME70Q19B"/></pdsc>
+</package>

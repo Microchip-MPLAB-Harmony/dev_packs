@@ -1,0 +1,7 @@
+--cpu Cortex-M0
+".\out\flashprg.o"
+".\out\flashdev.o"
+--strict --scatter ".\Target.lin"
+--diag_suppress L6305 --summary_stderr --info summarysizes --map --load_addr_map_info --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Out\PIC32CM-JH_512_Data.map" -o .\Out\PIC32CM-JH_512_Data.axf

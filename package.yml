@@ -4,4 +4,4 @@ package:
   type: "package"
   status: "production"
   required: true
-  version: "3.16.0-E1"
+  version: "3.17.0"

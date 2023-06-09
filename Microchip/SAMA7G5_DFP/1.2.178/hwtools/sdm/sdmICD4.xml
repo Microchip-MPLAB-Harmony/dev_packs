@@ -1,0 +1,10 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmICD4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="SAMA7G54" sdm:profile="armv7a"/>
+    <sdm:device sdm:devicename="SAMA7G54D1G" sdm:profile="armv7a"/>
+    <sdm:device sdm:devicename="SAMA7G54D2G" sdm:profile="armv7a"/>
+    <sdm:device sdm:devicename="SAMA7G54D4G" sdm:profile="armv7a"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:isstub="true" sdm:profilename="armv7a" sdm:profilesupported="no"/>
+</sdm:sdm>

@@ -1,0 +1,1156 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package schemaVersion="1.0">
+  <content>
+    <resources target="PIC32CZ2051CA91100">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ2051CA91100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ2051CA91100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz2051ca91100.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz2051ca91100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ2051CA91100__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz2051ca91100.s"/>
+        <includes pattern="system_pic32cz2051ca91100.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="system_pic32cz2051ca91100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz2051ca91100_flash.ld"/>
+        <includes pattern="gcc/pic32cz2051ca91100_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="system_pic32cz2051ca91100.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz2051ca91100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz2051ca91100/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ2051CA91100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ2051CA91100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ2051CA91100.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CZ2051CA91144">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ2051CA91144.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ2051CA91144.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz2051ca91144.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz2051ca91144.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ2051CA91144__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz2051ca91144.s"/>
+        <includes pattern="system_pic32cz2051ca91144.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="system_pic32cz2051ca91144.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz2051ca91144_flash.ld"/>
+        <includes pattern="gcc/pic32cz2051ca91144_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="system_pic32cz2051ca91144.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz2051ca91144/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz2051ca91144/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ2051CA91144.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ2051CA91144.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ2051CA91144.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CZ2051CA91176">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ2051CA91176.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ2051CA91176.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz2051ca91176.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz2051ca91176.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ2051CA91176__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz2051ca91176.s"/>
+        <includes pattern="system_pic32cz2051ca91176.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="system_pic32cz2051ca91176.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz2051ca91176_flash.ld"/>
+        <includes pattern="gcc/pic32cz2051ca91176_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="system_pic32cz2051ca91176.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz2051ca91176/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz2051ca91176/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ2051CA91176.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ2051CA91176.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ2051CA91176.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CZ4010CA91100">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ4010CA91100.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ4010CA91100.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz4010ca91100.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz4010ca91100.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ4010CA91100__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz4010ca91100.s"/>
+        <includes pattern="system_pic32cz4010ca91100.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="system_pic32cz4010ca91100.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz4010ca91100_flash.ld"/>
+        <includes pattern="gcc/pic32cz4010ca91100_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="system_pic32cz4010ca91100.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91100/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91100/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ4010CA91100.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91100.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91100.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CZ4010CA91144">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ4010CA91144.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ4010CA91144.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz4010ca91144.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz4010ca91144.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ4010CA91144__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz4010ca91144.s"/>
+        <includes pattern="system_pic32cz4010ca91144.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="system_pic32cz4010ca91144.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz4010ca91144_flash.ld"/>
+        <includes pattern="gcc/pic32cz4010ca91144_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="system_pic32cz4010ca91144.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91144/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91144/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ4010CA91144.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91144.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91144.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CZ4010CA91176">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ4010CA91176.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ4010CA91176.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz4010ca91176.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz4010ca91176.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ4010CA91176__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz4010ca91176.s"/>
+        <includes pattern="system_pic32cz4010ca91176.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="system_pic32cz4010ca91176.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz4010ca91176_flash.ld"/>
+        <includes pattern="gcc/pic32cz4010ca91176_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="system_pic32cz4010ca91176.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91176/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91176/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ4010CA91176.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91176.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91176.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+    <resources target="PIC32CZ4010CA91208">
+      <resource type="atdf" subdir="atdf">
+        <includes pattern="PIC32CZ4010CA91208.atdf"/>
+      </resource>
+      <resource type="pic" subdir="edc">
+        <includes pattern="PIC32CZ4010CA91208.PIC"/>
+      </resource>
+      <resource type="c.header" subdir="include">
+        <includes pattern="pic32c.h"/>
+        <includes pattern="pic32cz4010ca91208.h"/>
+        <includes pattern="system_pic32czca91.h"/>
+        <includes pattern="component/ac.h"/>
+        <includes pattern="component/adc.h"/>
+        <includes pattern="component/can.h"/>
+        <includes pattern="component/dma.h"/>
+        <includes pattern="component/drmtcm.h"/>
+        <includes pattern="component/dsu.h"/>
+        <includes pattern="component/ebi.h"/>
+        <includes pattern="component/eic.h"/>
+        <includes pattern="component/eth.h"/>
+        <includes pattern="component/evsys.h"/>
+        <includes pattern="component/fcr.h"/>
+        <includes pattern="component/fcw.h"/>
+        <includes pattern="component/freqm.h"/>
+        <includes pattern="component/fuses.h"/>
+        <includes pattern="component/gclk.h"/>
+        <includes pattern="component/hsm.h"/>
+        <includes pattern="component/mclk.h"/>
+        <includes pattern="component/mcramc.h"/>
+        <includes pattern="component/mlb.h"/>
+        <includes pattern="component/osc32kctrl.h"/>
+        <includes pattern="component/oscctrl.h"/>
+        <includes pattern="component/pac.h"/>
+        <includes pattern="component/pm.h"/>
+        <includes pattern="component/port.h"/>
+        <includes pattern="component/prm.h"/>
+        <includes pattern="component/ptc.h"/>
+        <includes pattern="component/rstc.h"/>
+        <includes pattern="component/rtc.h"/>
+        <includes pattern="component/sdmmc.h"/>
+        <includes pattern="component/sercom.h"/>
+        <includes pattern="component/spi_ixs.h"/>
+        <includes pattern="component/sqi.h"/>
+        <includes pattern="component/supc.h"/>
+        <includes pattern="component/tcc.h"/>
+        <includes pattern="component/tram.h"/>
+        <includes pattern="component/trng.h"/>
+        <includes pattern="component/usbhs.h"/>
+        <includes pattern="component/wdt.h"/>
+        <includes pattern="pio/pic32cz4010ca91208.h"/>
+        <includes pattern="component-version.h"/>
+        <meta key="define" value="__PIC32CZ4010CA91208__"/>
+      </resource>
+      <resource type="c.source.exe.template" subdir="templates">
+        <includes pattern="main.c"/>
+      </resource>
+      <resource type="c.source.lib.template" subdir="templates">
+        <includes pattern="library.c"/>
+      </resource>
+      <resource type="cpp.source.exe.template" subdir="templates">
+        <includes pattern="main.cpp"/>
+      </resource>
+      <resource type="cpp.source.lib.template" subdir="templates">
+        <includes pattern="library.cpp"/>
+      </resource>
+      <resource type="armcc.source.startup" subdir="armcc">
+        <includes pattern="armcc/startup_pic32cz4010ca91208.s"/>
+        <includes pattern="system_pic32cz4010ca91208.c"/>
+      </resource>
+      <resource type="gcc.source.startup" subdir="gcc">
+        <includes pattern="gcc/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="system_pic32cz4010ca91208.c"/>
+      </resource>
+      <resource type="gcc.linker" subdir="gcc">
+        <includes pattern="gcc/pic32cz4010ca91208_flash.ld"/>
+        <includes pattern="gcc/pic32cz4010ca91208_sram.ld"/>
+      </resource>
+      <resource type="iar.source.startup" subdir="iar">
+        <includes pattern="iar/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="system_pic32cz4010ca91208.c"/>
+      </resource>
+      <resource type="iar.linker" subdir="iar">
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91208/sram.icf"/>
+        <includes pattern="config/linker/Microchip/pic32cz4010ca91208/flash.icf"/>
+      </resource>
+      <resource type="iar.config" subdir="iar">
+        <includes pattern="config/debugger/Microchip/Trace_PIC32CZCA91.dmac"/>
+        <includes pattern="config/debugger/Microchip/PIC32CZ4010CA91208.ddf"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91208.i79"/>
+        <includes pattern="config/devices/Microchip/PIC32C/PIC32CZCA91/PIC32CZ4010CA91208.menu"/>
+      </resource>
+      <resource type="xc32" subdir="xc32">
+        <includes pattern="mcc_xc.h"/>
+        <includes pattern="PIC32CZ2051CA91100/startup_pic32cz2051ca91100.c"/>
+        <includes pattern="PIC32CZ2051CA91100/PIC32CZ2051CA91100.ld"/>
+        <includes pattern="PIC32CZ2051CA91100/specs-PIC32CZ2051CA91100"/>
+        <includes pattern="PIC32CZ2051CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91100/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91144/startup_pic32cz2051ca91144.c"/>
+        <includes pattern="PIC32CZ2051CA91144/PIC32CZ2051CA91144.ld"/>
+        <includes pattern="PIC32CZ2051CA91144/specs-PIC32CZ2051CA91144"/>
+        <includes pattern="PIC32CZ2051CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91144/pic32c"/>
+        <includes pattern="PIC32CZ2051CA91176/startup_pic32cz2051ca91176.c"/>
+        <includes pattern="PIC32CZ2051CA91176/PIC32CZ2051CA91176.ld"/>
+        <includes pattern="PIC32CZ2051CA91176/specs-PIC32CZ2051CA91176"/>
+        <includes pattern="PIC32CZ2051CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ2051CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91100/startup_pic32cz4010ca91100.c"/>
+        <includes pattern="PIC32CZ4010CA91100/PIC32CZ4010CA91100.ld"/>
+        <includes pattern="PIC32CZ4010CA91100/specs-PIC32CZ4010CA91100"/>
+        <includes pattern="PIC32CZ4010CA91100/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91100/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91144/startup_pic32cz4010ca91144.c"/>
+        <includes pattern="PIC32CZ4010CA91144/PIC32CZ4010CA91144.ld"/>
+        <includes pattern="PIC32CZ4010CA91144/specs-PIC32CZ4010CA91144"/>
+        <includes pattern="PIC32CZ4010CA91144/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91144/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91176/startup_pic32cz4010ca91176.c"/>
+        <includes pattern="PIC32CZ4010CA91176/PIC32CZ4010CA91176.ld"/>
+        <includes pattern="PIC32CZ4010CA91176/specs-PIC32CZ4010CA91176"/>
+        <includes pattern="PIC32CZ4010CA91176/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91176/pic32c"/>
+        <includes pattern="PIC32CZ4010CA91208/startup_pic32cz4010ca91208.c"/>
+        <includes pattern="PIC32CZ4010CA91208/PIC32CZ4010CA91208.ld"/>
+        <includes pattern="PIC32CZ4010CA91208/specs-PIC32CZ4010CA91208"/>
+        <includes pattern="PIC32CZ4010CA91208/configuration.data"/>
+        <includes pattern="PIC32CZ4010CA91208/pic32c"/>
+        <includes pattern="include/xc.h"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="dap_cortex-m7.py"/>
+        <includes pattern="j-link_cortex-m7.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="scripts.mdbcore" subdir="scripts">
+        <includes pattern="samba.py"/>
+      </resource>
+      <resource type="scripts.mdbcore.device" subdir="scripts">
+        <includes pattern="properties_device.py"/>
+      </resource>
+      <resource type="hwtools.mplab.mpheader" subdir="hwtools/mplab">
+        <includes pattern="MPHeader.xml"/>
+      </resource>
+      <resource type="hwtools.mplab.pluginboardsupport" subdir="hwtools/mplab">
+        <includes pattern="PluginBoardSupport.xml"/>
+      </resource>
+      <resource type="hwtools.sdm" subdir="hwtools/sdm">
+        <includes pattern="sdmCompilers.xml"/>
+        <includes pattern="sdmDebuggerMap.xml"/>
+        <includes pattern="sdmICD3.xml"/>
+        <includes pattern="sdmICD4.xml"/>
+        <includes pattern="sdmICD5.xml"/>
+        <includes pattern="sdmICE4.xml"/>
+        <includes pattern="sdmRealICE.xml"/>
+        <includes pattern="sdmRealICE4.xml"/>
+        <includes pattern="sdmSimulator.xml"/>
+      </resource>
+      <resource type="hwtools.persfr.arm32" subdir="hwtools/persfr">
+        <includes pattern="arm32.persfr"/>
+      </resource>
+    </resources>
+  </content>
+  <pdsc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" vendor="Microchip">
+    <releases>
+      <release version="1.0.BUILDNUMBER">
+        - Initial release.
+      </release>
+    </releases>
+  </pdsc>
+</package>

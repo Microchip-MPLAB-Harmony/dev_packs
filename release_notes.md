@@ -3,6 +3,15 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## dev_packs Release v3.18.1
+
+### Following Device Family Packs have been updated
+
+| DFP name              | Version           |
+| ---                   | ---               |
+| PIC32CX-BZ3_DFP       | 1.1.171           |
+
+
 ## dev_packs Release v3.18.0
 
 ### Following Device Family Packs have been updated

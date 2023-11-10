@@ -4,4 +4,4 @@ package:
   type: "package"
   status: "production"
   required: true
-  version: "3.18.0"
+  version: "v3.18.1"
